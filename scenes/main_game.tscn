@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://fwifwdj0klmd"]
+[gd_scene load_steps=21 format=3 uid="uid://fwifwdj0klmd"]
 
 [ext_resource type="PackedScene" uid="uid://boaytsxvldcf8" path="res://scenes/start_menu/pause.tscn" id="2_sw0rh"]
 [ext_resource type="Script" uid="uid://c0qla4xs5qtuw" path="res://scripts/round_manager.gd" id="3_m2ofq"]
@@ -68,6 +68,41 @@ _data = {
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_m2ofq"]
 allow_unpress = true
+
+[sub_resource type="GDScript" id="GDScript_wjob3"]
+resource_name = "arm"
+script/source = "extends Line2D
+
+const max_points: int = 50
+const follow_strength: float = 0.2
+const downward_speed: int = 200
+const base_position: Vector2 = Vector2(640, 900)
+
+var points_array: Array[Vector2] = []
+
+func _ready():
+	points_array.resize(max_points)
+	for i in range(max_points):
+		points_array[i] = base_position
+
+func _process(delta: float):
+
+	# Tip is exactly at mouse
+	points_array[0] = get_global_mouse_position()
+
+	# Rest follows smoothly
+	for i in range(1, max_points):
+		points_array[i] = points_array[i].lerp(points_array[i - 1], follow_strength)
+
+	# Base is fixed
+	points_array[max_points - 1] = base_position
+
+	# Downward drift
+	for i in range(max_points - 1):
+		points_array[i].y += downward_speed * delta
+
+	points = points_array
+"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n1acc"]
 animations = [{
@@ -188,12 +223,19 @@ button_group = SubResource("ButtonGroup_m2ofq")
 icon = ExtResource("7_k2eil")
 flat = true
 
+[node name="arm" type="Line2D" parent="."]
+width = 30.0
+default_color = Color(0.9490196, 0.68235296, 0.6, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+script = SubResource("GDScript_wjob3")
+
 [node name="hand" type="Node2D" parent="."]
 position = Vector2(-115, -29)
 script = ExtResource("8_08iwb")
 
 [node name="hand_sprite" type="AnimatedSprite2D" parent="hand"]
-position = Vector2(33, 30)
 sprite_frames = SubResource("SpriteFrames_n1acc")
 animation = &"tesoura"
 autoplay = "empty"
