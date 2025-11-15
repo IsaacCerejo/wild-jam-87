@@ -1,0 +1,204 @@
+[gd_scene load_steps=21 format=3 uid="uid://fwifwdj0klmd"]
+
+[ext_resource type="PackedScene" uid="uid://dmgyqc86pp3vs" path="res://scenes/start_menu/button_manager.tscn" id="1_ythv5"]
+[ext_resource type="PackedScene" uid="uid://mhtvak4c2lgp" path="res://scenes/start_menu/pause.tscn" id="2_sw0rh"]
+[ext_resource type="Script" uid="uid://c0qla4xs5qtuw" path="res://scripts/round_manager.gd" id="3_m2ofq"]
+[ext_resource type="Script" uid="uid://0ua5elcqwham" path="res://scripts/object_selector.gd" id="4_7hgdl"]
+[ext_resource type="Texture2D" uid="uid://b0788qfn374ll" path="res://assets/tools/tool_pinça.png" id="5_2pb35"]
+[ext_resource type="Texture2D" uid="uid://uuela3hv3sev" path="res://assets/tools/tool_tesoura.png" id="6_00i1t"]
+[ext_resource type="Texture2D" uid="uid://d1wspkbkkygsv" path="res://assets/tools/tool_spray.png" id="7_k2eil"]
+[ext_resource type="Script" uid="uid://vta4rkxv4wv0" path="res://scripts/hand.gd" id="8_08iwb"]
+[ext_resource type="Texture2D" uid="uid://dewjajqggymbo" path="res://assets/hand/hand_empty.png" id="9_5kidy"]
+[ext_resource type="Texture2D" uid="uid://kdeakq4xrq8s" path="res://assets/hand/hand_pinça.png" id="10_8ebjq"]
+[ext_resource type="Texture2D" uid="uid://chxpexxxkxr2n" path="res://assets/hand/hand_spray.png" id="11_5s8cp"]
+[ext_resource type="Texture2D" uid="uid://d3svvioh7o10y" path="res://assets/hand/hand_tesoura.png" id="12_ag8io"]
+[ext_resource type="Texture2D" uid="uid://dkp00siemeoxb" path="res://assets/tray.png" id="14_5s8cp"]
+[ext_resource type="Script" uid="uid://crishcwx7m46w" path="res://scripts/operating_tray.gd" id="14_8ebjq"]
+
+[sub_resource type="Animation" id="Animation_5s8cp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(971, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8ebjq"]
+resource_name = "Slide in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(971, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ag8io"]
+resource_name = "Slide out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-971, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ag8io"]
+_data = {
+&"RESET": SubResource("Animation_5s8cp"),
+&"Slide in": SubResource("Animation_8ebjq"),
+&"Slide out": SubResource("Animation_ag8io")
+}
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_m2ofq"]
+allow_unpress = true
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n1acc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_5kidy")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_8ebjq")
+}],
+"loop": true,
+"name": &"pinça",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_5s8cp")
+}],
+"loop": true,
+"name": &"spray",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_ag8io")
+}],
+"loop": true,
+"name": &"tesoura",
+"speed": 5.0
+}]
+
+[node name="main_game" type="Node2D"]
+y_sort_enabled = true
+
+[node name="ui" type="Control" parent="."]
+process_mode = 1
+z_index = 5
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="Button_Manager" parent="ui" instance=ExtResource("1_ythv5")]
+
+[node name="pause" parent="ui" instance=ExtResource("2_sw0rh")]
+visible = false
+top_level = true
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="TimeBar" type="ProgressBar" parent="ui"]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 50.0
+offset_right = 1086.0
+offset_bottom = 77.0
+show_percentage = false
+
+[node name="OperatingTray" type="Node2D" parent="."]
+z_index = -1
+position = Vector2(657, 385)
+script = ExtResource("14_8ebjq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="OperatingTray"]
+libraries = {
+&"": SubResource("AnimationLibrary_ag8io")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="OperatingTray"]
+position = Vector2(971, 0)
+scale = Vector2(3, 1.5)
+texture = ExtResource("14_5s8cp")
+
+[node name="Round_Manager" type="Node2D" parent="." node_paths=PackedStringArray("TimeBar")]
+script = ExtResource("3_m2ofq")
+TimeBar = NodePath("../ui/TimeBar")
+
+[node name="Object_Selector" type="Node2D" parent="." node_paths=PackedStringArray("hand_sprite")]
+script = ExtResource("4_7hgdl")
+hand_sprite = NodePath("../hand/hand_sprite")
+
+[node name="pinça" type="Button" parent="Object_Selector"]
+offset_left = 79.0
+offset_top = 295.0
+offset_right = 185.0
+offset_bottom = 395.0
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_m2ofq")
+icon = ExtResource("5_2pb35")
+flat = true
+expand_icon = true
+
+[node name="tesoura" type="Button" parent="Object_Selector"]
+offset_left = 81.0
+offset_top = 423.0
+offset_right = 187.0
+offset_bottom = 523.0
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_m2ofq")
+icon = ExtResource("6_00i1t")
+flat = true
+
+[node name="spray" type="Button" parent="Object_Selector"]
+offset_left = 82.0
+offset_top = 551.0
+offset_right = 188.0
+offset_bottom = 651.0
+focus_mode = 0
+toggle_mode = true
+button_group = SubResource("ButtonGroup_m2ofq")
+icon = ExtResource("7_k2eil")
+flat = true
+
+[node name="hand" type="Node2D" parent="."]
+position = Vector2(-115, -29)
+script = ExtResource("8_08iwb")
+
+[node name="hand_sprite" type="AnimatedSprite2D" parent="hand"]
+position = Vector2(33, 30)
+sprite_frames = SubResource("SpriteFrames_n1acc")
+animation = &"tesoura"
+autoplay = "empty"
+
+[connection signal="value_changed" from="ui/TimeBar" to="Round_Manager" method="_on_time_bar_value_changed"]
