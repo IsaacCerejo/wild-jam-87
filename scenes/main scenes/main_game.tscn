@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://fwifwdj0klmd"]
+
+[ext_resource type="PackedScene" uid="uid://dmgyqc86pp3vs" path="res://Menu/scenes/button_manager.tscn" id="1_ythv5"]
+[ext_resource type="PackedScene" uid="uid://mhtvak4c2lgp" path="res://Menu/scenes/pause.tscn" id="2_sw0rh"]
+
+[node name="main_game" type="Node2D"]
+y_sort_enabled = true
+
+[node name="ui" type="Control" parent="."]
+process_mode = 1
+z_index = 5
+custom_minimum_size = Vector2(1280, 720)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="Button_Manager" parent="ui" instance=ExtResource("1_ythv5")]
+
+[node name="pause" parent="ui" instance=ExtResource("2_sw0rh")]
+visible = false
+top_level = true
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
