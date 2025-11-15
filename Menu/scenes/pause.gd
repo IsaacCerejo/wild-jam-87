@@ -16,11 +16,13 @@ func open_close_pause():
 	visible = !visible
 	if visible:
 		get_tree().paused = true
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		
 	else:
 		get_tree().paused = false
 		options_menu.hide()
 		how_to_play_menu.hide()
+		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 func _on_resume_button_pressed() -> void:
 	open_close_pause()
