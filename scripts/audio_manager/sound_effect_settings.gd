@@ -1,4 +1,4 @@
-@icon("uid://bivavd21jp4gb")
+@icon("uid://dbpk4dr1p4ci8")
 class_name SoundEffectSettings
 extends Resource
 
