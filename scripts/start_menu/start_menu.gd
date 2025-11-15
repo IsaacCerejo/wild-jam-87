@@ -8,7 +8,8 @@ func _ready() -> void:
 
 func _on_start_button_pressed() -> void:
 	AudioManager.create_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.BUTTON_CLICK)
-	get_tree().change_scene_to_file("uid://fwifwdj0klmd")
+	await Global.game_controller.change_scene("", "uid://fwifwdj0klmd", TransitionSettings.TRANSITION_TYPE.FADE_TO_FADE)
+	#get_tree().change_scene_to_file("uid://fwifwdj0klmd")
 
 func _on_options_button_pressed() -> void:
 	AudioManager.create_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.BUTTON_CLICK)

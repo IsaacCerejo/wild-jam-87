@@ -1,5 +1,6 @@
 extends Node
 
+var game_controller: GameController
 var music_step: int = 9
 var sound_step: int = 9
 
@@ -26,4 +27,3 @@ func restart():
 	
 func replay():
 	get_tree().change_scene_to_file("uid://fwifwdj0klmd")
-	
