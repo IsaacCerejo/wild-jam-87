@@ -15,7 +15,7 @@ enum TRANSITION_TYPE {
 ## Material used for the "in" transition effect.
 @export var material_in: ShaderMaterial
 ## Duration of the transition effect in seconds.
-@export var duration: float = 1.0
+@export var duration: float = 0.5
 ## Easing function for the transition.
 @export var easing: Tween.EaseType = Tween.EASE_IN_OUT
 ## Transition curve type.
