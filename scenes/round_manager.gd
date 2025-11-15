@@ -9,7 +9,7 @@ func _ready() -> void:
 
 func start_round():
 	var tween = get_tree().create_tween()
-	tween.tween_property(TimeBar, "value", 0, 10)
+	tween.tween_property(TimeBar, "value", 100, 10)
 	operating_tray.spawn()
 
 
