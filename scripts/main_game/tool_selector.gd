@@ -10,7 +10,7 @@ func _ready() -> void:
 # Signal callbacks
 func _on_tool_picked_up(tool: Tool):
 	tool.hide()
-	Global.player._active_tool = tool
+	Global.player.set_active_tool(tool )
 	for child in get_children():
 		if child is Tool and child != tool:
 			child.show()

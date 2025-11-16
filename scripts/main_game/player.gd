@@ -11,6 +11,9 @@ func _ready() -> void:
 	Global.player = self
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
+func _exit_tree() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
 func _physics_process(_delta: float) -> void:
 	hand_sprite.global_position = get_global_mouse_position()
 
