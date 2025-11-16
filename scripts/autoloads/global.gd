@@ -1,20 +1,18 @@
 extends Node
 
-# Signals
-@warning_ignore("unused_signal")
-signal on_timer_value_changed
-
 # Constants
 const SCENE_UIDS = {
 	"START_MENU": "uid://dolritqgtceml",
 	"MAIN_GAME": "uid://fwifwdj0klmd",
 	"MAIN_GAME_UI": "uid://byg7j72h7pac6",
-	"LOSE_SCREEN": "uid://dfox7aapmjh2k"
+	"LOSE_SCREEN": "uid://dfox7aapmjh2k",
+	"MUSHROOM": "uid://cfxgo5ye53do0"
 }
 
 # Game Controller
 var game_controller: GameController
 var player: Player
+var time_bar: TimeBar
 var score: int = 0
 
 # Settings
@@ -40,3 +38,8 @@ func _input(event: InputEvent) -> void:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		else:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+
+func add_time_to_score() -> void:
+	if time_bar:
+		time_bar.stop_timer()
+		score += int(time_bar.get_time_left())

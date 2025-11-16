@@ -1,6 +1,5 @@
-[gd_scene load_steps=23 format=3 uid="uid://fwifwdj0klmd"]
+[gd_scene load_steps=21 format=3 uid="uid://fwifwdj0klmd"]
 
-[ext_resource type="Script" uid="uid://crishcwx7m46w" path="res://scripts/main_game/operating_tray.gd" id="1_b4n6q"]
 [ext_resource type="Texture2D" uid="uid://bce0lpb8ourlr" path="res://assets/background/background.png" id="1_s87mg"]
 [ext_resource type="Script" uid="uid://c0qla4xs5qtuw" path="res://scripts/main_game/patient_manager.gd" id="3_4y18v"]
 [ext_resource type="Script" uid="uid://0ua5elcqwham" path="res://scripts/main_game/tool_selector.gd" id="4_irrf2"]
@@ -9,11 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://cfynw7ir82qmn" path="res://scenes/main_game/tool.tscn" id="7_b4n6q"]
 [ext_resource type="Texture2D" uid="uid://dhupda6d3r6f1" path="res://assets/tools/tool_hammer.png" id="7_ebk6p"]
 [ext_resource type="Texture2D" uid="uid://d1wspkbkkygsv" path="res://assets/tools/tool_spray.png" id="7_l774p"]
-[ext_resource type="PackedScene" uid="uid://cfxgo5ye53do0" path="res://scenes/main_game/mushroom.tscn" id="8_irrf2"]
 [ext_resource type="Script" uid="uid://vta4rkxv4wv0" path="res://scripts/main_game/player.gd" id="8_r8wn4"]
 [ext_resource type="Texture2D" uid="uid://cep1fth1pjb7p" path="res://assets/background/cama.png" id="8_s87mg"]
 [ext_resource type="Texture2D" uid="uid://dewjajqggymbo" path="res://assets/hand/hand_empty.png" id="9_kwr1i"]
 [ext_resource type="Texture2D" uid="uid://kdeakq4xrq8s" path="res://assets/hand/hand_pinca.png" id="10_fxa2l"]
+[ext_resource type="PackedScene" uid="uid://mtilpmnd7m7y" path="res://scenes/main_game/patient.tscn" id="10_s87mg"]
 [ext_resource type="Texture2D" uid="uid://chxpexxxkxr2n" path="res://assets/hand/hand_spray.png" id="11_feobv"]
 [ext_resource type="Texture2D" uid="uid://d3svvioh7o10y" path="res://assets/hand/hand_tesoura.png" id="12_gxjft"]
 [ext_resource type="Script" uid="uid://ybxq7x6jqqc6" path="res://scripts/main_game/arm.gd" id="13_4y18v"]
@@ -33,23 +32,8 @@ tracks/0/keys = {
 "values": [Vector2(971, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_s87mg"]
-resource_name = "Slide Out"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Tray:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(0.5743483, 2.5491211),
-"update": 0,
-"values": [Vector2(-4, 0), Vector2(971, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_8ebjq"]
-resource_name = "Slide in"
+resource_name = "slide_in"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -66,8 +50,7 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ag8io"]
 _data = {
 &"RESET": SubResource("Animation_5s8cp"),
-&"Slide Out": SubResource("Animation_s87mg"),
-&"Slide in": SubResource("Animation_8ebjq")
+&"slide_in": SubResource("Animation_8ebjq")
 }
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n1acc"]
@@ -151,20 +134,20 @@ type = 4
 [node name="Sprite2D" parent="ToolSelector/Hammer" index="0"]
 texture = ExtResource("7_ebk6p")
 
-[node name="OperatingTray" type="Node2D" parent="."]
-unique_name_in_owner = true
+[node name="PatientManager" type="Node2D" parent="."]
 z_index = -1
-position = Vector2(657, 385)
-script = ExtResource("1_b4n6q")
+position = Vector2(640, 360)
+script = ExtResource("3_4y18v")
 
-[node name="Tray" type="Sprite2D" parent="OperatingTray"]
+[node name="Tray" type="Sprite2D" parent="PatientManager"]
 position = Vector2(971, 0)
 texture = ExtResource("8_s87mg")
 
-[node name="Mushroom" parent="OperatingTray" instance=ExtResource("8_irrf2")]
-allowed_tool_types = Array[int]([0])
+[node name="Patient" parent="PatientManager/Tray" instance=ExtResource("10_s87mg")]
+unique_name_in_owner = true
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="OperatingTray"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PatientManager"]
+unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_ag8io")
 }
@@ -187,9 +170,6 @@ begin_cap_mode = 2
 end_cap_mode = 2
 round_precision = 16
 script = ExtResource("13_4y18v")
-
-[node name="PatientManager" type="Node" parent="."]
-script = ExtResource("3_4y18v")
 
 [editable path="ToolSelector/Pinca"]
 [editable path="ToolSelector/Spray"]
