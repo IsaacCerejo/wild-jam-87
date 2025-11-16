@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6gc5emte74i3"
-path="res://.godot/imported/Tallshroom_RB.PNG-af773a9dcb509236e21e083c12de3dab.ctex"
+uid="uid://0hfxyqucojp5"
+path="res://.godot/imported/Tall Mushroom_twist.PNG-851a3a3c7f31516f14c857aaa6307f68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Mushrooms/Tallshroom_RB.PNG"
-dest_files=["res://.godot/imported/Tallshroom_RB.PNG-af773a9dcb509236e21e083c12de3dab.ctex"]
+source_file="res://assets/mushrooms/Tall Mushroom_twist.PNG"
+dest_files=["res://.godot/imported/Tall Mushroom_twist.PNG-851a3a3c7f31516f14c857aaa6307f68.ctex"]
 
 [params]
 

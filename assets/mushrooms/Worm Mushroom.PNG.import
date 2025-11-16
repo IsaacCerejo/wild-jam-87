@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oox6v2mdl4pn"
-path="res://.godot/imported/GloomRedshroom.PNG-0a50c4445924c8903adac086f9d28d7e.ctex"
+uid="uid://dv5f11hh5c8c1"
+path="res://.godot/imported/Worm Mushroom.PNG-28b5c7ca90b1b639ce4acdf1008d3508.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Mushrooms/GloomRedshroom.PNG"
-dest_files=["res://.godot/imported/GloomRedshroom.PNG-0a50c4445924c8903adac086f9d28d7e.ctex"]
+source_file="res://assets/mushrooms/Worm Mushroom.PNG"
+dest_files=["res://.godot/imported/Worm Mushroom.PNG-28b5c7ca90b1b639ce4acdf1008d3508.ctex"]
 
 [params]
 
