@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://uuela3hv3sev" path="res://assets/tools/tool_tesoura.png" id="6_ebk6p"]
 [ext_resource type="PackedScene" uid="uid://cfynw7ir82qmn" path="res://scenes/main_game/tool.tscn" id="7_b4n6q"]
 [ext_resource type="Texture2D" uid="uid://d1wspkbkkygsv" path="res://assets/tools/tool_spray.png" id="7_l774p"]
-[ext_resource type="PackedScene" path="res://scenes/main_game/mushroom.tscn" id="8_irrf2"]
-[ext_resource type="Script" path="res://scripts/main_game/player.gd" id="8_r8wn4"]
+[ext_resource type="PackedScene" uid="uid://cfxgo5ye53do0" path="res://scenes/main_game/mushroom.tscn" id="8_irrf2"]
+[ext_resource type="Script" uid="uid://vta4rkxv4wv0" path="res://scripts/main_game/player.gd" id="8_r8wn4"]
 [ext_resource type="Texture2D" uid="uid://cep1fth1pjb7p" path="res://assets/background/cama.png" id="8_s87mg"]
 [ext_resource type="Texture2D" uid="uid://dewjajqggymbo" path="res://assets/hand/hand_empty.png" id="9_kwr1i"]
 [ext_resource type="Texture2D" uid="uid://kdeakq4xrq8s" path="res://assets/hand/hand_pinca.png" id="10_fxa2l"]
@@ -32,21 +32,6 @@ tracks/0/keys = {
 "values": [Vector2(971, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_8ebjq"]
-resource_name = "Slide in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Tray:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(0.5176323, 2.5491161),
-"update": 0,
-"values": [Vector2(971, 0), Vector2(-4, 0)]
-}
-
 [sub_resource type="Animation" id="Animation_s87mg"]
 resource_name = "Slide Out"
 tracks/0/type = "value"
@@ -60,6 +45,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(0.5743483, 2.5491211),
 "update": 0,
 "values": [Vector2(-4, 0), Vector2(971, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8ebjq"]
+resource_name = "Slide in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tray:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5176323, 2.5491161),
+"update": 0,
+"values": [Vector2(971, 0), Vector2(-4, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ag8io"]
