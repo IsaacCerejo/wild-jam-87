@@ -6,6 +6,6 @@
 [resource]
 script = ExtResource("1_2gyxw")
 type = 1
-material_out = ExtResource("1_ws2ro")
-material_in = ExtResource("1_ws2ro")
+shader_material_out = ExtResource("1_ws2ro")
+shader_material_in = ExtResource("1_ws2ro")
 metadata/_custom_type_script = "uid://cofx5dibewx6m"

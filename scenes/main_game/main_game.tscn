@@ -1,0 +1,167 @@
+[gd_scene load_steps=20 format=3 uid="uid://fwifwdj0klmd"]
+
+[ext_resource type="Script" uid="uid://crishcwx7m46w" path="res://scripts/operating_tray.gd" id="1_b4n6q"]
+[ext_resource type="Texture2D" uid="uid://dkp00siemeoxb" path="res://assets/operating_tray/tray.png" id="2_gl27v"]
+[ext_resource type="Script" uid="uid://c0qla4xs5qtuw" path="res://scripts/patient_manager.gd" id="3_4y18v"]
+[ext_resource type="Script" uid="uid://0ua5elcqwham" path="res://scripts/tool_selector.gd" id="4_irrf2"]
+[ext_resource type="Texture2D" uid="uid://b0788qfn374ll" path="res://assets/tools/tool_pinça.png" id="5_s87mg"]
+[ext_resource type="Texture2D" uid="uid://uuela3hv3sev" path="res://assets/tools/tool_tesoura.png" id="6_ebk6p"]
+[ext_resource type="PackedScene" uid="uid://cfynw7ir82qmn" path="res://scenes/main_game/tool.tscn" id="7_b4n6q"]
+[ext_resource type="Texture2D" uid="uid://d1wspkbkkygsv" path="res://assets/tools/tool_spray.png" id="7_l774p"]
+[ext_resource type="Script" uid="uid://vta4rkxv4wv0" path="res://scripts/hand.gd" id="8_r8wn4"]
+[ext_resource type="Texture2D" uid="uid://dewjajqggymbo" path="res://assets/hand/hand_empty.png" id="9_kwr1i"]
+[ext_resource type="Texture2D" uid="uid://kdeakq4xrq8s" path="res://assets/hand/hand_pinca.png" id="10_fxa2l"]
+[ext_resource type="Texture2D" uid="uid://chxpexxxkxr2n" path="res://assets/hand/hand_spray.png" id="11_feobv"]
+[ext_resource type="Texture2D" uid="uid://d3svvioh7o10y" path="res://assets/hand/hand_tesoura.png" id="12_gxjft"]
+[ext_resource type="Script" uid="uid://ybxq7x6jqqc6" path="res://scripts/arm.gd" id="13_4y18v"]
+
+[sub_resource type="Animation" id="Animation_5s8cp"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tray:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(971, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8ebjq"]
+resource_name = "Slide in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tray:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(971, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ag8io"]
+resource_name = "Slide out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tray:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-971, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ag8io"]
+_data = {
+&"RESET": SubResource("Animation_5s8cp"),
+&"Slide in": SubResource("Animation_8ebjq"),
+&"Slide out": SubResource("Animation_ag8io")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n1acc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_kwr1i")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_fxa2l")
+}],
+"loop": true,
+"name": &"pinca",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_feobv")
+}],
+"loop": true,
+"name": &"spray",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_gxjft")
+}],
+"loop": true,
+"name": &"tesoura",
+"speed": 5.0
+}]
+
+[node name="main_game" type="Node2D"]
+y_sort_enabled = true
+
+[node name="ToolSelector" type="Node2D" parent="." node_paths=PackedStringArray("hand_sprite")]
+script = ExtResource("4_irrf2")
+hand_sprite = NodePath("../Hand/HandSprite")
+
+[node name="Pinca" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
+position = Vector2(117, 443)
+
+[node name="Sprite2D" parent="ToolSelector/Pinca" index="0"]
+texture = ExtResource("5_s87mg")
+
+[node name="Spray" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
+position = Vector2(117, 532)
+
+[node name="Sprite2D" parent="ToolSelector/Spray" index="0"]
+texture = ExtResource("7_l774p")
+
+[node name="Tesoura" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
+position = Vector2(118, 620)
+
+[node name="Sprite2D" parent="ToolSelector/Tesoura" index="0"]
+texture = ExtResource("6_ebk6p")
+
+[node name="OperatingTray" type="Node2D" parent="."]
+unique_name_in_owner = true
+z_index = -1
+position = Vector2(657, 385)
+script = ExtResource("1_b4n6q")
+
+[node name="Tray" type="Sprite2D" parent="OperatingTray"]
+position = Vector2(971, 0)
+scale = Vector2(3, 1.5)
+texture = ExtResource("2_gl27v")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="OperatingTray"]
+libraries = {
+&"": SubResource("AnimationLibrary_ag8io")
+}
+
+[node name="Hand" type="Node2D" parent="."]
+script = ExtResource("8_r8wn4")
+
+[node name="HandSprite" type="AnimatedSprite2D" parent="Hand"]
+sprite_frames = SubResource("SpriteFrames_n1acc")
+animation = &"tesoura"
+autoplay = "empty"
+
+[node name="arm" type="Line2D" parent="."]
+width = 30.0
+default_color = Color(0.9490196, 0.68235296, 0.6, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+script = ExtResource("13_4y18v")
+
+[node name="PatientManager" type="Node" parent="."]
+script = ExtResource("3_4y18v")
+
+[editable path="ToolSelector/Pinca"]
+[editable path="ToolSelector/Spray"]
+[editable path="ToolSelector/Tesoura"]

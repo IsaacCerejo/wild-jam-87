@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kdeakq4xrq8s"
-path="res://.godot/imported/hand_pinça.png-3c1698d154916111906236759bcdee63.ctex"
+path="res://.godot/imported/hand_pinca.png-acd2d59139263c03107ac5fc875a5d9d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/hand/hand_pinça.png"
-dest_files=["res://.godot/imported/hand_pinça.png-3c1698d154916111906236759bcdee63.ctex"]
+source_file="res://assets/hand/hand_pinca.png"
+dest_files=["res://.godot/imported/hand_pinca.png-acd2d59139263c03107ac5fc875a5d9d.ctex"]
 
 [params]
 
