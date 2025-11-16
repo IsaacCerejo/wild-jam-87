@@ -9,11 +9,13 @@ const SCENE_UIDS = {
 	"START_MENU": "uid://dolritqgtceml",
 	"MAIN_GAME": "uid://fwifwdj0klmd",
 	"MAIN_GAME_UI": "uid://byg7j72h7pac6",
+	"LOSE_SCREEN": "uid://dfox7aapmjh2k"
 }
 
 # Game Controller
 var game_controller: GameController
 var player: Player
+var score: int = 0
 
 # Settings
 var music_step: int = 9
