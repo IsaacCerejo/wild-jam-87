@@ -4,7 +4,9 @@ class_name Tool
 enum ToolType {
 	PINCA,
 	SPRAY,
-	TESOURA
+	TESOURA,
+	DRILL,
+	HAMMER
 }
 
 signal picked_up(tool: Tool)

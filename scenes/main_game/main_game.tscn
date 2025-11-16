@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://fwifwdj0klmd"]
+[gd_scene load_steps=23 format=3 uid="uid://fwifwdj0klmd"]
 
 [ext_resource type="Script" uid="uid://crishcwx7m46w" path="res://scripts/main_game/operating_tray.gd" id="1_b4n6q"]
 [ext_resource type="Texture2D" uid="uid://bce0lpb8ourlr" path="res://assets/background/background.png" id="1_s87mg"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://b0788qfn374ll" path="res://assets/tools/tool_pinça.png" id="5_s87mg"]
 [ext_resource type="Texture2D" uid="uid://uuela3hv3sev" path="res://assets/tools/tool_tesoura.png" id="6_ebk6p"]
 [ext_resource type="PackedScene" uid="uid://cfynw7ir82qmn" path="res://scenes/main_game/tool.tscn" id="7_b4n6q"]
+[ext_resource type="Texture2D" uid="uid://dhupda6d3r6f1" path="res://assets/tools/tool_hammer.png" id="7_ebk6p"]
 [ext_resource type="Texture2D" uid="uid://d1wspkbkkygsv" path="res://assets/tools/tool_spray.png" id="7_l774p"]
 [ext_resource type="PackedScene" uid="uid://cfxgo5ye53do0" path="res://scenes/main_game/mushroom.tscn" id="8_irrf2"]
 [ext_resource type="Script" uid="uid://vta4rkxv4wv0" path="res://scripts/main_game/player.gd" id="8_r8wn4"]
@@ -81,6 +82,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("12_gxjft")
+}],
+"loop": true,
+"name": &"hammer",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("10_fxa2l")
 }],
 "loop": true,
@@ -116,24 +125,31 @@ texture = ExtResource("1_s87mg")
 script = ExtResource("4_irrf2")
 
 [node name="Pinca" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
-position = Vector2(117, 443)
+position = Vector2(1096, 79)
 
 [node name="Sprite2D" parent="ToolSelector/Pinca" index="0"]
 texture = ExtResource("5_s87mg")
 
 [node name="Spray" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
-position = Vector2(117, 532)
+position = Vector2(1044, 587)
 type = 1
 
 [node name="Sprite2D" parent="ToolSelector/Spray" index="0"]
 texture = ExtResource("7_l774p")
 
 [node name="Tesoura" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
-position = Vector2(118, 620)
+position = Vector2(131, 632)
 type = 2
 
 [node name="Sprite2D" parent="ToolSelector/Tesoura" index="0"]
 texture = ExtResource("6_ebk6p")
+
+[node name="Hammer" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
+position = Vector2(774, 663)
+type = 4
+
+[node name="Sprite2D" parent="ToolSelector/Hammer" index="0"]
+texture = ExtResource("7_ebk6p")
 
 [node name="OperatingTray" type="Node2D" parent="."]
 unique_name_in_owner = true
@@ -160,7 +176,7 @@ script = ExtResource("8_r8wn4")
 unique_name_in_owner = true
 position = Vector2(32, 28)
 sprite_frames = SubResource("SpriteFrames_n1acc")
-animation = &"empty"
+animation = &"hammer"
 autoplay = "empty"
 
 [node name="arm" type="Line2D" parent="Player"]
@@ -177,3 +193,4 @@ script = ExtResource("3_4y18v")
 [editable path="ToolSelector/Pinca"]
 [editable path="ToolSelector/Spray"]
 [editable path="ToolSelector/Tesoura"]
+[editable path="ToolSelector/Hammer"]
