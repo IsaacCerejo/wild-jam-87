@@ -22,7 +22,6 @@ mouse_filter = 2
 max_value = 60.0
 show_percentage = false
 script = ExtResource("1_b1iqi")
-time_limit = 10.0
 
 [node name="Pause" parent="." instance=ExtResource("1_ifxwi")]
 layout_mode = 0
