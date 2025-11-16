@@ -180,11 +180,12 @@ animation = &"hammer"
 autoplay = "empty"
 
 [node name="arm" type="Line2D" parent="Player"]
-width = 30.0
+width = 40.0
 default_color = Color(0.9490196, 0.68235296, 0.6, 1)
 joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
+round_precision = 16
 script = ExtResource("13_4y18v")
 
 [node name="PatientManager" type="Node" parent="."]
