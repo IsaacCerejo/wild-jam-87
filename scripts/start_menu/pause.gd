@@ -36,4 +36,4 @@ func _on_how_to_play_button_pressed() -> void:
 func _on_main_menu_button_pressed() -> void:
 	AudioManager.create_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.BUTTON_CLICK)
 	get_tree().paused = false
-	Global.restart()
+	await Global.game_controller.change_scene(Global.SCENE_UIDS.START_MENU, "", TransitionSettings.TRANSITION_TYPE.FADE_TO_FADE)

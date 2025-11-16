@@ -1,13 +1,13 @@
 extends Node2D
+class_name OperatingTray
 
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass	
+	pass
 
 func spawn():
-
 	animation_player.play("Slide in")
 	# lógica de gerar um paciente and such
 

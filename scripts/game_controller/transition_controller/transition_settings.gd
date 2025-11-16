@@ -10,10 +10,10 @@ enum TRANSITION_TYPE {
 
 ## Type of transition effect to use.
 @export var type: TRANSITION_TYPE = TRANSITION_TYPE.NONE
-## Material used for the "out" transition effect.
-@export var material_out: ShaderMaterial
-## Material used for the "in" transition effect.
-@export var material_in: ShaderMaterial
+## Shader material used for the "out" transition effect.
+@export var shader_material_out: ShaderMaterial
+## Shader material used for the "in" transition effect.
+@export var shader_material_in: ShaderMaterial
 ## Duration of the transition effect in seconds.
 @export var duration: float = 0.5
 ## Easing function for the transition.
