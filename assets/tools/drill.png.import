@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dffmtdsldh8bb"
-path="res://.godot/imported/lesbian.png-ab0e1542b6f9ff18e96396e814612c04.ctex"
+uid="uid://cyhrd3h7qpjot"
+path="res://.godot/imported/drill.png-007838bcd920f2e623edb0507a796aaf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/lesbian.png"
-dest_files=["res://.godot/imported/lesbian.png-ab0e1542b6f9ff18e96396e814612c04.ctex"]
+source_file="res://assets/tools/drill.png"
+dest_files=["res://.godot/imported/drill.png-007838bcd920f2e623edb0507a796aaf.ctex"]
 
 [params]
 
