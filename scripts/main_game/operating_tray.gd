@@ -12,6 +12,6 @@ func spawn():
 	# lógica de gerar um paciente and such
 
 func cured():
-	animation_player.play("Slide out")
+	animation_player.play_backwards("Slide in")
 	# handle and cleanup
 	queue_free() # mayhaps
