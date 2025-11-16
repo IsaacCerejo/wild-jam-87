@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://byg7j72h7pac6"]
 
-[ext_resource type="Script" uid="uid://dao7fj2pl4bg3" path="res://scripts/time_bar.gd" id="1_b1iqi"]
+[ext_resource type="Script" uid="uid://dao7fj2pl4bg3" path="res://scripts/main_game/time_bar.gd" id="1_b1iqi"]
 [ext_resource type="PackedScene" uid="uid://boaytsxvldcf8" path="res://scenes/main_game/pause.tscn" id="1_ifxwi"]
 
 [node name="MainGameUI" type="Control"]

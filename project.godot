@@ -22,7 +22,7 @@ buses/default_bus_layout="res://resources/default_bus_layout.tres"
 [autoload]
 
 Global="*res://scripts/autoloads/global.gd"
-AudioManager="*res://scenes/audio_manager.tscn"
+AudioManager="*res://scenes/audio_manager/audio_manager.tscn"
 
 [display]
 
