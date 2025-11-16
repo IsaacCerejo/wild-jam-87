@@ -1,9 +1,5 @@
 extends Node2D
 
-@export var hand_sprite: AnimatedSprite2D
-
-var _active_tool: Tool = null
-
 func _ready() -> void:
 	for child in get_children():
 		if child is Tool:
@@ -14,9 +10,7 @@ func _ready() -> void:
 # Signal callbacks
 func _on_tool_picked_up(tool: Tool):
 	tool.hide()
-	_active_tool = tool
-	assert(hand_sprite.sprite_frames.has_animation(_active_tool.name.to_lower()))
-	hand_sprite.play(_active_tool.name.to_lower())
+	Global.player._active_tool = tool
 	for child in get_children():
-		if child is Tool and child != _active_tool:
+		if child is Tool and child != tool:
 			child.show()

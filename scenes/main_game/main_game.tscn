@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://fwifwdj0klmd"]
+[gd_scene load_steps=21 format=3 uid="uid://fwifwdj0klmd"]
 
 [ext_resource type="Script" uid="uid://crishcwx7m46w" path="res://scripts/main_game/operating_tray.gd" id="1_b4n6q"]
 [ext_resource type="Texture2D" uid="uid://dkp00siemeoxb" path="res://assets/operating_tray/tray.png" id="2_gl27v"]
@@ -8,7 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://uuela3hv3sev" path="res://assets/tools/tool_tesoura.png" id="6_ebk6p"]
 [ext_resource type="PackedScene" uid="uid://cfynw7ir82qmn" path="res://scenes/main_game/tool.tscn" id="7_b4n6q"]
 [ext_resource type="Texture2D" uid="uid://d1wspkbkkygsv" path="res://assets/tools/tool_spray.png" id="7_l774p"]
-[ext_resource type="Script" uid="uid://vta4rkxv4wv0" path="res://scripts/main_game/hand.gd" id="8_r8wn4"]
+[ext_resource type="PackedScene" uid="uid://cfxgo5ye53do0" path="res://scenes/main_game/mushroom.tscn" id="8_irrf2"]
+[ext_resource type="Script" uid="uid://vta4rkxv4wv0" path="res://scripts/main_game/player.gd" id="8_r8wn4"]
 [ext_resource type="Texture2D" uid="uid://dewjajqggymbo" path="res://assets/hand/hand_empty.png" id="9_kwr1i"]
 [ext_resource type="Texture2D" uid="uid://kdeakq4xrq8s" path="res://assets/hand/hand_pinca.png" id="10_fxa2l"]
 [ext_resource type="Texture2D" uid="uid://chxpexxxkxr2n" path="res://assets/hand/hand_spray.png" id="11_feobv"]
@@ -105,9 +106,8 @@ animations = [{
 [node name="main_game" type="Node2D"]
 y_sort_enabled = true
 
-[node name="ToolSelector" type="Node2D" parent="." node_paths=PackedStringArray("hand_sprite")]
+[node name="ToolSelector" type="Node2D" parent="."]
 script = ExtResource("4_irrf2")
-hand_sprite = NodePath("../Hand/HandSprite")
 
 [node name="Pinca" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
 position = Vector2(117, 443)
@@ -117,12 +117,14 @@ texture = ExtResource("5_s87mg")
 
 [node name="Spray" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
 position = Vector2(117, 532)
+type = 1
 
 [node name="Sprite2D" parent="ToolSelector/Spray" index="0"]
 texture = ExtResource("7_l774p")
 
 [node name="Tesoura" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
 position = Vector2(118, 620)
+type = 2
 
 [node name="Sprite2D" parent="ToolSelector/Tesoura" index="0"]
 texture = ExtResource("6_ebk6p")
@@ -138,20 +140,25 @@ position = Vector2(971, 0)
 scale = Vector2(3, 1.5)
 texture = ExtResource("2_gl27v")
 
+[node name="Mushroom" parent="OperatingTray" instance=ExtResource("8_irrf2")]
+allowed_tool_types = Array[int]([0])
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="OperatingTray"]
 libraries = {
 &"": SubResource("AnimationLibrary_ag8io")
 }
 
-[node name="Hand" type="Node2D" parent="."]
+[node name="Player" type="Node2D" parent="."]
 script = ExtResource("8_r8wn4")
 
-[node name="HandSprite" type="AnimatedSprite2D" parent="Hand"]
+[node name="HandSprite" type="AnimatedSprite2D" parent="Player"]
+unique_name_in_owner = true
+position = Vector2(32, 28)
 sprite_frames = SubResource("SpriteFrames_n1acc")
-animation = &"tesoura"
+animation = &"empty"
 autoplay = "empty"
 
-[node name="arm" type="Line2D" parent="."]
+[node name="arm" type="Line2D" parent="Player"]
 width = 30.0
 default_color = Color(0.9490196, 0.68235296, 0.6, 1)
 joint_mode = 2

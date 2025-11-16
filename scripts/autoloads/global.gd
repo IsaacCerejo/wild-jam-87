@@ -13,6 +13,7 @@ const SCENE_UIDS = {
 
 # Game Controller
 var game_controller: GameController
+var player: Player
 
 # Settings
 var music_step: int = 9
