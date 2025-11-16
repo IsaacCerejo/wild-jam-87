@@ -9,6 +9,10 @@ const SCENE_UIDS = {
 	"MUSHROOM": "uid://cfxgo5ye53do0"
 }
 
+const MATERIAL_UIDS = {
+	"OUTLINE_MATERIAL": "uid://bj6x4cma75nay"
+}
+
 # Game Controller
 var game_controller: GameController
 var player: Player

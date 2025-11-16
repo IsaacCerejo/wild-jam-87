@@ -11,8 +11,18 @@ enum ToolType {
 
 signal picked_up(tool: Tool)
 
+const OUTLINE_MATERIAL: ShaderMaterial = preload(Global.MATERIAL_UIDS.OUTLINE_MATERIAL)
+
 @export var type: ToolType
+
+@onready var sprite_2d: Sprite2D = %Sprite2D
 
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		picked_up.emit(self)
+
+func _on_mouse_exited() -> void:
+	sprite_2d.material = null
+
+func _on_mouse_entered() -> void:
+	sprite_2d.material = OUTLINE_MATERIAL
