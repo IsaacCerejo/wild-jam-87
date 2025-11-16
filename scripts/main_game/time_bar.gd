@@ -16,6 +16,9 @@ func _ready() -> void:
 	Global.time_bar = self
 	start_timer()
 
+func _exit_tree() -> void:
+	Global.time_bar = null
+
 func _process(delta: float) -> void:
 	if _finished:
 		return
