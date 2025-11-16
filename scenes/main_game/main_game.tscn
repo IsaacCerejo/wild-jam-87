@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://crishcwx7m46w" path="res://scripts/main_game/operating_tray.gd" id="1_b4n6q"]
 [ext_resource type="Texture2D" uid="uid://bce0lpb8ourlr" path="res://assets/background/background.png" id="1_s87mg"]
-[ext_resource type="Texture2D" uid="uid://dkp00siemeoxb" path="res://assets/operating_tray/tray.png" id="2_gl27v"]
 [ext_resource type="Script" uid="uid://c0qla4xs5qtuw" path="res://scripts/main_game/patient_manager.gd" id="3_4y18v"]
 [ext_resource type="Script" uid="uid://0ua5elcqwham" path="res://scripts/main_game/tool_selector.gd" id="4_irrf2"]
 [ext_resource type="Texture2D" uid="uid://b0788qfn374ll" path="res://assets/tools/tool_pinça.png" id="5_s87mg"]
@@ -11,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://d1wspkbkkygsv" path="res://assets/tools/tool_spray.png" id="7_l774p"]
 [ext_resource type="PackedScene" uid="uid://cfxgo5ye53do0" path="res://scenes/main_game/mushroom.tscn" id="8_irrf2"]
 [ext_resource type="Script" uid="uid://vta4rkxv4wv0" path="res://scripts/main_game/player.gd" id="8_r8wn4"]
+[ext_resource type="Texture2D" uid="uid://cep1fth1pjb7p" path="res://assets/background/cama.png" id="8_s87mg"]
 [ext_resource type="Texture2D" uid="uid://dewjajqggymbo" path="res://assets/hand/hand_empty.png" id="9_kwr1i"]
 [ext_resource type="Texture2D" uid="uid://kdeakq4xrq8s" path="res://assets/hand/hand_pinca.png" id="10_fxa2l"]
 [ext_resource type="Texture2D" uid="uid://chxpexxxkxr2n" path="res://assets/hand/hand_spray.png" id="11_feobv"]
@@ -143,8 +143,7 @@ script = ExtResource("1_b4n6q")
 
 [node name="Tray" type="Sprite2D" parent="OperatingTray"]
 position = Vector2(971, 0)
-scale = Vector2(3, 1.5)
-texture = ExtResource("2_gl27v")
+texture = ExtResource("8_s87mg")
 
 [node name="Mushroom" parent="OperatingTray" instance=ExtResource("8_irrf2")]
 allowed_tool_types = Array[int]([0])
