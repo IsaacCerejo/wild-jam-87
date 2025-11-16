@@ -6,3 +6,5 @@
 script = ExtResource("1_s1xdg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Skeleton2D" type="Skeleton2D" parent="Sprite2D"]
