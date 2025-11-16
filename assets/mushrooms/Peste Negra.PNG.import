@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk30wqwr1hfke"
-path="res://.godot/imported/Tall Mushroom 2head.PNG-1832d6dfd5ddb9d9276516d6340baf5b.ctex"
+uid="uid://by7xnoiugdjn7"
+path="res://.godot/imported/Peste Negra.PNG-c735252b72771d60db337a7602bd421f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Mushrooms/Tall Mushroom 2head.PNG"
-dest_files=["res://.godot/imported/Tall Mushroom 2head.PNG-1832d6dfd5ddb9d9276516d6340baf5b.ctex"]
+source_file="res://assets/mushrooms/Peste Negra.PNG"
+dest_files=["res://.godot/imported/Peste Negra.PNG-c735252b72771d60db337a7602bd421f.ctex"]
 
 [params]
 

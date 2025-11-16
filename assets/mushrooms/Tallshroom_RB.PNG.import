@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c512msf6winmo"
-path="res://.godot/imported/Face Mushroom.PNG-bb8e47467026ab8e115d8e25e5f0cca4.ctex"
+uid="uid://6gc5emte74i3"
+path="res://.godot/imported/Tallshroom_RB.PNG-4c27366486a3563af7b26314f436f752.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Mushrooms/Face Mushroom.PNG"
-dest_files=["res://.godot/imported/Face Mushroom.PNG-bb8e47467026ab8e115d8e25e5f0cca4.ctex"]
+source_file="res://assets/mushrooms/Tallshroom_RB.PNG"
+dest_files=["res://.godot/imported/Tallshroom_RB.PNG-4c27366486a3563af7b26314f436f752.ctex"]
 
 [params]
 

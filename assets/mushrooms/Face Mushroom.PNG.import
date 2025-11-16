@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv5f11hh5c8c1"
-path="res://.godot/imported/Worm Mushroom.PNG-3a19c2a97bf4774ad603451e150c4019.ctex"
+uid="uid://c512msf6winmo"
+path="res://.godot/imported/Face Mushroom.PNG-80e051c20091079a6d14a5c5858a63b6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Mushrooms/Worm Mushroom.PNG"
-dest_files=["res://.godot/imported/Worm Mushroom.PNG-3a19c2a97bf4774ad603451e150c4019.ctex"]
+source_file="res://assets/mushrooms/Face Mushroom.PNG"
+dest_files=["res://.godot/imported/Face Mushroom.PNG-80e051c20091079a6d14a5c5858a63b6.ctex"]
 
 [params]
 

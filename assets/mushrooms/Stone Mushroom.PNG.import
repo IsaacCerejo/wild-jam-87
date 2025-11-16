@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cpvqwpxftai1k"
-path="res://.godot/imported/Stone Mushroom.PNG-3c3f18d90f52089dfefd91f5945e4633.ctex"
+path="res://.godot/imported/Stone Mushroom.PNG-09a6fc335896b01d3374f87f4ced362c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Mushrooms/Stone Mushroom.PNG"
-dest_files=["res://.godot/imported/Stone Mushroom.PNG-3c3f18d90f52089dfefd91f5945e4633.ctex"]
+source_file="res://assets/mushrooms/Stone Mushroom.PNG"
+dest_files=["res://.godot/imported/Stone Mushroom.PNG-09a6fc335896b01d3374f87f4ced362c.ctex"]
 
 [params]
 
