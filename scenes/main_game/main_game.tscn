@@ -97,7 +97,6 @@ animations = [{
 }]
 
 [node name="MainGame" type="Node2D"]
-y_sort_enabled = true
 
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -1
