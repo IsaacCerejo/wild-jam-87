@@ -4,6 +4,16 @@ class_name Mushroom
 # Signal emitted when the mushroom is picked with the correct tool
 signal picked(_mushroom: Mushroom)
 
+enum MushroomType {
+	TALL,
+	BUBONIC,
+	BALLOON,
+	STONE,
+	SQUISHY
+}
+
+@export var mushroom_types: Array[Texture2D] = []
+
 @export var allowed_tool_types: Array[Tool.ToolType] = []
 @export var time_penalty: float = 5.0
 
@@ -28,6 +38,8 @@ signal picked(_mushroom: Mushroom)
 
 var _busy: bool = false
 
+func _ready() -> void:
+	sprite_2d.set_texture(mushroom_types[allowed_tool_types[0]])
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if _busy:
 		return
