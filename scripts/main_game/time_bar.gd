@@ -4,13 +4,21 @@ class_name TimeBar
 @export var time_limit: float = 60.0:
 	set = set_time_limit
 
+# Time it takes to reset the bar visually
 @export var reset_duration: float = 0.5
+
+@export_group("Warning Animation")
+@export var warning_rotate_amount: float = 2.5 # degrees
+@export var warning_rotate_duration: float = 0.05 # seconds per tween step
+@export var warning_scale_up: Vector2 = Vector2(1.02, 0.98)
+@export var warning_scale_duration: float = 0.05
 
 var _time_left: float = 0.0:
 	set = set_time_left,
 	get = get_time_left
 
 var _finished: bool = false
+var _warn_played: bool = false
 
 func _ready() -> void:
 	Global.time_bar = self
@@ -26,6 +34,10 @@ func _process(delta: float) -> void:
 	if _time_left > 0:
 		_time_left -= delta
 		value = time_limit - _time_left
+		# Play warning animation at half time
+		if not _warn_played and _time_left <= time_limit * 0.5:
+			_warn_played = true
+			_play_warning_animation()
 	else:
 		_on_time_bar_finished()
 
@@ -57,9 +69,27 @@ func reset_timer_animated() -> void:
 
 func start_timer() -> void:
 	_finished = false
+	_warn_played = false
 	_time_left = time_limit
 	max_value = time_limit
 	value = 0
+
+# Private functions
+func _play_warning_animation() -> void:
+	pivot_offset = size / 2 # center pivot for shake/scale
+
+	var tween := create_tween()
+
+	# Rotation shake
+	tween.parallel().tween_property(self, "rotation_degrees", -warning_rotate_amount, warning_rotate_duration)
+	tween.parallel().tween_property(self, "scale", warning_scale_up, warning_scale_duration)
+
+	# Continue rotation back
+	tween.tween_property(self, "rotation_degrees", warning_rotate_amount, warning_rotate_duration)
+	tween.tween_property(self, "rotation_degrees", 0.0, warning_rotate_duration)
+	tween.tween_property(self, "scale", Vector2.ONE, warning_scale_duration)
+
+	tween.play()
 
 # Signal callbacks
 func _on_time_bar_finished() -> void:
