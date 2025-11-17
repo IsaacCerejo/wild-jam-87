@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://qe1rt7g386g7"]
+
+[ext_resource type="Script" uid="uid://1yeioi72c6jd" path="res://scripts/timing_mini_game.gd" id="1_nrtvx"]
+[ext_resource type="Texture2D" uid="uid://8cmham0vgtd8" path="res://assets/circle.png" id="1_snhvf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nrtvx"]
+radius = 51.088158
+
+[node name="TimingMiniGame" type="Node2D"]
+script = ExtResource("1_nrtvx")
+
+[node name="Area2D" type="Area2D" parent="."]
+unique_name_in_owner = true
+scale = Vector2(2, 2)
+
+[node name="CircleShrink" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("1_snhvf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_nrtvx")
+
+[node name="CorrectCircle" type="Sprite2D" parent="."]
+modulate = Color(0, 0.7172891, 0.41734874, 1)
+texture = ExtResource("1_snhvf")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

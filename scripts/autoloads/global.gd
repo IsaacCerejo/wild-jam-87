@@ -12,6 +12,7 @@ const SCENE_UIDS = {
 	"BALLOON_MUSHROOM": "uid://i0birjinl1cf",
 	"BUBONIC_MUSHROOM": "uid://8wqjjiw2tak3",
 	"SQUISHY_MUSHROOM": "uid://c6mosdrb4vnvb",
+	"TIMING_MINI_GAME": "uid://qe1rt7g386g7"
 }
 
 const MATERIAL_UIDS = {
@@ -49,6 +50,12 @@ func _input(event: InputEvent) -> void:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 		else:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+
+func add_score(value: int) -> void:
+	score += value
+
+func reset_score() -> void:
+	score = 0
 
 func add_time_to_score() -> void:
 	if time_bar:

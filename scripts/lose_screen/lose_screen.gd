@@ -7,7 +7,7 @@ func _ready() -> void:
 	score_label.text = "[wave amp=50.0 freq=5.0 connected=1][rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0]%d[/rainbow]" % Global.score
 
 func _exit_tree() -> void:
-	Global.score = 0
+	Global.reset_score()
 
 # Signal callbacks
 func _on_main_menu_button_pressed() -> void:
