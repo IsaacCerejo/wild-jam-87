@@ -100,6 +100,10 @@ func _correct_animation() -> void:
 func _wrong_animation() -> void:
 	_busy = true
 
+	# Camera Shake
+	if Global.camera != null:
+		Global.camera.screen_shake()
+
 	var tween: Tween = create_tween()
 
 	# Flashing
