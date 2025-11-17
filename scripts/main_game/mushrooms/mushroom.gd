@@ -8,6 +8,7 @@ const OUTLINE_MATERIAL: ShaderMaterial = preload(Global.MATERIAL_UIDS.OUTLINE_MA
 const FLASH_MATERIAL: ShaderMaterial = preload(Global.MATERIAL_UIDS.FLASH_MATERIAL)
 
 @export var allowed_tool_types: Array[Tool.ToolType] = []
+@export var score_value: int = 10
 @export var time_penalty: float = 5.0
 
 @export_group("Correct Animation")
@@ -38,16 +39,21 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 	if _busy:
 		return
 
-	if _on_action_performed(event):
-		if Global.player.get_active_tool() != null:
-			if allowed_tool_types.has(Global.player.get_active_tool().type):
-				picked.emit(self)
-				await _correct_animation()
-				queue_free()
-			else:
-				if Global.time_bar != null:
-					Global.time_bar.add_time(-time_penalty)
-				await _wrong_animation()
+	var active_tool = Global.player.get_active_tool()
+	var is_tool_correct: bool = active_tool != null and allowed_tool_types.has(active_tool.type)
+
+	if is_tool_correct:
+		@warning_ignore("REDUNDANT_AWAIT")
+		if await _on_action_performed(event):
+			picked.emit(self)
+			Global.add_score(score_value)
+			await _correct_animation()
+			queue_free()
+	else:
+		if (event is InputEventMouseButton and event.pressed):
+			if Global.time_bar != null:
+				Global.time_bar.add_time(-time_penalty)
+			await _wrong_animation()
 
 func _correct_animation() -> void:
 	_busy = true
@@ -141,7 +147,7 @@ func _wrong_animation() -> void:
 
 # Action performed check. Function meant to be overridden.
 func _on_action_performed(event: InputEvent) -> bool:
-	return event is InputEventMouseButton and event.pressed
+	return (event is InputEventMouseButton and event.pressed)
 
 # Signal callbacks
 
