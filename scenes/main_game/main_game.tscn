@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://fwifwdj0klmd"]
+[gd_scene load_steps=28 format=3 uid="uid://fwifwdj0klmd"]
 
 [ext_resource type="Texture2D" uid="uid://bce0lpb8ourlr" path="res://assets/background/background.png" id="1_s87mg"]
 [ext_resource type="Script" uid="uid://c0qla4xs5qtuw" path="res://scripts/main_game/patient_manager.gd" id="3_4y18v"]
@@ -111,6 +111,13 @@ _data = {
 &"slide_in": SubResource("Animation_8ebjq")
 }
 
+[sub_resource type="Environment" id="Environment_r8wn4"]
+background_mode = 3
+glow_enabled = true
+fog_mode = 1
+fog_density = 1.0
+adjustment_enabled = true
+
 [node name="MainGame" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
@@ -212,6 +219,9 @@ limit_top = 0
 limit_right = 1280
 limit_bottom = 720
 script = ExtResource("19_r8wn4")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_r8wn4")
 
 [connection signal="input_event" from="Lantern" to="Lantern" method="_on_input_event"]
 
