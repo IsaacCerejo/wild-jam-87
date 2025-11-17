@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://fwifwdj0klmd"]
+[gd_scene load_steps=28 format=3 uid="uid://fwifwdj0klmd"]
 
 [ext_resource type="Texture2D" uid="uid://bce0lpb8ourlr" path="res://assets/background/background.png" id="1_s87mg"]
 [ext_resource type="Script" uid="uid://c0qla4xs5qtuw" path="res://scripts/main_game/patient_manager.gd" id="3_4y18v"]
@@ -12,13 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://cep1fth1pjb7p" path="res://assets/background/cama.png" id="8_s87mg"]
 [ext_resource type="Texture2D" uid="uid://dewjajqggymbo" path="res://assets/hand/hand_empty.png" id="9_kwr1i"]
 [ext_resource type="Texture2D" uid="uid://kdeakq4xrq8s" path="res://assets/hand/hand_pinca.png" id="10_fxa2l"]
-[ext_resource type="PackedScene" uid="uid://mtilpmnd7m7y" path="res://scenes/main_game/patient.tscn" id="10_s87mg"]
 [ext_resource type="Texture2D" uid="uid://chxpexxxkxr2n" path="res://assets/hand/hand_spray.png" id="11_feobv"]
 [ext_resource type="Texture2D" uid="uid://d3svvioh7o10y" path="res://assets/hand/hand_tesoura.png" id="12_gxjft"]
 [ext_resource type="Script" uid="uid://ybxq7x6jqqc6" path="res://scripts/main_game/arm.gd" id="13_4y18v"]
 [ext_resource type="Texture2D" uid="uid://cq78o0i5acgfx" path="res://assets/icons/icon.svg" id="14_ebk6p"]
 [ext_resource type="Texture2D" uid="uid://cyhrd3h7qpjot" path="res://assets/tools/drill.png" id="14_kwr1i"]
-[ext_resource type="Script" path="res://scripts/main_game/lantern.gd" id="14_r8wn4"]
+[ext_resource type="Script" uid="uid://b1allxwp806s0" path="res://scripts/main_game/lantern.gd" id="14_r8wn4"]
 [ext_resource type="Script" uid="uid://64asebo8pdx5" path="res://scripts/main_game/camera_shake.gd" id="19_r8wn4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n1acc"]
@@ -219,11 +218,7 @@ script = ExtResource("3_4y18v")
 [node name="Tray" type="Sprite2D" parent="PatientManager"]
 position = Vector2(971, 0)
 texture = ExtResource("8_s87mg")
-
-[node name="Patient" parent="PatientManager/Tray" instance=ExtResource("10_s87mg")]
-unique_name_in_owner = true
-position = Vector2(-3, -80)
-mushroom_count = 12
+offset = Vector2(2, 86)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="PatientManager"]
 unique_name_in_owner = true

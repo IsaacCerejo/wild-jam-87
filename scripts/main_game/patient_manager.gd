@@ -1,14 +1,22 @@
 extends Node2D
 class_name PatientManager
 
+@onready var tray: Sprite2D = $Tray
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
-@onready var patient: Patient = %Patient
+
+var patient: Patient
+
+const PATIENT_SCENE: PackedScene = preload(Global.SCENE_UIDS.PATIENT)
 
 func _ready() -> void:
-	patient.cured.connect(_on_patient_cured)
-	_show_patient()
+	_new_patient()
 
-func _show_patient() -> void:
+func _new_patient() -> void:
+	patient = PATIENT_SCENE.instantiate() as Patient
+	tray.add_child(patient)
+	patient.cured.connect(_on_patient_cured)
+	#TODO scale mushrooms by round
+	patient.mushroom_count = 12
 	patient.generate_mushrooms()
 
 	animation_player.play("slide_in")
@@ -25,5 +33,6 @@ func _on_patient_cured() -> void:
 
 	animation_player.play_backwards("slide_in")
 	await animation_player.animation_finished
-
-	_show_patient()
+	patient.queue_free()
+	
+	_new_patient()
