@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://mtilpmnd7m7y"]
+[gd_scene load_steps=10 format=3 uid="uid://mtilpmnd7m7y"]
 
 [ext_resource type="Script" uid="uid://c3wghgg2g717r" path="res://scripts/main_game/patient.gd" id="1_s1xdg"]
 [ext_resource type="Texture2D" uid="uid://crryfli08nlnx" path="res://assets/paciente/paciente.png" id="2_3knpu"]
@@ -9,20 +9,27 @@
 [ext_resource type="Texture2D" uid="uid://banij4qxjani5" path="res://assets/paciente/leftleg.png" id="7_5mt75"]
 [ext_resource type="Texture2D" uid="uid://4spu5jp4j6s5" path="res://assets/paciente/rightleg.png" id="8_q6v5p"]
 
+[sub_resource type="SkeletonModificationStack2D" id="SkeletonModificationStack2D_3knpu"]
+
 [node name="Patient" type="Node2D"]
 script = ExtResource("1_s1xdg")
-mushroom_count = 5
+mushroom_count = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.38039216)
 position = Vector2(1, 0)
 texture = ExtResource("2_3knpu")
 
+[node name="Skeleton2D" type="Skeleton2D" parent="Sprite2D"]
+modification_stack = SubResource("SkeletonModificationStack2D_3knpu")
+
 [node name="head" type="Sprite2D" parent="."]
 position = Vector2(-240, 15)
 texture = ExtResource("4_up4j8")
 
-[node name="torso" type="Sprite2D" parent="."]
+[node name="RigidBody2D3" type="RigidBody2D" parent="."]
+
+[node name="torso" type="Sprite2D" parent="RigidBody2D3"]
 position = Vector2(-66, 42)
 texture = ExtResource("3_rujrq")
 
@@ -43,58 +50,20 @@ position = Vector2(28, 42)
 texture = ExtResource("8_q6v5p")
 offset = Vector2(115, 32)
 
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+position = Vector2(2, 35)
+
 [node name="MushroomAreas" type="Node2D" parent="."]
 
-[node name="LeftLegArea" type="Line2D" parent="MushroomAreas"]
-position = Vector2(90, -54)
-points = PackedVector2Array(17, 0, 102, -25, 183, -44)
-width = 35.0
-default_color = Color(1, 0, 0, 0.20392157)
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="LeftLegArea2" type="Line2D" parent="MushroomAreas"]
-position = Vector2(-247, 29)
-points = PackedVector2Array(29, 0, -7, -1, -23, -26, -1, -51, 31, -41, 55, -22)
-width = 35.0
-default_color = Color(1, 0, 0, 0.20392157)
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="LeftArmArea" type="Line2D" parent="MushroomAreas"]
-position = Vector2(-158, -63.000008)
-rotation = -0.20234607
-points = PackedVector2Array(17, 0, 102, -25, 177.13339, -47.368248)
-width = 35.0
-default_color = Color(1, 0, 0, 0.20392157)
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="RightArmArea" type="Line2D" parent="MushroomAreas"]
-position = Vector2(-150.00002, 58.000004)
-rotation = 0.7707949
-points = PackedVector2Array(17, 0, 102, -25, 177.13339, -47.368248)
-width = 35.0
-default_color = Color(1, 0, 0, 0.20392157)
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="RightLegArea" type="Line2D" parent="MushroomAreas"]
-position = Vector2(107.99999, 62.999996)
-rotation = 0.52074564
-points = PackedVector2Array(0.7398529, -2.7299538, 84.18121, -24.073383, 163.28531, -42.92918)
+[node name="Line2D" type="Line2D" parent="MushroomAreas"]
+position = Vector2(97, -56)
+points = PackedVector2Array(-1, 4, 91, -22, 183, -44)
 width = 35.01
 default_color = Color(1, 0, 0, 0.20392157)
-begin_cap_mode = 2
-end_cap_mode = 2
 
-[node name="TorsoArea" type="Line2D" parent="MushroomAreas"]
-position = Vector2(-19, -17)
-rotation = 3.642796
-points = PackedVector2Array(10.805092, 8.7892, 66.531, -15.9256735, 123.216354, -46.462093, 84.16695, -110.52568, 32.24762, -78.44163, -17.65642, -53.04009)
-width = 60.0
+[node name="Line2D2" type="Line2D" parent="MushroomAreas"]
+position = Vector2(99, 57.999996)
+rotation = 0.52074564
+points = PackedVector2Array(-1, 4, 91, -22, 183, -44)
+width = 35.01
 default_color = Color(1, 0, 0, 0.20392157)
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
