@@ -49,6 +49,10 @@ func set_time_left(new_time_left: float) -> void:
 	_time_left = clamp(new_time_left, 0.0, time_limit)
 	value = time_limit - _time_left
 
+func add_time(amount: float) -> void:
+	_time_left = clamp(_time_left + amount, 0.0, time_limit)
+	value = time_limit - _time_left
+
 func set_time_limit(new_time_limit: float) -> void:
 	time_limit = new_time_limit
 	max_value = time_limit

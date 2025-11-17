@@ -5,6 +5,7 @@ class_name Mushroom
 signal picked(_mushroom: Mushroom)
 
 @export var allowed_tool_types: Array[Tool.ToolType] = []
+@export var time_penalty: float = 5.0
 
 @export_group("Correct Animation")
 @export var flash_intensity: float = 4.0
@@ -38,6 +39,8 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 				await _correct_animation()
 				queue_free()
 			else:
+				if Global.time_bar != null:
+					Global.time_bar.add_time(-time_penalty)
 				await _wrong_animation()
 
 func _correct_animation() -> void:
