@@ -6,7 +6,8 @@ const SCENE_UIDS = {
 	"MAIN_GAME": "uid://fwifwdj0klmd",
 	"MAIN_GAME_UI": "uid://byg7j72h7pac6",
 	"LOSE_SCREEN": "uid://dfox7aapmjh2k",
-	"MUSHROOM": "uid://cfxgo5ye53do0"
+	"MUSHROOM": "uid://cfxgo5ye53do0",
+	"PATIENT": "uid://mtilpmnd7m7y"
 }
 
 const MATERIAL_UIDS = {

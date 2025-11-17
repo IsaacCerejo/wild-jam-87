@@ -21,12 +21,12 @@ func _ready() -> void:
 	for area in mushroom_areas:
 		for point in area.get_point_count():
 			unused_base_points.append(area.to_global(area.get_point_position(point)))
+			
+
 	#TODO: spawn body with random skin
 
 func generate_mushrooms() -> void:
 	# spawn mushrooms
-	
-	# Pick 1 allowed tool only (assuming 1 type of mushroom per person)
 	var tool_keys = Tool.ToolType.keys()
 	
 	for i in range(mushroom_count):
@@ -34,7 +34,6 @@ func generate_mushrooms() -> void:
 		var random_tool: Tool.ToolType = Tool.ToolType[random_key]
 		var new_mushroom: Mushroom = MUSHROOM_SCENE.instantiate() as Mushroom
 		new_mushroom.allowed_tool_types = [random_tool]
-		#new_mushroom.set_rotation_degrees(randi_range(0,360))
 		new_mushroom.picked.connect(_on_mushroom_picked)
 		_mushrooms.append(new_mushroom)
 		add_child(new_mushroom)
