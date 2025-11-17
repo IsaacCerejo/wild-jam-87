@@ -16,16 +16,21 @@ func _ready() -> void:
 	var root_mushroom_areas = self.find_child("MushroomAreas")
 	mushroom_areas = root_mushroom_areas.get_children()
 	# spawn body with random skin
-	generate_mushrooms()
 		
 	pass # Replace with function body.
 
 func generate_mushrooms() -> void:
 	# spawn mushrooms
+	
+	# Pick 1 allowed tool only (assuming 1 type of mushroom per person)
+	var tool_keys = Tool.ToolType.keys()
+	var random_key = tool_keys.pick_random()
+	var random_tool: Tool.ToolType = Tool.ToolType[random_key]
+	
 	for i in range(mushroom_count):
 		var new_mushroom: Mushroom = MUSHROOM_SCENE.instantiate() as Mushroom
-		# TODO: set Mushrooms properties like allowed_tool_types and position properly
-		new_mushroom.allowed_tool_types = [Tool.ToolType.PINCA]
+		# TODO: set Mushroom sprite depending on allowed tool
+		new_mushroom.allowed_tool_types = [random_tool]
 		new_mushroom.picked.connect(_on_mushroom_picked)
 		_mushrooms.append(new_mushroom)
 		add_child(new_mushroom)
@@ -38,7 +43,6 @@ func _on_mushroom_picked(mushroom: Mushroom) -> void:
 
 func find_mushroom_position() -> Vector2:
 	var new_mushroom_position := Vector2()
-	print(len(mushroom_areas))
 	var affected_area:Line2D = mushroom_areas[randi_range(0,len(mushroom_areas)-1)] # Get random area
 	
 	var base_point_idx = randi_range(0,affected_area.get_point_count()-1)
