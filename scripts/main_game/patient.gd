@@ -33,9 +33,8 @@ func generate_mushrooms() -> void:
 		var random_key = tool_keys.pick_random()
 		var random_tool: Tool.ToolType = Tool.ToolType[random_key]
 		var new_mushroom: Mushroom = MUSHROOM_SCENE.instantiate() as Mushroom
-		# TODO: set Mushroom sprite depending on allowed tool
 		new_mushroom.allowed_tool_types = [random_tool]
-		new_mushroom.set_rotation_degrees(randi_range(0,360))
+		#new_mushroom.set_rotation_degrees(randi_range(0,360))
 		new_mushroom.picked.connect(_on_mushroom_picked)
 		_mushrooms.append(new_mushroom)
 		add_child(new_mushroom)
