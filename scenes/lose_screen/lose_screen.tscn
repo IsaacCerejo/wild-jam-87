@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dfox7aapmjh2k"]
 
 [ext_resource type="Theme" uid="uid://2ek7eagjo7f0" path="res://resources/themes/general_theme.tres" id="1_uglf1"]
-[ext_resource type="Script" uid="uid://dd7my64yx8kmn" path="res://scripts/lose_screen.gd" id="2_1n1m7"]
+[ext_resource type="Script" uid="uid://dd7my64yx8kmn" path="res://scripts/lose_screen/lose_screen.gd" id="2_1n1m7"]
 
 [node name="LoseScreen" type="Control"]
 layout_mode = 3
