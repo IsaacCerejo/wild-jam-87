@@ -34,8 +34,8 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 	if event is InputEventMouseButton and event.pressed:
 		if Global.player.get_active_tool() != null:
 			if allowed_tool_types.has(Global.player.get_active_tool().type):
-				_correct_animation()
 				picked.emit(self)
+				await _correct_animation()
 				queue_free()
 			else:
 				await _wrong_animation()
