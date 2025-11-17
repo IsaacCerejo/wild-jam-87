@@ -16,6 +16,7 @@ const MATERIAL_UIDS = {
 # Game Controller
 var game_controller: GameController
 var player: Player
+var camera: Camera2D
 var time_bar: TimeBar
 var score: int = 0
 
