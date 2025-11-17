@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://fwifwdj0klmd"]
+[gd_scene load_steps=29 format=3 uid="uid://fwifwdj0klmd"]
 
 [ext_resource type="Texture2D" uid="uid://bce0lpb8ourlr" path="res://assets/background/background.png" id="1_s87mg"]
 [ext_resource type="Script" uid="uid://c0qla4xs5qtuw" path="res://scripts/main_game/patient_manager.gd" id="3_4y18v"]
@@ -17,11 +17,20 @@
 [ext_resource type="Texture2D" uid="uid://d3svvioh7o10y" path="res://assets/hand/hand_tesoura.png" id="12_gxjft"]
 [ext_resource type="Script" uid="uid://ybxq7x6jqqc6" path="res://scripts/main_game/arm.gd" id="13_4y18v"]
 [ext_resource type="Texture2D" uid="uid://cq78o0i5acgfx" path="res://assets/icons/icon.svg" id="14_ebk6p"]
-[ext_resource type="Script" uid="uid://b1allxwp806s0" path="res://scripts/main_game/lantern.gd" id="14_r8wn4"]
+[ext_resource type="Texture2D" uid="uid://cyhrd3h7qpjot" path="res://assets/tools/drill.png" id="14_kwr1i"]
+[ext_resource type="Script" path="res://scripts/main_game/lantern.gd" id="14_r8wn4"]
 [ext_resource type="Script" uid="uid://64asebo8pdx5" path="res://scripts/main_game/camera_shake.gd" id="19_r8wn4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n1acc"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_gxjft")
+}],
+"loop": true,
+"name": &"drill",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("9_kwr1i")
@@ -132,7 +141,7 @@ script = ExtResource("8_r8wn4")
 unique_name_in_owner = true
 position = Vector2(32, 28)
 sprite_frames = SubResource("SpriteFrames_n1acc")
-animation = &"hammer"
+animation = &"drill"
 autoplay = "empty"
 
 [node name="arm" type="Line2D" parent="Player"]
@@ -174,6 +183,13 @@ type = 4
 
 [node name="Sprite2D" parent="ToolSelector/Hammer" index="0"]
 texture = ExtResource("7_ebk6p")
+
+[node name="Drill" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
+position = Vector2(1214, 398)
+type = 3
+
+[node name="Sprite2D" parent="ToolSelector/Drill" index="0"]
+texture = ExtResource("14_kwr1i")
 
 [node name="Lantern" type="Area2D" parent="."]
 z_index = -1
@@ -231,3 +247,4 @@ environment = SubResource("Environment_r8wn4")
 [editable path="ToolSelector/Spray"]
 [editable path="ToolSelector/Tesoura"]
 [editable path="ToolSelector/Hammer"]
+[editable path="ToolSelector/Drill"]
