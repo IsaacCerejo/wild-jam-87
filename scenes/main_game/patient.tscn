@@ -11,11 +11,16 @@
 
 [node name="Patient" type="Node2D"]
 script = ExtResource("1_s1xdg")
-mushroom_count = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.38039216)
 position = Vector2(1, 0)
+texture = ExtResource("2_3knpu")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.38039216)
+self_modulate = Color(0.26, 0, 0, 1)
+position = Vector2(1, 16)
 texture = ExtResource("2_3knpu")
 
 [node name="head" type="Sprite2D" parent="."]
@@ -47,54 +52,54 @@ offset = Vector2(115, 32)
 
 [node name="LeftLegArea" type="Line2D" parent="MushroomAreas"]
 position = Vector2(90, -54)
-points = PackedVector2Array(17, 0, 102, -25, 183, -44)
+points = PackedVector2Array(17, 0, 82, -16, 134, -31, 181, -44)
 width = 35.0
-default_color = Color(1, 0, 0, 0.20392157)
+default_color = Color(1, 0, 0, 0)
 begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="LeftLegArea2" type="Line2D" parent="MushroomAreas"]
 position = Vector2(-247, 29)
-points = PackedVector2Array(29, 0, -7, -1, -23, -26, -1, -51, 31, -41, 55, -22)
+points = PackedVector2Array(31, -4, -7, -1, -23, -26, -1, -51, 30, -45)
 width = 35.0
-default_color = Color(1, 0, 0, 0.20392157)
+default_color = Color(1, 0, 0, 0)
 joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="LeftArmArea" type="Line2D" parent="MushroomAreas"]
-position = Vector2(-158, -63.000008)
-rotation = -0.20234607
-points = PackedVector2Array(17, 0, 102, -25, 177.13339, -47.368248)
-width = 35.0
-default_color = Color(1, 0, 0, 0.20392157)
 begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="RightArmArea" type="Line2D" parent="MushroomAreas"]
 position = Vector2(-150.00002, 58.000004)
 rotation = 0.7707949
-points = PackedVector2Array(17, 0, 102, -25, 177.13339, -47.368248)
+points = PackedVector2Array(15.472099, 5.8833923, 72.344376, -14.501495, 120.670334, -30.768097, 176.08725, -48.345512)
 width = 35.0
-default_color = Color(1, 0, 0, 0.20392157)
+default_color = Color(1, 0, 0, 0)
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="LeftArmArea" type="Line2D" parent="MushroomAreas"]
+position = Vector2(-154, -66.99999)
+rotation = -0.18549728
+points = PackedVector2Array(20.763504, -2.2083664, 71.99763, -14.97805, 119.4848, -29.46833, 168.13927, -44.75701)
+width = 35.0
+default_color = Color(1, 0, 0, 0)
 begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="RightLegArea" type="Line2D" parent="MushroomAreas"]
 position = Vector2(107.99999, 62.999996)
 rotation = 0.52074564
-points = PackedVector2Array(0.7398529, -2.7299538, 84.18121, -24.073383, 163.28531, -42.92918)
+points = PackedVector2Array(0.9950714, 1.7348938, 58.76999, -14.109951, 110.71507, -30.0695, 162.91537, -41.564205)
 width = 35.01
-default_color = Color(1, 0, 0, 0.20392157)
+default_color = Color(1, 0, 0, 0)
 begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="TorsoArea" type="Line2D" parent="MushroomAreas"]
-position = Vector2(-19, -17)
+position = Vector2(-23, -17)
 rotation = 3.642796
-points = PackedVector2Array(10.805092, 8.7892, 66.531, -15.9256735, 123.216354, -46.462093, 84.16695, -110.52568, 32.24762, -78.44163, -17.65642, -53.04009)
+points = PackedVector2Array(120.25691, -51.0615, 87.668144, -108.46335, 33.209877, -80.908005, -26.990908, -51.34677, 13.910694, 12.903204, 72.273506, -17.931557)
 width = 60.0
-default_color = Color(1, 0, 0, 0.20392157)
+default_color = Color(1, 0, 0, 0)
 joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2

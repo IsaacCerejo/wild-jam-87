@@ -1,30 +1,33 @@
-[gd_scene load_steps=6 format=3 uid="uid://cfxgo5ye53do0"]
+[gd_scene load_steps=10 format=3 uid="uid://cfxgo5ye53do0"]
 
 [ext_resource type="Script" uid="uid://4yfpdxitkbji" path="res://scripts/main_game/mushroom.gd" id="1_0echp"]
 [ext_resource type="PackedScene" uid="uid://d4kyst7qokxst" path="res://scenes/main_game/hit_particles.tscn" id="2_bmcli"]
 [ext_resource type="Texture2D" uid="uid://cq78o0i5acgfx" path="res://assets/icons/icon.svg" id="2_gcnpq"]
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_0echp"]
-light_mode = 2
+[ext_resource type="Texture2D" uid="uid://dk30wqwr1hfke" path="res://assets/mushrooms/Tall Mushroom 2head.PNG" id="2_uolev"]
+[ext_resource type="Texture2D" uid="uid://by7xnoiugdjn7" path="res://assets/mushrooms/Peste Negra.PNG" id="3_d1t27"]
+[ext_resource type="Texture2D" uid="uid://0hfxyqucojp5" path="res://assets/mushrooms/Tall Mushroom_twist.PNG" id="4_07w8a"]
+[ext_resource type="Texture2D" uid="uid://cpvqwpxftai1k" path="res://assets/mushrooms/Stone Mushroom.PNG" id="5_o5qdp"]
+[ext_resource type="Texture2D" uid="uid://oox6v2mdl4pn" path="res://assets/mushrooms/GloomRedshroom.PNG" id="6_b04kb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s87mg"]
 radius = 16.03122
 
 [node name="Mushroom" type="Area2D"]
 script = ExtResource("1_0echp")
+mushroom_types = [ExtResource("2_uolev"), ExtResource("3_d1t27"), ExtResource("4_07w8a"), ExtResource("5_o5qdp"), ExtResource("6_b04kb")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 light_mask = 2
 visibility_layer = 2
-material = SubResource("CanvasItemMaterial_0echp")
-scale = Vector2(0.1625336, 0.16315629)
+scale = Vector2(0.2688431, 0.26987308)
 texture = ExtResource("2_gcnpq")
 
 [node name="GPUParticles2D" parent="." instance=ExtResource("2_bmcli")]
 unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.3274121, 1.3274121)
 shape = SubResource("CircleShape2D_s87mg")
 
 [connection signal="input_event" from="." to="." method="_on_input_event"]
