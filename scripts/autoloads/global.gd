@@ -11,7 +11,8 @@ const SCENE_UIDS = {
 }
 
 const MATERIAL_UIDS = {
-	"OUTLINE_MATERIAL": "uid://bj6x4cma75nay"
+	"OUTLINE_MATERIAL": "uid://bj6x4cma75nay",
+	"FLASH_MATERIAL": "uid://c4id7ag22mv0v"
 }
 
 # Game Controller
