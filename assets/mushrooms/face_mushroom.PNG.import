@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk30wqwr1hfke"
-path="res://.godot/imported/Tall Mushroom 2head.PNG-5bf5214890ba5320b87d0168ad1642d1.ctex"
+uid="uid://c512msf6winmo"
+path="res://.godot/imported/face_mushroom.PNG-316c375c4b76b0b25177b5a378e7a553.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mushrooms/Tall Mushroom 2head.PNG"
-dest_files=["res://.godot/imported/Tall Mushroom 2head.PNG-5bf5214890ba5320b87d0168ad1642d1.ctex"]
+source_file="res://assets/mushrooms/face_mushroom.PNG"
+dest_files=["res://.godot/imported/face_mushroom.PNG-316c375c4b76b0b25177b5a378e7a553.ctex"]
 
 [params]
 

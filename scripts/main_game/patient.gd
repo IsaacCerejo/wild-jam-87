@@ -4,10 +4,16 @@ class_name Patient
 # Signal for when the patient is cured
 signal cured()
 
-const MUSHROOM_SCENE: PackedScene = preload(Global.SCENE_UIDS.MUSHROOM)
+const MUSHROOM_SCENES: Array[PackedScene] = [
+	preload(Global.SCENE_UIDS.TALL_MUSHROOM),
+	preload(Global.SCENE_UIDS.STONE_MUSHROOM),
+	preload(Global.SCENE_UIDS.BALLOON_MUSHROOM),
+	preload(Global.SCENE_UIDS.BUBONIC_MUSHROOM),
+	preload(Global.SCENE_UIDS.SQUISHY_MUSHROOM),
+]
 
-@export_range(0,27) var mushroom_count: int # Max is 27 due to only spawning 1 shroom per point, with 27 points. Check find_mushroom_position() 
-@export_range(0,20) var shroom_deviation: float = 16.5
+@export_range(0, 27) var mushroom_count: int # Max is 27 due to only spawning 1 shroom per point, with 27 points. Check find_mushroom_position()
+@export_range(0, 20) var shroom_deviation: float = 16.5
 
 var _mushrooms: Array[Mushroom] = []
 var mushroom_areas: Array[Node] = []
@@ -26,14 +32,10 @@ func _ready() -> void:
 	#TODO: spawn body with random skin
 
 func generate_mushrooms() -> void:
-	# spawn mushrooms
-	var tool_keys = Tool.ToolType.keys()
-	
+	# Spawn mushrooms
 	for i in range(mushroom_count):
-		var random_key = tool_keys.pick_random()
-		var random_tool: Tool.ToolType = Tool.ToolType[random_key]
-		var new_mushroom: Mushroom = MUSHROOM_SCENE.instantiate() as Mushroom
-		new_mushroom.allowed_tool_types = [random_tool]
+		var random_scene = MUSHROOM_SCENES.pick_random()
+		var new_mushroom: Mushroom = random_scene.instantiate() as Mushroom
 		new_mushroom.picked.connect(_on_mushroom_picked)
 		_mushrooms.append(new_mushroom)
 		add_child(new_mushroom)
@@ -48,10 +50,10 @@ func find_mushroom_position() -> Vector2:
 	var new_mushroom_position := Vector2()
 	
 	# Always use different base points
-	var random_idx = randi_range(0,unused_base_points.size()-1)
+	var random_idx = randi_range(0, unused_base_points.size() - 1)
 	var affected_area = unused_base_points[random_idx]
 	unused_base_points.pop_at(random_idx)
 
-	new_mushroom_position = Vector2(affected_area.x + randf_range(-shroom_deviation,shroom_deviation) ,affected_area.y + randf_range(-shroom_deviation,shroom_deviation) )
+	new_mushroom_position = Vector2(affected_area.x + randf_range(-shroom_deviation, shroom_deviation), affected_area.y + randf_range(-shroom_deviation, shroom_deviation))
 
 	return new_mushroom_position

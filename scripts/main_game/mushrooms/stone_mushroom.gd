@@ -1,0 +1,2 @@
+extends Mushroom
+class_name StoneMushroom
