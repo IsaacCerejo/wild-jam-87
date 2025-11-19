@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://i0birjinl1cf"]
+
+[ext_resource type="PackedScene" uid="uid://cfxgo5ye53do0" path="res://scenes/main_game/mushrooms/mushroom.tscn" id="1_hd5rx"]
+[ext_resource type="Script" uid="uid://dr4x8proq0vvu" path="res://scripts/main_game/mushrooms/balloon_mushroom.gd" id="2_50jiv"]
+[ext_resource type="Texture2D" uid="uid://oox6v2mdl4pn" path="res://assets/mushrooms/gloomredshroom.PNG" id="2_epkm7"]
+
+[node name="BalloonMushroom" instance=ExtResource("1_hd5rx")]
+script = ExtResource("2_50jiv")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_epkm7")

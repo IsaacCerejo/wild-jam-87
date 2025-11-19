@@ -4,18 +4,8 @@ class_name Mushroom
 # Signal emitted when the mushroom is picked with the correct tool
 signal picked(_mushroom: Mushroom)
 
-enum MushroomType {
-	TALL,
-	BUBONIC,
-	BALLOON,
-	STONE,
-	SQUISHY
-}
-
 const OUTLINE_MATERIAL: ShaderMaterial = preload(Global.MATERIAL_UIDS.OUTLINE_MATERIAL)
 const FLASH_MATERIAL: ShaderMaterial = preload(Global.MATERIAL_UIDS.FLASH_MATERIAL)
-
-@export var mushroom_types: Array[Texture2D] = []
 
 @export var allowed_tool_types: Array[Tool.ToolType] = []
 @export var time_penalty: float = 5.0
@@ -42,14 +32,13 @@ var _busy: bool = false
 var _original_material: Material = null
 
 func _ready() -> void:
-	sprite_2d.set_texture(mushroom_types[allowed_tool_types[0]])
 	_original_material = sprite_2d.material
 
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if _busy:
 		return
 
-	if event is InputEventMouseButton and event.pressed:
+	if _on_action_performed(event):
 		if Global.player.get_active_tool() != null:
 			if allowed_tool_types.has(Global.player.get_active_tool().type):
 				picked.emit(self)
@@ -149,6 +138,10 @@ func _wrong_animation() -> void:
 	await tween.finished
 	sprite_2d.material = original_material
 	_busy = false
+
+# Action performed check. Function meant to be overridden.
+func _on_action_performed(event: InputEvent) -> bool:
+	return event is InputEventMouseButton and event.pressed
 
 # Signal callbacks
 

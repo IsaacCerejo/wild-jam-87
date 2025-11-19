@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://8wqjjiw2tak3"]
+
+[ext_resource type="PackedScene" uid="uid://cfxgo5ye53do0" path="res://scenes/main_game/mushrooms/mushroom.tscn" id="1_kheme"]
+[ext_resource type="Script" uid="uid://i6d3f7aycfqa" path="res://scripts/main_game/mushrooms/bubonic_mushroom.gd" id="2_n1h2m"]
+[ext_resource type="Texture2D" uid="uid://c512msf6winmo" path="res://assets/mushrooms/face_mushroom.PNG" id="2_u12pw"]
+
+[node name="BubonicMushroom" instance=ExtResource("1_kheme")]
+script = ExtResource("2_n1h2m")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_u12pw")

@@ -6,8 +6,12 @@ const SCENE_UIDS = {
 	"MAIN_GAME": "uid://fwifwdj0klmd",
 	"MAIN_GAME_UI": "uid://byg7j72h7pac6",
 	"LOSE_SCREEN": "uid://dfox7aapmjh2k",
-	"MUSHROOM": "uid://cfxgo5ye53do0",
-	"PATIENT": "uid://mtilpmnd7m7y"
+	"PATIENT": "uid://mtilpmnd7m7y",
+	"TALL_MUSHROOM": "uid://darqsw3l4uvnv",
+	"STONE_MUSHROOM": "uid://bqgj0pn787y68",
+	"BALLOON_MUSHROOM": "uid://i0birjinl1cf",
+	"BUBONIC_MUSHROOM": "uid://8wqjjiw2tak3",
+	"SQUISHY_MUSHROOM": "uid://c6mosdrb4vnvb",
 }
 
 const MATERIAL_UIDS = {

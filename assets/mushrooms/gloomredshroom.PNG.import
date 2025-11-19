@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://oox6v2mdl4pn"
-path="res://.godot/imported/GloomRedshroom.PNG-33499c4b4901bdd632eea42331849564.ctex"
+path="res://.godot/imported/gloomredshroom.PNG-ee48db90e44be4964676b6fc65b13ee6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mushrooms/GloomRedshroom.PNG"
-dest_files=["res://.godot/imported/GloomRedshroom.PNG-33499c4b4901bdd632eea42331849564.ctex"]
+source_file="res://assets/mushrooms/gloomredshroom.PNG"
+dest_files=["res://.godot/imported/gloomredshroom.PNG-ee48db90e44be4964676b6fc65b13ee6.ctex"]
 
 [params]
 

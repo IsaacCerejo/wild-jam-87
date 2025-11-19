@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c83ywu25rdwxu"
-path="res://.godot/imported/Tallshroom_Malef.PNG-27d9cb3410480dfa9d20a29aafa5f29d.ctex"
+uid="uid://cpvqwpxftai1k"
+path="res://.godot/imported/stone_mushroom.PNG-1ddfde3345808d473cd5565c438abbb6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mushrooms/Tallshroom_Malef.PNG"
-dest_files=["res://.godot/imported/Tallshroom_Malef.PNG-27d9cb3410480dfa9d20a29aafa5f29d.ctex"]
+source_file="res://assets/mushrooms/stone_mushroom.PNG"
+dest_files=["res://.godot/imported/stone_mushroom.PNG-1ddfde3345808d473cd5565c438abbb6.ctex"]
 
 [params]
 

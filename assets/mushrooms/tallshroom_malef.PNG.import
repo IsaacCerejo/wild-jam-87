@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://by7xnoiugdjn7"
-path="res://.godot/imported/Peste Negra.PNG-c735252b72771d60db337a7602bd421f.ctex"
+uid="uid://c83ywu25rdwxu"
+path="res://.godot/imported/tallshroom_malef.PNG-812af1a852bee7176259e0ecceb9cde5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mushrooms/Peste Negra.PNG"
-dest_files=["res://.godot/imported/Peste Negra.PNG-c735252b72771d60db337a7602bd421f.ctex"]
+source_file="res://assets/mushrooms/tallshroom_malef.PNG"
+dest_files=["res://.godot/imported/tallshroom_malef.PNG-812af1a852bee7176259e0ecceb9cde5.ctex"]
 
 [params]
 
