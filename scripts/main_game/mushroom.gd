@@ -12,13 +12,15 @@ enum MushroomType {
 	SQUISHY
 }
 
+const OUTLINE_MATERIAL: ShaderMaterial = preload(Global.MATERIAL_UIDS.OUTLINE_MATERIAL)
+const FLASH_MATERIAL: ShaderMaterial = preload(Global.MATERIAL_UIDS.FLASH_MATERIAL)
+
 @export var mushroom_types: Array[Texture2D] = []
 
 @export var allowed_tool_types: Array[Tool.ToolType] = []
 @export var time_penalty: float = 5.0
 
 @export_group("Correct Animation")
-@export var flash_intensity: float = 4.0
 @export var flash_in_duration: float = 0.05
 @export var flash_out_duration: float = 0.05
 @export var flash_count: int = 1
@@ -29,17 +31,20 @@ enum MushroomType {
 
 @export_group("Wrong Animation")
 @export var wrong_flash_color: Color = Color(1, 0, 0, 1)
-@export var wrong_flash_in_duration: float = 0.1
-@export var wrong_flash_out_duration: float = 0.15
+@export var wrong_flash_in_duration: float = 0.05
+@export var wrong_flash_out_duration: float = 0.05
 @export var wrong_flash_count: int = 1
 
 @onready var sprite_2d: Sprite2D = %Sprite2D
 @onready var hit_particles: GPUParticles2D = %GPUParticles2D
 
 var _busy: bool = false
+var _original_material: Material = null
 
 func _ready() -> void:
 	sprite_2d.set_texture(mushroom_types[allowed_tool_types[0]])
+	_original_material = sprite_2d.material
+
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if _busy:
 		return
@@ -61,19 +66,22 @@ func _correct_animation() -> void:
 	if hit_particles:
 		hit_particles.restart()
 
+	var original_material: Material = sprite_2d.material
+	var original_scale: Vector2 = sprite_2d.scale
+	var original_rotation: float = sprite_2d.rotation_degrees
+
+	var flash_material: ShaderMaterial = FLASH_MATERIAL.duplicate()
+	sprite_2d.material = flash_material
+
 	var tween: Tween = create_tween()
 
-	# Flashing
-	for i in flash_count:
-		# Flash in
+	for i: int in flash_count:
 		tween.tween_property(
-			sprite_2d,
-			"modulate",
-			Color(1, 1, 1, 1) * flash_intensity,
+			flash_material,
+			"shader_parameter/flash",
+			true,
 			flash_in_duration
 		)
-
-		# Squash and rotate
 		if i == 0:
 			tween.parallel().tween_property(
 				sprite_2d,
@@ -87,54 +95,65 @@ func _correct_animation() -> void:
 				randf_range(-rotation_max_degrees, rotation_max_degrees),
 				squash_duration
 			)
-
-		# Flash out
 		tween.tween_property(
-			sprite_2d,
-			"modulate",
-			Color(1, 1, 1, 1),
+			flash_material,
+			"shader_parameter/flash",
+			false,
 			flash_out_duration
 		)
-
-	# Return to normal
 	tween.tween_property(
 		sprite_2d,
 		"scale",
-		Vector2.ONE,
+		original_scale,
 		return_duration
 	)
 	tween.tween_property(
 		sprite_2d,
 		"rotation_degrees",
-		0.0,
+		original_rotation,
 		return_duration
 	)
 
 	await tween.finished
-
+	sprite_2d.material = original_material
+	_busy = false
+	
 func _wrong_animation() -> void:
 	_busy = true
 
-	# Camera Shake
 	if Global.camera != null:
 		Global.camera.screen_shake()
 
+	var original_material: Material = sprite_2d.material
+
+	var flash_material: ShaderMaterial = FLASH_MATERIAL.duplicate()
+	sprite_2d.material = flash_material
+	flash_material.set_shader_parameter("flash_color", wrong_flash_color)
+
 	var tween: Tween = create_tween()
 
-	# Flashing
-	for i in wrong_flash_count:
+	for i: int in wrong_flash_count:
 		tween.tween_property(
-			sprite_2d,
-			"modulate",
-			wrong_flash_color,
+			flash_material,
+			"shader_parameter/flash",
+			true,
 			wrong_flash_in_duration
 		)
 		tween.tween_property(
-			sprite_2d,
-			"modulate",
-			Color(1, 1, 1, 1),
+			flash_material,
+			"shader_parameter/flash",
+			false,
 			wrong_flash_out_duration
 		)
 
 	await tween.finished
+	sprite_2d.material = original_material
 	_busy = false
+
+# Signal callbacks
+
+func _on_mouse_entered() -> void:
+	sprite_2d.material = OUTLINE_MATERIAL
+
+func _on_mouse_exited() -> void:
+	sprite_2d.material = _original_material
