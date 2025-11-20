@@ -4,6 +4,12 @@ extends Control
 @onready var options_menu: Control = %OptionsMenu
 
 func _ready() -> void:
+	if AudioManager.get_active_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.BACKGROUND_MUSIC) == null:
+		AudioManager.create_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.BACKGROUND_MUSIC)
+	else:
+		var music_audio: AudioStreamPlayer = AudioManager.get_active_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.BACKGROUND_MUSIC)
+		if is_instance_valid(music_audio):
+			music_audio.get_stream_playback().switch_to_clip(0)
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _on_start_button_pressed() -> void:

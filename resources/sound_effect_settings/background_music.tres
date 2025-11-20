@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="SoundEffectSettings" load_steps=4 format=3 uid="uid://dx2j21fgk6yvg"]
+
+[ext_resource type="Script" uid="uid://dw2bqkenv2kn5" path="res://scripts/audio_manager/sound_effect_settings.gd" id="1_elnfp"]
+[ext_resource type="AudioStream" uid="uid://pfnuu04welnd" path="res://assets/sounds/background.mp3" id="2_qi00w"]
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_qi00w"]
+clip_count = 1
+clip_0/name = &"Background"
+clip_0/stream = ExtResource("2_qi00w")
+clip_0/auto_advance = 0
+_transitions = {
+Vector2i(0, 0): {
+"fade_beats": 16.0,
+"fade_mode": 2,
+"from_time": 0,
+"to_time": 1
+}
+}
+
+[resource]
+script = ExtResource("1_elnfp")
+limit = 1
+type = 2
+sound_effect = SubResource("AudioStreamInteractive_qi00w")
+volume = -20
+bus_name = &"Music"
+metadata/_custom_type_script = "uid://dw2bqkenv2kn5"

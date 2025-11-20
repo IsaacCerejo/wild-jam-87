@@ -32,9 +32,13 @@ func create_2d_audio_at_location(location: Vector2, type: SoundEffectSettings.SO
 				push_warning("Audio Manager: Bus name '%s' not found. Defaulting to 'Master' bus." % sound_effect_setting.bus_name)
 			new_audio.bus = sound_effect_setting.bus_name
 			new_audio.position = location
-			new_audio.finished.connect(sound_effect_setting._on_audio_finished)
-			new_audio.finished.connect(new_audio.queue_free)
+			new_audio.finished.connect(func():
+				sound_effect_setting.on_audio_finished()
+				_remove_active_sound(type, new_audio)
+				new_audio.queue_free()
+			)
 			new_audio.play()
+			_add_active_sound(type, new_audio)
 	else:
 		push_error("Audio Manager failed to find setting for type ", type)
 
@@ -53,9 +57,13 @@ func create_audio(type: SoundEffectSettings.SOUND_EFFECT_TYPE):
 			if (AudioServer.get_bus_index(sound_effect_setting.bus_name) == -1):
 				push_warning("Audio Manager: Bus name '%s' not found. Defaulting to 'Master' bus." % sound_effect_setting.bus_name)
 			new_audio.bus = sound_effect_setting.bus_name
-			new_audio.finished.connect(sound_effect_setting.on_audio_finished)
-			new_audio.finished.connect(new_audio.queue_free)
+			new_audio.finished.connect(func():
+				sound_effect_setting.on_audio_finished()
+				_remove_active_sound(type, new_audio)
+				new_audio.queue_free()
+			)
 			new_audio.play()
+			_add_active_sound(type, new_audio)
 	else:
 		push_error("Audio Manager failed to find setting for type ", type)
 
@@ -67,11 +75,13 @@ func fade_out_audio(type: SoundEffectSettings.SOUND_EFFECT_TYPE, duration: float
 	for player in _active_sounds[type]:
 		if not is_instance_valid(player):
 			continue
-		var tween := create_tween()
+		var tween: Tween = player.create_tween()
 		tween.tween_property(player, "volume_db", -80, duration)
 		tween.finished.connect(func():
 			if is_instance_valid(player):
 				player.stop()
+				var sound_effect_setting: SoundEffectSettings = _sound_effect_dict[type]
+				sound_effect_setting.on_audio_finished()
 				_remove_active_sound(type, player)
 				player.queue_free())
 
@@ -83,8 +93,10 @@ func stop_audio(type: SoundEffectSettings.SOUND_EFFECT_TYPE):
 	for player in _active_sounds[type]:
 		if is_instance_valid(player):
 			player.stop()
+			var sound_effect_setting: SoundEffectSettings = _sound_effect_dict[type]
+			sound_effect_setting.on_audio_finished()
+			_remove_active_sound(type, player)
 			player.queue_free()
-	_active_sounds.erase(type)
 
 ## Get all active audio sources of a given type.
 func get_active_audios(type: SoundEffectSettings.SOUND_EFFECT_TYPE) -> Array:

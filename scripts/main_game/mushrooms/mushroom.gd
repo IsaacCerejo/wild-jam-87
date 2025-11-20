@@ -46,6 +46,7 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 			@warning_ignore("REDUNDANT_AWAIT")
 			if await _on_action_performed(event):
 				picked.emit(self)
+				AudioManager.create_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.MUSHROOM_PICKED)
 				Global.add_score(score_value)
 				await _correct_animation()
 				queue_free()
