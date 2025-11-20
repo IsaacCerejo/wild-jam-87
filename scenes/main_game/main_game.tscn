@@ -17,7 +17,7 @@
 [ext_resource type="Script" uid="uid://ybxq7x6jqqc6" path="res://scripts/main_game/arm.gd" id="13_4y18v"]
 [ext_resource type="Texture2D" uid="uid://cq78o0i5acgfx" path="res://assets/icons/icon.svg" id="14_ebk6p"]
 [ext_resource type="Texture2D" uid="uid://cyhrd3h7qpjot" path="res://assets/tools/drill.png" id="14_kwr1i"]
-[ext_resource type="Script" uid="uid://b1allxwp806s0" path="res://scripts/main_game/lantern.gd" id="14_r8wn4"]
+[ext_resource type="Script" path="res://scripts/main_game/lantern.gd" id="14_r8wn4"]
 [ext_resource type="Script" uid="uid://64asebo8pdx5" path="res://scripts/main_game/camera_shake.gd" id="19_r8wn4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n1acc"]
@@ -181,7 +181,7 @@ rotation = -0.77841693
 shape = SubResource("RectangleShape2D_r8wn4")
 
 [node name="Spray" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
-position = Vector2(1044, 587)
+position = Vector2(948, 587)
 type = 1
 
 [node name="Sprite2D" parent="ToolSelector/Spray" index="0"]
@@ -202,7 +202,7 @@ rotation = -0.91978854
 shape = SubResource("RectangleShape2D_fxa2l")
 
 [node name="Hammer" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
-position = Vector2(774, 663)
+position = Vector2(746, 672)
 type = 4
 
 [node name="Sprite2D" parent="ToolSelector/Hammer" index="0"]
@@ -212,7 +212,7 @@ texture = ExtResource("7_ebk6p")
 shape = SubResource("RectangleShape2D_feobv")
 
 [node name="Drill" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
-position = Vector2(1217, 475)
+position = Vector2(1078, 642)
 type = 3
 
 [node name="Sprite2D" parent="ToolSelector/Drill" index="0"]
