@@ -41,16 +41,19 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 
 	var active_tool = Global.player.get_active_tool()
 	var is_tool_correct: bool = active_tool != null and allowed_tool_types.has(active_tool.type)
-
-	if is_tool_correct:
-		@warning_ignore("REDUNDANT_AWAIT")
-		if await _on_action_performed(event):
-			picked.emit(self)
-			Global.add_score(score_value)
-			await _correct_animation()
-			queue_free()
-	else:
-		if (event is InputEventMouseButton and event.pressed):
+	if (event is InputEventMouseButton and event.pressed):
+		if is_tool_correct:
+			@warning_ignore("REDUNDANT_AWAIT")
+			if await _on_action_performed(event):
+				picked.emit(self)
+				Global.add_score(score_value)
+				await _correct_animation()
+				queue_free()
+			else:
+				if Global.time_bar != null:
+					Global.time_bar.add_time(-time_penalty)
+				await _wrong_animation()
+		else:
 			if Global.time_bar != null:
 				Global.time_bar.add_time(-time_penalty)
 			await _wrong_animation()
@@ -146,11 +149,10 @@ func _wrong_animation() -> void:
 	_busy = false
 
 # Action performed check. Function meant to be overridden.
-func _on_action_performed(event: InputEvent) -> bool:
-	return (event is InputEventMouseButton and event.pressed)
+func _on_action_performed(_event: InputEvent) -> bool:
+	return true
 
 # Signal callbacks
-
 func _on_mouse_entered() -> void:
 	sprite_2d.material = OUTLINE_MATERIAL
 
