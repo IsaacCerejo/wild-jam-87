@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4spu5jp4j6s5"
-path="res://.godot/imported/rightleg.png-12f9e1e386a0a2736e31b2176518d5a0.ctex"
+uid="uid://op5f0ffy213x"
+path="res://.godot/imported/right_leg.png-ebc3aa4ed4079cac068f06287d330438.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/paciente/rightleg.png"
-dest_files=["res://.godot/imported/rightleg.png-12f9e1e386a0a2736e31b2176518d5a0.ctex"]
+source_file="res://assets/paciente/right_leg.png"
+dest_files=["res://.godot/imported/right_leg.png-ebc3aa4ed4079cac068f06287d330438.ctex"]
 
 [params]
 

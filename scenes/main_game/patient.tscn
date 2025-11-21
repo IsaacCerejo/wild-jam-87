@@ -1,21 +1,16 @@
 [gd_scene load_steps=9 format=3 uid="uid://mtilpmnd7m7y"]
 
 [ext_resource type="Script" uid="uid://c3wghgg2g717r" path="res://scripts/main_game/patient.gd" id="1_s1xdg"]
-[ext_resource type="Texture2D" uid="uid://crryfli08nlnx" path="res://assets/paciente/paciente.png" id="2_3knpu"]
-[ext_resource type="Texture2D" uid="uid://csv4fff1ifxnm" path="res://assets/paciente/torso.png" id="3_rujrq"]
-[ext_resource type="Texture2D" uid="uid://cic42w0lmmafb" path="res://assets/paciente/head.png" id="4_up4j8"]
-[ext_resource type="Texture2D" uid="uid://cl6ebeh5q4r3n" path="res://assets/paciente/leftarm.png" id="5_ddug4"]
-[ext_resource type="Texture2D" uid="uid://dgry88yvva61m" path="res://assets/paciente/rightarm.png" id="6_6vb6e"]
-[ext_resource type="Texture2D" uid="uid://banij4qxjani5" path="res://assets/paciente/leftleg.png" id="7_5mt75"]
-[ext_resource type="Texture2D" uid="uid://4spu5jp4j6s5" path="res://assets/paciente/rightleg.png" id="8_q6v5p"]
+[ext_resource type="Texture2D" uid="uid://bloq2j3mt8a3w" path="res://assets/paciente/paciente.png" id="2_3knpu"]
+[ext_resource type="Texture2D" uid="uid://cn3ixunlwsdxs" path="res://assets/paciente/torso.png" id="3_rujrq"]
+[ext_resource type="Texture2D" uid="uid://43013cqc7mv3" path="res://assets/paciente/left_arm.png" id="4_rlp5r"]
+[ext_resource type="Texture2D" uid="uid://b7q4fvme8ah78" path="res://assets/paciente/head.png" id="4_up4j8"]
+[ext_resource type="Texture2D" uid="uid://7uk0gwy21nhl" path="res://assets/paciente/right_arm.png" id="5_5qs04"]
+[ext_resource type="Texture2D" uid="uid://d1wg6uk21q1bv" path="res://assets/paciente/left_leg.png" id="6_up4j8"]
+[ext_resource type="Texture2D" uid="uid://op5f0ffy213x" path="res://assets/paciente/right_leg.png" id="7_ddug4"]
 
 [node name="Patient" type="Node2D"]
 script = ExtResource("1_s1xdg")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.38039216)
-position = Vector2(1, 0)
-texture = ExtResource("2_3knpu")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 0.38039216)
@@ -23,43 +18,72 @@ self_modulate = Color(0.26, 0, 0, 1)
 position = Vector2(1, 16)
 texture = ExtResource("2_3knpu")
 
-[node name="head" type="Sprite2D" parent="."]
-position = Vector2(-240, 15)
-texture = ExtResource("4_up4j8")
+[node name="Pins" type="Node2D" parent="."]
 
-[node name="torso" type="Sprite2D" parent="."]
-position = Vector2(-66, 42)
-texture = ExtResource("3_rujrq")
+[node name="PinJoint2D" type="PinJoint2D" parent="Pins"]
+position = Vector2(-192, 3)
+node_a = NodePath("../../MushroomAreas/Torso")
+node_b = NodePath("../../MushroomAreas/Head")
 
-[node name="arm_left" type="Sprite2D" parent="."]
-position = Vector2(-69, -113)
-texture = ExtResource("5_ddug4")
+[node name="PinJoint2D2" type="PinJoint2D" parent="Pins"]
+position = Vector2(-147, -57)
+node_a = NodePath("../../MushroomAreas/Torso")
+node_b = NodePath("../../MushroomAreas/LeftArm")
 
-[node name="arm_right" type="Sprite2D" parent="."]
-position = Vector2(-29, 118)
-texture = ExtResource("6_6vb6e")
+[node name="PinJoint2D3" type="PinJoint2D" parent="Pins"]
+position = Vector2(-147, 60)
+node_a = NodePath("../../MushroomAreas/Torso")
+node_b = NodePath("../../MushroomAreas/RightArm")
 
-[node name="leg_left" type="Sprite2D" parent="."]
-position = Vector2(140, -68)
-texture = ExtResource("7_5mt75")
+[node name="PinJoint2D4" type="PinJoint2D" parent="Pins"]
+position = Vector2(44, 47)
+node_a = NodePath("../../MushroomAreas/Torso")
+node_b = NodePath("../../MushroomAreas/RightLeg")
 
-[node name="leg_left2" type="Sprite2D" parent="."]
-position = Vector2(28, 42)
-texture = ExtResource("8_q6v5p")
-offset = Vector2(115, 32)
+[node name="PinJoint2D5" type="PinJoint2D" parent="Pins"]
+position = Vector2(43, -44)
+node_a = NodePath("../../MushroomAreas/Torso")
+node_b = NodePath("../../MushroomAreas/LeftLeg")
 
 [node name="MushroomAreas" type="Node2D" parent="."]
 
-[node name="LeftLegArea" type="Line2D" parent="MushroomAreas"]
-position = Vector2(90, -54)
-points = PackedVector2Array(17, 0, 82, -16, 134, -31, 181, -44)
-width = 35.0
+[node name="Torso" type="RigidBody2D" parent="MushroomAreas"]
+position = Vector2(-68, 6)
+gravity_scale = 0.0
+inertia = 1007.5
+freeze = true
+freeze_mode = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="MushroomAreas/Torso"]
+texture = ExtResource("3_rujrq")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MushroomAreas/Torso"]
+polygon = PackedVector2Array(-116, 23, -131, 12, -133, -13, -118, -28, -106, -66, -89, -83, -24, -71, 15, -68, 59, -71, 92, -79, 115, -12, 114, 1, 108, 72, 85, 75, 60, 65, -20, 63, -101, 64, -114, 34)
+
+[node name="TorsoArea" type="Line2D" parent="MushroomAreas/Torso"]
+position = Vector2(45, -23)
+rotation = -2.6403892
+points = PackedVector2Array(120.25691, -51.0615, 87.668144, -108.46335, 33.209877, -80.908005, -26.990908, -51.34677, 13.910694, 12.903204, 72.273506, -17.931557)
+width = 60.0
 default_color = Color(1, 0, 0, 0)
+joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
 
-[node name="LeftLegArea2" type="Line2D" parent="MushroomAreas"]
-position = Vector2(-247, 29)
+[node name="Head" type="RigidBody2D" parent="MushroomAreas"]
+position = Vector2(-235, 0)
+mass = 67.932
+gravity_scale = 0.0
+linear_damp = 4.0
+
+[node name="Sprite2D" type="Sprite2D" parent="MushroomAreas/Head"]
+texture = ExtResource("4_up4j8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MushroomAreas/Head"]
+polygon = PackedVector2Array(-54, 2, -47, -17, -33, -34, -11, -41, 16, -35, 29, -29, 31, -22, 47, -15, 53, 2, 52, 19, 36, 28, 28, 38, 7, 47, -12, 49, -32, 42, -45, 27)
+
+[node name="HeadArea" type="Line2D" parent="MushroomAreas/Head"]
+position = Vector2(-12, 29)
 points = PackedVector2Array(31, -4, -7, -1, -23, -26, -1, -51, 30, -45)
 width = 35.0
 default_color = Color(1, 0, 0, 0)
@@ -67,17 +91,21 @@ joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
 
-[node name="RightArmArea" type="Line2D" parent="MushroomAreas"]
-position = Vector2(-150.00002, 58.000004)
-rotation = 0.7707949
-points = PackedVector2Array(15.472099, 5.8833923, 72.344376, -14.501495, 120.670334, -30.768097, 176.08725, -48.345512)
-width = 35.0
-default_color = Color(1, 0, 0, 0)
-begin_cap_mode = 2
-end_cap_mode = 2
+[node name="LeftArm" type="RigidBody2D" parent="MushroomAreas"]
+position = Vector2(-71, -97)
+mass = 67.932
+gravity_scale = 0.0
+linear_damp = 2.0
 
-[node name="LeftArmArea" type="Line2D" parent="MushroomAreas"]
-position = Vector2(-154, -66.99999)
+[node name="Sprite2D" type="Sprite2D" parent="MushroomAreas/LeftArm"]
+texture = ExtResource("4_rlp5r")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MushroomAreas/LeftArm"]
+rotation = 0.014211261
+polygon = PackedVector2Array(-99.54936, 32.417942, -75.80759, 14.078705, -13.2971115, -20.81314, 75.01178, -70.07307, 84.025085, -69.20104, 96.26546, -52.3733, 95.43609, -40.3603, 5.2410736, 16.92723, -43.370285, 44.62083, -63.226166, 54.904037, -90.223434, 55.287727, -99.3362, 47.41643)
+
+[node name="LeftArmArea" type="Line2D" parent="MushroomAreas/LeftArm"]
+position = Vector2(-83, 30.000008)
 rotation = -0.18549728
 points = PackedVector2Array(20.763504, -2.2083664, 71.99763, -14.97805, 119.4848, -29.46833, 168.13927, -44.75701)
 width = 35.0
@@ -85,21 +113,65 @@ default_color = Color(1, 0, 0, 0)
 begin_cap_mode = 2
 end_cap_mode = 2
 
-[node name="RightLegArea" type="Line2D" parent="MushroomAreas"]
-position = Vector2(107.99999, 62.999996)
-rotation = 0.52074564
-points = PackedVector2Array(0.9950714, 1.7348938, 58.76999, -14.109951, 110.71507, -30.0695, 162.91537, -41.564205)
-width = 35.01
+[node name="RightArm" type="RigidBody2D" parent="MushroomAreas"]
+position = Vector2(-72, 101)
+mass = 67.932
+gravity_scale = 0.0
+linear_damp = 2.0
+
+[node name="Sprite2D" type="Sprite2D" parent="MushroomAreas/RightArm"]
+texture = ExtResource("5_5qs04")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MushroomAreas/RightArm"]
+polygon = PackedVector2Array(-101, -54, -84, -61, -62, -59, -27, -36, 1, -20, 98, 30, 102, 48, 93, 63, 69, 61, -29, 11, -92, -23, -104, -43)
+
+[node name="RightArmArea" type="Line2D" parent="MushroomAreas/RightArm"]
+position = Vector2(-78.000015, -42.999996)
+rotation = 0.7707949
+scale = Vector2(0.99999994, 0.99999994)
+points = PackedVector2Array(15.472099, 5.8833923, 72.344376, -14.501495, 120.670334, -30.768097, 176.08725, -48.345512)
+width = 35.0
 default_color = Color(1, 0, 0, 0)
 begin_cap_mode = 2
 end_cap_mode = 2
 
-[node name="TorsoArea" type="Line2D" parent="MushroomAreas"]
-position = Vector2(-23, -17)
-rotation = 3.642796
-points = PackedVector2Array(120.25691, -51.0615, 87.668144, -108.46335, 33.209877, -80.908005, -26.990908, -51.34677, 13.910694, 12.903204, 72.273506, -17.931557)
-width = 60.0
+[node name="LeftLeg" type="RigidBody2D" parent="MushroomAreas"]
+position = Vector2(146, -66)
+mass = 67.932
+gravity_scale = 0.0
+linear_damp = 2.0
+
+[node name="Sprite2D" type="Sprite2D" parent="MushroomAreas/LeftLeg"]
+texture = ExtResource("6_up4j8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MushroomAreas/LeftLeg"]
+polygon = PackedVector2Array(-141, 16, -122, -8, -61, -15, -47, -13, 130, -53, 141, -45, 142, -27, 138, -16, -46, 41, -92, 60, -125, 58, -137, 50)
+
+[node name="LeftLegArea" type="Line2D" parent="MushroomAreas/LeftLeg"]
+position = Vector2(-56, 12)
+points = PackedVector2Array(17, 0, 82, -16, 134, -31, 181, -44)
+width = 35.0
 default_color = Color(1, 0, 0, 0)
-joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="RightLeg" type="RigidBody2D" parent="MushroomAreas"]
+position = Vector2(142, 79)
+mass = 67.932
+gravity_scale = 0.0
+linear_damp = 2.0
+
+[node name="Sprite2D" type="Sprite2D" parent="MushroomAreas/RightLeg"]
+texture = ExtResource("7_ddug4")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MushroomAreas/RightLeg"]
+polygon = PackedVector2Array(-131, -39, -112, -65, -86, -64, -50, -49, 107, 1, 145, 13, 148, 26, 143, 43, 136, 48, 26, 25, -55, 9, -112, 5, -134, -13)
+
+[node name="RightLegArea" type="Line2D" parent="MushroomAreas/RightLeg"]
+position = Vector2(-34.000008, -16.000004)
+rotation = 0.52074564
+points = PackedVector2Array(0.9950714, 1.7348938, 58.76999, -14.109951, 110.71507, -30.0695, 162.91537, -41.564205)
+width = 35.01
+default_color = Color(1, 0, 0, 0)
 begin_cap_mode = 2
 end_cap_mode = 2

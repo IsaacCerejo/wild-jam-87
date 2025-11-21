@@ -11,6 +11,12 @@ const MUSHROOM_SCENES: Array[PackedScene] = [
 	preload(Global.SCENE_UIDS.BUBONIC_MUSHROOM),
 	preload(Global.SCENE_UIDS.SQUISHY_MUSHROOM),
 ]
+@onready var head: RigidBody2D = $Head
+@onready var left_arm: RigidBody2D = $LeftArm
+@onready var right_arm: RigidBody2D = $RightArm
+@onready var left_leg: RigidBody2D = $LeftLeg
+@onready var right_leg: RigidBody2D = $RightLeg
+@onready var limb_list: Array[RigidBody2D] = [head,left_arm, right_arm, left_leg, right_leg]
 
 @export_range(0, 27) var mushroom_count: int # Max is 27 due to only spawning 1 shroom per point, with 27 points. Check find_mushroom_position()
 @export_range(0, 20) var shroom_deviation: float = 16.5
@@ -21,14 +27,15 @@ var unused_base_points: Array[Vector2] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var root_mushroom_areas = self.find_child("MushroomAreas")
-	mushroom_areas = root_mushroom_areas.get_children()
+	
+	
+	# call me lebron james the way i hardcode this shit like a baller
+	mushroom_areas = [$MushroomAreas/Head/HeadArea,$MushroomAreas/LeftArm/LeftArmArea,$MushroomAreas/RightArm/RightArmArea,$MushroomAreas/LeftLeg/LeftLegArea,$MushroomAreas/RightLeg/RightLegArea,$MushroomAreas/Torso/TorsoArea]
 	
 	for area in mushroom_areas:
 		for point in area.get_point_count():
 			unused_base_points.append(area.to_global(area.get_point_position(point)))
 			
-
 	#TODO: spawn body with random skin
 
 func generate_mushrooms() -> void:
