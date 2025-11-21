@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv5f11hh5c8c1"
-path="res://.godot/imported/worm_mushroom.PNG-a14fe139b22975b74a0ece6e1f2fb2da.ctex"
+uid="uid://0hfxyqucojp5"
+path="res://.godot/imported/balloon_mushroom.PNG-6b586b91b1173294ccce45fe8782df4e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mushrooms/worm_mushroom.PNG"
-dest_files=["res://.godot/imported/worm_mushroom.PNG-a14fe139b22975b74a0ece6e1f2fb2da.ctex"]
+source_file="res://assets/mushrooms/balloon_mushroom.PNG"
+dest_files=["res://.godot/imported/balloon_mushroom.PNG-6b586b91b1173294ccce45fe8782df4e.ctex"]
 
 [params]
 

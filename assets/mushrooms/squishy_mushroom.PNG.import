@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://by7xnoiugdjn7"
-path="res://.godot/imported/peste_negra.PNG-8f31d0aaf4396f19196b6f59b56a7294.ctex"
+uid="uid://oox6v2mdl4pn"
+path="res://.godot/imported/squishy_mushroom.PNG-945d1c8e55a0b22a158557f47fb146c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mushrooms/peste_negra.PNG"
-dest_files=["res://.godot/imported/peste_negra.PNG-8f31d0aaf4396f19196b6f59b56a7294.ctex"]
+source_file="res://assets/mushrooms/squishy_mushroom.PNG"
+dest_files=["res://.godot/imported/squishy_mushroom.PNG-945d1c8e55a0b22a158557f47fb146c7.ctex"]
 
 [params]
 

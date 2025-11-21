@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://bqgj0pn787y68"]
 
 [ext_resource type="PackedScene" uid="uid://cfxgo5ye53do0" path="res://scenes/main_game/mushrooms/mushroom.tscn" id="1_u8tfb"]
-[ext_resource type="Texture2D" uid="uid://cpvqwpxftai1k" path="res://assets/mushrooms/stone_mushroom.PNG" id="2_3lpir"]
-[ext_resource type="Script" uid="uid://cg3gdlkv0fkw8" path="res://scripts/main_game/mushrooms/stone_mushroom.gd" id="2_50dat"]
+[ext_resource type="Script" uid="uid://cg3gdlkv0fkw8" path="res://scripts/main_game/mushrooms/jester_mushroom.gd" id="2_50dat"]
+[ext_resource type="Texture2D" uid="uid://by7xnoiugdjn7" path="res://assets/mushrooms/bubonic_mushroom.PNG" id="3_50dat"]
 
 [node name="StoneMushroom" instance=ExtResource("1_u8tfb")]
 script = ExtResource("2_50dat")
@@ -12,4 +12,4 @@ initial_scale = Vector2(0.9, 0.9)
 target_scale = Vector2(1.2, 1.2)
 
 [node name="Sprite2D" parent="." index="0"]
-texture = ExtResource("2_3lpir")
+texture = ExtResource("3_50dat")

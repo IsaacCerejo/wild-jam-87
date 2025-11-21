@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://6gc5emte74i3"
-path="res://.godot/imported/tallshroom_rb.PNG-a6394666882983a667af4d7f066eb9ce.ctex"
+uid="uid://dk30wqwr1hfke"
+path="res://.godot/imported/tall_mushroom.PNG-31a6949b79676cff507aa1eeac8d1b8d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mushrooms/tallshroom_rb.PNG"
-dest_files=["res://.godot/imported/tallshroom_rb.PNG-a6394666882983a667af4d7f066eb9ce.ctex"]
+source_file="res://assets/mushrooms/tall_mushroom.PNG"
+dest_files=["res://.godot/imported/tall_mushroom.PNG-31a6949b79676cff507aa1eeac8d1b8d.ctex"]
 
 [params]
 

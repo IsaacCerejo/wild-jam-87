@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://c6mosdrb4vnvb"]
 
 [ext_resource type="PackedScene" uid="uid://cfxgo5ye53do0" path="res://scenes/main_game/mushrooms/mushroom.tscn" id="1_g1w1s"]
-[ext_resource type="Texture2D" uid="uid://dk30wqwr1hfke" path="res://assets/mushrooms/tall_mushroom_2head.PNG" id="2_va38b"]
+[ext_resource type="Texture2D" uid="uid://dk30wqwr1hfke" path="res://assets/mushrooms/tall_mushroom.PNG" id="2_va38b"]
 [ext_resource type="Script" uid="uid://seg1a5bpbvas" path="res://scripts/main_game/mushrooms/squishy_mushroom.gd" id="2_w30f3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w30f3"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oox6v2mdl4pn"
-path="res://.godot/imported/gloomredshroom.PNG-ee48db90e44be4964676b6fc65b13ee6.ctex"
+uid="uid://6gc5emte74i3"
+path="res://.godot/imported/jester_mushroom.PNG-a23e754ec043a992da6b01cfa0fbaccf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/mushrooms/gloomredshroom.PNG"
-dest_files=["res://.godot/imported/gloomredshroom.PNG-ee48db90e44be4964676b6fc65b13ee6.ctex"]
+source_file="res://assets/mushrooms/jester_mushroom.PNG"
+dest_files=["res://.godot/imported/jester_mushroom.PNG-a23e754ec043a992da6b01cfa0fbaccf.ctex"]
 
 [params]
 
