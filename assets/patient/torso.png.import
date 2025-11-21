@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7q4fvme8ah78"
-path="res://.godot/imported/head.png-2d0f7953f00f7591fc7db992c4af7d6b.ctex"
+uid="uid://cn3ixunlwsdxs"
+path="res://.godot/imported/torso.png-6a7ef08a8e6f756b2ba7812b7611f1b2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/paciente/head.png"
-dest_files=["res://.godot/imported/head.png-2d0f7953f00f7591fc7db992c4af7d6b.ctex"]
+source_file="res://assets/patient/torso.png"
+dest_files=["res://.godot/imported/torso.png-6a7ef08a8e6f756b2ba7812b7611f1b2.ctex"]
 
 [params]
 
