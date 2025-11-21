@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqgj0pn787y68"]
+
+[ext_resource type="PackedScene" uid="uid://cfxgo5ye53do0" path="res://scenes/main_game/mushrooms/mushroom.tscn" id="1_g25aq"]
+[ext_resource type="Script" uid="uid://cg3gdlkv0fkw8" path="res://scripts/main_game/mushrooms/jester_mushroom.gd" id="2_0t73v"]
+[ext_resource type="Texture2D" uid="uid://6gc5emte74i3" path="res://assets/mushrooms/jester_mushroom.PNG" id="3_00xul"]
+
+[node name="JesterMushroom" instance=ExtResource("1_g25aq")]
+script = ExtResource("2_0t73v")
+drag_distance_threshold = 50.0
+initial_duration = 0.1
+initial_scale = Vector2(0.9, 0.9)
+target_scale = Vector2(1.2, 1.2)
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("3_00xul")

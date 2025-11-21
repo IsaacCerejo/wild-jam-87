@@ -1,2 +1,2 @@
 extends Mushroom
-class_name BubonicMushroom
+class_name FaceMushroom

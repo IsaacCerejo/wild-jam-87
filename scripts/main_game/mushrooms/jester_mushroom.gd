@@ -1,5 +1,5 @@
 extends Mushroom
-class_name StoneMushroom
+class_name JesterMushroom
 
 @export var drag_distance_threshold: float = 50.0
 

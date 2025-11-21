@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://cfxgo5ye53do0" path="res://scenes/main_game/mushrooms/mushroom.tscn" id="1_1aahr"]
 [ext_resource type="Script" uid="uid://c3ppqq4806ni" path="res://scripts/main_game/mushrooms/tall_mushroom.gd" id="2_h65x5"]
-[ext_resource type="Texture2D" uid="uid://0hfxyqucojp5" path="res://assets/mushrooms/balloon_mushroom.PNG" id="2_k5pad"]
+[ext_resource type="Texture2D" uid="uid://dk30wqwr1hfke" path="res://assets/mushrooms/tall_mushroom.PNG" id="3_h65x5"]
 
 [node name="TallMushroom" instance=ExtResource("1_1aahr")]
 script = ExtResource("2_h65x5")
 
 [node name="Sprite2D" parent="." index="0"]
-texture = ExtResource("2_k5pad")
+texture = ExtResource("3_h65x5")
