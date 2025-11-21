@@ -36,6 +36,7 @@ func _ready() -> void:
 	_original_material = sprite_2d.material
 
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
+	assert(Global.player != null)
 	var active_tool: Tool = Global.player.get_active_tool()
 
 	if _busy or active_tool == null:

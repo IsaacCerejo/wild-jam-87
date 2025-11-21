@@ -43,9 +43,6 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Escape"):
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 	
-	if event.is_action_pressed("Restart"):
-		await Global.game_controller.change_scene(SCENE_UIDS.MAIN_GAME_UI, SCENE_UIDS.MAIN_GAME, TransitionSettings.TRANSITION_TYPE.FADE_TO_FADE)
-	
 	if event.is_action_pressed("Fullscreen"):
 		var mode := DisplayServer.window_get_mode()
 	

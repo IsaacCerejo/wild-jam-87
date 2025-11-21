@@ -4,6 +4,7 @@ extends Control
 @onready var options_menu: Control = %OptionsMenu
 
 func _ready() -> void:
+	Global.reset_score()
 	if AudioManager.get_active_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.BACKGROUND_MUSIC) == null:
 		AudioManager.create_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.BACKGROUND_MUSIC)
 	else:
