@@ -13,4 +13,5 @@ func _on_action_performed(_event: InputEvent) -> bool:
 		var accuracy_modifier: float = await mini_game.complete
 		score_value = int(score_value * accuracy_modifier)
 		_in_mini_game = false
-	return true
+		return true
+	return false

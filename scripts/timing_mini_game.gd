@@ -17,7 +17,7 @@ func _ready() -> void:
 	queue_free()
 
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
-	if event is InputEventMouseButton and event.pressed:
+	if event is InputEventMouseButton and not event.pressed:
 		var current_scale: Vector2 = area_2d.scale
 		var distance: float = (current_scale - _perfect_scale).length()
 		var max_distance: float = _perfect_scale.length()
@@ -25,3 +25,7 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 		
 		complete.emit(accuracy_modifier)
 		queue_free()
+
+func _on_area_2d_mouse_exited() -> void:
+	complete.emit(0.0)
+	queue_free()

@@ -41,23 +41,24 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 
 	var active_tool = Global.player.get_active_tool()
 	var is_tool_correct: bool = active_tool != null and allowed_tool_types.has(active_tool.type)
-	if (event is InputEventMouseButton and event.pressed):
-		if is_tool_correct:
-			@warning_ignore("REDUNDANT_AWAIT")
-			if await _on_action_performed(event):
-				picked.emit(self)
-				AudioManager.create_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.MUSHROOM_PICKED)
-				Global.add_score(score_value)
-				await _correct_animation()
-				queue_free()
-			else:
-				if Global.time_bar != null:
+
+	if event is InputEventMouseButton:
+		if not is_tool_correct:
+			if event.pressed:
+				if Global.time_bar:
 					Global.time_bar.add_time(-time_penalty)
 				await _wrong_animation()
-		else:
-			if Global.time_bar != null:
-				Global.time_bar.add_time(-time_penalty)
-			await _wrong_animation()
+			return
+
+		@warning_ignore("REDUNDANT_AWAIT")
+		var result: bool = await _on_action_performed(event)
+
+		if result:
+			picked.emit(self)
+			AudioManager.create_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.MUSHROOM_PICKED)
+			Global.add_score(score_value)
+			await _correct_animation()
+			queue_free()
 
 func _correct_animation() -> void:
 	_busy = true
@@ -150,8 +151,8 @@ func _wrong_animation() -> void:
 	_busy = false
 
 # Action performed check. Function meant to be overridden.
-func _on_action_performed(_event: InputEvent) -> bool:
-	return true
+func _on_action_performed(event: InputEvent) -> bool:
+	return (not event.pressed)
 
 # Signal callbacks
 func _on_mouse_entered() -> void:
