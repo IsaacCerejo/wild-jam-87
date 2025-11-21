@@ -2,6 +2,7 @@ extends Node
 
 # Constants
 const SCENE_UIDS = {
+	"GAME_CONTROLLER": "uid://cyangrc80ocx0",
 	"START_MENU": "uid://dolritqgtceml",
 	"MAIN_GAME": "uid://fwifwdj0klmd",
 	"MAIN_GAME_UI": "uid://byg7j72h7pac6",
