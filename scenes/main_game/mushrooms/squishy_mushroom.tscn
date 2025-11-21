@@ -9,6 +9,7 @@ radius = 16.03122
 
 [node name="SquishyMushroom" instance=ExtResource("1_g1w1s")]
 script = ExtResource("2_w30f3")
+allowed_tool_types = Array[int]([4])
 
 [node name="Sprite2D" parent="." index="0"]
 texture = ExtResource("3_w30f3")
