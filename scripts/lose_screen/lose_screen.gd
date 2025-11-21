@@ -5,6 +5,8 @@ extends Control
 @onready var total_score_label: RichTextLabel = %TotalScore
 
 func _ready() -> void:
+	Global.high_score = max(Global.high_score, Global.compute_total_score())
+
 	mushroom_score_label.clear()
 	mushroom_score_label.text = "[wave amp=50.0 freq=5.0 connected=1][rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0]%d[/rainbow]" % Global.mushroom_score
 

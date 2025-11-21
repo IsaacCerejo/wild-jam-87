@@ -29,6 +29,7 @@ var camera: Camera2D
 var time_bar: TimeBar
 var time_score: int = 0
 var mushroom_score: int = 0
+var high_score: int = 0
 
 # Settings
 var music_step: int = 9
