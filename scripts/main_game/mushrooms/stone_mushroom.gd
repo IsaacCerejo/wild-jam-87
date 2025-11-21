@@ -14,7 +14,7 @@ var _start_pos: Vector2
 signal drag_finished(success: bool)
 
 func _on_action_performed(event: InputEvent) -> bool:
-	if not _dragging and event is InputEventMouseButton and event.pressed:
+	if not _dragging and event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		_dragging = true
 		_start_pos = to_local(event.position)
 		var _original_scale: Vector2 = sprite_2d.scale
@@ -55,6 +55,6 @@ func _input(event: InputEvent) -> void:
 			_dragging = false
 			drag_finished.emit(true)
 
-	elif event is InputEventMouseButton and not event.pressed:
+	elif event is InputEventMouseButton and not event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		_dragging = false
 		drag_finished.emit(false)
