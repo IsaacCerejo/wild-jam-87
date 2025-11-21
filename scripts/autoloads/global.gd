@@ -60,7 +60,6 @@ func reset_score() -> void:
 	score = 0
 
 func add_time_to_score() -> void:
-	print("Adding time to score")
 	if time_bar:
 		time_bar.stop_timer()
 		score += int(time_bar.get_time_left())
