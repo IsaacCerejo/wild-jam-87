@@ -42,7 +42,7 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 	var active_tool = Global.player.get_active_tool()
 	var is_tool_correct: bool = active_tool != null and allowed_tool_types.has(active_tool.type)
 
-	if event is InputEventMouseButton:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if not is_tool_correct:
 			if event.pressed:
 				if Global.time_bar:
