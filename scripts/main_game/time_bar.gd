@@ -13,16 +13,15 @@ class_name TimeBar
 @export var warning_scale_up: Vector2 = Vector2(1.02, 0.98)
 @export var warning_scale_duration: float = 0.05
 
-var _time_left: float = 0.0:
+var _time_left: float = time_limit:
 	set = set_time_left,
 	get = get_time_left
 
-var _finished: bool = false
+var _finished: bool = true
 var _warn_played: bool = false
 
 func _ready() -> void:
 	Global.time_bar = self
-	start_timer()
 
 func _exit_tree() -> void:
 	Global.time_bar = null
@@ -72,6 +71,8 @@ func reset_timer_animated() -> void:
 	value = 0
 
 func start_timer() -> void:
+	if not visible:
+		show()
 	_finished = false
 	_warn_played = false
 	_time_left = time_limit

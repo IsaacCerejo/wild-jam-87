@@ -7,9 +7,18 @@ class_name PatientManager
 var patient: Patient
 
 const PATIENT_SCENE: PackedScene = preload(Global.SCENE_UIDS.PATIENT)
+const PATIENT_TUTORIAL_SCENE: PackedScene = preload(Global.SCENE_UIDS.PATIENT_TUTORIAL)
 
 func _ready() -> void:
-	_new_patient()
+	patient = PATIENT_TUTORIAL_SCENE.instantiate() as PatientTutorial
+	tray.add_child(patient)
+	patient.cured.connect(_on_patient_cured)
+	patient.generate_mushrooms()
+
+	animation_player.play("slide_in")
+	# TODO: Yes or nay?
+	# await animation_player.animation_finished
+
 
 func _new_patient() -> void:
 	patient = PATIENT_SCENE.instantiate() as Patient
@@ -20,6 +29,7 @@ func _new_patient() -> void:
 	patient.generate_mushrooms()
 
 	animation_player.play("slide_in")
+	# TODO: Yes or nay?
 	# await animation_player.animation_finished
 
 	Global.time_bar.start_timer()

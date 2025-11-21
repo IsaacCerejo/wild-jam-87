@@ -8,6 +8,7 @@ const SCENE_UIDS = {
 	"MAIN_GAME_UI": "uid://byg7j72h7pac6",
 	"LOSE_SCREEN": "uid://dfox7aapmjh2k",
 	"PATIENT": "uid://mtilpmnd7m7y",
+	"PATIENT_TUTORIAL": "uid://cypx2cfe52eck",
 	"TALL_MUSHROOM": "uid://darqsw3l4uvnv",
 	"STONE_MUSHROOM": "uid://bqgj0pn787y68",
 	"BALLOON_MUSHROOM": "uid://i0birjinl1cf",

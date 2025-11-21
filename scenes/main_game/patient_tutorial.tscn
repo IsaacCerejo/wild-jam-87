@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://cypx2cfe52eck"]
+
+[ext_resource type="PackedScene" uid="uid://mtilpmnd7m7y" path="res://scenes/main_game/patient.tscn" id="1_kashg"]
+[ext_resource type="Script" uid="uid://dqh4qwcf846vd" path="res://scripts/main_game/patient_tutorial.gd" id="2_e8cf8"]
+
+[node name="Patient" instance=ExtResource("1_kashg")]
+script = ExtResource("2_e8cf8")
