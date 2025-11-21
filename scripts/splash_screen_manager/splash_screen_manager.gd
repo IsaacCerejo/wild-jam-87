@@ -14,6 +14,10 @@ func _ready() -> void:
 	get_screens()
 	fade()
 
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_pressed():
+		get_tree().change_scene_to_file(Global.SCENE_UIDS.GAME_CONTROLLER)
+
 func get_screens() -> void:
 	splash_screens = splash_screen_container.get_children()
 	for screen in splash_screens:
