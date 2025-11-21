@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://b18qc0kkm5pkx"]
+
+[ext_resource type="Script" uid="uid://b1allxwp806s0" path="res://scripts/main_game/lantern.gd" id="1_k74nt"]
+[ext_resource type="Texture2D" uid="uid://cq78o0i5acgfx" path="res://assets/icons/icon.svg" id="2_xha3u"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r8wn4"]
+radius = 66.75328
+
+[sub_resource type="Gradient" id="Gradient_s87mg"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ebk6p"]
+gradient = SubResource("Gradient_s87mg")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.84659094, 0.1846591)
+
+[node name="Lantern" type="Area2D"]
+z_index = -1
+script = ExtResource("1_k74nt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_xha3u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_r8wn4")
+
+[node name="Light" type="PointLight2D" parent="."]
+position = Vector2(0, 2.9999998)
+scale = Vector2(5, 5)
+color = Color(1, 0.54901963, 0.25882354, 1)
+energy = 1.3
+range_item_cull_mask = 3
+texture = SubResource("GradientTexture2D_ebk6p")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
