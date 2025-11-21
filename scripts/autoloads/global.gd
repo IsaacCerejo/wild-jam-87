@@ -27,7 +27,8 @@ var game_controller: GameController
 var player: Player
 var camera: Camera2D
 var time_bar: TimeBar
-var score: int = 0
+var time_score: int = 0
+var mushroom_score: int = 0
 
 # Settings
 var music_step: int = 9
@@ -53,13 +54,17 @@ func _input(event: InputEvent) -> void:
 		else:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
-func add_score(value: int) -> void:
-	score += value
+func add_mushroom_score(value: int) -> void:
+	mushroom_score += value
+
+func compute_total_score() -> int:
+	return time_score + mushroom_score
 
 func reset_score() -> void:
-	score = 0
+	time_score = 0
+	mushroom_score = 0
 
 func add_time_to_score() -> void:
 	if time_bar:
 		time_bar.stop_timer()
-		score += int(time_bar.get_time_left())
+		time_score += int(time_bar.get_time_left())

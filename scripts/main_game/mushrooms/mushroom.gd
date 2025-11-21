@@ -36,11 +36,12 @@ func _ready() -> void:
 	_original_material = sprite_2d.material
 
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
-	if _busy:
+	var active_tool: Tool = Global.player.get_active_tool()
+
+	if _busy or active_tool == null:
 		return
 
-	var active_tool = Global.player.get_active_tool()
-	var is_tool_correct: bool = active_tool != null and allowed_tool_types.has(active_tool.type)
+	var is_tool_correct: bool = allowed_tool_types.has(active_tool.type)
 
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if not is_tool_correct:
@@ -56,7 +57,7 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 		if result:
 			picked.emit(self)
 			AudioManager.create_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.MUSHROOM_PICKED)
-			Global.add_score(score_value)
+			Global.add_mushroom_score(score_value)
 			await _correct_animation()
 			queue_free()
 
