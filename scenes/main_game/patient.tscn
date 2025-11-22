@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://mtilpmnd7m7y"]
+[gd_scene load_steps=10 format=3 uid="uid://mtilpmnd7m7y"]
 
 [ext_resource type="Script" uid="uid://c3wghgg2g717r" path="res://scripts/main_game/patient.gd" id="1_s1xdg"]
 [ext_resource type="Texture2D" uid="uid://bloq2j3mt8a3w" path="res://assets/patient/patient.png" id="2_3knpu"]
@@ -8,9 +8,19 @@
 [ext_resource type="Texture2D" uid="uid://7uk0gwy21nhl" path="res://assets/patient/right_arm.png" id="5_5qs04"]
 [ext_resource type="Texture2D" uid="uid://d1wg6uk21q1bv" path="res://assets/patient/left_leg.png" id="6_up4j8"]
 [ext_resource type="Texture2D" uid="uid://op5f0ffy213x" path="res://assets/patient/right_leg.png" id="7_ddug4"]
+[ext_resource type="Script" uid="uid://me7cgjqr5843" path="res://scripts/main_game/patient_drag.gd" id="9_ddug4"]
 
 [node name="Patient" type="Node2D"]
 script = ExtResource("1_s1xdg")
+
+[node name="DragManager" type="Node2D" parent="."]
+script = ExtResource("9_ddug4")
+
+[node name="MousePin" type="PinJoint2D" parent="DragManager"]
+node_a = NodePath("MouseBody")
+softness = 4.0
+
+[node name="MouseBody" type="StaticBody2D" parent="DragManager/MousePin"]
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 0.38039216)
@@ -24,16 +34,19 @@ texture = ExtResource("2_3knpu")
 position = Vector2(-192, 3)
 node_a = NodePath("../../MushroomAreas/Torso")
 node_b = NodePath("../../MushroomAreas/Head")
+angular_limit_lower = -2.0943952
 
 [node name="PinJoint2D2" type="PinJoint2D" parent="Pins"]
 position = Vector2(-147, -57)
 node_a = NodePath("../../MushroomAreas/Torso")
 node_b = NodePath("../../MushroomAreas/LeftArm")
+angular_limit_lower = -2.0943952
 
 [node name="PinJoint2D3" type="PinJoint2D" parent="Pins"]
 position = Vector2(-147, 60)
 node_a = NodePath("../../MushroomAreas/Torso")
 node_b = NodePath("../../MushroomAreas/RightArm")
+angular_limit_lower = -2.0943952
 
 [node name="PinJoint2D4" type="PinJoint2D" parent="Pins"]
 position = Vector2(44, 47)
