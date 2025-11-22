@@ -6,6 +6,7 @@ enum SOUND_EFFECT_TYPE {
 	BUTTON_CLICK,
 	MUSHROOM_PICKED,
 	BACKGROUND_MUSIC,
+	WRONG_TOOL,
 }
 
 ## Maximum amount of this sound that can play at the same time.

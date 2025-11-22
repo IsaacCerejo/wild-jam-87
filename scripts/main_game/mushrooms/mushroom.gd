@@ -52,6 +52,7 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 			if event.pressed:
 				if Global.game_ui != null and Global.game_ui.hud.visible:
 					Global.game_ui.hud.time_bar.add_time(-time_penalty)
+				AudioManager.create_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.WRONG_TOOL)
 				await _wrong_animation()
 			return
 
