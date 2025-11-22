@@ -1,7 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://cypx2cfe52eck"]
+[gd_scene load_steps=5 format=3 uid="uid://cypx2cfe52eck"]
 
 [ext_resource type="PackedScene" uid="uid://mtilpmnd7m7y" path="res://scenes/main_game/patient.tscn" id="1_kashg"]
 [ext_resource type="Script" uid="uid://dqh4qwcf846vd" path="res://scripts/main_game/patient_tutorial.gd" id="2_e8cf8"]
+[ext_resource type="Shader" uid="uid://bxfmwgtfjfhjo" path="res://resources/shaders/shadow.gdshader" id="3_n0xb8"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b2en4"]
+shader = ExtResource("3_n0xb8")
+shader_parameter/tint_color = Color(0.18757862, 0.31231412, 0.33311018, 1)
+shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
+shader_parameter/key_threshold = 0.02
 
 [node name="Patient" instance=ExtResource("1_kashg")]
 script = ExtResource("2_e8cf8")
+
+[node name="torsoShadow" parent="MushroomAreas/Torso" index="3"]
+material = SubResource("ShaderMaterial_b2en4")
+
+[node name="torsoShadow2" parent="MushroomAreas/Head" index="3"]
+material = SubResource("ShaderMaterial_b2en4")
+
+[node name="LeftArmShadow" parent="MushroomAreas/LeftArm" index="3"]
+material = SubResource("ShaderMaterial_b2en4")
+
+[node name="RightArmShadow" parent="MushroomAreas/RightArm" index="3"]
+material = SubResource("ShaderMaterial_b2en4")
+
+[node name="LeftLegShadow" parent="MushroomAreas/LeftLeg" index="3"]
+material = SubResource("ShaderMaterial_b2en4")
+
+[node name="RightLegShadow" parent="MushroomAreas/RightLeg" index="3"]
+material = SubResource("ShaderMaterial_b2en4")
