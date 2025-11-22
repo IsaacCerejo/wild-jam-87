@@ -1,6 +1,6 @@
 extends Line2D
 
-const MAX_POINTS: int = 200
+const MAX_POINTS: int = 2
 const FOLLOW_STRENGTH: float = 0.2
 const DOWNWARD_SPEED: float = 300
 const BASE_POSITION: Vector2 = Vector2(800, 900)
