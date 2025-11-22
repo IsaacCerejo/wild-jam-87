@@ -1,14 +1,15 @@
 extends Control
+class_name PauseMenu
 
 @onready var options_menu: Control = %OptionsMenu
 @onready var how_to_play_menu: Control = %HowToPlayMenu
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Pause"):
-		_open_close_pause()
+		open_close_pause()
 
-# Private functions
-func _open_close_pause():
+# Public functions
+func open_close_pause():
 	visible = !visible
 	if visible:
 		get_tree().paused = true
@@ -23,7 +24,7 @@ func _open_close_pause():
 # Signal callbacks
 func _on_resume_button_pressed() -> void:
 	AudioManager.create_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.BUTTON_CLICK)
-	_open_close_pause()
+	open_close_pause()
 
 func _on_options_button_pressed() -> void:
 	AudioManager.create_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.BUTTON_CLICK)

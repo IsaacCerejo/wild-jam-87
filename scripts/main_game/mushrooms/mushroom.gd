@@ -50,8 +50,8 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if not is_tool_correct:
 			if event.pressed:
-				if Global.time_bar:
-					Global.time_bar.add_time(-time_penalty)
+				if Global.game_ui != null and Global.game_ui.hud.visible:
+					Global.game_ui.hud.time_bar.add_time(-time_penalty)
 				await _wrong_animation()
 			return
 

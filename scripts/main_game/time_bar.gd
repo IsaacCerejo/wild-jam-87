@@ -20,12 +20,6 @@ var _time_left: float = time_limit:
 var _finished: bool = true
 var _warn_played: bool = false
 
-func _ready() -> void:
-	Global.time_bar = self
-
-func _exit_tree() -> void:
-	Global.time_bar = null
-
 func _process(delta: float) -> void:
 	if _finished:
 		return
@@ -62,7 +56,7 @@ func set_time_limit(new_time_limit: float) -> void:
 func stop_timer() -> void:
 	_finished = true
 
-func reset_timer_animated() -> void:
+func reset_timer() -> void:
 	_finished = true
 	var tween: Tween = create_tween()
 	tween.tween_property(self, "value", 0, reset_duration)
@@ -71,8 +65,6 @@ func reset_timer_animated() -> void:
 	value = 0
 
 func start_timer() -> void:
-	if not visible:
-		show()
 	_finished = false
 	_warn_played = false
 	_time_left = time_limit

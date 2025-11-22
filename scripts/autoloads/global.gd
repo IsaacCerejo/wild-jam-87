@@ -24,9 +24,10 @@ const MATERIAL_UIDS = {
 
 # Game Controller
 var game_controller: GameController
+# Mal practical but for jam purposes. Ideally use signals.
 var player: Player
 var camera: Camera2D
-var time_bar: TimeBar
+var game_ui: MainGameUI
 var time_score: int = 0
 var mushroom_score: int = 0
 var high_score: int = 0
@@ -53,7 +54,15 @@ func _input(event: InputEvent) -> void:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 
 func add_mushroom_score(value: int) -> void:
-	mushroom_score += value
+	if game_ui and Global.game_ui.hud.visible:
+		mushroom_score += value
+		game_ui.hud.update_score()
+
+func add_time_to_score() -> void:
+	if game_ui and Global.game_ui.hud.visible:
+		game_ui.hud.time_bar.stop_timer()
+		time_score += int(game_ui.hud.time_bar.get_time_left())
+		game_ui.hud.update_score()
 
 func compute_total_score() -> int:
 	return time_score + mushroom_score
@@ -61,8 +70,3 @@ func compute_total_score() -> int:
 func reset_score() -> void:
 	time_score = 0
 	mushroom_score = 0
-
-func add_time_to_score() -> void:
-	if time_bar:
-		time_bar.stop_timer()
-		time_score += int(time_bar.get_time_left())

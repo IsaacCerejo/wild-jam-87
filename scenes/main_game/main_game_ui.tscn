@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://byg7j72h7pac6"]
+[gd_scene load_steps=4 format=3 uid="uid://byg7j72h7pac6"]
 
-[ext_resource type="Script" uid="uid://dao7fj2pl4bg3" path="res://scripts/main_game/time_bar.gd" id="1_b1iqi"]
 [ext_resource type="PackedScene" uid="uid://boaytsxvldcf8" path="res://scenes/main_game/pause.tscn" id="1_ifxwi"]
+[ext_resource type="Script" uid="uid://dxfj3x285p1a" path="res://scripts/main_game/main_game_ui.gd" id="1_j38uc"]
+[ext_resource type="PackedScene" uid="uid://dyw0n07n1jck7" path="res://scenes/main_game/hud.tscn" id="2_7kn4w"]
 
 [node name="MainGameUI" type="Control"]
 layout_mode = 3
@@ -11,20 +12,20 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+script = ExtResource("1_j38uc")
 
-[node name="TimeBar" type="ProgressBar" parent="."]
+[node name="HUD" parent="." instance=ExtResource("2_7kn4w")]
+unique_name_in_owner = true
 visible = false
-layout_mode = 0
-offset_left = 184.0
-offset_top = 50.0
-offset_right = 1086.0
-offset_bottom = 77.0
-mouse_filter = 2
-max_value = 60.0
-show_percentage = false
-script = ExtResource("1_b1iqi")
+layout_mode = 1
 
-[node name="Pause" parent="." instance=ExtResource("1_ifxwi")]
-layout_mode = 0
-offset_right = 1280.0
-offset_bottom = 720.0
+[node name="PauseMenu" parent="." instance=ExtResource("1_ifxwi")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2

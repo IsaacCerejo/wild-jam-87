@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://dyw0n07n1jck7"]
+
+[ext_resource type="Script" uid="uid://cmwyty2v52l2y" path="res://scripts/main_game/hud.gd" id="1_haqa6"]
+[ext_resource type="Theme" uid="uid://2ek7eagjo7f0" path="res://resources/themes/general_theme.tres" id="1_vbvyk"]
+[ext_resource type="Script" uid="uid://dao7fj2pl4bg3" path="res://scripts/main_game/time_bar.gd" id="2_haqa6"]
+
+[node name="HUD" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+script = ExtResource("1_haqa6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="TimeBar" type="ProgressBar" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(720, 25)
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+mouse_filter = 2
+theme = ExtResource("1_vbvyk")
+max_value = 60.0
+show_percentage = false
+script = ExtResource("2_haqa6")
+
+[node name="ScoreLabel" type="Label" parent="HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 25)
+layout_mode = 2
+size_flags_horizontal = 10
+theme = ExtResource("1_vbvyk")
+horizontal_alignment = 1
+vertical_alignment = 1

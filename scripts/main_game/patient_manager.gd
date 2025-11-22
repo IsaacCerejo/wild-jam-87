@@ -32,14 +32,13 @@ func _new_patient() -> void:
 	# TODO: Yes or nay?
 	# await animation_player.animation_finished
 
-	Global.time_bar.start_timer()
+	Global.game_ui.hud.start()
 
 func _on_patient_cured() -> void:
 	# Add remaining time to score
 	Global.add_time_to_score()
-
 	# Animate timer reset
-	Global.time_bar.reset_timer_animated()
+	Global.game_ui.hud.time_bar.reset_timer()
 
 	animation_player.play_backwards("slide_in")
 	await animation_player.animation_finished

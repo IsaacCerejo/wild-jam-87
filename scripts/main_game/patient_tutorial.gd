@@ -1,9 +1,6 @@
 extends Patient
 class_name PatientTutorial
 
-func _exit_tree() -> void:
-	Global.reset_score()
-
 # Override
 func generate_mushrooms() -> void:
 	for mushroom_scene in MUSHROOM_SCENES:
