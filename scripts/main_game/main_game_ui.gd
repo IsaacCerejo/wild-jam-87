@@ -1,8 +1,8 @@
 extends Control
 class_name MainGameUI
 
-@onready var hud: Control = %HUD
-@onready var pause_menu: Control = %PauseMenu
+@onready var hud: Hud = %HUD
+@onready var pause_menu: PauseMenu = %PauseMenu
 
 func _ready() -> void:
 	Global.game_ui = self

@@ -16,12 +16,11 @@ const MUSHROOM_SCENES: Array[PackedScene] = [
 @export_range(0, 20) var shroom_deviation: float = 16.5
 
 var _mushrooms: Array[Mushroom] = []
-@onready var mushroom_areas: Array[Line2D] = [$MushroomAreas/Torso/TorsoArea,$MushroomAreas/Head/HeadArea,$MushroomAreas/LeftArm/LeftArmArea,$MushroomAreas/RightArm/RightArmArea,$MushroomAreas/LeftLeg/LeftLegArea,$MushroomAreas/RightLeg/RightLegArea]
+@onready var mushroom_areas: Array[Line2D] = [$MushroomAreas/Torso/TorsoArea, $MushroomAreas/Head/HeadArea, $MushroomAreas/LeftArm/LeftArmArea, $MushroomAreas/RightArm/RightArmArea, $MushroomAreas/LeftLeg/LeftLegArea, $MushroomAreas/RightLeg/RightLegArea]
 var unused_base_points: Array[Vector2] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	
 	pass
 	#TODO: spawn body with random skin
 
@@ -33,7 +32,7 @@ func generate_mushrooms() -> void:
 		new_mushroom.picked.connect(_on_mushroom_picked)
 		new_mushroom.z_index = 1
 		_mushrooms.append(new_mushroom)
-		var affected_area = mushroom_areas[randi_range(0,len(mushroom_areas)-1)]
+		var affected_area = mushroom_areas[randi_range(0, len(mushroom_areas) - 1)]
 		affected_area.add_child(new_mushroom)
 		new_mushroom.set_position(find_mushroom_position(affected_area))
 
@@ -42,7 +41,7 @@ func _on_mushroom_picked(mushroom: Mushroom) -> void:
 	if _mushrooms.size() == 0:
 		cured.emit()
 
-func find_mushroom_position(affected_area:Line2D) -> Vector2:
+func find_mushroom_position(affected_area: Line2D) -> Vector2:
 	var new_mushroom_position := Vector2()
 	
 	# Always use different base points

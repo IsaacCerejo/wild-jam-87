@@ -24,6 +24,8 @@ const MATERIAL_UIDS = {
 
 @warning_ignore("UNUSED_SIGNAL")
 signal round_changed(new_round: int)
+@warning_ignore("UNUSED_SIGNAL")
+signal mushroom_picked(mushroom_type: String)
 
 # Game Controller
 var game_controller: GameController
@@ -32,6 +34,14 @@ var player: Player
 var camera: Camera2D
 var game_ui: MainGameUI
 var time_score: int = 0
+# Bad hardcoded mushroom types, but jam time constraints
+var mushrooms_picked: Dictionary = {
+	"TallMushroom": 0,
+	"JesterMushroom": 0,
+	"BalloonMushroom": 0,
+	"FaceMushroom": 0,
+	"SquishyMushroom": 0
+}
 var mushroom_score: int = 0
 var high_score: int = 0
 

@@ -60,6 +60,8 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> voi
 
 		if result:
 			picked.emit(self)
+			Global.mushroom_picked.emit(get_script().get_global_name())
+			Global.mushrooms_picked[get_script().get_global_name()] += 1
 			AudioManager.create_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.MUSHROOM_PICKED)
 			Global.add_mushroom_score(score_value)
 			await _correct_animation()

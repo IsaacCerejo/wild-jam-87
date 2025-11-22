@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://fwifwdj0klmd"]
+[gd_scene load_steps=42 format=3 uid="uid://fwifwdj0klmd"]
 
 [ext_resource type="Texture2D" uid="uid://bce0lpb8ourlr" path="res://assets/background/background.png" id="1_s87mg"]
 [ext_resource type="Script" uid="uid://c0qla4xs5qtuw" path="res://scripts/main_game/patient_manager.gd" id="3_4y18v"]
@@ -10,9 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://cfynw7ir82qmn" path="res://scenes/main_game/tool.tscn" id="7_b4n6q"]
 [ext_resource type="Texture2D" uid="uid://dhupda6d3r6f1" path="res://assets/tools/tool_hammer.png" id="7_ebk6p"]
 [ext_resource type="Texture2D" uid="uid://d1wspkbkkygsv" path="res://assets/tools/tool_spray.png" id="7_l774p"]
+[ext_resource type="Script" uid="uid://crlx8tc4ryyvd" path="res://scripts/main_game/post_its.gd" id="8_gxjft"]
 [ext_resource type="Script" uid="uid://vta4rkxv4wv0" path="res://scripts/main_game/player.gd" id="8_r8wn4"]
 [ext_resource type="Texture2D" uid="uid://cep1fth1pjb7p" path="res://assets/background/cama.png" id="8_s87mg"]
 [ext_resource type="Texture2D" uid="uid://dewjajqggymbo" path="res://assets/hand/hand_empty.png" id="9_kwr1i"]
+[ext_resource type="Shader" uid="uid://dp763fss7hgwb" path="res://resources/shaders/dissolve.gdshader" id="9_uddg2"]
 [ext_resource type="Texture2D" uid="uid://kdeakq4xrq8s" path="res://assets/hand/hand_pinca.png" id="10_fxa2l"]
 [ext_resource type="Texture2D" uid="uid://chxpexxxkxr2n" path="res://assets/hand/hand_spray.png" id="11_feobv"]
 [ext_resource type="Texture2D" uid="uid://d3svvioh7o10y" path="res://assets/hand/hand_tesoura.png" id="12_gxjft"]
@@ -75,6 +77,66 @@ animations = [{
 "name": &"tesoura",
 "speed": 5.0
 }]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_uddg2"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_qspar"]
+noise = SubResource("FastNoiseLite_uddg2")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uddg2"]
+shader = ExtResource("9_uddg2")
+shader_parameter/base_color = Color(1, 1, 1, 1)
+shader_parameter/inside_color = Color(0.2, 0.2, 0.2, 1)
+shader_parameter/dissolve_amount = 0.0
+shader_parameter/glow_color = Color(1, 0, 0, 1)
+shader_parameter/glow_intensity = 5.0
+shader_parameter/glow_border_width = 0.05
+shader_parameter/glow_border_smoothness = 0.04
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_qspar")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qspar"]
+shader = ExtResource("9_uddg2")
+shader_parameter/base_color = Color(1, 1, 1, 1)
+shader_parameter/inside_color = Color(0.2, 0.2, 0.2, 1)
+shader_parameter/dissolve_amount = 0.0
+shader_parameter/glow_color = Color(1, 0, 0, 1)
+shader_parameter/glow_intensity = 5.0
+shader_parameter/glow_border_width = 0.05
+shader_parameter/glow_border_smoothness = 0.04
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_qspar")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7mboc"]
+shader = ExtResource("9_uddg2")
+shader_parameter/base_color = Color(1, 1, 1, 1)
+shader_parameter/inside_color = Color(0.2, 0.2, 0.2, 1)
+shader_parameter/dissolve_amount = 0.0
+shader_parameter/glow_color = Color(1, 0, 0, 1)
+shader_parameter/glow_intensity = 5.0
+shader_parameter/glow_border_width = 0.05
+shader_parameter/glow_border_smoothness = 0.04
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_qspar")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_fm6xj"]
+shader = ExtResource("9_uddg2")
+shader_parameter/base_color = Color(1, 1, 1, 1)
+shader_parameter/inside_color = Color(0.2, 0.2, 0.2, 1)
+shader_parameter/dissolve_amount = 0.0
+shader_parameter/glow_color = Color(1, 0, 0, 1)
+shader_parameter/glow_intensity = 5.0
+shader_parameter/glow_border_width = 0.05
+shader_parameter/glow_border_smoothness = 0.04
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_qspar")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sjufv"]
+shader = ExtResource("9_uddg2")
+shader_parameter/base_color = Color(1, 1, 1, 1)
+shader_parameter/inside_color = Color(0.2, 0.2, 0.2, 1)
+shader_parameter/dissolve_amount = 0.0
+shader_parameter/glow_color = Color(1, 0, 0, 1)
+shader_parameter/glow_intensity = 5.0
+shader_parameter/glow_border_width = 0.05
+shader_parameter/glow_border_smoothness = 0.04
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_qspar")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r8wn4"]
 size = Vector2(120.32367, 37.60898)
@@ -163,25 +225,35 @@ script = ExtResource("13_4y18v")
 [node name="PostIts" type="Node2D" parent="."]
 z_index = -1
 position = Vector2(1140, 550)
+script = ExtResource("8_gxjft")
 
 [node name="TesouraPostIt" type="Sprite2D" parent="PostIts"]
-position = Vector2(-931, 64)
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_uddg2")
+position = Vector2(-909, 32)
 texture = ExtResource("15_fxa2l")
 
 [node name="SprayPostIt" type="Sprite2D" parent="PostIts"]
-position = Vector2(-150, 120)
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_qspar")
+position = Vector2(-97, 70)
 texture = ExtResource("16_feobv")
 
 [node name="HammerPostIt" type="Sprite2D" parent="PostIts"]
-position = Vector2(-480, 93)
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_7mboc")
+position = Vector2(-379, 30)
 texture = ExtResource("17_uddg2")
 
 [node name="PincaPostIt" type="Sprite2D" parent="PostIts"]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_fm6xj")
 position = Vector2(58, -482)
 texture = ExtResource("18_qspar")
 
 [node name="DrillPostIt" type="Sprite2D" parent="PostIts"]
-position = Vector2(-29, 80)
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_sjufv")
 texture = ExtResource("19_7mboc")
 
 [node name="ToolSelector" type="Node2D" parent="."]
