@@ -139,19 +139,19 @@ shader_parameter/glow_border_smoothness = 0.04
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_qspar")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r8wn4"]
-size = Vector2(120.32367, 37.60898)
+size = Vector2(137.29382, 59.939575)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwr1i"]
-size = Vector2(68, 143)
+size = Vector2(84, 165)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fxa2l"]
-size = Vector2(70.945465, 115.03424)
+size = Vector2(88.37793, 129.79956)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_feobv"]
 size = Vector2(160, 73)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gxjft"]
-size = Vector2(123.13217, 50.195206)
+size = Vector2(137.22478, 72.31305)
 
 [sub_resource type="Animation" id="Animation_5s8cp"]
 length = 0.001
@@ -231,30 +231,31 @@ script = ExtResource("8_gxjft")
 [node name="TesouraPostIt" type="Sprite2D" parent="PostIts"]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_uddg2")
-position = Vector2(-909, 32)
+position = Vector2(-928, 103)
 texture = ExtResource("15_fxa2l")
 
 [node name="SprayPostIt" type="Sprite2D" parent="PostIts"]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_qspar")
-position = Vector2(-97, 70)
+position = Vector2(-187, 120)
 texture = ExtResource("16_feobv")
 
 [node name="HammerPostIt" type="Sprite2D" parent="PostIts"]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_7mboc")
-position = Vector2(-379, 30)
+position = Vector2(-460, 93)
 texture = ExtResource("17_uddg2")
 
 [node name="PincaPostIt" type="Sprite2D" parent="PostIts"]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_fm6xj")
-position = Vector2(58, -482)
+position = Vector2(18, -446)
 texture = ExtResource("18_qspar")
 
 [node name="DrillPostIt" type="Sprite2D" parent="PostIts"]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_sjufv")
+position = Vector2(12, 85)
 texture = ExtResource("19_7mboc")
 
 [node name="ToolSelector" type="Node2D" parent="."]
@@ -273,7 +274,7 @@ rotation = -0.77841693
 shape = SubResource("RectangleShape2D_r8wn4")
 
 [node name="Spray" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
-position = Vector2(910, 599)
+position = Vector2(881, 601)
 type = 1
 
 [node name="Sprite2D" parent="ToolSelector/Spray" index="0"]
@@ -314,7 +315,7 @@ type = 3
 texture = ExtResource("14_kwr1i")
 
 [node name="CollisionShape2D" parent="ToolSelector/Drill" index="1"]
-position = Vector2(2.6916504, 0.21844482)
+position = Vector2(-1.8564453, -5.163513)
 rotation = 0.86917394
 shape = SubResource("RectangleShape2D_gxjft")
 
