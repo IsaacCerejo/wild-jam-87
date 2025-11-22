@@ -34,7 +34,7 @@ theme_override_constants/separation = 75
 
 [node name="TimeBar" type="ProgressBar" parent="HBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(720, 25)
+custom_minimum_size = Vector2(520, 25)
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 4
