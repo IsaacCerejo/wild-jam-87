@@ -20,12 +20,17 @@ func _ready():
 
 func _physics_process(_delta: float) -> void:
 	mouse_pin.global_position = get_global_mouse_position()
+	
+func _input(event):
+	if dragging and event is InputEventMouseButton:
+		if event.button_index == MOUSE_BUTTON_LEFT and !event.pressed:
+			dragging = false
+			mouse_pin.set_node_b("")
 
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int, sender:RigidBody2D):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
 		if Global.player.get_active_tool() == null:
 			dragging = true
-			print("Grabbing limb:", sender.name)
 			mouse_pin.set_node_b(sender.get_path())
 	
 		@warning_ignore("REDUNDANT_AWAIT")
@@ -33,7 +38,6 @@ func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int, sender
 		if result:
 			dragging = false
 			mouse_pin.set_node_b("")
-			print("Letting go of limb:", sender.name)
 	pass
 	
 # Action performed check. Function meant to be overridden.
