@@ -17,7 +17,7 @@ script = ExtResource("9_ddug4")
 
 [node name="MousePin" type="PinJoint2D" parent="DragManager"]
 node_a = NodePath("MouseBody")
-softness = 4.0
+softness = 1.0
 
 [node name="MouseBody" type="StaticBody2D" parent="DragManager/MousePin"]
 
