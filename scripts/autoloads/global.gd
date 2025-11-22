@@ -22,6 +22,9 @@ const MATERIAL_UIDS = {
 	"FLASH_MATERIAL": "uid://c4id7ag22mv0v"
 }
 
+const SAVE_LOCATION: String = "user://save_game.json"
+const ENCRYPTION_PASSWORD: String = "WildJam87"
+
 @warning_ignore("UNUSED_SIGNAL")
 signal round_changed(new_round: int)
 @warning_ignore("UNUSED_SIGNAL")
@@ -52,6 +55,7 @@ var sound_step: int = 9
 # Why do this?
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS
+	load_game()
 
 # TODO: Remove this I think
 func _input(event: InputEvent) -> void:
@@ -83,3 +87,19 @@ func compute_total_score() -> int:
 func reset_score() -> void:
 	time_score = 0
 	mushroom_score = 0
+
+func save_game() -> void:
+	var file := FileAccess.open_encrypted_with_pass(SAVE_LOCATION, FileAccess.WRITE, ENCRYPTION_PASSWORD)
+	if file:
+		file.store_var({
+			"high_score": high_score
+		})
+		file.close()
+
+func load_game() -> void:
+	if FileAccess.file_exists(SAVE_LOCATION):
+		var file := FileAccess.open_encrypted_with_pass(SAVE_LOCATION, FileAccess.READ, ENCRYPTION_PASSWORD)
+		if file:
+			var data = file.get_var()
+			high_score = data.get("high_score", 0)
+			file.close()
