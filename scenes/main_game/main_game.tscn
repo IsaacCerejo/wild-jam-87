@@ -260,7 +260,7 @@ position = Vector2(12, 85)
 texture = ExtResource("19_7mboc")
 
 [node name="ToolSelector" type="Node2D" parent="."]
-z_index = -1
+z_index = 2
 script = ExtResource("4_irrf2")
 
 [node name="Pinca" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
