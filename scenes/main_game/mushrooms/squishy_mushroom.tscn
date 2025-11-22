@@ -12,7 +12,12 @@ script = ExtResource("2_w30f3")
 allowed_tool_types = Array[int]([4])
 
 [node name="Sprite2D" parent="." index="0"]
+position = Vector2(0, -25)
 texture = ExtResource("3_w30f3")
 
+[node name="GPUParticles2D" parent="." index="1"]
+position = Vector2(0, -25)
+
 [node name="CollisionShape2D" parent="." index="2"]
+position = Vector2(0, -25)
 shape = SubResource("CircleShape2D_wmv7v")

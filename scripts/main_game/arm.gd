@@ -1,9 +1,9 @@
 extends Line2D
 
-const MAX_POINTS: int = 50
+const MAX_POINTS: int = 2
 const FOLLOW_STRENGTH: float = 0.2
 const DOWNWARD_SPEED: float = 300
-const BASE_POSITION: Vector2 = Vector2(640, 900)
+const BASE_POSITION: Vector2 = Vector2(800, 900)
 
 var _points_array: Array[Vector2] = []
 

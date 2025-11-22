@@ -151,7 +151,7 @@ offset = Vector2(28, 24)
 
 [node name="arm" type="Line2D" parent="Player"]
 position = Vector2(31, 26)
-width = 40.0
+width = 30.0
 default_color = Color(0.9490196, 0.68235296, 0.6, 1)
 joint_mode = 2
 begin_cap_mode = 2

@@ -72,7 +72,8 @@ end_cap_mode = 2
 
 [node name="Head" type="RigidBody2D" parent="MushroomAreas"]
 position = Vector2(-235, 0)
-mass = 67.932
+input_pickable = true
+mass = 7.553
 gravity_scale = 0.0
 linear_damp = 4.0
 
@@ -93,6 +94,7 @@ end_cap_mode = 2
 
 [node name="LeftArm" type="RigidBody2D" parent="MushroomAreas"]
 position = Vector2(-71, -97)
+input_pickable = true
 mass = 67.932
 gravity_scale = 0.0
 linear_damp = 2.0
@@ -115,6 +117,7 @@ end_cap_mode = 2
 
 [node name="RightArm" type="RigidBody2D" parent="MushroomAreas"]
 position = Vector2(-72, 101)
+input_pickable = true
 mass = 67.932
 gravity_scale = 0.0
 linear_damp = 2.0
@@ -137,6 +140,7 @@ end_cap_mode = 2
 
 [node name="LeftLeg" type="RigidBody2D" parent="MushroomAreas"]
 position = Vector2(146, -66)
+input_pickable = true
 mass = 67.932
 gravity_scale = 0.0
 linear_damp = 2.0
@@ -157,6 +161,7 @@ end_cap_mode = 2
 
 [node name="RightLeg" type="RigidBody2D" parent="MushroomAreas"]
 position = Vector2(142, 79)
+input_pickable = true
 mass = 67.932
 gravity_scale = 0.0
 linear_damp = 2.0
