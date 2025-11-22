@@ -2,14 +2,15 @@ extends Node2D
 class_name PatientManager
 
 # For every round_frequency rounds, increase mushroom count by mushroom_increase
-@export var round_frequency: int = 1
-@export var mushroom_increase: int = 1
+@export_range(1, 10) var round_frequency: int = 1
+@export_range(1, 10) var mushroom_increase: int = 1
 
 @onready var tray: Sprite2D = $Tray
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
 
 var patient: Patient
 var current_round: int = 0
+var total_mushroom_count: int = 0
 
 const PATIENT_SCENE: PackedScene = preload(Global.SCENE_UIDS.PATIENT)
 const PATIENT_TUTORIAL_SCENE: PackedScene = preload(Global.SCENE_UIDS.PATIENT_TUTORIAL)
@@ -27,15 +28,18 @@ func _ready() -> void:
 
 func _new_patient() -> void:
 	current_round += 1
+	Global.round_changed.emit(current_round)
 
 	patient = PATIENT_SCENE.instantiate() as Patient
 	tray.add_child(patient)
 	patient.cured.connect(_on_patient_cured)
 	
-	# Scale mushroom count based on round
-	var base_count = patient.MUSHROOM_SCENES.size() # default starting count
-	var additional = int(float(current_round) / float(round_frequency)) * mushroom_increase
-	patient.mushroom_count = base_count + additional
+	var base_count = patient.MUSHROOM_SCENES.size()
+
+	if current_round % round_frequency == 0:
+		total_mushroom_count += mushroom_increase
+
+	patient.mushroom_count = base_count + total_mushroom_count
 
 	patient.generate_mushrooms()
 

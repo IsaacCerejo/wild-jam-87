@@ -4,6 +4,10 @@ class_name TimeBar
 @export var time_limit: float = 60.0:
 	set = set_time_limit
 
+@export_range(1, 10) var round_frequency: int = 1 # Rounds per time decrease
+@export_range(1, 10) var time_decrease: float = 5.0 # Time decrease per round_frequency
+@export_range(1, 60) var minimum_time_limit: float = 15.0 # Minimum time limit
+
 # Time it takes to reset the bar visually
 @export var reset_duration: float = 0.5
 
@@ -19,6 +23,9 @@ var _time_left: float = time_limit:
 
 var _finished: bool = true
 var _warn_played: bool = false
+
+func _ready() -> void:
+	Global.round_changed.connect(_on_round_changed)
 
 func _process(delta: float) -> void:
 	if _finished:
@@ -47,7 +54,7 @@ func add_time(amount: float) -> void:
 	value = time_limit - _time_left
 
 func set_time_limit(new_time_limit: float) -> void:
-	time_limit = new_time_limit
+	time_limit = max(new_time_limit, minimum_time_limit)
 	max_value = time_limit
 	_time_left = max_value
 	value = 0
@@ -94,3 +101,11 @@ func _on_time_bar_finished() -> void:
 		return
 	_finished = true
 	await Global.game_controller.change_scene(Global.SCENE_UIDS.LOSE_SCREEN, "", TransitionSettings.TRANSITION_TYPE.FADE_TO_FADE)
+
+func _on_round_changed(new_round: int) -> void:
+	if new_round <= 1:
+		return
+
+	if new_round % round_frequency == 0:
+		var new_limit = time_limit - time_decrease
+		set_time_limit(new_limit)

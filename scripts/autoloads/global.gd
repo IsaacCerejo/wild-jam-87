@@ -22,6 +22,9 @@ const MATERIAL_UIDS = {
 	"FLASH_MATERIAL": "uid://c4id7ag22mv0v"
 }
 
+@warning_ignore("UNUSED_SIGNAL")
+signal round_changed(new_round: int)
+
 # Game Controller
 var game_controller: GameController
 # Mal practical but for jam purposes. Ideally use signals.
