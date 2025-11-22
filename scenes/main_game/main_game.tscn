@@ -10,11 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://cfynw7ir82qmn" path="res://scenes/main_game/tool.tscn" id="7_b4n6q"]
 [ext_resource type="Texture2D" uid="uid://c22v675hf6vne" path="res://assets/tools/tool_hammer.png" id="7_ebk6p"]
 [ext_resource type="Texture2D" uid="uid://d1wspkbkkygsv" path="res://assets/tools/tool_spray.png" id="7_l774p"]
-[ext_resource type="Script" uid="uid://crlx8tc4ryyvd" path="res://scripts/main_game/post_its.gd" id="8_gxjft"]
+[ext_resource type="Script" path="res://scripts/main_game/post_its.gd" id="8_gxjft"]
 [ext_resource type="Script" uid="uid://vta4rkxv4wv0" path="res://scripts/main_game/player.gd" id="8_r8wn4"]
 [ext_resource type="Texture2D" uid="uid://cep1fth1pjb7p" path="res://assets/background/cama.png" id="8_s87mg"]
 [ext_resource type="Texture2D" uid="uid://dewjajqggymbo" path="res://assets/hand/hand_empty.png" id="9_kwr1i"]
-[ext_resource type="Shader" uid="uid://dp763fss7hgwb" path="res://resources/shaders/dissolve.gdshader" id="9_uddg2"]
+[ext_resource type="Shader" path="res://resources/shaders/dissolve.gdshader" id="9_uddg2"]
 [ext_resource type="Texture2D" uid="uid://kdeakq4xrq8s" path="res://assets/hand/hand_pinca.png" id="10_fxa2l"]
 [ext_resource type="Texture2D" uid="uid://chxpexxxkxr2n" path="res://assets/hand/hand_spray.png" id="11_feobv"]
 [ext_resource type="Texture2D" uid="uid://d3svvioh7o10y" path="res://assets/hand/hand_tesoura.png" id="12_gxjft"]
@@ -211,10 +211,11 @@ unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_n1acc")
 animation = &"tesoura"
 autoplay = "empty"
+offset = Vector2(14.47, 32.22)
 
 [node name="arm" type="Line2D" parent="Player"]
 position = Vector2(31, 26)
-width = 30.0
+width = 35.0
 default_color = Color(0.9490196, 0.68235296, 0.6, 1)
 joint_mode = 2
 begin_cap_mode = 2
