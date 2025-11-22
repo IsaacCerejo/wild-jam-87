@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://0ixx8sqasrjp" path="res://assets/hand/hand_hammer.png" id="5_uddg2"]
 [ext_resource type="Texture2D" uid="uid://uuela3hv3sev" path="res://assets/tools/tool_tesoura.png" id="6_ebk6p"]
 [ext_resource type="PackedScene" uid="uid://cfynw7ir82qmn" path="res://scenes/main_game/tool.tscn" id="7_b4n6q"]
-[ext_resource type="Texture2D" uid="uid://dhupda6d3r6f1" path="res://assets/tools/tool_hammer.png" id="7_ebk6p"]
+[ext_resource type="Texture2D" uid="uid://c22v675hf6vne" path="res://assets/tools/tool_hammer.png" id="7_ebk6p"]
 [ext_resource type="Texture2D" uid="uid://d1wspkbkkygsv" path="res://assets/tools/tool_spray.png" id="7_l774p"]
 [ext_resource type="Script" uid="uid://crlx8tc4ryyvd" path="res://scripts/main_game/post_its.gd" id="8_gxjft"]
 [ext_resource type="Script" uid="uid://vta4rkxv4wv0" path="res://scripts/main_game/player.gd" id="8_r8wn4"]
@@ -151,7 +151,7 @@ size = Vector2(70.945465, 115.03424)
 size = Vector2(160, 73)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gxjft"]
-size = Vector2(44.484985, 197.89801)
+size = Vector2(123.13217, 50.195206)
 
 [sub_resource type="Animation" id="Animation_5s8cp"]
 length = 0.001
@@ -283,7 +283,7 @@ position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_kwr1i")
 
 [node name="Tesoura" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
-position = Vector2(128, 656)
+position = Vector2(112, 655)
 type = 2
 
 [node name="Sprite2D" parent="ToolSelector/Tesoura" index="0"]
@@ -295,7 +295,7 @@ rotation = -0.91978854
 shape = SubResource("RectangleShape2D_fxa2l")
 
 [node name="Hammer" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
-position = Vector2(746, 672)
+position = Vector2(717, 684)
 type = 4
 
 [node name="Sprite2D" parent="ToolSelector/Hammer" index="0"]
@@ -306,14 +306,14 @@ position = Vector2(4, 0.5)
 shape = SubResource("RectangleShape2D_feobv")
 
 [node name="Drill" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
-position = Vector2(1150, 637)
+position = Vector2(1084, 660)
 type = 3
 
 [node name="Sprite2D" parent="ToolSelector/Drill" index="0"]
 texture = ExtResource("14_kwr1i")
 
 [node name="CollisionShape2D" parent="ToolSelector/Drill" index="1"]
-position = Vector2(2.0928955, 2.4766235)
+position = Vector2(2.6916504, 0.21844482)
 rotation = 0.86917394
 shape = SubResource("RectangleShape2D_gxjft")
 
