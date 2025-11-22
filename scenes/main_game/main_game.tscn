@@ -1,6 +1,7 @@
-[gd_scene load_steps=44 format=3 uid="uid://fwifwdj0klmd"]
+[gd_scene load_steps=45 format=3 uid="uid://fwifwdj0klmd"]
 
-[ext_resource type="Texture2D" uid="uid://bce0lpb8ourlr" path="res://assets/background/background.png" id="1_s87mg"]
+[ext_resource type="Texture2D" uid="uid://b6ug3vgnb5hek" path="res://assets/background/background.PNG" id="1_fm6xj"]
+[ext_resource type="Texture2D" uid="uid://dq7udm4bi8xi8" path="res://assets/background/cabinet.PNG" id="2_sjufv"]
 [ext_resource type="Script" uid="uid://c0qla4xs5qtuw" path="res://scripts/main_game/patient_manager.gd" id="3_4y18v"]
 [ext_resource type="Texture2D" uid="uid://dhgcgtngpsxv2" path="res://assets/hand/hand_drill.png" id="3_gxjft"]
 [ext_resource type="Script" uid="uid://0ua5elcqwham" path="res://scripts/main_game/tool_selector.gd" id="4_irrf2"]
@@ -201,7 +202,12 @@ adjustment_enabled = true
 [node name="Background" type="Sprite2D" parent="."]
 z_index = -3
 position = Vector2(640, 360)
-texture = ExtResource("1_s87mg")
+texture = ExtResource("1_fm6xj")
+
+[node name="cabinet" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(640, 360)
+texture = ExtResource("2_sjufv")
 
 [node name="Player" type="Node2D" parent="."]
 z_index = 3
@@ -225,7 +231,7 @@ round_precision = 16
 script = ExtResource("13_4y18v")
 
 [node name="PostIts" type="Node2D" parent="."]
-z_index = -1
+z_index = 1
 position = Vector2(1140, 550)
 script = ExtResource("8_gxjft")
 
