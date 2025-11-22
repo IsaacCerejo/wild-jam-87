@@ -69,7 +69,7 @@ bg_color = Color(0.996078, 0.682353, 0.203922, 1)
 anti_aliasing = false
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7wj0h"]
-bg_color = Color(0.11372549, 0.11372549, 0.12156863, 1)
+bg_color = Color(0.2635563, 0.44873983, 0.42344528, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
@@ -124,6 +124,7 @@ LineEdit/colors/selection_color = Color(0.14902, 0.168627, 0.266667, 1)
 LineEdit/styles/focus = SubResource("StyleBoxFlat_yfmy3")
 LineEdit/styles/normal = SubResource("StyleBoxFlat_4440x")
 Panel/styles/panel = SubResource("StyleBoxFlat_7wj0h")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_7wj0h")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_6kuxg")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_vhdrr")
 RichTextLabel/colors/default_color = Color(0.67058825, 0.27450982, 0.27450982, 1)

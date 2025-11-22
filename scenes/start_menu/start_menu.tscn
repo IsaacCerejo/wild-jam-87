@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bdpgwda84gcms" path="res://assets/start_menu/icons/fullscreen_icon.png" id="3_rudpn"]
 [ext_resource type="PackedScene" uid="uid://bp7pspq4knti5" path="res://scenes/start_menu/options_menu.tscn" id="4_eum3g"]
 [ext_resource type="PackedScene" uid="uid://2i316e7renfb" path="res://scenes/start_menu/how_to_play_menu.tscn" id="5_gu1vn"]
-[ext_resource type="PackedScene" uid="uid://cypx2cfe52eck" path="res://scenes/main_game/patient_tutorial.tscn" id="6_tj3dw"]
+[ext_resource type="Texture2D" uid="uid://bh2ctcktws0kg" path="res://assets/patient/patient_with_shadow_for_menu.png" id="6_tj3dw"]
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -106,9 +106,9 @@ unique_name_in_owner = true
 visible = false
 layout_mode = 1
 
-[node name="Patient" parent="." instance=ExtResource("6_tj3dw")]
-position = Vector2(294, 349)
-rotation = 1.548581
+[node name="patient" type="Sprite2D" parent="."]
+position = Vector2(299, 345)
+texture = ExtResource("6_tj3dw")
 
 [connection signal="pressed" from="ButtonContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="ButtonContainer/HowToPlayButton" to="." method="_on_how_to_play_button_pressed"]
