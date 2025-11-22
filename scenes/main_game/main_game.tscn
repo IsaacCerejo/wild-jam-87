@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://fwifwdj0klmd"]
+[gd_scene load_steps=45 format=3 uid="uid://fwifwdj0klmd"]
 
 [ext_resource type="Texture2D" uid="uid://bce0lpb8ourlr" path="res://assets/background/background.png" id="1_s87mg"]
 [ext_resource type="Script" uid="uid://c0qla4xs5qtuw" path="res://scripts/main_game/patient_manager.gd" id="3_4y18v"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://ylfhpqxkwiw1" path="res://assets/post_its/IMG_0762.PNG" id="18_qspar"]
 [ext_resource type="Texture2D" uid="uid://63foqjywx0e2" path="res://assets/post_its/IMG_0759.PNG" id="19_7mboc"]
 [ext_resource type="Script" uid="uid://64asebo8pdx5" path="res://scripts/main_game/camera_shake.gd" id="19_r8wn4"]
+[ext_resource type="PackedScene" uid="uid://i0birjinl1cf" path="res://scenes/main_game/mushrooms/balloon_mushroom.tscn" id="27_fm6xj"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n1acc"]
 animations = [{
@@ -342,6 +343,12 @@ script = ExtResource("19_r8wn4")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_r8wn4")
+
+[node name="BalloonMushroom" parent="." instance=ExtResource("27_fm6xj")]
+position = Vector2(628, 175)
+
+[node name="BalloonMushroom2" parent="." instance=ExtResource("27_fm6xj")]
+position = Vector2(605, 172)
 
 [editable path="ToolSelector/Pinca"]
 [editable path="ToolSelector/Spray"]
