@@ -1,9 +1,11 @@
-[gd_scene load_steps=33 format=3 uid="uid://fwifwdj0klmd"]
+[gd_scene load_steps=35 format=3 uid="uid://fwifwdj0klmd"]
 
 [ext_resource type="Texture2D" uid="uid://bce0lpb8ourlr" path="res://assets/background/background.png" id="1_s87mg"]
 [ext_resource type="Script" uid="uid://c0qla4xs5qtuw" path="res://scripts/main_game/patient_manager.gd" id="3_4y18v"]
+[ext_resource type="Texture2D" uid="uid://dhgcgtngpsxv2" path="res://assets/hand/hand_drill.png" id="3_gxjft"]
 [ext_resource type="Script" uid="uid://0ua5elcqwham" path="res://scripts/main_game/tool_selector.gd" id="4_irrf2"]
 [ext_resource type="Texture2D" uid="uid://b0788qfn374ll" path="res://assets/tools/tool_pinça.png" id="5_s87mg"]
+[ext_resource type="Texture2D" uid="uid://0ixx8sqasrjp" path="res://assets/hand/hand_hammer.png" id="5_uddg2"]
 [ext_resource type="Texture2D" uid="uid://uuela3hv3sev" path="res://assets/tools/tool_tesoura.png" id="6_ebk6p"]
 [ext_resource type="PackedScene" uid="uid://cfynw7ir82qmn" path="res://scenes/main_game/tool.tscn" id="7_b4n6q"]
 [ext_resource type="Texture2D" uid="uid://dhupda6d3r6f1" path="res://assets/tools/tool_hammer.png" id="7_ebk6p"]
@@ -27,7 +29,7 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("12_gxjft")
+"texture": ExtResource("3_gxjft")
 }],
 "loop": true,
 "name": &"drill",
@@ -43,7 +45,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("12_gxjft")
+"texture": ExtResource("5_uddg2")
 }],
 "loop": true,
 "name": &"hammer",
@@ -75,16 +77,16 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r8wn4"]
-size = Vector2(48.794067, 187.35413)
+size = Vector2(120.32367, 37.60898)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwr1i"]
-size = Vector2(90, 206)
+size = Vector2(68, 143)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fxa2l"]
-size = Vector2(102, 230.90155)
+size = Vector2(70.945465, 115.03424)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_feobv"]
-size = Vector2(242, 92)
+size = Vector2(160, 73)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gxjft"]
 size = Vector2(44.484985, 197.89801)
@@ -145,9 +147,8 @@ script = ExtResource("8_r8wn4")
 [node name="HandSprite" type="AnimatedSprite2D" parent="Player"]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_n1acc")
-animation = &"empty"
+animation = &"tesoura"
 autoplay = "empty"
-offset = Vector2(28, 24)
 
 [node name="arm" type="Line2D" parent="Player"]
 position = Vector2(31, 26)
@@ -164,15 +165,15 @@ z_index = -1
 position = Vector2(1140, 550)
 
 [node name="TesouraPostIt" type="Sprite2D" parent="PostIts"]
-position = Vector2(-909, 32)
+position = Vector2(-931, 64)
 texture = ExtResource("15_fxa2l")
 
 [node name="SprayPostIt" type="Sprite2D" parent="PostIts"]
-position = Vector2(-97, 70)
+position = Vector2(-150, 120)
 texture = ExtResource("16_feobv")
 
 [node name="HammerPostIt" type="Sprite2D" parent="PostIts"]
-position = Vector2(-379, 30)
+position = Vector2(-480, 93)
 texture = ExtResource("17_uddg2")
 
 [node name="PincaPostIt" type="Sprite2D" parent="PostIts"]
@@ -180,6 +181,7 @@ position = Vector2(58, -482)
 texture = ExtResource("18_qspar")
 
 [node name="DrillPostIt" type="Sprite2D" parent="PostIts"]
+position = Vector2(-29, 80)
 texture = ExtResource("19_7mboc")
 
 [node name="ToolSelector" type="Node2D" parent="."]
@@ -193,28 +195,30 @@ position = Vector2(1096, 79)
 texture = ExtResource("5_s87mg")
 
 [node name="CollisionShape2D" parent="ToolSelector/Pinca" index="1"]
-position = Vector2(-0.5, 0)
+position = Vector2(1.3126221, -2.7181396)
 rotation = -0.77841693
 shape = SubResource("RectangleShape2D_r8wn4")
 
 [node name="Spray" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
-position = Vector2(948, 587)
+position = Vector2(910, 599)
 type = 1
 
 [node name="Sprite2D" parent="ToolSelector/Spray" index="0"]
 texture = ExtResource("7_l774p")
 
 [node name="CollisionShape2D" parent="ToolSelector/Spray" index="1"]
+position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_kwr1i")
 
 [node name="Tesoura" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
-position = Vector2(131, 632)
+position = Vector2(128, 656)
 type = 2
 
 [node name="Sprite2D" parent="ToolSelector/Tesoura" index="0"]
 texture = ExtResource("6_ebk6p")
 
 [node name="CollisionShape2D" parent="ToolSelector/Tesoura" index="1"]
+position = Vector2(-2.1519928, -6.5203247)
 rotation = -0.91978854
 shape = SubResource("RectangleShape2D_fxa2l")
 
@@ -226,10 +230,11 @@ type = 4
 texture = ExtResource("7_ebk6p")
 
 [node name="CollisionShape2D" parent="ToolSelector/Hammer" index="1"]
+position = Vector2(4, 0.5)
 shape = SubResource("RectangleShape2D_feobv")
 
 [node name="Drill" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
-position = Vector2(1177, 626)
+position = Vector2(1150, 637)
 type = 3
 
 [node name="Sprite2D" parent="ToolSelector/Drill" index="0"]
