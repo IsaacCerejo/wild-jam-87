@@ -11,7 +11,6 @@ extends Node2D
 	"SquishyMushroom": %HammerPostIt
 }
 
-
 func _ready() -> void:
 	Global.mushroom_picked.connect(_on_mushroom_picked)
 

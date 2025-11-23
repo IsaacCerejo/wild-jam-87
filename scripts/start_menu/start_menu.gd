@@ -5,6 +5,7 @@ extends Control
 
 func _ready() -> void:
 	Global.reset_score()
+	Global.reset_mushrooms_picked()
 	if AudioManager.get_active_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.BACKGROUND_MUSIC) == null:
 		AudioManager.create_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.BACKGROUND_MUSIC)
 	else:

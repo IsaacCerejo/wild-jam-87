@@ -88,6 +88,10 @@ func reset_score() -> void:
 	time_score = 0
 	mushroom_score = 0
 
+func reset_mushrooms_picked() -> void:
+	for key in mushrooms_picked.keys():
+		mushrooms_picked[key] = 0
+
 func save_game() -> void:
 	var file := FileAccess.open_encrypted_with_pass(SAVE_LOCATION, FileAccess.WRITE, ENCRYPTION_PASSWORD)
 	if file:
