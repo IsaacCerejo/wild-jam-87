@@ -16,7 +16,7 @@ func _ready() -> void:
 	timer_score_label.text = "[wave amp=50.0 freq=5.0 connected=1][rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0]%d[/rainbow]" % Global.time_score
 
 	total_score_label.clear()
-	total_score_label.text = "[wave amp=50.0 freq=5.0 connected=1][rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0]%d[/rainbow]" % Global.compute_total_score()
+	total_score_label.text = "[wave amp=50.0 freq=5.0 connected=1][rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0]%s[/rainbow]" % str("SCORE: " + str(Global.compute_total_score()))
 
 	high_score_label.clear()
 	high_score_label.text = "[wave amp=50.0 freq=5.0 connected=1][rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0]HIGHSCORE: %d[/rainbow]" % Global.high_score
