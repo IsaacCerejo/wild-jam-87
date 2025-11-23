@@ -21,11 +21,20 @@ var used_base_points: Array[int] = []
 
 @onready var head_animPlayer: AnimationPlayer = $MushroomAreas/Head/HeadAnimations
 const head_sprites = ["Head","Head_2","Head_3","Head_4","Head_5","Head_6","Head_7"]
+@onready var torso_animation_player: AnimationPlayer = $MushroomAreas/Torso/TorsoAnimationPlayer
+const torso_sprites = ["Torso","Torso_2"]
+@onready var right_arm_animation_player: AnimationPlayer = $MushroomAreas/RightArm/RightArmAnimationPlayer
+const right_arm_sprites = ["RightArm","RightArm_2"]
+@onready var left_leg_animation_player: AnimationPlayer = $MushroomAreas/LeftLeg/LeftLegAnimationPlayer
+const left_leg_sprites = ["LeftLeg","LeftLeg_2","LeftLeg_3","LeftLeg_4"]
+
 
 func _ready() -> void:
 	head_animPlayer.play(head_sprites.pick_random())
-	pass
-	#TODO: spawn body with random skin
+	torso_animation_player.play(torso_sprites.pick_random())
+	right_arm_animation_player.play(right_arm_sprites.pick_random())
+	left_leg_animation_player.play(left_leg_sprites.pick_random())
+
 
 func generate_mushrooms() -> void:
 	# Spawn mushrooms
