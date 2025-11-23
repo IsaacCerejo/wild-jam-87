@@ -27,13 +27,15 @@ const torso_sprites = ["Torso","Torso_2"]
 const right_arm_sprites = ["RightArm","RightArm_2","RightArm_3","RightArm_4","RightArm_5"]
 @onready var left_leg_animation_player: AnimationPlayer = $MushroomAreas/LeftLeg/LeftLegAnimationPlayer
 const left_leg_sprites = ["LeftLeg","LeftLeg_2","LeftLeg_3","LeftLeg_4"]
-
+@onready var left_arm_animation_player: AnimationPlayer = $MushroomAreas/LeftArm/LeftArmAnimationPlayer
+const left_arm_sprites = ["LeftArm","LeftArm_2","LeftArm_3"]
 
 func _ready() -> void:
 	head_animPlayer.play(head_sprites.pick_random())
 	torso_animation_player.play(torso_sprites.pick_random())
 	right_arm_animation_player.play(right_arm_sprites.pick_random())
 	left_leg_animation_player.play(left_leg_sprites.pick_random())
+	left_arm_animation_player.play(left_arm_sprites.pick_random())
 
 
 func generate_mushrooms() -> void:
