@@ -40,6 +40,7 @@ movie_writer/movie_file="D:/Isaac/Videogames/Godot/2025/Wild Jam 87/teste_video.
 
 folder_colors={
 "res://assets/": "green",
+"res://builds/": "yellow",
 "res://resources/": "orange",
 "res://scenes/": "pink",
 "res://scripts/": "purple"
