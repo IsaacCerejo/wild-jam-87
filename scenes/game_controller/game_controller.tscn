@@ -28,4 +28,5 @@ layout_mode = 1
 
 [node name="TransitionController" parent="." instance=ExtResource("2_7jkri")]
 unique_name_in_owner = true
+z_index = 10
 transition_settings = Array[ExtResource("4_s8vvr")]([ExtResource("5_giy5l")])
