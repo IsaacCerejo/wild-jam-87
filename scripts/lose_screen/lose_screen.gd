@@ -3,6 +3,7 @@ extends Control
 @onready var mushroom_score_label: RichTextLabel = %MushroomScore
 @onready var timer_score_label: RichTextLabel = %TimerScore
 @onready var total_score_label: RichTextLabel = %TotalScore
+@onready var new_best_label: RichTextLabel = %NewBest
 @onready var high_score_label: RichTextLabel = %HighScore
 
 func _ready() -> void:
@@ -10,16 +11,21 @@ func _ready() -> void:
 	Global.save_game()
 
 	mushroom_score_label.clear()
-	mushroom_score_label.text = "[wave amp=50.0 freq=5.0 connected=1][rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0]%d[/rainbow]" % Global.mushroom_score
+	mushroom_score_label.text = "%d" % Global.mushroom_score
 
 	timer_score_label.clear()
-	timer_score_label.text = "[wave amp=50.0 freq=5.0 connected=1][rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0]%d[/rainbow]" % Global.time_score
+	timer_score_label.text = "%d" % Global.time_score
 
 	total_score_label.clear()
-	total_score_label.text = "[wave amp=50.0 freq=5.0 connected=1][rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0]%s[/rainbow]" % str("SCORE: " + str(Global.compute_total_score()))
+	total_score_label.text = "%d" % Global.compute_total_score()
 
 	high_score_label.clear()
-	high_score_label.text = "[wave amp=50.0 freq=5.0 connected=1][rainbow freq=1.0 sat=0.8 val=0.8 speed=1.0]HIGHSCORE: %d[/rainbow]" % Global.high_score
+	high_score_label.text = "HIGHSCORE: %d" % Global.high_score
+
+	if Global.compute_total_score() >= Global.high_score:
+		new_best_label.visible = true
+	else:
+		new_best_label.visible = false
 
 # Signal callbacks
 func _on_main_menu_button_pressed() -> void:
