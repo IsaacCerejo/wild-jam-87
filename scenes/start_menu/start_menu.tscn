@@ -99,6 +99,11 @@ icon = ExtResource("3_rudpn")
 icon_alignment = 1
 expand_icon = true
 
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(647, 196)
+scale = Vector2(1.4507042, 1.4507042)
+texture = ExtResource("7_rudpn")
+
 [node name="OptionsMenu" parent="." instance=ExtResource("4_eum3g")]
 unique_name_in_owner = true
 visible = false
@@ -113,11 +118,6 @@ layout_mode = 1
 position = Vector2(278, 343)
 rotation = 1.5707964
 script = null
-
-[node name="Logo" type="Sprite2D" parent="."]
-position = Vector2(647, 196)
-scale = Vector2(1.4507042, 1.4507042)
-texture = ExtResource("7_rudpn")
 
 [connection signal="pressed" from="ButtonContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="ButtonContainer/HowToPlayButton" to="." method="_on_how_to_play_button_pressed"]
