@@ -1,4 +1,4 @@
-[gd_scene load_steps=82 format=3 uid="uid://mtilpmnd7m7y"]
+[gd_scene load_steps=88 format=3 uid="uid://mtilpmnd7m7y"]
 
 [ext_resource type="Script" uid="uid://c3wghgg2g717r" path="res://scripts/main_game/patient.gd" id="1_s1xdg"]
 [ext_resource type="Texture2D" uid="uid://cn3ixunlwsdxs" path="res://assets/patient/torso.png" id="3_rujrq"]
@@ -32,6 +32,9 @@
 [ext_resource type="Texture2D" uid="uid://ntf56a0702b8" path="res://assets/patient/right_arm_5.png" id="18_3y02d"]
 [ext_resource type="Texture2D" uid="uid://b2trqud2dfl4b" path="res://assets/patient/hair_3.png" id="18_6u6v3"]
 [ext_resource type="Texture2D" uid="uid://dnqg4yp7xywfp" path="res://assets/patient/hair_4.png" id="19_pujfp"]
+[ext_resource type="Texture2D" uid="uid://rym1mhxiffef" path="res://assets/patient/hair_5.png" id="20_qmpkf"]
+[ext_resource type="Texture2D" uid="uid://dm2s6gsbb0uuf" path="res://assets/patient/hair_6.png" id="21_isq70"]
+[ext_resource type="Texture2D" uid="uid://bxt53dacps4hd" path="res://assets/patient/hair_7.png" id="22_chgtv"]
 [ext_resource type="Script" uid="uid://bxu1ceexvxg2" path="res://scripts/main_game/patient_skin_manager.gd" id="27_jmvsg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6vb6e"]
@@ -279,7 +282,6 @@ _data = {
 }
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6q3dj"]
-load_path = "res://.godot/imported/hair.png-05c7bb09f7f903299ebdd485fa2de9bc.ctex"
 
 [sub_resource type="Animation" id="Animation_su1ts"]
 resource_name = "Hair"
@@ -294,21 +296,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [null]
-}
-
-[sub_resource type="Animation" id="Animation_784va"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("HairRoot/Hair:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [SubResource("CompressedTexture2D_6q3dj")]
 }
 
 [sub_resource type="Animation" id="Animation_ik0ls"]
@@ -371,6 +358,66 @@ tracks/0/keys = {
 "values": [ExtResource("19_pujfp")]
 }
 
+[sub_resource type="Animation" id="Animation_784va"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HairRoot/Hair:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("CompressedTexture2D_6q3dj")]
+}
+
+[sub_resource type="Animation" id="Animation_bgo8l"]
+resource_name = "Hair_6"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HairRoot/Hair:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("20_qmpkf")]
+}
+
+[sub_resource type="Animation" id="Animation_qxm5x"]
+resource_name = "Hair_7"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HairRoot/Hair:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("21_isq70")]
+}
+
+[sub_resource type="Animation" id="Animation_uiwib"]
+resource_name = "Hair_8"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HairRoot/Hair:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("22_chgtv")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ik0ls"]
 _data = {
 &"Hair": SubResource("Animation_su1ts"),
@@ -378,6 +425,9 @@ _data = {
 &"Hair_3": SubResource("Animation_5fm1m"),
 &"Hair_4": SubResource("Animation_c2xyc"),
 &"Hair_5": SubResource("Animation_5cg5p"),
+&"Hair_6": SubResource("Animation_bgo8l"),
+&"Hair_7": SubResource("Animation_qxm5x"),
+&"Hair_8": SubResource("Animation_uiwib"),
 &"RESET": SubResource("Animation_784va")
 }
 

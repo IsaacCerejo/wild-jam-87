@@ -12,7 +12,7 @@ const torso_sprites = ["Torso","Torso_2","Torso_3","Torso_4","Torso_5"]
 const right_arm_sprites = ["RightArm","RightArm_2","RightArm_3","RightArm_4","RightArm_5"]
 const left_leg_sprites = ["LeftLeg","LeftLeg_2","LeftLeg_3","LeftLeg_4"]
 const left_arm_sprites = ["LeftArm","LeftArm_2","LeftArm_3"]
-const hair_sprites = ["Hair","Hair_2","Hair_3","Hair_4","Hair_5"]
+const hair_sprites = ["Hair","Hair_2","Hair_3","Hair_4","Hair_5","Hair_6","Hair_7","Hair_8"]
 
 func _ready() -> void:
 	head_animPlayer.play(head_sprites.pick_random())
