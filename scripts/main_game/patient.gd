@@ -20,7 +20,7 @@ var _mushrooms: Array[Mushroom] = []
 var used_base_points: Array[int] = []
 
 @onready var head_animPlayer: AnimationPlayer = $MushroomAreas/Head/HeadAnimations
-const head_sprites = ["Head","Head_2","Head_3","Head_4"]
+const head_sprites = ["Head","Head_2","Head_3","Head_4","Head_5","Head_6","Head_7"]
 
 func _ready() -> void:
 	head_animPlayer.play(head_sprites.pick_random())
