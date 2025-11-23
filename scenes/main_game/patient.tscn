@@ -1,4 +1,4 @@
-[gd_scene load_steps=90 format=3 uid="uid://mtilpmnd7m7y"]
+[gd_scene load_steps=101 format=3 uid="uid://mtilpmnd7m7y"]
 
 [ext_resource type="Script" uid="uid://c3wghgg2g717r" path="res://scripts/main_game/patient.gd" id="1_s1xdg"]
 [ext_resource type="Texture2D" uid="uid://cn3ixunlwsdxs" path="res://assets/patient/torso.png" id="3_rujrq"]
@@ -37,6 +37,10 @@
 [ext_resource type="Texture2D" uid="uid://bxt53dacps4hd" path="res://assets/patient/hair_7.png" id="22_chgtv"]
 [ext_resource type="Texture2D" uid="uid://d1movdn3r5rg5" path="res://assets/patient/hair_9.png" id="23_oijsj"]
 [ext_resource type="Script" uid="uid://bxu1ceexvxg2" path="res://scripts/main_game/patient_skin_manager.gd" id="27_jmvsg"]
+[ext_resource type="Texture2D" uid="uid://cwqhcwjjd2htj" path="res://assets/patient/right_leg-2.png" id="37_x53ik"]
+[ext_resource type="Texture2D" uid="uid://dpa10xrr181ob" path="res://assets/patient/right_leg-3.png" id="38_su1ts"]
+[ext_resource type="Texture2D" uid="uid://diyjofvpri47b" path="res://assets/patient/right_leg-4.png" id="39_su1ts"]
+[ext_resource type="Texture2D" uid="uid://xjdguy6jr8kj" path="res://assets/patient/right_leg-5.png" id="40_ik0ls"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6vb6e"]
 shader = ExtResource("4_ddug4")
@@ -404,21 +408,6 @@ tracks/0/keys = {
 "values": [ExtResource("22_chgtv")]
 }
 
-[sub_resource type="Animation" id="Animation_784va"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("HairRoot/Hair:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [SubResource("CompressedTexture2D_6q3dj")]
-}
-
 [sub_resource type="Animation" id="Animation_p8ks4"]
 resource_name = "Hair_9"
 tracks/0/type = "value"
@@ -432,6 +421,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [ExtResource("23_oijsj")]
+}
+
+[sub_resource type="Animation" id="Animation_784va"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HairRoot/Hair:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("CompressedTexture2D_6q3dj")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ik0ls"]
@@ -724,6 +728,111 @@ shader_parameter/tint_color = Color(0.18757862, 0.31231412, 0.33311018, 1)
 shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
 shader_parameter/key_threshold = 0.02
 
+[sub_resource type="Animation" id="Animation_beubr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_ddug4")]
+}
+
+[sub_resource type="Animation" id="Animation_3ch1p"]
+resource_name = "RightLeg"
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_ddug4")]
+}
+
+[sub_resource type="Animation" id="Animation_x06ly"]
+resource_name = "RightLeg_2"
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("37_x53ik")]
+}
+
+[sub_resource type="Animation" id="Animation_u1x62"]
+resource_name = "RightLeg_3"
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("38_su1ts")]
+}
+
+[sub_resource type="Animation" id="Animation_4dx2u"]
+resource_name = "RightLeg_4"
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("39_su1ts")]
+}
+
+[sub_resource type="Animation" id="Animation_k68rx"]
+resource_name = "RightLeg_5"
+step = 0.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("40_ik0ls")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4dx2u"]
+_data = {
+&"RESET": SubResource("Animation_beubr"),
+&"RightLeg": SubResource("Animation_3ch1p"),
+&"RightLeg_2": SubResource("Animation_x06ly"),
+&"RightLeg_3": SubResource("Animation_u1x62"),
+&"RightLeg_4": SubResource("Animation_4dx2u"),
+&"RightLeg_5": SubResource("Animation_k68rx")
+}
+
 [node name="Patient" type="Node2D"]
 script = ExtResource("1_s1xdg")
 
@@ -988,6 +1097,11 @@ z_index = -1
 material = SubResource("ShaderMaterial_vfgv1")
 position = Vector2(0, 13)
 texture = ExtResource("7_ddug4")
+
+[node name="RightLegAnimationPlayer" type="AnimationPlayer" parent="MushroomAreas/RightLeg"]
+libraries = {
+&"": SubResource("AnimationLibrary_4dx2u")
+}
 
 [node name="PatientSkinManager" type="Node2D" parent="."]
 script = ExtResource("27_jmvsg")
