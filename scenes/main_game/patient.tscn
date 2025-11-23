@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=3 uid="uid://mtilpmnd7m7y"]
+[gd_scene load_steps=90 format=3 uid="uid://mtilpmnd7m7y"]
 
 [ext_resource type="Script" uid="uid://c3wghgg2g717r" path="res://scripts/main_game/patient.gd" id="1_s1xdg"]
 [ext_resource type="Texture2D" uid="uid://cn3ixunlwsdxs" path="res://assets/patient/torso.png" id="3_rujrq"]
@@ -35,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://rym1mhxiffef" path="res://assets/patient/hair_5.png" id="20_qmpkf"]
 [ext_resource type="Texture2D" uid="uid://dm2s6gsbb0uuf" path="res://assets/patient/hair_6.png" id="21_isq70"]
 [ext_resource type="Texture2D" uid="uid://bxt53dacps4hd" path="res://assets/patient/hair_7.png" id="22_chgtv"]
+[ext_resource type="Texture2D" uid="uid://d1movdn3r5rg5" path="res://assets/patient/hair_9.png" id="23_oijsj"]
 [ext_resource type="Script" uid="uid://bxu1ceexvxg2" path="res://scripts/main_game/patient_skin_manager.gd" id="27_jmvsg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6vb6e"]
@@ -358,21 +359,6 @@ tracks/0/keys = {
 "values": [ExtResource("19_pujfp")]
 }
 
-[sub_resource type="Animation" id="Animation_784va"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("HairRoot/Hair:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [SubResource("CompressedTexture2D_6q3dj")]
-}
-
 [sub_resource type="Animation" id="Animation_bgo8l"]
 resource_name = "Hair_6"
 tracks/0/type = "value"
@@ -418,6 +404,36 @@ tracks/0/keys = {
 "values": [ExtResource("22_chgtv")]
 }
 
+[sub_resource type="Animation" id="Animation_784va"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HairRoot/Hair:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [SubResource("CompressedTexture2D_6q3dj")]
+}
+
+[sub_resource type="Animation" id="Animation_p8ks4"]
+resource_name = "Hair_9"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("HairRoot/Hair:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("23_oijsj")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ik0ls"]
 _data = {
 &"Hair": SubResource("Animation_su1ts"),
@@ -428,6 +444,7 @@ _data = {
 &"Hair_6": SubResource("Animation_bgo8l"),
 &"Hair_7": SubResource("Animation_qxm5x"),
 &"Hair_8": SubResource("Animation_uiwib"),
+&"Hair_9": SubResource("Animation_p8ks4"),
 &"RESET": SubResource("Animation_784va")
 }
 
