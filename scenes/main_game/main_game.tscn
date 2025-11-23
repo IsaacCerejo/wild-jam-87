@@ -19,7 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://cep1fth1pjb7p" path="res://assets/background/cama.png" id="8_s87mg"]
 [ext_resource type="Texture2D" uid="uid://b105tuuoyfqp5" path="res://assets/hand/hand_spray_2.png" id="8_sjufv"]
 [ext_resource type="Texture2D" uid="uid://dewjajqggymbo" path="res://assets/hand/hand_empty.png" id="9_kwr1i"]
-[ext_resource type="Shader" path="res://resources/shaders/dissolve.gdshader" id="9_uddg2"]
+[ext_resource type="Shader" uid="uid://dp763fss7hgwb" path="res://resources/shaders/dissolve.gdshader" id="9_uddg2"]
 [ext_resource type="Texture2D" uid="uid://kdeakq4xrq8s" path="res://assets/hand/hand_pinca.png" id="10_fxa2l"]
 [ext_resource type="Texture2D" uid="uid://chxpexxxkxr2n" path="res://assets/hand/hand_spray.png" id="11_feobv"]
 [ext_resource type="Texture2D" uid="uid://d3svvioh7o10y" path="res://assets/hand/hand_tesoura.png" id="12_gxjft"]
@@ -110,7 +110,7 @@ shader_parameter/base_color = Color(1, 1, 1, 1)
 shader_parameter/inside_color = Color(0.2, 0.2, 0.2, 1)
 shader_parameter/dissolve_amount = 0.0
 shader_parameter/glow_color = Color(1, 0, 0, 1)
-shader_parameter/glow_intensity = 5.0
+shader_parameter/glow_intensity = 1.0
 shader_parameter/glow_border_width = 0.05
 shader_parameter/glow_border_smoothness = 0.04
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_qspar")
@@ -121,7 +121,7 @@ shader_parameter/base_color = Color(1, 1, 1, 1)
 shader_parameter/inside_color = Color(0.2, 0.2, 0.2, 1)
 shader_parameter/dissolve_amount = 0.0
 shader_parameter/glow_color = Color(1, 0, 0, 1)
-shader_parameter/glow_intensity = 5.0
+shader_parameter/glow_intensity = 1.0
 shader_parameter/glow_border_width = 0.05
 shader_parameter/glow_border_smoothness = 0.04
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_qspar")
@@ -132,7 +132,7 @@ shader_parameter/base_color = Color(1, 1, 1, 1)
 shader_parameter/inside_color = Color(0.2, 0.2, 0.2, 1)
 shader_parameter/dissolve_amount = 0.0
 shader_parameter/glow_color = Color(1, 0, 0, 1)
-shader_parameter/glow_intensity = 5.0
+shader_parameter/glow_intensity = 1.0
 shader_parameter/glow_border_width = 0.05
 shader_parameter/glow_border_smoothness = 0.04
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_qspar")
@@ -143,7 +143,7 @@ shader_parameter/base_color = Color(1, 1, 1, 1)
 shader_parameter/inside_color = Color(0.2, 0.2, 0.2, 1)
 shader_parameter/dissolve_amount = 0.0
 shader_parameter/glow_color = Color(1, 0, 0, 1)
-shader_parameter/glow_intensity = 5.0
+shader_parameter/glow_intensity = 1.0
 shader_parameter/glow_border_width = 0.05
 shader_parameter/glow_border_smoothness = 0.04
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_qspar")
@@ -154,7 +154,7 @@ shader_parameter/base_color = Color(1, 1, 1, 1)
 shader_parameter/inside_color = Color(0.2, 0.2, 0.2, 1)
 shader_parameter/dissolve_amount = 0.0
 shader_parameter/glow_color = Color(1, 0, 0, 1)
-shader_parameter/glow_intensity = 5.0
+shader_parameter/glow_intensity = 1.0
 shader_parameter/glow_border_width = 0.05
 shader_parameter/glow_border_smoothness = 0.04
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_qspar")
