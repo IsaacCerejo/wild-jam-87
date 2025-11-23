@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dolritqgtceml"]
+[gd_scene load_steps=8 format=3 uid="uid://dolritqgtceml"]
 
 [ext_resource type="Script" uid="uid://crp24nu04jd44" path="res://scripts/start_menu/start_menu.gd" id="1_4v5wy"]
 [ext_resource type="Theme" uid="uid://2ek7eagjo7f0" path="res://resources/themes/general_theme.tres" id="2_tj3dw"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bp7pspq4knti5" path="res://scenes/start_menu/options_menu.tscn" id="4_eum3g"]
 [ext_resource type="PackedScene" uid="uid://2i316e7renfb" path="res://scenes/start_menu/how_to_play_menu.tscn" id="5_gu1vn"]
 [ext_resource type="PackedScene" uid="uid://mtilpmnd7m7y" path="res://scenes/main_game/patient.tscn" id="6_rudpn"]
+[ext_resource type="Texture2D" uid="uid://djliflvadj1j5" path="res://assets/ui/logo.png" id="7_rudpn"]
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -35,9 +36,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -80.0
-offset_top = -116.5
+offset_top = -29.0
 offset_right = 80.0
-offset_bottom = 118.5
+offset_bottom = 206.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20
@@ -112,6 +113,11 @@ layout_mode = 1
 position = Vector2(278, 343)
 rotation = 1.5707964
 script = null
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(647, 196)
+scale = Vector2(1.4507042, 1.4507042)
+texture = ExtResource("7_rudpn")
 
 [connection signal="pressed" from="ButtonContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="ButtonContainer/HowToPlayButton" to="." method="_on_how_to_play_button_pressed"]
