@@ -1,26 +1,33 @@
-[gd_scene load_steps=7 format=3 uid="uid://dyw0n07n1jck7"]
+[gd_scene load_steps=9 format=3 uid="uid://dyw0n07n1jck7"]
 
 [ext_resource type="Script" path="res://scripts/main_game/hud.gd" id="1_haqa6"]
 [ext_resource type="Theme" uid="uid://2ek7eagjo7f0" path="res://resources/themes/general_theme.tres" id="1_vbvyk"]
 [ext_resource type="Script" uid="uid://dao7fj2pl4bg3" path="res://scripts/main_game/time_bar.gd" id="2_haqa6"]
 [ext_resource type="Texture2D" uid="uid://d04aagcti8h6c" path="res://assets/ui/timer_bar_background.png" id="3_mahcn"]
+[ext_resource type="Texture2D" uid="uid://b81vnfykm2dtf" path="res://assets/ui/points_background.png" id="5_mrrl1"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mrrl1"]
 texture = ExtResource("3_mahcn")
 expand_margin_top = 64.0
+modulate_color = Color(0.11129999, 0.21, 0.15406999, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mahcn"]
-bg_color = Color(0.18431373, 0.30980393, 0.2901961, 1)
+bg_color = Color(1.8247963, 1.8247963, 1.8247963, 1)
 border_width_left = 7
 border_width_top = 7
 border_width_right = 7
 border_width_bottom = 7
-border_color = Color(1, 1, 1, 1)
+border_color = Color(0.10980392, 0.21176471, 0.15294118, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 anti_aliasing = false
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4lh8y"]
+texture = ExtResource("5_mrrl1")
+expand_margin_top = 64.0
+modulate_color = Color(0.10980392, 0.21176471, 0.15294118, 1)
 
 [node name="HUD" type="MarginContainer"]
 anchors_preset = 15
@@ -43,7 +50,6 @@ theme_override_constants/separation = 75
 
 [node name="TimeBar" type="ProgressBar" parent="HBoxContainer"]
 unique_name_in_owner = true
-modulate = Color(0.92156863, 0.9254902, 0.8627451, 1)
 custom_minimum_size = Vector2(520, 25)
 layout_mode = 2
 size_flags_horizontal = 10
@@ -63,5 +69,7 @@ custom_minimum_size = Vector2(100, 25)
 layout_mode = 2
 size_flags_horizontal = 10
 theme = ExtResource("1_vbvyk")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_4lh8y")
 horizontal_alignment = 1
 vertical_alignment = 1
