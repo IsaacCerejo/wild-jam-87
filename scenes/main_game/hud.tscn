@@ -1,12 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://dyw0n07n1jck7"]
+[gd_scene load_steps=7 format=3 uid="uid://dyw0n07n1jck7"]
 
 [ext_resource type="Script" path="res://scripts/main_game/hud.gd" id="1_haqa6"]
 [ext_resource type="Theme" uid="uid://2ek7eagjo7f0" path="res://resources/themes/general_theme.tres" id="1_vbvyk"]
 [ext_resource type="Script" uid="uid://dao7fj2pl4bg3" path="res://scripts/main_game/time_bar.gd" id="2_haqa6"]
+[ext_resource type="Texture2D" uid="uid://d04aagcti8h6c" path="res://assets/ui/timer_bar_background.png" id="3_mahcn"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_haqa6"]
-bg_color = Color(0.92156863, 0.9254902, 0.8627451, 1)
-border_color = Color(0.18431373, 0.30980393, 0.2901961, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mrrl1"]
+texture = ExtResource("3_mahcn")
+expand_margin_top = 64.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mahcn"]
+bg_color = Color(0.18431373, 0.30980393, 0.2901961, 1)
+border_width_left = 7
+border_width_top = 7
+border_width_right = 7
+border_width_bottom = 7
+border_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -20,7 +29,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/margin_left = 50
-theme_override_constants/margin_top = 50
+theme_override_constants/margin_top = 58
 theme_override_constants/margin_right = 50
 theme_override_constants/margin_bottom = 50
 script = ExtResource("1_haqa6")
@@ -34,14 +43,17 @@ theme_override_constants/separation = 75
 
 [node name="TimeBar" type="ProgressBar" parent="HBoxContainer"]
 unique_name_in_owner = true
+modulate = Color(0.92156863, 0.9254902, 0.8627451, 1)
 custom_minimum_size = Vector2(520, 25)
 layout_mode = 2
 size_flags_horizontal = 10
 size_flags_vertical = 4
 mouse_filter = 2
 theme = ExtResource("1_vbvyk")
-theme_override_styles/background = SubResource("StyleBoxFlat_haqa6")
+theme_override_styles/background = SubResource("StyleBoxTexture_mrrl1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_mahcn")
 max_value = 60.0
+value = 0.3
 show_percentage = false
 script = ExtResource("2_haqa6")
 
