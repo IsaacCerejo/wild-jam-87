@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="WIld Jam 87"
+config/name="Fungal Protocol"
 run/main_scene="uid://ctxh2n0dh5uns"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
@@ -74,3 +74,4 @@ textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 viewport/hdr_2d=true
+anti_aliasing/quality/msaa_2d=3
