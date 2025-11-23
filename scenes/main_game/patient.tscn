@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://mtilpmnd7m7y"]
+[gd_scene load_steps=68 format=3 uid="uid://mtilpmnd7m7y"]
 
 [ext_resource type="Script" uid="uid://c3wghgg2g717r" path="res://scripts/main_game/patient.gd" id="1_s1xdg"]
 [ext_resource type="Texture2D" uid="uid://cn3ixunlwsdxs" path="res://assets/patient/torso.png" id="3_rujrq"]
@@ -8,9 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://1ne7h6dq6fke" path="res://assets/patient/torso-2.png" id="5_5ddas"]
 [ext_resource type="Texture2D" uid="uid://7uk0gwy21nhl" path="res://assets/patient/right_arm.png" id="5_5qs04"]
 [ext_resource type="Texture2D" uid="uid://b1aqla8vunclh" path="res://assets/patient/head-2.png" id="6_6vb6e"]
+[ext_resource type="Texture2D" uid="uid://c3tknjwlpsbeh" path="res://assets/patient/torso-3.png" id="6_l5mt1"]
 [ext_resource type="Texture2D" uid="uid://d1wg6uk21q1bv" path="res://assets/patient/left_leg.png" id="6_up4j8"]
 [ext_resource type="Texture2D" uid="uid://6qhwdg4opbk4" path="res://assets/patient/head-3.png" id="7_5mt75"]
 [ext_resource type="Texture2D" uid="uid://op5f0ffy213x" path="res://assets/patient/right_leg.png" id="7_ddug4"]
+[ext_resource type="Texture2D" uid="uid://bts3u6qwo6b52" path="res://assets/patient/torso-4.png" id="7_tgv11"]
 [ext_resource type="Texture2D" uid="uid://dctyf7ejpd8hd" path="res://assets/patient/head-4.png" id="8_q6v5p"]
 [ext_resource type="Script" uid="uid://me7cgjqr5843" path="res://scripts/main_game/patient_drag.gd" id="9_ddug4"]
 [ext_resource type="Texture2D" uid="uid://cndf0k3cx6xrb" path="res://assets/patient/head-5.png" id="9_xkswm"]
@@ -25,6 +27,7 @@
 [ext_resource type="Texture2D" uid="uid://c8cfiv5118g5r" path="res://assets/patient/right_arm_4.png" id="17_0spcl"]
 [ext_resource type="Texture2D" uid="uid://5g0pgvkik3p4" path="res://assets/patient/left_leg-4.png" id="17_sn5s6"]
 [ext_resource type="Texture2D" uid="uid://ntf56a0702b8" path="res://assets/patient/right_arm_5.png" id="18_3y02d"]
+[ext_resource type="Script" uid="uid://bxu1ceexvxg2" path="res://scripts/main_game/patient_skin_manager.gd" id="27_jmvsg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6vb6e"]
 shader = ExtResource("4_ddug4")
@@ -77,11 +80,43 @@ tracks/0/keys = {
 "values": [ExtResource("5_5ddas")]
 }
 
+[sub_resource type="Animation" id="Animation_oijsj"]
+resource_name = "Torso_3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("6_l5mt1")]
+}
+
+[sub_resource type="Animation" id="Animation_ejxm8"]
+resource_name = "Torso_4"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_tgv11")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tgv11"]
 _data = {
 &"RESET": SubResource("Animation_tgv11"),
 &"Torso": SubResource("Animation_jmvsg"),
-&"Torso_2": SubResource("Animation_sj4tf")
+&"Torso_2": SubResource("Animation_sj4tf"),
+&"Torso_3": SubResource("Animation_oijsj"),
+&"Torso_4": SubResource("Animation_ejxm8")
 }
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5mt75"]
@@ -243,21 +278,6 @@ tracks/0/keys = {
 "values": [ExtResource("4_rlp5r")]
 }
 
-[sub_resource type="Animation" id="Animation_qmpkf"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("4_rlp5r")]
-}
-
 [sub_resource type="Animation" id="Animation_isq70"]
 resource_name = "LeftArm_2"
 tracks/0/type = "value"
@@ -286,6 +306,21 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [ExtResource("15_vlsef")]
+}
+
+[sub_resource type="Animation" id="Animation_qmpkf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_rlp5r")]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_isq70"]
@@ -750,3 +785,6 @@ z_index = -1
 material = SubResource("ShaderMaterial_vfgv1")
 position = Vector2(0, 13)
 texture = ExtResource("7_ddug4")
+
+[node name="PatientSkinManager" type="Node2D" parent="."]
+script = ExtResource("27_jmvsg")

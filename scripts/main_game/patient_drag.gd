@@ -29,7 +29,7 @@ func _input(event):
 
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int, sender:RigidBody2D):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if Global.player.get_active_tool() == null:
+		if Global.player==null or Global.player.get_active_tool() == null :
 			dragging = true
 			mouse_pin.set_node_b(sender.get_path())
 	
