@@ -19,8 +19,11 @@ var _mushrooms: Array[Mushroom] = []
 @onready var mushroom_areas: Array[Line2D] = [$MushroomAreas/Torso/TorsoArea, $MushroomAreas/Head/HeadArea, $MushroomAreas/LeftArm/LeftArmArea, $MushroomAreas/RightArm/RightArmArea, $MushroomAreas/LeftLeg/LeftLegArea, $MushroomAreas/RightLeg/RightLegArea]
 var unused_base_points: Array[Vector2] = []
 
-# Called when the node enters the scene tree for the first time.
+@onready var head_animPlayer: AnimationPlayer = $MushroomAreas/Head/HeadAnimations
+const head_sprites = ["Head","Head_2","Head_3","Head_4"]
+
 func _ready() -> void:
+	head_animPlayer.play(head_sprites.pick_random())
 	pass
 	#TODO: spawn body with random skin
 

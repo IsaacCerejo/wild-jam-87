@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6ug3vgnb5hek"
-path="res://.godot/imported/background.png-af8116bd94e27df8cdb7b0ec54dd4e56.ctex"
+uid="uid://6qhwdg4opbk4"
+path="res://.godot/imported/head-3.png-29224c8c0c2fd1b42b26a001104bfc08.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/background.png"
-dest_files=["res://.godot/imported/background.png-af8116bd94e27df8cdb7b0ec54dd4e56.ctex"]
+source_file="res://assets/patient/head-3.png"
+dest_files=["res://.godot/imported/head-3.png-29224c8c0c2fd1b42b26a001104bfc08.ctex"]
 
 [params]
 
