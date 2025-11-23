@@ -3,6 +3,8 @@ extends Control
 @onready var how_to_play_menu: Control = %HowToPlayMenu
 @onready var options_menu: Control = %OptionsMenu
 
+var _starting: bool = false
+
 func _ready() -> void:
 	Global.reset_score()
 	Global.reset_mushrooms_picked()
@@ -15,6 +17,10 @@ func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 
 func _on_start_button_pressed() -> void:
+	if _starting:
+		return
+	_starting = true
+
 	AudioManager.create_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.BUTTON_CLICK)
 	await Global.game_controller.change_scene(Global.SCENE_UIDS.MAIN_GAME_UI, Global.SCENE_UIDS.MAIN_GAME, TransitionSettings.TRANSITION_TYPE.FADE_TO_FADE)
 
