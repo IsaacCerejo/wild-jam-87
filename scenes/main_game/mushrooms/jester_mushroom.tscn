@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqgj0pn787y68"]
+[gd_scene load_steps=5 format=3 uid="uid://bqgj0pn787y68"]
 
 [ext_resource type="PackedScene" uid="uid://cfxgo5ye53do0" path="res://scenes/main_game/mushrooms/mushroom.tscn" id="1_g25aq"]
 [ext_resource type="Script" uid="uid://cg3gdlkv0fkw8" path="res://scripts/main_game/mushrooms/jester_mushroom.gd" id="2_0t73v"]
 [ext_resource type="Texture2D" uid="uid://6gc5emte74i3" path="res://assets/mushrooms/jester_mushroom.PNG" id="3_00xul"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g25aq"]
+size = Vector2(28.62713, 66.2944)
 
 [node name="JesterMushroom" instance=ExtResource("1_g25aq")]
 script = ExtResource("2_0t73v")
@@ -16,4 +19,5 @@ texture = ExtResource("3_00xul")
 position = Vector2(-2.5, -49.5)
 
 [node name="CollisionShape2D" parent="." index="2"]
-position = Vector2(0, -37)
+position = Vector2(0, -40)
+shape = SubResource("RectangleShape2D_g25aq")

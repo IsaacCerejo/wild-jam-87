@@ -16,4 +16,4 @@ texture = ExtResource("3_epkm7")
 position = Vector2(-0.5, -25)
 
 [node name="CollisionShape2D" parent="." index="2"]
-position = Vector2(-0.5, -25)
+position = Vector2(-1, -28.000002)
