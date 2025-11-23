@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://mtilpmnd7m7y"]
+[gd_scene load_steps=31 format=3 uid="uid://mtilpmnd7m7y"]
 
 [ext_resource type="Script" uid="uid://c3wghgg2g717r" path="res://scripts/main_game/patient.gd" id="1_s1xdg"]
 [ext_resource type="Texture2D" uid="uid://cn3ixunlwsdxs" path="res://assets/patient/torso.png" id="3_rujrq"]
@@ -12,6 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://op5f0ffy213x" path="res://assets/patient/right_leg.png" id="7_ddug4"]
 [ext_resource type="Texture2D" uid="uid://dctyf7ejpd8hd" path="res://assets/patient/head-4.png" id="8_q6v5p"]
 [ext_resource type="Script" uid="uid://me7cgjqr5843" path="res://scripts/main_game/patient_drag.gd" id="9_ddug4"]
+[ext_resource type="Texture2D" uid="uid://cndf0k3cx6xrb" path="res://assets/patient/head-5.png" id="9_xkswm"]
+[ext_resource type="Texture2D" uid="uid://bleqvj5ufj74p" path="res://assets/patient/head-6.png" id="10_vfgv1"]
+[ext_resource type="Texture2D" uid="uid://oweld0jjnaft" path="res://assets/patient/head-7.png" id="11_vfgv1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6vb6e"]
 shader = ExtResource("4_ddug4")
@@ -100,12 +103,60 @@ tracks/0/keys = {
 "values": [ExtResource("4_up4j8")]
 }
 
+[sub_resource type="Animation" id="Animation_ensor"]
+resource_name = "Head_5"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("9_xkswm")]
+}
+
+[sub_resource type="Animation" id="Animation_01t6u"]
+resource_name = "Head_6"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("10_vfgv1")]
+}
+
+[sub_resource type="Animation" id="Animation_sn5s6"]
+resource_name = "Head_7"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("11_vfgv1")]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xkswm"]
 _data = {
 &"Head": SubResource("Animation_q6v5p"),
 &"Head_2": SubResource("Animation_3dkft"),
 &"Head_3": SubResource("Animation_xkswm"),
 &"Head_4": SubResource("Animation_vfgv1"),
+&"Head_5": SubResource("Animation_ensor"),
+&"Head_6": SubResource("Animation_01t6u"),
+&"Head_7": SubResource("Animation_sn5s6"),
 &"RESET": SubResource("Animation_5mt75")
 }
 
