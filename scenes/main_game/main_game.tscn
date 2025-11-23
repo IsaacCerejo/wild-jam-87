@@ -1,6 +1,6 @@
 [gd_scene load_steps=50 format=3 uid="uid://fwifwdj0klmd"]
 
-[ext_resource type="Texture2D" uid="uid://b6ug3vgnb5hek" path="res://assets/background/background.png" id="1_fm6xj"]
+[ext_resource type="Texture2D" uid="uid://b6ug3vgnb5hek" path="res://assets/background/background.PNG" id="1_fm6xj"]
 [ext_resource type="Texture2D" uid="uid://dq7udm4bi8xi8" path="res://assets/background/cabinet.PNG" id="2_sjufv"]
 [ext_resource type="Script" uid="uid://c0qla4xs5qtuw" path="res://scripts/main_game/patient_manager.gd" id="3_4y18v"]
 [ext_resource type="Texture2D" uid="uid://dhgcgtngpsxv2" path="res://assets/hand/hand_drill.png" id="3_gxjft"]
@@ -216,6 +216,7 @@ glow_enabled = true
 fog_mode = 1
 fog_density = 1.0
 adjustment_enabled = true
+adjustment_contrast = 1.1
 
 [node name="MainGame" type="Node2D"]
 

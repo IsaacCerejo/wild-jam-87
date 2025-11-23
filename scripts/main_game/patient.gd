@@ -17,7 +17,7 @@ const MUSHROOM_SCENES: Array[PackedScene] = [
 
 var _mushrooms: Array[Mushroom] = []
 @onready var mushroom_areas: Array[Line2D] = [$MushroomAreas/Torso/TorsoArea, $MushroomAreas/Head/HeadArea, $MushroomAreas/LeftArm/LeftArmArea, $MushroomAreas/RightArm/RightArmArea, $MushroomAreas/LeftLeg/LeftLegArea, $MushroomAreas/RightLeg/RightLegArea]
-var unused_base_points: Array[Vector2] = []
+var used_base_points: Array[int] = []
 
 @onready var head_animPlayer: AnimationPlayer = $MushroomAreas/Head/HeadAnimations
 const head_sprites = ["Head","Head_2","Head_3","Head_4"]
@@ -45,13 +45,23 @@ func _on_mushroom_picked(mushroom: Mushroom) -> void:
 		cured.emit()
 
 func find_mushroom_position(affected_area: Line2D) -> Vector2:
-	var new_mushroom_position := Vector2()
-	
-	# Always use different base points
-	var random_idx = randi_range(0, affected_area.get_point_count() - 1)
-	var affected_point = affected_area.points[random_idx]
-	#unused_base_points.pop_at(random_idx)
+	# i used chatgpt for this, i think its working
+	if used_base_points.size() == affected_area.get_point_count():
+		push_warning("All positions used!")
+		return Vector2.ZERO
 
-	new_mushroom_position = Vector2(affected_point.x + randf_range(-shroom_deviation, shroom_deviation), affected_point.y + randf_range(-shroom_deviation, shroom_deviation))
+	var random_idx: int
 
-	return new_mushroom_position
+	# pick a new index that hasn't been used
+	while true:
+		random_idx = randi_range(0, affected_area.get_point_count() - 1)
+		if random_idx not in used_base_points:
+			used_base_points.append(random_idx)
+			break
+
+	var base_point = affected_area.points[random_idx]
+
+	return base_point + Vector2(
+		randf_range(-shroom_deviation, shroom_deviation),
+		randf_range(-shroom_deviation, shroom_deviation)
+	)
