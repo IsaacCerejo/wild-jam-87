@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://oox6v2mdl4pn" path="res://assets/mushrooms/squishy_mushroom.PNG" id="3_w30f3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wmv7v"]
-radius = 16.03122
+radius = 19.644848
 
 [node name="SquishyMushroom" instance=ExtResource("1_g1w1s")]
 script = ExtResource("2_w30f3")
