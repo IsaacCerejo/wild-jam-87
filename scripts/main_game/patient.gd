@@ -24,7 +24,7 @@ const head_sprites = ["Head","Head_2","Head_3","Head_4","Head_5","Head_6","Head_
 @onready var torso_animation_player: AnimationPlayer = $MushroomAreas/Torso/TorsoAnimationPlayer
 const torso_sprites = ["Torso","Torso_2"]
 @onready var right_arm_animation_player: AnimationPlayer = $MushroomAreas/RightArm/RightArmAnimationPlayer
-const right_arm_sprites = ["RightArm","RightArm_2"]
+const right_arm_sprites = ["RightArm","RightArm_2","RightArm_3","RightArm_4","RightArm_5"]
 @onready var left_leg_animation_player: AnimationPlayer = $MushroomAreas/LeftLeg/LeftLegAnimationPlayer
 const left_leg_sprites = ["LeftLeg","LeftLeg_2","LeftLeg_3","LeftLeg_4"]
 
