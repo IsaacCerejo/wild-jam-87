@@ -45,23 +45,10 @@ func _on_mushroom_picked(mushroom: Mushroom) -> void:
 		cured.emit()
 
 func find_mushroom_position(affected_area: Line2D) -> Vector2:
-	# i used chatgpt for this, i think its working
-	if used_base_points.size() == affected_area.get_point_count():
-		push_warning("All positions used!")
-		return Vector2.ZERO
-
-	var random_idx: int
-
-	# pick a new index that hasn't been used
-	while true:
-		random_idx = randi_range(0, affected_area.get_point_count() - 1)
-		if random_idx not in used_base_points:
-			used_base_points.append(random_idx)
-			break
-
-	var base_point = affected_area.points[random_idx]
-
-	return base_point + Vector2(
-		randf_range(-shroom_deviation, shroom_deviation),
-		randf_range(-shroom_deviation, shroom_deviation)
-	)
+	var new_mushroom_position := Vector2() 
+	# Always use different base points 
+	var random_idx = randi_range(0, affected_area.get_point_count() - 1) 
+	var affected_point = affected_area.points[random_idx] 
+	#unused_base_points.pop_at(random_idx) 
+	new_mushroom_position = Vector2(affected_point.x + randf_range(-shroom_deviation, shroom_deviation), affected_point.y + randf_range(-shroom_deviation, shroom_deviation)) 
+	return new_mushroom_position
