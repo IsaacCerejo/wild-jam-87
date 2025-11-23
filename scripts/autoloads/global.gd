@@ -53,8 +53,8 @@ var music_step: int = 9
 var sound_step: int = 9
 
 # Mouse cursor
-var custom_mouse_cursor_default = load("uid://d08lthy8v1mdv")
-var custom_mouse_cursor_click = load("uid://01bsd0kqbtd0")
+var custom_mouse_cursor_default = load("uid://defpvu1xwxmj5")
+var custom_mouse_cursor_click = load("uid://dolq5cc8bdvky")
 
 # Why do this?
 func _ready() -> void:
