@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6ug3vgnb5hek"
-path="res://.godot/imported/background.PNG-ea1f6cbadad444f0085f9b5acbe35101.ctex"
+uid="uid://b6b2gmnnylqqp"
+path="res://.godot/imported/hand_pinca_2.png-f5e6f4f1fad350692d5cad5ee72eca74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/background.PNG"
-dest_files=["res://.godot/imported/background.PNG-ea1f6cbadad444f0085f9b5acbe35101.ctex"]
+source_file="res://assets/hand/hand_pinca_2.png"
+dest_files=["res://.godot/imported/hand_pinca_2.png-f5e6f4f1fad350692d5cad5ee72eca74.ctex"]
 
 [params]
 

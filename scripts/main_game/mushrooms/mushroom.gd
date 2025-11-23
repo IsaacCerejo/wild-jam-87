@@ -37,7 +37,11 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	self.global_rotation = 0
-	
+
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		Global.player.set_active_tool(Global.player.get_active_tool())
+
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	assert(Global.player != null)
 	var active_tool: Tool = Global.player.get_active_tool()

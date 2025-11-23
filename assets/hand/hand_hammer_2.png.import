@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6ug3vgnb5hek"
-path="res://.godot/imported/background.PNG-ea1f6cbadad444f0085f9b5acbe35101.ctex"
+uid="uid://1m7aw2i8qg1c"
+path="res://.godot/imported/hand_hammer_2.png-2ccd1fb0f1f1a0ab036f84b81c0a737f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/background.PNG"
-dest_files=["res://.godot/imported/background.PNG-ea1f6cbadad444f0085f9b5acbe35101.ctex"]
+source_file="res://assets/hand/hand_hammer_2.png"
+dest_files=["res://.godot/imported/hand_hammer_2.png-2ccd1fb0f1f1a0ab036f84b81c0a737f.ctex"]
 
 [params]
 

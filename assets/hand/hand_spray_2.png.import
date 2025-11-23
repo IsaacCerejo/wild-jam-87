@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6ug3vgnb5hek"
-path="res://.godot/imported/background.PNG-ea1f6cbadad444f0085f9b5acbe35101.ctex"
+uid="uid://b105tuuoyfqp5"
+path="res://.godot/imported/hand_spray_2.png-866fb0e1ef30e815951fa7c3a00ebaf2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/background.PNG"
-dest_files=["res://.godot/imported/background.PNG-ea1f6cbadad444f0085f9b5acbe35101.ctex"]
+source_file="res://assets/hand/hand_spray_2.png"
+dest_files=["res://.godot/imported/hand_spray_2.png-866fb0e1ef30e815951fa7c3a00ebaf2.ctex"]
 
 [params]
 

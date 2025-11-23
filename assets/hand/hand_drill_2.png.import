@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6ug3vgnb5hek"
-path="res://.godot/imported/background.PNG-ea1f6cbadad444f0085f9b5acbe35101.ctex"
+uid="uid://pq8w40504wk7"
+path="res://.godot/imported/hand_drill_2.png-f4496389d8f7bf3c1201a250e8d51c96.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/background.PNG"
-dest_files=["res://.godot/imported/background.PNG-ea1f6cbadad444f0085f9b5acbe35101.ctex"]
+source_file="res://assets/hand/hand_drill_2.png"
+dest_files=["res://.godot/imported/hand_drill_2.png-f4496389d8f7bf3c1201a250e8d51c96.ctex"]
 
 [params]
 

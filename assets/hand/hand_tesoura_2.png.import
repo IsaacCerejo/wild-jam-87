@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6ug3vgnb5hek"
-path="res://.godot/imported/background.PNG-ea1f6cbadad444f0085f9b5acbe35101.ctex"
+uid="uid://btdknwtxlcnbi"
+path="res://.godot/imported/hand_tesoura_2.png-c2ebdd8e84974ffb85b625421caddc92.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/background.PNG"
-dest_files=["res://.godot/imported/background.PNG-ea1f6cbadad444f0085f9b5acbe35101.ctex"]
+source_file="res://assets/hand/hand_tesoura_2.png"
+dest_files=["res://.godot/imported/hand_tesoura_2.png-c2ebdd8e84974ffb85b625421caddc92.ctex"]
 
 [params]
 
