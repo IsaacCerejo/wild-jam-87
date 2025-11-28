@@ -266,13 +266,13 @@ texture = ExtResource("15_fxa2l")
 [node name="SprayPostIt" type="Sprite2D" parent="PostIts"]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_qspar")
-position = Vector2(-187, 120)
+position = Vector2(-105, 119)
 texture = ExtResource("16_feobv")
 
 [node name="HammerPostIt" type="Sprite2D" parent="PostIts"]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_7mboc")
-position = Vector2(-460, 93)
+position = Vector2(-478, 108)
 texture = ExtResource("17_uddg2")
 
 [node name="PincaPostIt" type="Sprite2D" parent="PostIts"]
@@ -284,7 +284,7 @@ texture = ExtResource("18_qspar")
 [node name="DrillPostIt" type="Sprite2D" parent="PostIts"]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_sjufv")
-position = Vector2(12, 85)
+position = Vector2(91, 94)
 texture = ExtResource("19_7mboc")
 
 [node name="ToolSelector" type="Node2D" parent="."]
@@ -303,7 +303,7 @@ rotation = -0.77841693
 shape = SubResource("RectangleShape2D_r8wn4")
 
 [node name="Spray" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
-position = Vector2(881, 601)
+position = Vector2(952, 640)
 type = 1
 
 [node name="Sprite2D" parent="ToolSelector/Spray" index="0"]
@@ -326,7 +326,7 @@ rotation = -0.91978854
 shape = SubResource("RectangleShape2D_fxa2l")
 
 [node name="Hammer" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
-position = Vector2(717, 684)
+position = Vector2(773, 666)
 type = 4
 
 [node name="Sprite2D" parent="ToolSelector/Hammer" index="0"]
@@ -337,7 +337,7 @@ position = Vector2(4, 0.5)
 shape = SubResource("RectangleShape2D_feobv")
 
 [node name="Drill" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
-position = Vector2(1084, 660)
+position = Vector2(1149, 666)
 type = 3
 
 [node name="Sprite2D" parent="ToolSelector/Drill" index="0"]
