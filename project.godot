@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Fungal Protocol"
+config/tags=PackedStringArray("wildjam87")
 run/main_scene="uid://ctxh2n0dh5uns"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
