@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xjdguy6jr8kj"
-path="res://.godot/imported/right_leg-5.png-98528327efebc174f5c9c1be6324515a.ctex"
+uid="uid://cqijquxiulp1n"
+path="res://.godot/imported/tattoo_01.png-4653eb35debdbb1945b6c9af373f65bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/patient/right_leg/right_leg-5.png"
-dest_files=["res://.godot/imported/right_leg-5.png-98528327efebc174f5c9c1be6324515a.ctex"]
+source_file="res://assets/patient/leg/tattoo_01.png"
+dest_files=["res://.godot/imported/tattoo_01.png-4653eb35debdbb1945b6c9af373f65bb.ctex"]
 
 [params]
 

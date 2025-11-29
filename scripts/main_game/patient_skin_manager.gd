@@ -4,8 +4,8 @@ extends Node2D
 @onready var torso_sprite: Sprite2D = $"../MushroomAreas/Torso/torso_skin"
 @onready var left_arm_sprite: Sprite2D = $"../MushroomAreas/LeftArm/arm_skin"
 @onready var right_arm_sprite: Sprite2D = $"../MushroomAreas/RightArm/arm_skin"
-@onready var left_leg_sprite: Sprite2D = $"../MushroomAreas/LeftLeg/Sprite2D"
-@onready var right_leg_sprite: Sprite2D = $"../MushroomAreas/RightLeg/Sprite2D"
+@onready var left_leg_sprite: Sprite2D = $"../MushroomAreas/LeftLeg/leg_skin"
+@onready var right_leg_sprite: Sprite2D = $"../MushroomAreas/RightLeg/leg_skin"
 @onready var hair_sprite: Sprite2D = $"../MushroomAreas/Head/HairRoot/Hair"
 
 func _ready() -> void:
@@ -13,8 +13,8 @@ func _ready() -> void:
 	torso_sprite.texture = load_random_texture("res://assets/patient/torso")
 	left_arm_sprite.texture = load_random_texture("res://assets/patient/arm")
 	right_arm_sprite.texture = load_random_texture("res://assets/patient/arm")
-	left_leg_sprite.texture = load_random_texture("res://assets/patient/left_leg")
-	right_leg_sprite.texture = load_random_texture("res://assets/patient/right_leg")
+	left_leg_sprite.texture = load_random_texture("res://assets/patient/leg")
+	right_leg_sprite.texture = load_random_texture("res://assets/patient/leg")
 	hair_sprite.texture = load_random_texture("res://assets/patient/hair")
 
 func load_random_texture(folder_path: String) -> Texture2D:

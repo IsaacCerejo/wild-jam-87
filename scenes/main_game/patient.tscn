@@ -1,12 +1,11 @@
-[gd_scene load_steps=18 format=3 uid="uid://mtilpmnd7m7y"]
+[gd_scene load_steps=17 format=3 uid="uid://mtilpmnd7m7y"]
 
 [ext_resource type="Script" uid="uid://c3wghgg2g717r" path="res://scripts/main_game/patient.gd" id="1_s1xdg"]
 [ext_resource type="Texture2D" uid="uid://dj84m1ovp6jep" path="res://assets/patient/blank_parts/torso.png" id="3_5mt75"]
 [ext_resource type="Texture2D" path="res://assets/patient/torso/torso.png" id="3_rujrq"]
 [ext_resource type="Shader" uid="uid://bxfmwgtfjfhjo" path="res://resources/shaders/shadow.gdshader" id="4_ddug4"]
 [ext_resource type="Texture2D" uid="uid://b7q4fvme8ah78" path="res://assets/patient/head/head.png" id="4_up4j8"]
-[ext_resource type="Texture2D" uid="uid://d1wg6uk21q1bv" path="res://assets/patient/left_leg/left_leg.png" id="6_up4j8"]
-[ext_resource type="Texture2D" uid="uid://op5f0ffy213x" path="res://assets/patient/right_leg/right_leg.png" id="7_ddug4"]
+[ext_resource type="Texture2D" uid="uid://bhaii651jxouo" path="res://assets/patient/blank_parts/leg.png" id="8_5mt75"]
 [ext_resource type="Texture2D" uid="uid://8guy4d6qos1b" path="res://assets/patient/blank_parts/arm.png" id="8_q6v5p"]
 [ext_resource type="Script" uid="uid://me7cgjqr5843" path="res://scripts/main_game/patient_drag.gd" id="9_ddug4"]
 [ext_resource type="Script" uid="uid://bxu1ceexvxg2" path="res://scripts/main_game/patient_skin_manager.gd" id="27_jmvsg"]
@@ -238,14 +237,18 @@ texture = ExtResource("8_q6v5p")
 flip_v = true
 
 [node name="LeftLeg" type="RigidBody2D" parent="MushroomAreas"]
-position = Vector2(146, -66)
+position = Vector2(144, -65)
 input_pickable = true
 mass = 67.932
 gravity_scale = 0.0
 linear_damp = 2.0
 
-[node name="Sprite2D" type="Sprite2D" parent="MushroomAreas/LeftLeg"]
-texture = ExtResource("6_up4j8")
+[node name="blank_leg" type="Sprite2D" parent="MushroomAreas/LeftLeg"]
+rotation = -0.23693149
+texture = ExtResource("8_5mt75")
+
+[node name="leg_skin" type="Sprite2D" parent="MushroomAreas/LeftLeg"]
+rotation = -0.23736478
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MushroomAreas/LeftLeg"]
 polygon = PackedVector2Array(-141, 16, -122, -8, -61, -15, -47, -13, 130, -53, 141, -45, 142, -27, 138, -16, -46, 41, -92, 60, -125, 58, -137, 50)
@@ -264,17 +267,24 @@ show_behind_parent = true
 z_index = -1
 material = SubResource("ShaderMaterial_xkswm")
 position = Vector2(0, 13)
-texture = ExtResource("6_up4j8")
+rotation = -0.23736478
+texture = ExtResource("8_5mt75")
 
 [node name="RightLeg" type="RigidBody2D" parent="MushroomAreas"]
-position = Vector2(142, 79)
+position = Vector2(140, 68)
 input_pickable = true
 mass = 67.932
 gravity_scale = 0.0
 linear_damp = 2.0
 
-[node name="Sprite2D" type="Sprite2D" parent="MushroomAreas/RightLeg"]
-texture = ExtResource("7_ddug4")
+[node name="blank_leg" type="Sprite2D" parent="MushroomAreas/RightLeg"]
+rotation = 0.23736478
+texture = ExtResource("8_5mt75")
+flip_v = true
+
+[node name="leg_skin" type="Sprite2D" parent="MushroomAreas/RightLeg"]
+rotation = 0.23736478
+flip_v = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MushroomAreas/RightLeg"]
 polygon = PackedVector2Array(-131, -39, -112, -65, -86, -64, -50, -49, 107, 1, 145, 13, 148, 26, 143, 43, 136, 48, 26, 25, -55, 9, -112, 5, -134, -13)
@@ -294,7 +304,9 @@ show_behind_parent = true
 z_index = -1
 material = SubResource("ShaderMaterial_vfgv1")
 position = Vector2(0, 13)
-texture = ExtResource("7_ddug4")
+rotation = 0.23736478
+texture = ExtResource("8_5mt75")
+flip_v = true
 
 [node name="PatientSkinManager" type="Node2D" parent="."]
 script = ExtResource("27_jmvsg")

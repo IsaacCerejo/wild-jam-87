@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1wg6uk21q1bv"
-path="res://.godot/imported/left_leg.png-65932c1ca41120b00e808254c5296e8d.ctex"
+uid="uid://itiu0gm0i0jj"
+path="res://.godot/imported/scratches.png-351aa40e71d10af1ff94c91c77aca14b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/patient/left_leg/left_leg.png"
-dest_files=["res://.godot/imported/left_leg.png-65932c1ca41120b00e808254c5296e8d.ctex"]
+source_file="res://assets/patient/leg/scratches.png"
+dest_files=["res://.godot/imported/scratches.png-351aa40e71d10af1ff94c91c77aca14b.ctex"]
 
 [params]
 
