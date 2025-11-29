@@ -247,9 +247,10 @@ script = ExtResource("13_4y18v")
 [node name="HandSprite" type="AnimatedSprite2D" parent="Player"]
 unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_n1acc")
-animation = &"drill"
+animation = &"pinca"
 autoplay = "empty"
-offset = Vector2(48, 40)
+frame = 1
+offset = Vector2(31.395, 57.65)
 
 [node name="PostIts" type="Node2D" parent="."]
 z_index = 1
