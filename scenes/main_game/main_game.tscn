@@ -249,7 +249,7 @@ unique_name_in_owner = true
 sprite_frames = SubResource("SpriteFrames_n1acc")
 animation = &"drill"
 autoplay = "empty"
-offset = Vector2(14.47, 32.22)
+offset = Vector2(48, 40)
 
 [node name="PostIts" type="Node2D" parent="."]
 z_index = 1

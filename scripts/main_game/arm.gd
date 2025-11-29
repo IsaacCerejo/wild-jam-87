@@ -14,7 +14,7 @@ func _ready():
 
 func _process(delta: float):
 	# The tip of the arm follows the mouse
-	_points_array[0] = get_global_mouse_position() + Vector2(12,20)
+	_points_array[0] = get_global_mouse_position() + Vector2(48,32)
 
 	# Each point smoothly follows the previous one
 	for i in range(1, MAX_POINTS):

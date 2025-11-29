@@ -1,10 +1,8 @@
-[gd_scene load_steps=18 format=3 uid="uid://mtilpmnd7m7y"]
+[gd_scene load_steps=16 format=3 uid="uid://mtilpmnd7m7y"]
 
 [ext_resource type="Script" uid="uid://c3wghgg2g717r" path="res://scripts/main_game/patient.gd" id="1_s1xdg"]
 [ext_resource type="Texture2D" uid="uid://dj84m1ovp6jep" path="res://assets/patient/blank_parts/torso.png" id="3_5mt75"]
-[ext_resource type="Texture2D" path="res://assets/patient/torso/torso.png" id="3_rujrq"]
 [ext_resource type="Shader" uid="uid://bxfmwgtfjfhjo" path="res://resources/shaders/shadow.gdshader" id="4_ddug4"]
-[ext_resource type="Texture2D" path="res://assets/patient/head/head.png" id="4_up4j8"]
 [ext_resource type="Texture2D" uid="uid://cydyqswqfl3mb" path="res://assets/patient/blank_parts/head.png" id="6_6vb6e"]
 [ext_resource type="Texture2D" uid="uid://cseyxordw16lv" path="res://assets/patient/hair/hair_06.png" id="7_5mt75"]
 [ext_resource type="Texture2D" uid="uid://bhaii651jxouo" path="res://assets/patient/blank_parts/leg.png" id="8_5mt75"]
@@ -124,7 +122,6 @@ show_behind_parent = true
 z_index = -1
 material = SubResource("ShaderMaterial_6vb6e")
 position = Vector2(-6, 11)
-texture = ExtResource("3_rujrq")
 
 [node name="Head" type="RigidBody2D" parent="MushroomAreas"]
 position = Vector2(-235, 0)
@@ -162,7 +159,6 @@ show_behind_parent = true
 z_index = -1
 material = SubResource("ShaderMaterial_5mt75")
 position = Vector2(-9, 11)
-texture = ExtResource("4_up4j8")
 
 [node name="LeftArm" type="RigidBody2D" parent="MushroomAreas"]
 position = Vector2(-71, -97)
