@@ -1,46 +1,15 @@
-[gd_scene load_steps=101 format=3 uid="uid://mtilpmnd7m7y"]
+[gd_scene load_steps=18 format=3 uid="uid://mtilpmnd7m7y"]
 
 [ext_resource type="Script" uid="uid://c3wghgg2g717r" path="res://scripts/main_game/patient.gd" id="1_s1xdg"]
-[ext_resource type="Texture2D" uid="uid://cn3ixunlwsdxs" path="res://assets/patient/torso.png" id="3_rujrq"]
+[ext_resource type="Texture2D" uid="uid://cn3ixunlwsdxs" path="res://assets/patient/torso/torso.png" id="3_rujrq"]
 [ext_resource type="Shader" uid="uid://bxfmwgtfjfhjo" path="res://resources/shaders/shadow.gdshader" id="4_ddug4"]
-[ext_resource type="Texture2D" uid="uid://43013cqc7mv3" path="res://assets/patient/left_arm.png" id="4_rlp5r"]
-[ext_resource type="Texture2D" uid="uid://b7q4fvme8ah78" path="res://assets/patient/head.png" id="4_up4j8"]
-[ext_resource type="Texture2D" uid="uid://1ne7h6dq6fke" path="res://assets/patient/torso-2.png" id="5_5ddas"]
-[ext_resource type="Texture2D" uid="uid://7uk0gwy21nhl" path="res://assets/patient/right_arm.png" id="5_5qs04"]
-[ext_resource type="Texture2D" uid="uid://b1aqla8vunclh" path="res://assets/patient/head-2.png" id="6_6vb6e"]
-[ext_resource type="Texture2D" uid="uid://c3tknjwlpsbeh" path="res://assets/patient/torso-3.png" id="6_l5mt1"]
-[ext_resource type="Texture2D" uid="uid://d1wg6uk21q1bv" path="res://assets/patient/left_leg.png" id="6_up4j8"]
-[ext_resource type="Texture2D" uid="uid://6qhwdg4opbk4" path="res://assets/patient/head-3.png" id="7_5mt75"]
-[ext_resource type="Texture2D" uid="uid://op5f0ffy213x" path="res://assets/patient/right_leg.png" id="7_ddug4"]
-[ext_resource type="Texture2D" uid="uid://bts3u6qwo6b52" path="res://assets/patient/torso-4.png" id="7_tgv11"]
-[ext_resource type="Texture2D" uid="uid://dctyf7ejpd8hd" path="res://assets/patient/head-4.png" id="8_q6v5p"]
-[ext_resource type="Texture2D" uid="uid://bfuuh6nlrqipo" path="res://assets/patient/torso-5.png" id="8_sj4tf"]
+[ext_resource type="Texture2D" uid="uid://43013cqc7mv3" path="res://assets/patient/left_arm/left_arm.png" id="4_rlp5r"]
+[ext_resource type="Texture2D" uid="uid://b7q4fvme8ah78" path="res://assets/patient/head/head.png" id="4_up4j8"]
+[ext_resource type="Texture2D" uid="uid://7uk0gwy21nhl" path="res://assets/patient/right_arm/right_arm.png" id="5_5qs04"]
+[ext_resource type="Texture2D" uid="uid://d1wg6uk21q1bv" path="res://assets/patient/left_leg/left_leg.png" id="6_up4j8"]
+[ext_resource type="Texture2D" uid="uid://op5f0ffy213x" path="res://assets/patient/right_leg/right_leg.png" id="7_ddug4"]
 [ext_resource type="Script" uid="uid://me7cgjqr5843" path="res://scripts/main_game/patient_drag.gd" id="9_ddug4"]
-[ext_resource type="Texture2D" uid="uid://cndf0k3cx6xrb" path="res://assets/patient/head-5.png" id="9_xkswm"]
-[ext_resource type="Texture2D" uid="uid://bleqvj5ufj74p" path="res://assets/patient/head-6.png" id="10_vfgv1"]
-[ext_resource type="Texture2D" uid="uid://oweld0jjnaft" path="res://assets/patient/head-7.png" id="11_vfgv1"]
-[ext_resource type="Texture2D" uid="uid://bky7c7qe7d744" path="res://assets/patient/left_arm_2.png" id="14_v8ekv"]
-[ext_resource type="Texture2D" uid="uid://clwulmav5gx35" path="res://assets/patient/right_arm-2.png" id="14_xbv8b"]
-[ext_resource type="Texture2D" uid="uid://ryjhe2o523sf" path="res://assets/patient/left_leg-2.png" id="15_ensor"]
-[ext_resource type="Texture2D" uid="uid://dlw031sxd4kvp" path="res://assets/patient/left_arm_3.png" id="15_vlsef"]
-[ext_resource type="Texture2D" uid="uid://c8qktx4e2y8jw" path="res://assets/patient/right_arm_3.png" id="16_0g64t"]
-[ext_resource type="Texture2D" uid="uid://b4yw5gsl4lbbm" path="res://assets/patient/left_leg-3.png" id="16_01t6u"]
-[ext_resource type="Texture2D" uid="uid://c6r2fwqmb3arm" path="res://assets/patient/hair_1.png" id="16_ab3to"]
-[ext_resource type="Texture2D" uid="uid://c8cfiv5118g5r" path="res://assets/patient/right_arm_4.png" id="17_0spcl"]
-[ext_resource type="Texture2D" uid="uid://bwbi6y7jdud2o" path="res://assets/patient/hair_2.png" id="17_6q3dj"]
-[ext_resource type="Texture2D" uid="uid://5g0pgvkik3p4" path="res://assets/patient/left_leg-4.png" id="17_sn5s6"]
-[ext_resource type="Texture2D" uid="uid://ntf56a0702b8" path="res://assets/patient/right_arm_5.png" id="18_3y02d"]
-[ext_resource type="Texture2D" uid="uid://b2trqud2dfl4b" path="res://assets/patient/hair_3.png" id="18_6u6v3"]
-[ext_resource type="Texture2D" uid="uid://dnqg4yp7xywfp" path="res://assets/patient/hair_4.png" id="19_pujfp"]
-[ext_resource type="Texture2D" uid="uid://rym1mhxiffef" path="res://assets/patient/hair_5.png" id="20_qmpkf"]
-[ext_resource type="Texture2D" uid="uid://dm2s6gsbb0uuf" path="res://assets/patient/hair_6.png" id="21_isq70"]
-[ext_resource type="Texture2D" uid="uid://bxt53dacps4hd" path="res://assets/patient/hair_7.png" id="22_chgtv"]
-[ext_resource type="Texture2D" uid="uid://d1movdn3r5rg5" path="res://assets/patient/hair_9.png" id="23_oijsj"]
 [ext_resource type="Script" uid="uid://bxu1ceexvxg2" path="res://scripts/main_game/patient_skin_manager.gd" id="27_jmvsg"]
-[ext_resource type="Texture2D" uid="uid://cwqhcwjjd2htj" path="res://assets/patient/right_leg-2.png" id="37_x53ik"]
-[ext_resource type="Texture2D" uid="uid://dpa10xrr181ob" path="res://assets/patient/right_leg-3.png" id="38_su1ts"]
-[ext_resource type="Texture2D" uid="uid://diyjofvpri47b" path="res://assets/patient/right_leg-4.png" id="39_su1ts"]
-[ext_resource type="Texture2D" uid="uid://xjdguy6jr8kj" path="res://assets/patient/right_leg-5.png" id="40_ik0ls"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6vb6e"]
 shader = ExtResource("4_ddug4")
@@ -48,409 +17,13 @@ shader_parameter/tint_color = Color(0.18757862, 0.31231412, 0.33311018, 1)
 shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
 shader_parameter/key_threshold = 0.02
 
-[sub_resource type="Animation" id="Animation_tgv11"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("3_rujrq")]
-}
-
-[sub_resource type="Animation" id="Animation_jmvsg"]
-resource_name = "Torso"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("3_rujrq")]
-}
-
-[sub_resource type="Animation" id="Animation_sj4tf"]
-resource_name = "Torso_2"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.033333335),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("5_5ddas")]
-}
-
-[sub_resource type="Animation" id="Animation_oijsj"]
-resource_name = "Torso_3"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("6_l5mt1")]
-}
-
-[sub_resource type="Animation" id="Animation_ejxm8"]
-resource_name = "Torso_4"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("7_tgv11")]
-}
-
-[sub_resource type="Animation" id="Animation_x53ik"]
-resource_name = "Torso_5"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("8_sj4tf")]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_tgv11"]
-_data = {
-&"RESET": SubResource("Animation_tgv11"),
-&"Torso": SubResource("Animation_jmvsg"),
-&"Torso_2": SubResource("Animation_sj4tf"),
-&"Torso_3": SubResource("Animation_oijsj"),
-&"Torso_4": SubResource("Animation_ejxm8"),
-&"Torso_5": SubResource("Animation_x53ik")
-}
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5mt75"]
 shader = ExtResource("4_ddug4")
 shader_parameter/tint_color = Color(0.18757862, 0.31231412, 0.33311018, 1)
 shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
 shader_parameter/key_threshold = 0.02
 
-[sub_resource type="Animation" id="Animation_q6v5p"]
-resource_name = "Head"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("4_up4j8")]
-}
-
-[sub_resource type="Animation" id="Animation_3dkft"]
-resource_name = "Head_2"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("6_6vb6e")]
-}
-
-[sub_resource type="Animation" id="Animation_xkswm"]
-resource_name = "Head_3"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("7_5mt75")]
-}
-
-[sub_resource type="Animation" id="Animation_vfgv1"]
-resource_name = "Head_4"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("8_q6v5p")]
-}
-
-[sub_resource type="Animation" id="Animation_ensor"]
-resource_name = "Head_5"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("9_xkswm")]
-}
-
-[sub_resource type="Animation" id="Animation_01t6u"]
-resource_name = "Head_6"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("10_vfgv1")]
-}
-
-[sub_resource type="Animation" id="Animation_sn5s6"]
-resource_name = "Head_7"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("11_vfgv1")]
-}
-
-[sub_resource type="Animation" id="Animation_5mt75"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("4_up4j8")]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_xkswm"]
-_data = {
-&"Head": SubResource("Animation_q6v5p"),
-&"Head_2": SubResource("Animation_3dkft"),
-&"Head_3": SubResource("Animation_xkswm"),
-&"Head_4": SubResource("Animation_vfgv1"),
-&"Head_5": SubResource("Animation_ensor"),
-&"Head_6": SubResource("Animation_01t6u"),
-&"Head_7": SubResource("Animation_sn5s6"),
-&"RESET": SubResource("Animation_5mt75")
-}
-
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6q3dj"]
-
-[sub_resource type="Animation" id="Animation_su1ts"]
-resource_name = "Hair"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("HairRoot/Hair:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [null]
-}
-
-[sub_resource type="Animation" id="Animation_ik0ls"]
-resource_name = "Hair_2"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("HairRoot/Hair:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("16_ab3to")]
-}
-
-[sub_resource type="Animation" id="Animation_5fm1m"]
-resource_name = "Hair_3"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("HairRoot/Hair:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("17_6q3dj")]
-}
-
-[sub_resource type="Animation" id="Animation_c2xyc"]
-resource_name = "Hair_4"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("HairRoot/Hair:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("18_6u6v3")]
-}
-
-[sub_resource type="Animation" id="Animation_5cg5p"]
-resource_name = "Hair_5"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("HairRoot/Hair:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.033333335),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("19_pujfp")]
-}
-
-[sub_resource type="Animation" id="Animation_bgo8l"]
-resource_name = "Hair_6"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("HairRoot/Hair:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("20_qmpkf")]
-}
-
-[sub_resource type="Animation" id="Animation_qxm5x"]
-resource_name = "Hair_7"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("HairRoot/Hair:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("21_isq70")]
-}
-
-[sub_resource type="Animation" id="Animation_uiwib"]
-resource_name = "Hair_8"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("HairRoot/Hair:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("22_chgtv")]
-}
-
-[sub_resource type="Animation" id="Animation_p8ks4"]
-resource_name = "Hair_9"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("HairRoot/Hair:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("23_oijsj")]
-}
-
-[sub_resource type="Animation" id="Animation_784va"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("HairRoot/Hair:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [SubResource("CompressedTexture2D_6q3dj")]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_ik0ls"]
-_data = {
-&"Hair": SubResource("Animation_su1ts"),
-&"Hair_2": SubResource("Animation_ik0ls"),
-&"Hair_3": SubResource("Animation_5fm1m"),
-&"Hair_4": SubResource("Animation_c2xyc"),
-&"Hair_5": SubResource("Animation_5cg5p"),
-&"Hair_6": SubResource("Animation_bgo8l"),
-&"Hair_7": SubResource("Animation_qxm5x"),
-&"Hair_8": SubResource("Animation_uiwib"),
-&"Hair_9": SubResource("Animation_p8ks4"),
-&"RESET": SubResource("Animation_784va")
-}
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q6v5p"]
 shader = ExtResource("4_ddug4")
@@ -458,179 +31,11 @@ shader_parameter/tint_color = Color(0.18757862, 0.31231412, 0.33311018, 1)
 shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
 shader_parameter/key_threshold = 0.02
 
-[sub_resource type="Animation" id="Animation_pujfp"]
-resource_name = "LeftArm"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("4_rlp5r")]
-}
-
-[sub_resource type="Animation" id="Animation_isq70"]
-resource_name = "LeftArm_2"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("14_v8ekv")]
-}
-
-[sub_resource type="Animation" id="Animation_chgtv"]
-resource_name = "LeftArm_3"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("15_vlsef")]
-}
-
-[sub_resource type="Animation" id="Animation_qmpkf"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("4_rlp5r")]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_isq70"]
-_data = {
-&"LeftArm": SubResource("Animation_pujfp"),
-&"LeftArm_2": SubResource("Animation_isq70"),
-&"LeftArm_3": SubResource("Animation_chgtv"),
-&"RESET": SubResource("Animation_qmpkf")
-}
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3dkft"]
 shader = ExtResource("4_ddug4")
 shader_parameter/tint_color = Color(0.18757862, 0.31231412, 0.33311018, 1)
 shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
 shader_parameter/key_threshold = 0.02
-
-[sub_resource type="Animation" id="Animation_vlsef"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("5_5qs04")]
-}
-
-[sub_resource type="Animation" id="Animation_v8ekv"]
-resource_name = "RightArm"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("5_5qs04")]
-}
-
-[sub_resource type="Animation" id="Animation_l5mt1"]
-resource_name = "RightArm_2"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("14_xbv8b")]
-}
-
-[sub_resource type="Animation" id="Animation_ab3to"]
-resource_name = "RightArm_3"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("16_0g64t")]
-}
-
-[sub_resource type="Animation" id="Animation_6q3dj"]
-resource_name = "RightArm_4"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("17_0spcl")]
-}
-
-[sub_resource type="Animation" id="Animation_6u6v3"]
-resource_name = "RightArm_5"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("18_3y02d")]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_vlsef"]
-_data = {
-&"RESET": SubResource("Animation_vlsef"),
-&"RightArm": SubResource("Animation_v8ekv"),
-&"RightArm_2": SubResource("Animation_l5mt1"),
-&"RightArm_3": SubResource("Animation_ab3to"),
-&"RightArm_4": SubResource("Animation_6q3dj"),
-&"RightArm_5": SubResource("Animation_6u6v3")
-}
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xkswm"]
 shader = ExtResource("4_ddug4")
@@ -638,200 +43,11 @@ shader_parameter/tint_color = Color(0.18757862, 0.31231412, 0.33311018, 1)
 shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
 shader_parameter/key_threshold = 0.02
 
-[sub_resource type="Animation" id="Animation_xbv8b"]
-resource_name = "LeftLeg"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MushroomAreas/LeftLeg/Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("6_up4j8")]
-}
-
-[sub_resource type="Animation" id="Animation_0g64t"]
-resource_name = "LeftLeg_2"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MushroomAreas/LeftLeg/Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("15_ensor")]
-}
-
-[sub_resource type="Animation" id="Animation_0spcl"]
-resource_name = "LeftLeg_3"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MushroomAreas/LeftLeg/Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("16_01t6u")]
-}
-
-[sub_resource type="Animation" id="Animation_3y02d"]
-resource_name = "LeftLeg_4"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MushroomAreas/LeftLeg/Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("17_sn5s6")]
-}
-
-[sub_resource type="Animation" id="Animation_5ddas"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MushroomAreas/LeftLeg/Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("6_up4j8")]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_0g64t"]
-_data = {
-&"LeftLeg": SubResource("Animation_xbv8b"),
-&"LeftLeg_2": SubResource("Animation_0g64t"),
-&"LeftLeg_3": SubResource("Animation_0spcl"),
-&"LeftLeg_4": SubResource("Animation_3y02d"),
-&"RESET": SubResource("Animation_5ddas")
-}
-
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vfgv1"]
 shader = ExtResource("4_ddug4")
 shader_parameter/tint_color = Color(0.18757862, 0.31231412, 0.33311018, 1)
 shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
 shader_parameter/key_threshold = 0.02
-
-[sub_resource type="Animation" id="Animation_beubr"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("7_ddug4")]
-}
-
-[sub_resource type="Animation" id="Animation_3ch1p"]
-resource_name = "RightLeg"
-step = 0.0333333
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("7_ddug4")]
-}
-
-[sub_resource type="Animation" id="Animation_x06ly"]
-resource_name = "RightLeg_2"
-step = 0.0333333
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("37_x53ik")]
-}
-
-[sub_resource type="Animation" id="Animation_u1x62"]
-resource_name = "RightLeg_3"
-step = 0.0333333
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("38_su1ts")]
-}
-
-[sub_resource type="Animation" id="Animation_4dx2u"]
-resource_name = "RightLeg_4"
-step = 0.0333333
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("39_su1ts")]
-}
-
-[sub_resource type="Animation" id="Animation_k68rx"]
-resource_name = "RightLeg_5"
-step = 0.0333333
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("40_ik0ls")]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_4dx2u"]
-_data = {
-&"RESET": SubResource("Animation_beubr"),
-&"RightLeg": SubResource("Animation_3ch1p"),
-&"RightLeg_2": SubResource("Animation_x06ly"),
-&"RightLeg_3": SubResource("Animation_u1x62"),
-&"RightLeg_4": SubResource("Animation_4dx2u"),
-&"RightLeg_5": SubResource("Animation_k68rx")
-}
 
 [node name="Patient" type="Node2D"]
 script = ExtResource("1_s1xdg")
@@ -909,11 +125,6 @@ material = SubResource("ShaderMaterial_6vb6e")
 position = Vector2(-6, 11)
 texture = ExtResource("3_rujrq")
 
-[node name="TorsoAnimationPlayer" type="AnimationPlayer" parent="MushroomAreas/Torso"]
-libraries = {
-&"": SubResource("AnimationLibrary_tgv11")
-}
-
 [node name="Head" type="RigidBody2D" parent="MushroomAreas"]
 position = Vector2(-235, 0)
 input_pickable = true
@@ -944,22 +155,11 @@ material = SubResource("ShaderMaterial_5mt75")
 position = Vector2(-9, 11)
 texture = ExtResource("4_up4j8")
 
-[node name="HeadAnimations" type="AnimationPlayer" parent="MushroomAreas/Head"]
-libraries = {
-&"": SubResource("AnimationLibrary_xkswm")
-}
-
 [node name="HairRoot" type="Node2D" parent="MushroomAreas/Head"]
 position = Vector2(-10, 3)
 
 [node name="Hair" type="Sprite2D" parent="MushroomAreas/Head/HairRoot"]
 texture = SubResource("CompressedTexture2D_6q3dj")
-
-[node name="HairAnimations" type="AnimationPlayer" parent="MushroomAreas/Head/HairRoot"]
-root_node = NodePath("../..")
-libraries = {
-&"": SubResource("AnimationLibrary_ik0ls")
-}
 
 [node name="LeftArm" type="RigidBody2D" parent="MushroomAreas"]
 position = Vector2(-71, -97)
@@ -992,11 +192,6 @@ material = SubResource("ShaderMaterial_q6v5p")
 position = Vector2(1, 13)
 texture = ExtResource("4_rlp5r")
 
-[node name="LeftArmAnimationPlayer" type="AnimationPlayer" parent="MushroomAreas/LeftArm"]
-libraries = {
-&"": SubResource("AnimationLibrary_isq70")
-}
-
 [node name="RightArm" type="RigidBody2D" parent="MushroomAreas"]
 position = Vector2(-72, 101)
 input_pickable = true
@@ -1028,11 +223,6 @@ material = SubResource("ShaderMaterial_3dkft")
 position = Vector2(0, 13)
 texture = ExtResource("5_5qs04")
 
-[node name="RightArmAnimationPlayer" type="AnimationPlayer" parent="MushroomAreas/RightArm"]
-libraries = {
-&"": SubResource("AnimationLibrary_vlsef")
-}
-
 [node name="LeftLeg" type="RigidBody2D" parent="MushroomAreas"]
 position = Vector2(146, -66)
 input_pickable = true
@@ -1061,12 +251,6 @@ z_index = -1
 material = SubResource("ShaderMaterial_xkswm")
 position = Vector2(0, 13)
 texture = ExtResource("6_up4j8")
-
-[node name="LeftLegAnimationPlayer" type="AnimationPlayer" parent="MushroomAreas/LeftLeg"]
-root_node = NodePath("../../..")
-libraries = {
-&"": SubResource("AnimationLibrary_0g64t")
-}
 
 [node name="RightLeg" type="RigidBody2D" parent="MushroomAreas"]
 position = Vector2(142, 79)
@@ -1097,11 +281,6 @@ z_index = -1
 material = SubResource("ShaderMaterial_vfgv1")
 position = Vector2(0, 13)
 texture = ExtResource("7_ddug4")
-
-[node name="RightLegAnimationPlayer" type="AnimationPlayer" parent="MushroomAreas/RightLeg"]
-libraries = {
-&"": SubResource("AnimationLibrary_4dx2u")
-}
 
 [node name="PatientSkinManager" type="Node2D" parent="."]
 script = ExtResource("27_jmvsg")

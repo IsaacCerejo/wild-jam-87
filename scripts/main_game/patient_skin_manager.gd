@@ -1,26 +1,37 @@
 extends Node2D
 
-@onready var torso_animation_player: AnimationPlayer = $"../MushroomAreas/Torso/TorsoAnimationPlayer"
-@onready var head_animPlayer: AnimationPlayer = $"../MushroomAreas/Head/HeadAnimations"
-@onready var left_arm_animation_player: AnimationPlayer = $"../MushroomAreas/LeftArm/LeftArmAnimationPlayer"
-@onready var right_arm_animation_player: AnimationPlayer = $"../MushroomAreas/RightArm/RightArmAnimationPlayer"
-@onready var left_leg_animation_player: AnimationPlayer = $"../MushroomAreas/LeftLeg/LeftLegAnimationPlayer"
-@onready var right_leg_animation_player: AnimationPlayer = $"../MushroomAreas/RightLeg/RightLegAnimationPlayer"
-@onready var hair_animation_player: AnimationPlayer = $"../MushroomAreas/Head/HairRoot/HairAnimations"
-
-const head_sprites = ["Head", "Head_2", "Head_3", "Head_4", "Head_5", "Head_6", "Head_7"]
-const torso_sprites = ["Torso", "Torso_2", "Torso_3", "Torso_4", "Torso_5"]
-const right_arm_sprites = ["RightArm", "RightArm_2", "RightArm_3", "RightArm_4", "RightArm_5"]
-const left_leg_sprites = ["LeftLeg", "LeftLeg_2", "LeftLeg_3", "LeftLeg_4"]
-const right_leg_sprites = ["RightLeg", "RightLeg_2", "RightLeg_3", "RightLeg_4", "RightLeg_5"]
-const left_arm_sprites = ["LeftArm", "LeftArm_2", "LeftArm_3"]
-const hair_sprites = ["Hair", "Hair_2", "Hair_3", "Hair_4", "Hair_5", "Hair_6", "Hair_7", "Hair_8", "Hair_9"]
+@onready var head_sprite: Sprite2D = $"../MushroomAreas/Head/Sprite2D"
+@onready var torso_sprite: Sprite2D = $"../MushroomAreas/Torso/Sprite2D"
+@onready var left_arm_sprite: Sprite2D = $"../MushroomAreas/LeftArm/Sprite2D"
+@onready var right_arm_sprite: Sprite2D = $"../MushroomAreas/RightArm/Sprite2D"
+@onready var left_leg_sprite: Sprite2D = $"../MushroomAreas/LeftLeg/Sprite2D"
+@onready var right_leg_sprite: Sprite2D = $"../MushroomAreas/RightLeg/Sprite2D"
+@onready var hair_sprite: Sprite2D = $"../MushroomAreas/Head/HairRoot/Hair"
 
 func _ready() -> void:
-	head_animPlayer.play(head_sprites.pick_random())
-	torso_animation_player.play(torso_sprites.pick_random())
-	right_arm_animation_player.play(right_arm_sprites.pick_random())
-	left_leg_animation_player.play(left_leg_sprites.pick_random())
-	right_leg_animation_player.play(right_leg_sprites.pick_random())
-	left_arm_animation_player.play(left_arm_sprites.pick_random())
-	hair_animation_player.play(hair_sprites.pick_random())
+	head_sprite.texture = load_random_texture("res://assets/patient/head/")
+	torso_sprite.texture = load_random_texture("res://assets/patient/torso")
+	left_arm_sprite.texture = load_random_texture("res://assets/patient/left_arm")
+	right_arm_sprite.texture = load_random_texture("res://assets/patient/right_arm")
+	left_leg_sprite.texture = load_random_texture("res://assets/patient/left_leg")
+	right_leg_sprite.texture = load_random_texture("res://assets/patient/right_leg")
+	hair_sprite.texture = load_random_texture("res://assets/patient/hair")
+
+func load_random_texture(folder_path: String) -> Texture2D:
+	
+	var folder := DirAccess.open(folder_path)
+	var assets_available: Array[String] = []
+	
+	folder.list_dir_begin()
+
+	var asset_path := folder.get_next()
+	while asset_path != "":
+		if asset_path.get_extension() == "png":
+			assets_available.append(asset_path)
+		asset_path = folder.get_next()
+
+	folder.list_dir_end()
+	
+	var chosen_asset = assets_available.pick_random()
+
+	return load(folder_path + "/" + chosen_asset)
