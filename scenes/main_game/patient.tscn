@@ -140,6 +140,7 @@ texture = ExtResource("6_6vb6e")
 texture = ExtResource("6_5mt75")
 
 [node name="hair" type="Sprite2D" parent="MushroomAreas/Head"]
+self_modulate = Color(0.101960786, 0.07450981, 0.0627451, 1)
 position = Vector2(-35, 0)
 texture = ExtResource("7_6vb6e")
 
