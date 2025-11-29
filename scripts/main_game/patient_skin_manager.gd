@@ -10,6 +10,10 @@ extends Node2D
 @onready var right_leg_sprite: Sprite2D = $"../MushroomAreas/RightLeg/leg_skin"
 
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("Restart"):
+		_ready()
+
 func _ready() -> void:
 	mouth_sprite.texture = load_random_texture("res://assets/patient/mouth")
 	hair_sprite.texture = load_random_texture("res://assets/patient/hair")

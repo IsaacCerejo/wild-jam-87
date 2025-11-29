@@ -5,7 +5,7 @@
 [ext_resource type="Shader" uid="uid://bxfmwgtfjfhjo" path="res://resources/shaders/shadow.gdshader" id="4_ddug4"]
 [ext_resource type="Texture2D" uid="uid://d0nxnu1lno442" path="res://assets/patient/eyes/eyes_07.png" id="6_5mt75"]
 [ext_resource type="Texture2D" uid="uid://cydyqswqfl3mb" path="res://assets/patient/blank_parts/head.png" id="6_6vb6e"]
-[ext_resource type="Texture2D" uid="uid://cseyxordw16lv" path="res://assets/patient/hair/hair_06.png" id="7_5mt75"]
+[ext_resource type="Texture2D" uid="uid://c31kxhqc57r52" path="res://assets/patient/hair/hair_09.png" id="7_6vb6e"]
 [ext_resource type="Texture2D" uid="uid://bhaii651jxouo" path="res://assets/patient/blank_parts/leg.png" id="8_5mt75"]
 [ext_resource type="Texture2D" uid="uid://8guy4d6qos1b" path="res://assets/patient/blank_parts/arm.png" id="8_q6v5p"]
 [ext_resource type="Script" uid="uid://me7cgjqr5843" path="res://scripts/main_game/patient_drag.gd" id="9_ddug4"]
@@ -141,7 +141,7 @@ texture = ExtResource("6_5mt75")
 
 [node name="hair" type="Sprite2D" parent="MushroomAreas/Head"]
 position = Vector2(-35, 0)
-texture = ExtResource("7_5mt75")
+texture = ExtResource("7_6vb6e")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MushroomAreas/Head"]
 polygon = PackedVector2Array(-54, 0, -46, -24, -33, -39, -11, -45, 15, -41, 27, -36, 31, -26, 47, -20, 53, 2, 52, 19, 34, 24, 27, 35, 6, 43, -12, 46, -32, 39, -45, 24)
