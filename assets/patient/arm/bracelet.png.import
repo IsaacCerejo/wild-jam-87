@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8qktx4e2y8jw"
-path="res://.godot/imported/right_arm_3.png-6d18c29392f68e0ac73921e45284d0de.ctex"
+uid="uid://rwu6kwiklbdf"
+path="res://.godot/imported/bracelet.png-d38c5f93b1ed3957e84bfd8fde5e0575.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/patient/right_arm/right_arm_3.png"
-dest_files=["res://.godot/imported/right_arm_3.png-6d18c29392f68e0ac73921e45284d0de.ctex"]
+source_file="res://assets/patient/arm/bracelet.png"
+dest_files=["res://.godot/imported/bracelet.png-d38c5f93b1ed3957e84bfd8fde5e0575.ctex"]
 
 [params]
 

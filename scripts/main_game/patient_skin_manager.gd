@@ -2,8 +2,8 @@ extends Node2D
 
 @onready var head_sprite: Sprite2D = $"../MushroomAreas/Head/Sprite2D"
 @onready var torso_sprite: Sprite2D = $"../MushroomAreas/Torso/torso_skin"
-@onready var left_arm_sprite: Sprite2D = $"../MushroomAreas/LeftArm/Sprite2D"
-@onready var right_arm_sprite: Sprite2D = $"../MushroomAreas/RightArm/Sprite2D"
+@onready var left_arm_sprite: Sprite2D = $"../MushroomAreas/LeftArm/arm_skin"
+@onready var right_arm_sprite: Sprite2D = $"../MushroomAreas/RightArm/arm_skin"
 @onready var left_leg_sprite: Sprite2D = $"../MushroomAreas/LeftLeg/Sprite2D"
 @onready var right_leg_sprite: Sprite2D = $"../MushroomAreas/RightLeg/Sprite2D"
 @onready var hair_sprite: Sprite2D = $"../MushroomAreas/Head/HairRoot/Hair"
@@ -11,8 +11,8 @@ extends Node2D
 func _ready() -> void:
 	head_sprite.texture = load_random_texture("res://assets/patient/head/")
 	torso_sprite.texture = load_random_texture("res://assets/patient/torso")
-	left_arm_sprite.texture = load_random_texture("res://assets/patient/left_arm")
-	right_arm_sprite.texture = load_random_texture("res://assets/patient/right_arm")
+	left_arm_sprite.texture = load_random_texture("res://assets/patient/arm")
+	right_arm_sprite.texture = load_random_texture("res://assets/patient/arm")
 	left_leg_sprite.texture = load_random_texture("res://assets/patient/left_leg")
 	right_leg_sprite.texture = load_random_texture("res://assets/patient/right_leg")
 	hair_sprite.texture = load_random_texture("res://assets/patient/hair")
