@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cn3ixunlwsdxs"
-path="res://.godot/imported/torso.png-2bdc64415daecd3ef28d5e446fcf1ded.ctex"
+uid="uid://c65jqx6mxjqc3"
+path="res://.godot/imported/tattoo_1.png-f88b2b58bd85f7c0789a80fa9d6fa5af.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/patient/torso/torso.png"
-dest_files=["res://.godot/imported/torso.png-2bdc64415daecd3ef28d5e446fcf1ded.ctex"]
+source_file="res://assets/patient/torso/tattoo_1.png"
+dest_files=["res://.godot/imported/tattoo_1.png-f88b2b58bd85f7c0789a80fa9d6fa5af.ctex"]
 
 [params]
 

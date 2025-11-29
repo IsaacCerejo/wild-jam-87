@@ -1,7 +1,7 @@
 extends Node2D
 
 @onready var head_sprite: Sprite2D = $"../MushroomAreas/Head/Sprite2D"
-@onready var torso_sprite: Sprite2D = $"../MushroomAreas/Torso/Sprite2D"
+@onready var torso_sprite: Sprite2D = $"../MushroomAreas/Torso/torso_skin"
 @onready var left_arm_sprite: Sprite2D = $"../MushroomAreas/LeftArm/Sprite2D"
 @onready var right_arm_sprite: Sprite2D = $"../MushroomAreas/RightArm/Sprite2D"
 @onready var left_leg_sprite: Sprite2D = $"../MushroomAreas/LeftLeg/Sprite2D"
