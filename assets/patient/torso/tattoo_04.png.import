@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blf5y60vh4ujw"
-path="res://.godot/imported/no_skin.png-2d4295cfd82802c7a813c613d43e36e6.ctex"
+uid="uid://cdoy24vixq0eg"
+path="res://.godot/imported/tattoo_04.png-957b98088a047593f22f301ccd1a5451.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/patient/torso/no_skin.png"
-dest_files=["res://.godot/imported/no_skin.png-2d4295cfd82802c7a813c613d43e36e6.ctex"]
+source_file="res://assets/patient/torso/tattoo_04.png"
+dest_files=["res://.godot/imported/tattoo_04.png-957b98088a047593f22f301ccd1a5451.ctex"]
 
 [params]
 

@@ -41,6 +41,7 @@ func _ready() -> void:
 	left_leg_sprite.texture = load_random_texture("res://assets/patient/leg")
 	right_leg_sprite.texture = load_random_texture("res://assets/patient/leg")
 	randomize_hair_color()
+	randomize_flip_torso()
 
 func load_random_texture(folder_path: String) -> Texture2D:
 	
@@ -63,3 +64,6 @@ func load_random_texture(folder_path: String) -> Texture2D:
 
 func randomize_hair_color():
 	hair_sprite.self_modulate = hair_colors[randi_range(0, hair_colors.size()-1)]
+
+func randomize_flip_torso():
+	torso_sprite.flip_v = randi_range(0,1)
