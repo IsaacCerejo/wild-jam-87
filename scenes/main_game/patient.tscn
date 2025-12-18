@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://mtilpmnd7m7y"]
+[gd_scene load_steps=23 format=3 uid="uid://mtilpmnd7m7y"]
 
 [ext_resource type="Script" uid="uid://c3wghgg2g717r" path="res://scripts/main_game/patient.gd" id="1_s1xdg"]
 [ext_resource type="Texture2D" uid="uid://dj84m1ovp6jep" path="res://assets/patient/blank_parts/torso.png" id="3_5mt75"]
@@ -8,8 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://c31kxhqc57r52" path="res://assets/patient/hair/hair_09.png" id="7_6vb6e"]
 [ext_resource type="Texture2D" uid="uid://bhaii651jxouo" path="res://assets/patient/blank_parts/leg.png" id="8_5mt75"]
 [ext_resource type="Texture2D" uid="uid://8guy4d6qos1b" path="res://assets/patient/blank_parts/arm.png" id="8_q6v5p"]
-[ext_resource type="Script" uid="uid://me7cgjqr5843" path="res://scripts/main_game/patient_drag.gd" id="9_ddug4"]
-[ext_resource type="Script" uid="uid://bxu1ceexvxg2" path="res://scripts/main_game/patient_skin_manager.gd" id="27_jmvsg"]
+[ext_resource type="Script" path="res://scripts/main_game/patient_drag.gd" id="9_ddug4"]
+[ext_resource type="Script" path="res://scripts/main_game/patient_skin_manager.gd" id="27_jmvsg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6vb6e"]
+size = Vector2(210, 136)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6vb6e"]
 shader = ExtResource("4_ddug4")
@@ -17,11 +20,17 @@ shader_parameter/tint_color = Color(0.18757862, 0.31231412, 0.33311018, 1)
 shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
 shader_parameter/key_threshold = 0.02
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_6vb6e"]
+radius = 45.099888
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5mt75"]
 shader = ExtResource("4_ddug4")
 shader_parameter/tint_color = Color(0.18757862, 0.31231412, 0.33311018, 1)
 shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
 shader_parameter/key_threshold = 0.02
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mt75"]
+size = Vector2(194.34631, 33.126724)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q6v5p"]
 shader = ExtResource("4_ddug4")
@@ -29,17 +38,26 @@ shader_parameter/tint_color = Color(0.18757862, 0.31231412, 0.33311018, 1)
 shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
 shader_parameter/key_threshold = 0.02
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6v5p"]
+size = Vector2(194.34631, 33.126724)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3dkft"]
 shader = ExtResource("4_ddug4")
 shader_parameter/tint_color = Color(0.18757862, 0.31231412, 0.33311018, 1)
 shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
 shader_parameter/key_threshold = 0.02
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3dkft"]
+size = Vector2(233.62363, 44.47082)
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xkswm"]
 shader = ExtResource("4_ddug4")
 shader_parameter/tint_color = Color(0.18757862, 0.31231412, 0.33311018, 1)
 shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
 shader_parameter/key_threshold = 0.02
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xkswm"]
+size = Vector2(224.08731, 42.177475)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vfgv1"]
 shader = ExtResource("4_ddug4")
@@ -107,15 +125,10 @@ texture = ExtResource("3_5mt75")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MushroomAreas/Torso"]
 polygon = PackedVector2Array(-116, 23, -131, 12, -133, -13, -118, -28, -106, -66, -89, -83, -24, -71, 15, -68, 59, -71, 92, -79, 115, -12, 114, 1, 108, 72, 85, 75, 60, 65, -20, 63, -101, 64, -114, 34)
 
-[node name="TorsoArea" type="Line2D" parent="MushroomAreas/Torso"]
-position = Vector2(45, -23)
-rotation = -2.6403892
-points = PackedVector2Array(120.25691, -51.0615, 87.668144, -108.46335, 33.209877, -80.908005, -26.990908, -51.34677, 13.910694, 12.903204, 72.273506, -17.931557)
-width = 60.0
-default_color = Color(1, 0, 0, 0)
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
+[node name="TorsoArea" type="Area2D" parent="MushroomAreas/Torso"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MushroomAreas/Torso/TorsoArea"]
+shape = SubResource("RectangleShape2D_6vb6e")
 
 [node name="torsoShadow" type="Sprite2D" parent="MushroomAreas/Torso"]
 self_modulate = Color(0, 0.011764706, 0.3019608, 0.41960785)
@@ -147,14 +160,11 @@ texture = ExtResource("7_6vb6e")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MushroomAreas/Head"]
 polygon = PackedVector2Array(-54, 0, -46, -24, -33, -39, -11, -45, 15, -41, 27, -36, 31, -26, 47, -20, 53, 2, 52, 19, 34, 24, 27, 35, 6, 43, -12, 46, -32, 39, -45, 24)
 
-[node name="HeadArea" type="Line2D" parent="MushroomAreas/Head"]
-position = Vector2(-12, 29)
-points = PackedVector2Array(31, -4, -7, -1, -23, -26, -1, -51, 30, -45)
-width = 35.0
-default_color = Color(1, 0, 0, 0)
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
+[node name="HeadArea" type="Area2D" parent="MushroomAreas/Head"]
+position = Vector2(-6, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MushroomAreas/Head/HeadArea"]
+shape = SubResource("CircleShape2D_6vb6e")
 
 [node name="torsoShadow2" type="Sprite2D" parent="MushroomAreas/Head"]
 self_modulate = Color(0, 0.011764706, 0.3019608, 0.41960785)
@@ -181,14 +191,13 @@ rotation = -0.48694685
 rotation = 0.014211261
 polygon = PackedVector2Array(-99.54936, 32.417942, -75.80759, 14.078705, -13.2971115, -20.81314, 75.01178, -70.07307, 84.025085, -69.20104, 96.26546, -52.3733, 95.43609, -40.3603, 5.2410736, 16.92723, -43.370285, 44.62083, -63.226166, 54.904037, -90.223434, 55.287727, -99.3362, 47.41643)
 
-[node name="LeftArmArea" type="Line2D" parent="MushroomAreas/LeftArm"]
-position = Vector2(-83, 30.000008)
-rotation = -0.18549728
-points = PackedVector2Array(20.763504, -2.2083664, 71.99763, -14.97805, 119.4848, -29.46833, 168.13927, -44.75701)
-width = 35.0
-default_color = Color(1, 0, 0, 0)
-begin_cap_mode = 2
-end_cap_mode = 2
+[node name="LeftArmArea" type="Area2D" parent="MushroomAreas/LeftArm"]
+rotation = -0.4691616
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MushroomAreas/LeftArm/LeftArmArea"]
+position = Vector2(7.9298134, -0.35768127)
+rotation = -0.028842902
+shape = SubResource("RectangleShape2D_5mt75")
 
 [node name="LeftArmShadow" type="Sprite2D" parent="MushroomAreas/LeftArm"]
 show_behind_parent = true
@@ -218,15 +227,12 @@ flip_v = true
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MushroomAreas/RightArm"]
 polygon = PackedVector2Array(-101, -54, -84, -61, -62, -59, -27, -36, 1, -20, 98, 30, 102, 48, 93, 63, 69, 61, -29, 11, -92, -23, -104, -43)
 
-[node name="RightArmArea" type="Line2D" parent="MushroomAreas/RightArm"]
-position = Vector2(-78.000015, -42.999996)
-rotation = 0.7707949
-scale = Vector2(0.99999994, 0.99999994)
-points = PackedVector2Array(15.472099, 5.8833923, 72.344376, -14.501495, 120.670334, -30.768097, 176.08725, -48.345512)
-width = 35.0
-default_color = Color(1, 0, 0, 0)
-begin_cap_mode = 2
-end_cap_mode = 2
+[node name="RightArmArea" type="Area2D" parent="MushroomAreas/RightArm"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MushroomAreas/RightArm/RightArmArea"]
+position = Vector2(9.000004, 5)
+rotation = 0.51001304
+shape = SubResource("RectangleShape2D_q6v5p")
 
 [node name="RightArmShadow" type="Sprite2D" parent="MushroomAreas/RightArm"]
 show_behind_parent = true
@@ -254,13 +260,13 @@ rotation = -0.23736478
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MushroomAreas/LeftLeg"]
 polygon = PackedVector2Array(-141, 16, -122, -8, -61, -15, -47, -13, 130, -53, 141, -45, 142, -27, 138, -16, -46, 41, -92, 60, -125, 58, -137, 50)
 
-[node name="LeftLegArea" type="Line2D" parent="MushroomAreas/LeftLeg"]
-position = Vector2(-56, 12)
-points = PackedVector2Array(17, 0, 82, -16, 134, -31, 181, -44)
-width = 35.0
-default_color = Color(1, 0, 0, 0)
-begin_cap_mode = 2
-end_cap_mode = 2
+[node name="LeftLegArea" type="Area2D" parent="MushroomAreas/LeftLeg"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MushroomAreas/LeftLeg/LeftLegArea"]
+position = Vector2(19.199707, -5.9105835)
+rotation = -0.23091592
+scale = Vector2(0.9999998, 0.9999998)
+shape = SubResource("RectangleShape2D_3dkft")
 
 [node name="LeftLegShadow" type="Sprite2D" parent="MushroomAreas/LeftLeg"]
 self_modulate = Color(0, 0.011764706, 0.3019608, 0.41960785)
@@ -290,14 +296,14 @@ flip_v = true
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MushroomAreas/RightLeg"]
 polygon = PackedVector2Array(-131, -39, -112, -65, -86, -64, -50, -49, 107, 1, 145, 13, 148, 26, 143, 43, 136, 48, 26, 25, -55, 9, -112, 5, -134, -13)
 
-[node name="RightLegArea" type="Line2D" parent="MushroomAreas/RightLeg"]
-position = Vector2(-34.000008, -16.000004)
-rotation = 0.52074564
-points = PackedVector2Array(0.9950714, 1.7348938, 58.76999, -14.109951, 110.71507, -30.0695, 162.91537, -41.564205)
-width = 35.01
-default_color = Color(1, 0, 0, 0)
-begin_cap_mode = 2
-end_cap_mode = 2
+[node name="RightLegArea" type="Area2D" parent="MushroomAreas/RightLeg"]
+rotation = 0.47099003
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MushroomAreas/RightLeg/RightLegArea"]
+position = Vector2(23.088562, -7.306896)
+rotation = -0.23570515
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_xkswm")
 
 [node name="RightLegShadow" type="Sprite2D" parent="MushroomAreas/RightLeg"]
 self_modulate = Color(0, 0.011764706, 0.3019608, 0.41960785)
