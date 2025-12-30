@@ -11,7 +11,11 @@ var _active_tool: Tool = null:
 
 func _ready() -> void:
 	Global.player = self
-	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	
+	# This is because the mouse appears for 1 frame at the top corner
+	await get_tree().create_timer(0.01).timeout 
+	show()
+
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_RIGHT and event.pressed:
@@ -19,9 +23,8 @@ func _input(event: InputEvent) -> void:
 			tool_dropped.emit()
 			set_active_tool()
 
-func _exit_tree() -> void:
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	Global.player = null
+#func _exit_tree() -> void:
+	#Global.player = null
 
 func _physics_process(_delta: float) -> void:
 	hand_sprite.global_position = get_global_mouse_position()

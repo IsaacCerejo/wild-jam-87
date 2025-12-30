@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://mtilpmnd7m7y"]
+[gd_scene load_steps=21 format=3 uid="uid://mtilpmnd7m7y"]
 
 [ext_resource type="Script" uid="uid://c3wghgg2g717r" path="res://scripts/main_game/patient.gd" id="1_s1xdg"]
 [ext_resource type="Texture2D" uid="uid://dj84m1ovp6jep" path="res://assets/patient/blank_parts/torso.png" id="3_5mt75"]
@@ -8,60 +8,55 @@
 [ext_resource type="Texture2D" uid="uid://c31kxhqc57r52" path="res://assets/patient/hair/hair_09.png" id="7_6vb6e"]
 [ext_resource type="Texture2D" uid="uid://bhaii651jxouo" path="res://assets/patient/blank_parts/leg.png" id="8_5mt75"]
 [ext_resource type="Texture2D" uid="uid://8guy4d6qos1b" path="res://assets/patient/blank_parts/arm.png" id="8_q6v5p"]
-[ext_resource type="Script" path="res://scripts/main_game/patient_drag.gd" id="9_ddug4"]
-[ext_resource type="Script" path="res://scripts/main_game/patient_skin_manager.gd" id="27_jmvsg"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6vb6e"]
-size = Vector2(210, 136)
+[ext_resource type="Script" uid="uid://me7cgjqr5843" path="res://scripts/main_game/patient_drag.gd" id="9_ddug4"]
+[ext_resource type="Script" uid="uid://bxu1ceexvxg2" path="res://scripts/main_game/patient_skin_manager.gd" id="27_jmvsg"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6vb6e"]
 shader = ExtResource("4_ddug4")
-shader_parameter/tint_color = Color(0.18757862, 0.31231412, 0.33311018, 1)
+shader_parameter/tint_color = Color(0.263, 0.42, 0.447, 1)
+shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
+shader_parameter/key_threshold = 0.02
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6vb6e"]
+size = Vector2(172, 120)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5mt75"]
+shader = ExtResource("4_ddug4")
+shader_parameter/tint_color = Color(0.263, 0.42, 0.447, 1)
 shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
 shader_parameter/key_threshold = 0.02
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6vb6e"]
-radius = 45.099888
+radius = 39.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_5mt75"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xkswm"]
 shader = ExtResource("4_ddug4")
-shader_parameter/tint_color = Color(0.18757862, 0.31231412, 0.33311018, 1)
-shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
-shader_parameter/key_threshold = 0.02
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mt75"]
-size = Vector2(194.34631, 33.126724)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_q6v5p"]
-shader = ExtResource("4_ddug4")
-shader_parameter/tint_color = Color(0.18757862, 0.31231412, 0.33311018, 1)
-shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
-shader_parameter/key_threshold = 0.02
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6v5p"]
-size = Vector2(194.34631, 33.126724)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_3dkft"]
-shader = ExtResource("4_ddug4")
-shader_parameter/tint_color = Color(0.18757862, 0.31231412, 0.33311018, 1)
+shader_parameter/tint_color = Color(0.263, 0.42, 0.447, 1)
 shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
 shader_parameter/key_threshold = 0.02
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3dkft"]
-size = Vector2(233.62363, 44.47082)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xkswm"]
-shader = ExtResource("4_ddug4")
-shader_parameter/tint_color = Color(0.18757862, 0.31231412, 0.33311018, 1)
-shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
-shader_parameter/key_threshold = 0.02
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xkswm"]
-size = Vector2(224.08731, 42.177475)
+size = Vector2(251.10478, 40.02314)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vfgv1"]
 shader = ExtResource("4_ddug4")
-shader_parameter/tint_color = Color(0.18757862, 0.31231412, 0.33311018, 1)
+shader_parameter/tint_color = Color(0.263, 0.42, 0.447, 1)
+shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
+shader_parameter/key_threshold = 0.02
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_q6v5p"]
+shader = ExtResource("4_ddug4")
+shader_parameter/tint_color = Color(0.263, 0.42, 0.447, 1)
+shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
+shader_parameter/key_threshold = 0.02
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6vb6e"]
+radius = 15.969711
+height = 157.54086
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3dkft"]
+shader = ExtResource("4_ddug4")
+shader_parameter/tint_color = Color(0.263, 0.42, 0.447, 1)
 shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
 shader_parameter/key_threshold = 0.02
 
@@ -80,240 +75,206 @@ softness = 1.0
 [node name="Pins" type="Node2D" parent="."]
 
 [node name="PinJoint2D" type="PinJoint2D" parent="Pins"]
-position = Vector2(-192, 3)
-node_a = NodePath("../../MushroomAreas/Torso")
-node_b = NodePath("../../MushroomAreas/Head")
-angular_limit_lower = -2.0943952
+position = Vector2(-192, 0)
+node_a = NodePath("../../BodyParts/Torso")
+node_b = NodePath("../../BodyParts/Head")
+bias = 0.9
+disable_collision = false
 
 [node name="PinJoint2D2" type="PinJoint2D" parent="Pins"]
-position = Vector2(-147, -57)
-node_a = NodePath("../../MushroomAreas/Torso")
-node_b = NodePath("../../MushroomAreas/LeftArm")
-angular_limit_lower = -2.0943952
+position = Vector2(-147, -60)
+node_a = NodePath("../../BodyParts/Torso")
+node_b = NodePath("../../BodyParts/LeftArm")
+bias = 0.9
+disable_collision = false
 
 [node name="PinJoint2D3" type="PinJoint2D" parent="Pins"]
 position = Vector2(-147, 60)
-node_a = NodePath("../../MushroomAreas/Torso")
-node_b = NodePath("../../MushroomAreas/RightArm")
+node_a = NodePath("../../BodyParts/Torso")
+node_b = NodePath("../../BodyParts/RightArm")
+bias = 0.9
+disable_collision = false
 angular_limit_lower = -2.0943952
 
 [node name="PinJoint2D4" type="PinJoint2D" parent="Pins"]
-position = Vector2(44, 47)
-node_a = NodePath("../../MushroomAreas/Torso")
-node_b = NodePath("../../MushroomAreas/RightLeg")
+position = Vector2(31, 45)
+node_a = NodePath("../../BodyParts/Torso")
+node_b = NodePath("../../BodyParts/RightLeg")
+bias = 0.9
+disable_collision = false
 
 [node name="PinJoint2D5" type="PinJoint2D" parent="Pins"]
-position = Vector2(43, -44)
-node_a = NodePath("../../MushroomAreas/Torso")
-node_b = NodePath("../../MushroomAreas/LeftLeg")
+position = Vector2(28, -45)
+node_a = NodePath("../../BodyParts/Torso")
+node_b = NodePath("../../BodyParts/LeftLeg")
+bias = 0.9
+disable_collision = false
 
-[node name="MushroomAreas" type="Node2D" parent="."]
+[node name="BodyParts" type="Node2D" parent="."]
 z_index = 1
 
-[node name="Torso" type="RigidBody2D" parent="MushroomAreas"]
-position = Vector2(-68, 6)
+[node name="Torso" type="RigidBody2D" parent="BodyParts"]
+position = Vector2(-68, 0)
 gravity_scale = 0.0
-inertia = 1007.5
 freeze = true
 freeze_mode = 1
 
-[node name="blank_torso" type="Sprite2D" parent="MushroomAreas/Torso"]
-texture = ExtResource("3_5mt75")
-
-[node name="torso_skin" type="Sprite2D" parent="MushroomAreas/Torso"]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MushroomAreas/Torso"]
-polygon = PackedVector2Array(-116, 23, -131, 12, -133, -13, -118, -28, -106, -66, -89, -83, -24, -71, 15, -68, 59, -71, 92, -79, 115, -12, 114, 1, 108, 72, 85, 75, 60, 65, -20, 63, -101, 64, -114, 34)
-
-[node name="TorsoArea" type="Area2D" parent="MushroomAreas/Torso"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MushroomAreas/Torso/TorsoArea"]
-shape = SubResource("RectangleShape2D_6vb6e")
-
-[node name="torsoShadow" type="Sprite2D" parent="MushroomAreas/Torso"]
-self_modulate = Color(0, 0.011764706, 0.3019608, 0.41960785)
+[node name="shadow" type="Sprite2D" parent="BodyParts/Torso"]
 show_behind_parent = true
 z_index = -1
 material = SubResource("ShaderMaterial_6vb6e")
-position = Vector2(-6, 11)
+position = Vector2(6, 5)
+texture = ExtResource("3_5mt75")
 
-[node name="Head" type="RigidBody2D" parent="MushroomAreas"]
+[node name="blank_torso" type="Sprite2D" parent="BodyParts/Torso"]
+texture = ExtResource("3_5mt75")
+
+[node name="torso_skin" type="Sprite2D" parent="BodyParts/Torso"]
+
+[node name="collision" type="CollisionShape2D" parent="BodyParts/Torso"]
+position = Vector2(-23, 0)
+shape = SubResource("RectangleShape2D_6vb6e")
+
+[node name="Head" type="RigidBody2D" parent="BodyParts"]
 position = Vector2(-235, 0)
 input_pickable = true
-mass = 7.553
+mass = 35.0
 gravity_scale = 0.0
-linear_damp = 4.0
+linear_damp = 2.0
+angular_damp = 8.0
 
-[node name="base_head" type="Sprite2D" parent="MushroomAreas/Head"]
+[node name="shadow" type="Sprite2D" parent="BodyParts/Head"]
+show_behind_parent = true
+z_index = -1
+material = SubResource("ShaderMaterial_5mt75")
+position = Vector2(4, 8)
 texture = ExtResource("6_6vb6e")
 
-[node name="mouth" type="Sprite2D" parent="MushroomAreas/Head"]
+[node name="base_head" type="Sprite2D" parent="BodyParts/Head"]
+texture = ExtResource("6_6vb6e")
 
-[node name="eyes" type="Sprite2D" parent="MushroomAreas/Head"]
+[node name="mouth" type="Sprite2D" parent="BodyParts/Head"]
+
+[node name="eyes" type="Sprite2D" parent="BodyParts/Head"]
 texture = ExtResource("6_5mt75")
 
-[node name="hair" type="Sprite2D" parent="MushroomAreas/Head"]
+[node name="hair" type="Sprite2D" parent="BodyParts/Head"]
 self_modulate = Color(0.101960786, 0.07450981, 0.0627451, 1)
 position = Vector2(-35, 0)
 texture = ExtResource("7_6vb6e")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MushroomAreas/Head"]
-polygon = PackedVector2Array(-54, 0, -46, -24, -33, -39, -11, -45, 15, -41, 27, -36, 31, -26, 47, -20, 53, 2, 52, 19, 34, 24, 27, 35, 6, 43, -12, 46, -32, 39, -45, 24)
-
-[node name="HeadArea" type="Area2D" parent="MushroomAreas/Head"]
-position = Vector2(-6, 0)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MushroomAreas/Head/HeadArea"]
+[node name="collision" type="CollisionShape2D" parent="BodyParts/Head"]
+position = Vector2(-3, 0)
 shape = SubResource("CircleShape2D_6vb6e")
 
-[node name="torsoShadow2" type="Sprite2D" parent="MushroomAreas/Head"]
-self_modulate = Color(0, 0.011764706, 0.3019608, 0.41960785)
-show_behind_parent = true
-z_index = -1
-material = SubResource("ShaderMaterial_5mt75")
-position = Vector2(-9, 11)
-
-[node name="LeftArm" type="RigidBody2D" parent="MushroomAreas"]
-position = Vector2(-71, -97)
+[node name="LeftLeg" type="RigidBody2D" parent="BodyParts"]
+position = Vector2(150, -70)
+rotation = -0.23038344
 input_pickable = true
-mass = 67.932
+mass = 35.0
 gravity_scale = 0.0
 linear_damp = 2.0
+angular_damp = 8.0
 
-[node name="blank_arm" type="Sprite2D" parent="MushroomAreas/LeftArm"]
-rotation = -0.48694685
-texture = ExtResource("8_q6v5p")
-
-[node name="arm_skin" type="Sprite2D" parent="MushroomAreas/LeftArm"]
-rotation = -0.48694685
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MushroomAreas/LeftArm"]
-rotation = 0.014211261
-polygon = PackedVector2Array(-99.54936, 32.417942, -75.80759, 14.078705, -13.2971115, -20.81314, 75.01178, -70.07307, 84.025085, -69.20104, 96.26546, -52.3733, 95.43609, -40.3603, 5.2410736, 16.92723, -43.370285, 44.62083, -63.226166, 54.904037, -90.223434, 55.287727, -99.3362, 47.41643)
-
-[node name="LeftArmArea" type="Area2D" parent="MushroomAreas/LeftArm"]
-rotation = -0.4691616
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MushroomAreas/LeftArm/LeftArmArea"]
-position = Vector2(7.9298134, -0.35768127)
-rotation = -0.028842902
-shape = SubResource("RectangleShape2D_5mt75")
-
-[node name="LeftArmShadow" type="Sprite2D" parent="MushroomAreas/LeftArm"]
-show_behind_parent = true
-z_index = -1
-material = SubResource("ShaderMaterial_q6v5p")
-position = Vector2(1, 13)
-rotation = -0.48694685
-texture = ExtResource("8_q6v5p")
-
-[node name="RightArm" type="RigidBody2D" parent="MushroomAreas"]
-position = Vector2(-72, 101)
-input_pickable = true
-mass = 67.932
-gravity_scale = 0.0
-linear_damp = 2.0
-
-[node name="blank_arm" type="Sprite2D" parent="MushroomAreas/RightArm"]
-rotation = 0.48694685
-texture = ExtResource("8_q6v5p")
-flip_v = true
-
-[node name="arm_skin" type="Sprite2D" parent="MushroomAreas/RightArm"]
-rotation = 0.48737496
-texture = ExtResource("8_q6v5p")
-flip_v = true
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MushroomAreas/RightArm"]
-polygon = PackedVector2Array(-101, -54, -84, -61, -62, -59, -27, -36, 1, -20, 98, 30, 102, 48, 93, 63, 69, 61, -29, 11, -92, -23, -104, -43)
-
-[node name="RightArmArea" type="Area2D" parent="MushroomAreas/RightArm"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MushroomAreas/RightArm/RightArmArea"]
-position = Vector2(9.000004, 5)
-rotation = 0.51001304
-shape = SubResource("RectangleShape2D_q6v5p")
-
-[node name="RightArmShadow" type="Sprite2D" parent="MushroomAreas/RightArm"]
-show_behind_parent = true
-z_index = -1
-material = SubResource("ShaderMaterial_3dkft")
-position = Vector2(0, 13)
-rotation = 0.48694685
-texture = ExtResource("8_q6v5p")
-flip_v = true
-
-[node name="LeftLeg" type="RigidBody2D" parent="MushroomAreas"]
-position = Vector2(144, -65)
-input_pickable = true
-mass = 67.932
-gravity_scale = 0.0
-linear_damp = 2.0
-
-[node name="blank_leg" type="Sprite2D" parent="MushroomAreas/LeftLeg"]
-rotation = -0.23693149
-texture = ExtResource("8_5mt75")
-
-[node name="leg_skin" type="Sprite2D" parent="MushroomAreas/LeftLeg"]
-rotation = -0.23736478
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MushroomAreas/LeftLeg"]
-polygon = PackedVector2Array(-141, 16, -122, -8, -61, -15, -47, -13, 130, -53, 141, -45, 142, -27, 138, -16, -46, 41, -92, 60, -125, 58, -137, 50)
-
-[node name="LeftLegArea" type="Area2D" parent="MushroomAreas/LeftLeg"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MushroomAreas/LeftLeg/LeftLegArea"]
-position = Vector2(19.199707, -5.9105835)
-rotation = -0.23091592
-scale = Vector2(0.9999998, 0.9999998)
-shape = SubResource("RectangleShape2D_3dkft")
-
-[node name="LeftLegShadow" type="Sprite2D" parent="MushroomAreas/LeftLeg"]
-self_modulate = Color(0, 0.011764706, 0.3019608, 0.41960785)
+[node name="shadow" type="Sprite2D" parent="BodyParts/LeftLeg"]
 show_behind_parent = true
 z_index = -1
 material = SubResource("ShaderMaterial_xkswm")
-position = Vector2(0, 13)
-rotation = -0.23736478
+position = Vector2(2, 9)
 texture = ExtResource("8_5mt75")
 
-[node name="RightLeg" type="RigidBody2D" parent="MushroomAreas"]
-position = Vector2(140, 68)
+[node name="blank_leg" type="Sprite2D" parent="BodyParts/LeftLeg"]
+texture = ExtResource("8_5mt75")
+
+[node name="leg_skin" type="Sprite2D" parent="BodyParts/LeftLeg"]
+
+[node name="collision" type="CollisionShape2D" parent="BodyParts/LeftLeg"]
+position = Vector2(13.435, 0)
+shape = SubResource("RectangleShape2D_3dkft")
+
+[node name="RightLeg" type="RigidBody2D" parent="BodyParts"]
+position = Vector2(149, 70)
+rotation = 0.23561947
 input_pickable = true
-mass = 67.932
+mass = 35.0
 gravity_scale = 0.0
 linear_damp = 2.0
+angular_damp = 8.0
 
-[node name="blank_leg" type="Sprite2D" parent="MushroomAreas/RightLeg"]
-rotation = 0.23736478
-texture = ExtResource("8_5mt75")
-flip_v = true
-
-[node name="leg_skin" type="Sprite2D" parent="MushroomAreas/RightLeg"]
-rotation = 0.23736478
-flip_v = true
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MushroomAreas/RightLeg"]
-polygon = PackedVector2Array(-131, -39, -112, -65, -86, -64, -50, -49, 107, 1, 145, 13, 148, 26, 143, 43, 136, 48, 26, 25, -55, 9, -112, 5, -134, -13)
-
-[node name="RightLegArea" type="Area2D" parent="MushroomAreas/RightLeg"]
-rotation = 0.47099003
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MushroomAreas/RightLeg/RightLegArea"]
-position = Vector2(23.088562, -7.306896)
-rotation = -0.23570515
-scale = Vector2(0.9999999, 0.9999999)
-shape = SubResource("RectangleShape2D_xkswm")
-
-[node name="RightLegShadow" type="Sprite2D" parent="MushroomAreas/RightLeg"]
-self_modulate = Color(0, 0.011764706, 0.3019608, 0.41960785)
+[node name="shadow" type="Sprite2D" parent="BodyParts/RightLeg"]
 show_behind_parent = true
 z_index = -1
 material = SubResource("ShaderMaterial_vfgv1")
-position = Vector2(0, 13)
-rotation = 0.23736478
+position = Vector2(0, 9)
 texture = ExtResource("8_5mt75")
 flip_v = true
+
+[node name="blank_leg" type="Sprite2D" parent="BodyParts/RightLeg"]
+texture = ExtResource("8_5mt75")
+flip_v = true
+
+[node name="leg_skin" type="Sprite2D" parent="BodyParts/RightLeg"]
+flip_v = true
+
+[node name="collision" type="CollisionShape2D" parent="BodyParts/RightLeg"]
+position = Vector2(12.950455, -7.6293945e-06)
+shape = SubResource("RectangleShape2D_3dkft")
+
+[node name="LeftArm" type="RigidBody2D" parent="BodyParts"]
+position = Vector2(-71, -105)
+rotation = -0.49741885
+input_pickable = true
+mass = 35.0
+gravity_scale = 0.0
+linear_damp = 2.0
+angular_damp = 8.0
+
+[node name="shadow" type="Sprite2D" parent="BodyParts/LeftArm"]
+show_behind_parent = true
+z_index = -1
+material = SubResource("ShaderMaterial_q6v5p")
+position = Vector2(2, 9)
+texture = ExtResource("8_q6v5p")
+
+[node name="blank_arm" type="Sprite2D" parent="BodyParts/LeftArm"]
+texture = ExtResource("8_q6v5p")
+
+[node name="arm_skin" type="Sprite2D" parent="BodyParts/LeftArm"]
+
+[node name="collision" type="CollisionShape2D" parent="BodyParts/LeftArm"]
+position = Vector2(30.885445, -0.29897106)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_6vb6e")
+
+[node name="RightArm" type="RigidBody2D" parent="BodyParts"]
+position = Vector2(-72, 105)
+rotation = 0.50963616
+input_pickable = true
+mass = 35.0
+gravity_scale = 0.0
+linear_damp = 2.0
+angular_damp = 8.0
+
+[node name="shadow" type="Sprite2D" parent="BodyParts/RightArm"]
+show_behind_parent = true
+z_index = -1
+material = SubResource("ShaderMaterial_3dkft")
+position = Vector2(-1, 9)
+texture = ExtResource("8_q6v5p")
+flip_v = true
+
+[node name="blank_arm" type="Sprite2D" parent="BodyParts/RightArm"]
+texture = ExtResource("8_q6v5p")
+flip_v = true
+
+[node name="arm_skin" type="Sprite2D" parent="BodyParts/RightArm"]
+texture = ExtResource("8_q6v5p")
+flip_v = true
+
+[node name="collision" type="CollisionShape2D" parent="BodyParts/RightArm"]
+position = Vector2(31.175, 0)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_6vb6e")
 
 [node name="PatientSkinManager" type="Node2D" parent="."]
 script = ExtResource("27_jmvsg")

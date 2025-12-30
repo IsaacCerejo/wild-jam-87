@@ -3,7 +3,7 @@ class_name PatientTutorial
 
 # Override
 func generate_mushrooms() -> void:
-	var _mushroom_areas_picked: Array[Area2D] = mushroom_areas
+	var _mushroom_areas_picked: Array[PhysicsBody2D] = mushroom_areas
 	for mushroom_scene in MUSHROOM_SCENES:
 		var new_mushroom: Mushroom = mushroom_scene.instantiate() as Mushroom
 		new_mushroom.picked.connect(_on_mushroom_picked)

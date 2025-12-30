@@ -53,13 +53,13 @@ var music_step: int = 9
 var sound_step: int = 9
 
 # Mouse cursor
-var custom_mouse_cursor_default = load("uid://defpvu1xwxmj5")
-var custom_mouse_cursor_click = load("uid://dolq5cc8bdvky")
+#var custom_mouse_cursor_default = load("uid://defpvu1xwxmj5")
+#var custom_mouse_cursor_click = load("uid://dolq5cc8bdvky")
 
 # Why do this?
 func _ready() -> void:
-	Input.set_custom_mouse_cursor(custom_mouse_cursor_default)
-	Input.set_custom_mouse_cursor(custom_mouse_cursor_click, Input.CURSOR_POINTING_HAND)
+	#Input.set_custom_mouse_cursor(custom_mouse_cursor_default)
+	#Input.set_custom_mouse_cursor(custom_mouse_cursor_click, Input.CURSOR_POINTING_HAND)
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	load_game()
 

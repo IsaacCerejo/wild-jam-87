@@ -1,30 +1,18 @@
-[gd_scene load_steps=50 format=3 uid="uid://fwifwdj0klmd"]
+[gd_scene load_steps=37 format=3 uid="uid://fwifwdj0klmd"]
 
 [ext_resource type="Texture2D" uid="uid://b6ug3vgnb5hek" path="res://assets/background/background.png" id="1_fm6xj"]
 [ext_resource type="Texture2D" uid="uid://dq7udm4bi8xi8" path="res://assets/background/cabinet.PNG" id="2_sjufv"]
 [ext_resource type="Script" uid="uid://c0qla4xs5qtuw" path="res://scripts/main_game/patient_manager.gd" id="3_4y18v"]
-[ext_resource type="Texture2D" uid="uid://dhgcgtngpsxv2" path="res://assets/hand/hand_drill.png" id="3_gxjft"]
+[ext_resource type="PackedScene" uid="uid://l2cef4jx50s4" path="res://scenes/main_game/Player.tscn" id="3_kwr1i"]
 [ext_resource type="Script" uid="uid://0ua5elcqwham" path="res://scripts/main_game/tool_selector.gd" id="4_irrf2"]
-[ext_resource type="Texture2D" uid="uid://pq8w40504wk7" path="res://assets/hand/hand_drill_2.png" id="5_kgumw"]
 [ext_resource type="Texture2D" uid="uid://b0788qfn374ll" path="res://assets/tools/tool_pinça.png" id="5_s87mg"]
-[ext_resource type="Texture2D" uid="uid://0ixx8sqasrjp" path="res://assets/hand/hand_hammer.png" id="5_uddg2"]
 [ext_resource type="Texture2D" uid="uid://uuela3hv3sev" path="res://assets/tools/tool_tesoura.png" id="6_ebk6p"]
 [ext_resource type="PackedScene" uid="uid://cfynw7ir82qmn" path="res://scenes/main_game/tool.tscn" id="7_b4n6q"]
 [ext_resource type="Texture2D" uid="uid://c22v675hf6vne" path="res://assets/tools/tool_hammer.png" id="7_ebk6p"]
-[ext_resource type="Texture2D" uid="uid://b6b2gmnnylqqp" path="res://assets/hand/hand_pinca_2.png" id="7_fy5ht"]
 [ext_resource type="Texture2D" uid="uid://d1wspkbkkygsv" path="res://assets/tools/tool_spray.png" id="7_l774p"]
-[ext_resource type="Texture2D" uid="uid://1m7aw2i8qg1c" path="res://assets/hand/hand_hammer_2.png" id="7_rdfwi"]
 [ext_resource type="Script" uid="uid://crlx8tc4ryyvd" path="res://scripts/main_game/post_its.gd" id="8_gxjft"]
-[ext_resource type="Script" uid="uid://vta4rkxv4wv0" path="res://scripts/main_game/player.gd" id="8_r8wn4"]
 [ext_resource type="Texture2D" uid="uid://cep1fth1pjb7p" path="res://assets/background/cama.png" id="8_s87mg"]
-[ext_resource type="Texture2D" uid="uid://b105tuuoyfqp5" path="res://assets/hand/hand_spray_2.png" id="8_sjufv"]
-[ext_resource type="Texture2D" uid="uid://dewjajqggymbo" path="res://assets/hand/hand_empty.png" id="9_kwr1i"]
 [ext_resource type="Shader" uid="uid://dp763fss7hgwb" path="res://resources/shaders/dissolve.gdshader" id="9_uddg2"]
-[ext_resource type="Texture2D" uid="uid://kdeakq4xrq8s" path="res://assets/hand/hand_pinca.png" id="10_fxa2l"]
-[ext_resource type="Texture2D" uid="uid://chxpexxxkxr2n" path="res://assets/hand/hand_spray.png" id="11_feobv"]
-[ext_resource type="Texture2D" uid="uid://d3svvioh7o10y" path="res://assets/hand/hand_tesoura.png" id="12_gxjft"]
-[ext_resource type="Texture2D" uid="uid://btdknwtxlcnbi" path="res://assets/hand/hand_tesoura_2.png" id="12_ucrkv"]
-[ext_resource type="Script" uid="uid://ybxq7x6jqqc6" path="res://scripts/main_game/arm.gd" id="13_4y18v"]
 [ext_resource type="Texture2D" uid="uid://cyhrd3h7qpjot" path="res://assets/tools/drill.png" id="14_kwr1i"]
 [ext_resource type="Texture2D" uid="uid://c84qi7og20aic" path="res://assets/post_its/IMG_0761.PNG" id="15_fxa2l"]
 [ext_resource type="Texture2D" uid="uid://df067qcq6mwj3" path="res://assets/post_its/IMG_0760.PNG" id="16_feobv"]
@@ -32,72 +20,6 @@
 [ext_resource type="Texture2D" uid="uid://ylfhpqxkwiw1" path="res://assets/post_its/IMG_0762.PNG" id="18_qspar"]
 [ext_resource type="Texture2D" uid="uid://63foqjywx0e2" path="res://assets/post_its/IMG_0759.PNG" id="19_7mboc"]
 [ext_resource type="Script" uid="uid://64asebo8pdx5" path="res://scripts/main_game/camera_shake.gd" id="19_r8wn4"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_n1acc"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_kgumw")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_gxjft")
-}],
-"loop": false,
-"name": &"drill",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("9_kwr1i")
-}],
-"loop": false,
-"name": &"empty",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_rdfwi")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_uddg2")
-}],
-"loop": false,
-"name": &"hammer",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("7_fy5ht")
-}, {
-"duration": 1.0,
-"texture": ExtResource("10_fxa2l")
-}],
-"loop": false,
-"name": &"pinca",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_sjufv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("11_feobv")
-}],
-"loop": false,
-"name": &"spray",
-"speed": 12.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("12_ucrkv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("12_gxjft")
-}],
-"loop": false,
-"name": &"tesoura",
-"speed": 12.0
-}]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_uddg2"]
 
@@ -230,27 +152,7 @@ z_index = 1
 position = Vector2(640, 360)
 texture = ExtResource("2_sjufv")
 
-[node name="Player" type="Node2D" parent="."]
-z_index = 3
-script = ExtResource("8_r8wn4")
-
-[node name="arm" type="Line2D" parent="Player"]
-position = Vector2(31, 26)
-width = 35.0
-default_color = Color(0.9490196, 0.68235296, 0.6, 1)
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
-round_precision = 16
-script = ExtResource("13_4y18v")
-
-[node name="HandSprite" type="AnimatedSprite2D" parent="Player"]
-unique_name_in_owner = true
-sprite_frames = SubResource("SpriteFrames_n1acc")
-animation = &"pinca"
-autoplay = "empty"
-frame = 1
-offset = Vector2(31.395, 57.65)
+[node name="Player" parent="." instance=ExtResource("3_kwr1i")]
 
 [node name="PostIts" type="Node2D" parent="."]
 z_index = 1

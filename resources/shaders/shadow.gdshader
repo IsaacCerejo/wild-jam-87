@@ -2,7 +2,7 @@ shader_type canvas_item;
 
 render_mode blend_mix;
 uniform sampler2D SCREEN_TEXTURE : hint_screen_texture;
-uniform vec4 tint_color : source_color = vec4(1.0, 1.0, 1.0, 1.0);  // The color to recolor the sprite
+uniform vec4 tint_color : source_color = vec4(0.263, 0.42, 0.447, 1.0);  // The color to recolor the sprite
 uniform vec4 key_color : source_color = vec4(0.0, 0.0, 0.0, 1.0);   // Background color to render over
 uniform float key_threshold = 0.02;                                 // Allowed difference for key match
 

@@ -17,12 +17,11 @@ const MUSHROOM_SCENES: Array[PackedScene] = [
 @export_range(10, 200) var max_attempts: int = 100
 
 var _mushrooms: Array[Mushroom] = []
-@onready var mushroom_areas: Array[Area2D] = [$MushroomAreas/Torso/TorsoArea, $MushroomAreas/Head/HeadArea, $MushroomAreas/LeftArm/LeftArmArea, $MushroomAreas/RightArm/RightArmArea, $MushroomAreas/LeftLeg/LeftLegArea, $MushroomAreas/RightLeg/RightLegArea]
+@onready var mushroom_areas: Array[PhysicsBody2D] = [$BodyParts/Torso, $BodyParts/Head, $BodyParts/LeftArm, $BodyParts/RightArm, $BodyParts/LeftLeg, $BodyParts/RightLeg]
 var used_base_points: Array[int] = []
 
 func _ready() -> void:
 	pass
-
 
 func generate_mushrooms() -> void:
 	# Spawn mushrooms
@@ -32,7 +31,7 @@ func generate_mushrooms() -> void:
 	while spawned < mushroom_count and attempts < max_attempts:
 		attempts += 1
 
-		var affected_area: Area2D = mushroom_areas.pick_random()
+		var affected_area: PhysicsBody2D = mushroom_areas.pick_random()
 		var p: Vector2 = random_point_in_area(affected_area)
 
 		if is_valid(p, points):
@@ -51,14 +50,14 @@ func generate_mushrooms() -> void:
 		
 			spawned += 1
 
-
 func _on_mushroom_picked(mushroom: Mushroom) -> void:
 	_mushrooms.erase(mushroom)
 	if _mushrooms.size() == 0:
 		cured.emit()
 
-func random_point_in_area(area: Area2D) -> Vector2:
-	var collision := area.get_child(0)
+func random_point_in_area(area: PhysicsBody2D) -> Vector2:
+	
+	var collision := area.get_node("collision")
 	assert(collision is CollisionShape2D)
 
 	var shape: Shape2D = collision.shape

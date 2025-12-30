@@ -6,6 +6,7 @@ extends Control
 var _starting: bool = false
 
 func _ready() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	Global.reset_score()
 	Global.reset_mushrooms_picked()
 	if AudioManager.get_active_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.BACKGROUND_MUSIC) == null:
@@ -14,7 +15,7 @@ func _ready() -> void:
 		var music_audio: AudioStreamPlayer = AudioManager.get_active_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.BACKGROUND_MUSIC)
 		if is_instance_valid(music_audio):
 			music_audio.get_stream_playback().switch_to_clip(0)
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
 
 func _on_start_button_pressed() -> void:
 	if _starting:

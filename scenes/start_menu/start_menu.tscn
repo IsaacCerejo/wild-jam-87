@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dolritqgtceml"]
+[gd_scene load_steps=9 format=3 uid="uid://dolritqgtceml"]
 
 [ext_resource type="Script" uid="uid://crp24nu04jd44" path="res://scripts/start_menu/start_menu.gd" id="1_4v5wy"]
 [ext_resource type="Theme" uid="uid://2ek7eagjo7f0" path="res://resources/themes/general_theme.tres" id="2_tj3dw"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://2i316e7renfb" path="res://scenes/start_menu/how_to_play_menu.tscn" id="5_gu1vn"]
 [ext_resource type="PackedScene" uid="uid://mtilpmnd7m7y" path="res://scenes/main_game/patient.tscn" id="6_rudpn"]
 [ext_resource type="Texture2D" uid="uid://djliflvadj1j5" path="res://assets/ui/logo.png" id="7_rudpn"]
+[ext_resource type="PackedScene" uid="uid://l2cef4jx50s4" path="res://scenes/main_game/Player.tscn" id="8_eum3g"]
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -81,10 +82,11 @@ text = " QUIT"
 [node name="FullScreenButton" type="Button" parent="."]
 texture_filter = 1
 layout_mode = 1
-offset_left = 1166.0
-offset_top = 628.0
-offset_right = 1206.0
-offset_bottom = 668.0
+offset_left = 1198.0001
+offset_top = 640.0
+offset_right = 1244.0001
+offset_bottom = 692.0
+scale = Vector2(0.7, 0.7)
 focus_neighbor_bottom = NodePath("../ButtonContainer/StartButton")
 focus_mode = 0
 mouse_default_cursor_shape = 2
@@ -97,17 +99,17 @@ theme_override_colors/icon_hover_pressed_color = Color(0.13725491, 0.13333334, 0
 theme_override_font_sizes/font_size = 27
 icon = ExtResource("3_rudpn")
 icon_alignment = 1
-expand_icon = true
 
 [node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(647, 196)
-scale = Vector2(1.4507042, 1.4507042)
 texture = ExtResource("7_rudpn")
 
 [node name="OptionsMenu" parent="." instance=ExtResource("4_eum3g")]
 unique_name_in_owner = true
 visible = false
 layout_mode = 1
+offset_top = -23.0
+offset_bottom = -23.0
 
 [node name="HowToPlayMenu" parent="." instance=ExtResource("5_gu1vn")]
 unique_name_in_owner = true
@@ -118,6 +120,8 @@ layout_mode = 1
 position = Vector2(278, 343)
 rotation = 1.5707964
 script = null
+
+[node name="Player" parent="." instance=ExtResource("8_eum3g")]
 
 [connection signal="pressed" from="ButtonContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="ButtonContainer/HowToPlayButton" to="." method="_on_how_to_play_button_pressed"]

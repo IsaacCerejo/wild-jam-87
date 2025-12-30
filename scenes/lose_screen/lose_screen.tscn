@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://dfox7aapmjh2k"]
+[gd_scene load_steps=10 format=3 uid="uid://dfox7aapmjh2k"]
 
 [ext_resource type="Theme" uid="uid://2ek7eagjo7f0" path="res://resources/themes/general_theme.tres" id="1_uglf1"]
 [ext_resource type="Script" uid="uid://dd7my64yx8kmn" path="res://scripts/lose_screen/lose_screen.gd" id="2_1n1m7"]
 [ext_resource type="Texture2D" uid="uid://cfbevapdom3w2" path="res://assets/patient/lost_pose.png" id="3_m5wjf"]
+[ext_resource type="PackedScene" uid="uid://l2cef4jx50s4" path="res://scenes/main_game/Player.tscn" id="4_wja71"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mnm0h"]
 bg_color = Color(0.23056081, 0.39943027, 0.37795302, 1)
@@ -245,5 +246,7 @@ focus_mode = 0
 mouse_default_cursor_shape = 2
 theme = ExtResource("1_uglf1")
 text = "MAIN MENU"
+
+[node name="Player" parent="." instance=ExtResource("4_wja71")]
 
 [connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

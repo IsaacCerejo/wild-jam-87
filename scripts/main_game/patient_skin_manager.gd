@@ -1,13 +1,13 @@
 extends Node2D
 
-@onready var mouth_sprite: Sprite2D = $"../MushroomAreas/Head/mouth"
-@onready var eyes_sprite: Sprite2D = $"../MushroomAreas/Head/eyes"
-@onready var hair_sprite: Sprite2D = $"../MushroomAreas/Head/hair"
-@onready var torso_sprite: Sprite2D = $"../MushroomAreas/Torso/torso_skin"
-@onready var left_arm_sprite: Sprite2D = $"../MushroomAreas/LeftArm/arm_skin"
-@onready var right_arm_sprite: Sprite2D = $"../MushroomAreas/RightArm/arm_skin"
-@onready var left_leg_sprite: Sprite2D = $"../MushroomAreas/LeftLeg/leg_skin"
-@onready var right_leg_sprite: Sprite2D = $"../MushroomAreas/RightLeg/leg_skin"
+@onready var mouth_sprite: Sprite2D = $"../BodyParts/Head/mouth"
+@onready var eyes_sprite: Sprite2D = $"../BodyParts/Head/eyes"
+@onready var hair_sprite: Sprite2D = $"../BodyParts/Head/hair"
+@onready var torso_sprite: Sprite2D = $"../BodyParts/Torso/torso_skin"
+@onready var left_arm_sprite: Sprite2D = $"../BodyParts/LeftArm/arm_skin"
+@onready var right_arm_sprite: Sprite2D = $"../BodyParts/RightArm/arm_skin"
+@onready var left_leg_sprite: Sprite2D = $"../BodyParts/LeftLeg/leg_skin"
+@onready var right_leg_sprite: Sprite2D = $"../BodyParts/RightLeg/leg_skin"
 
 const hair_colors: Array = [
 	Color("8c4e34ff"),

@@ -12,14 +12,16 @@ func _input(event: InputEvent) -> void:
 func open_close_pause():
 	visible = !visible
 	if visible:
+		Global.player.tool_dropped.emit()
+		Global.player.set_active_tool()
 		get_tree().paused = true
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
 		
 	else:
 		get_tree().paused = false
 		options_menu.hide()
 		how_to_play_menu.hide()
-		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+
 
 # Signal callbacks
 func _on_resume_button_pressed() -> void:
