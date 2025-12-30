@@ -56,7 +56,6 @@ focus_next = NodePath("../SoundLabel")
 focus_previous = NodePath("../FullScreenButton")
 mouse_default_cursor_shape = 2
 theme = ExtResource("1_7qeq7")
-theme_override_font_sizes/font_size = 20
 text = "SETTINGS"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -89,7 +88,7 @@ focus_next = NodePath("../SoundLabel")
 focus_previous = NodePath("../FullScreenButton")
 mouse_default_cursor_shape = 2
 theme = ExtResource("1_7qeq7")
-text = "Music"
+text = "MUSIC"
 horizontal_alignment = 1
 vertical_alignment = 2
 
