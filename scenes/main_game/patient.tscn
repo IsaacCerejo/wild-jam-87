@@ -111,7 +111,7 @@ bias = 0.9
 disable_collision = false
 
 [node name="BodyParts" type="Node2D" parent="."]
-z_index = 4
+z_index = 5
 y_sort_enabled = true
 
 [node name="Torso" type="RigidBody2D" parent="BodyParts"]
@@ -123,17 +123,17 @@ freeze_mode = 1
 
 [node name="shadow" type="Sprite2D" parent="BodyParts/Torso"]
 show_behind_parent = true
-z_index = -3
+z_index = -4
 material = SubResource("ShaderMaterial_6vb6e")
 position = Vector2(6, 5)
 texture = ExtResource("3_5mt75")
 
 [node name="blank_torso" type="Sprite2D" parent="BodyParts/Torso"]
-z_index = -2
+z_index = -3
 texture = ExtResource("3_5mt75")
 
 [node name="torso_skin" type="Sprite2D" parent="BodyParts/Torso"]
-z_index = -2
+z_index = -3
 
 [node name="collision" type="CollisionShape2D" parent="BodyParts/Torso"]
 position = Vector2(-23, 0)
@@ -150,7 +150,7 @@ angular_damp = 8.0
 
 [node name="shadow" type="Sprite2D" parent="BodyParts/Head"]
 show_behind_parent = true
-z_index = -3
+z_index = -4
 material = SubResource("ShaderMaterial_5mt75")
 position = Vector2(4, 8)
 texture = ExtResource("6_6vb6e")
@@ -160,10 +160,10 @@ z_index = -2
 texture = ExtResource("6_6vb6e")
 
 [node name="mouth" type="Sprite2D" parent="BodyParts/Head"]
-z_index = -1
+z_index = -2
 
 [node name="eyes" type="Sprite2D" parent="BodyParts/Head"]
-z_index = -1
+z_index = -2
 texture = ExtResource("6_5mt75")
 
 [node name="hair" type="Sprite2D" parent="BodyParts/Head"]
@@ -188,7 +188,7 @@ angular_damp = 8.0
 
 [node name="shadow" type="Sprite2D" parent="BodyParts/LeftLeg"]
 show_behind_parent = true
-z_index = -3
+z_index = -4
 material = SubResource("ShaderMaterial_xkswm")
 position = Vector2(2, 9)
 texture = ExtResource("8_5mt75")
@@ -216,7 +216,7 @@ angular_damp = 8.0
 
 [node name="shadow" type="Sprite2D" parent="BodyParts/RightLeg"]
 show_behind_parent = true
-z_index = -3
+z_index = -4
 material = SubResource("ShaderMaterial_vfgv1")
 position = Vector2(0, 9)
 texture = ExtResource("8_5mt75")
@@ -247,7 +247,7 @@ angular_damp = 8.0
 
 [node name="shadow" type="Sprite2D" parent="BodyParts/LeftArm"]
 show_behind_parent = true
-z_index = -3
+z_index = -4
 material = SubResource("ShaderMaterial_q6v5p")
 position = Vector2(2, 9)
 texture = ExtResource("8_q6v5p")
@@ -276,7 +276,7 @@ angular_damp = 8.0
 
 [node name="shadow" type="Sprite2D" parent="BodyParts/RightArm"]
 show_behind_parent = true
-z_index = -3
+z_index = -4
 material = SubResource("ShaderMaterial_3dkft")
 position = Vector2(-1, 9)
 texture = ExtResource("8_q6v5p")

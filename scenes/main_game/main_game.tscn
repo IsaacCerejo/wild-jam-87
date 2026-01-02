@@ -82,19 +82,19 @@ shader_parameter/glow_border_smoothness = 0.04
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_qspar")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r8wn4"]
-size = Vector2(137.29382, 59.939575)
+size = Vector2(148.48877, 72.637695)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kwr1i"]
-size = Vector2(84, 165)
+size = Vector2(84, 170)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fxa2l"]
-size = Vector2(88.37793, 129.79956)
+size = Vector2(95.03497, 137.68652)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_feobv"]
-size = Vector2(160, 73)
+size = Vector2(168, 87)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gxjft"]
-size = Vector2(137.22478, 72.31305)
+size = Vector2(152.6727, 77.00333)
 
 [sub_resource type="Animation" id="Animation_5s8cp"]
 length = 0.001
@@ -213,7 +213,7 @@ type = 1
 texture = ExtResource("7_l774p")
 
 [node name="CollisionShape2D" parent="ToolSelector/Spray" index="1"]
-position = Vector2(0, -0.5)
+position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_kwr1i")
 
 [node name="Tesoura" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
@@ -236,7 +236,7 @@ type = 4
 texture = ExtResource("7_ebk6p")
 
 [node name="CollisionShape2D" parent="ToolSelector/Hammer" index="1"]
-position = Vector2(4, 0.5)
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_feobv")
 
 [node name="Drill" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
@@ -247,7 +247,7 @@ type = 3
 texture = ExtResource("14_kwr1i")
 
 [node name="CollisionShape2D" parent="ToolSelector/Drill" index="1"]
-position = Vector2(-1.8564453, -5.163513)
+position = Vector2(1.3377686, 2.2496948)
 rotation = 0.86917394
 shape = SubResource("RectangleShape2D_gxjft")
 
