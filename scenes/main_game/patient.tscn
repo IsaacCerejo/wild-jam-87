@@ -13,42 +13,27 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6vb6e"]
 shader = ExtResource("4_ddug4")
-shader_parameter/tint_color = Color(0.263, 0.42, 0.447, 1)
-shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
-shader_parameter/key_threshold = 0.02
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6vb6e"]
 size = Vector2(172, 120)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5mt75"]
 shader = ExtResource("4_ddug4")
-shader_parameter/tint_color = Color(0.263, 0.42, 0.447, 1)
-shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
-shader_parameter/key_threshold = 0.02
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6vb6e"]
 radius = 39.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xkswm"]
 shader = ExtResource("4_ddug4")
-shader_parameter/tint_color = Color(0.263, 0.42, 0.447, 1)
-shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
-shader_parameter/key_threshold = 0.02
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3dkft"]
 size = Vector2(251.10478, 40.02314)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_vfgv1"]
 shader = ExtResource("4_ddug4")
-shader_parameter/tint_color = Color(0.263, 0.42, 0.447, 1)
-shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
-shader_parameter/key_threshold = 0.02
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q6v5p"]
 shader = ExtResource("4_ddug4")
-shader_parameter/tint_color = Color(0.263, 0.42, 0.447, 1)
-shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
-shader_parameter/key_threshold = 0.02
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6vb6e"]
 radius = 15.969711
@@ -56,9 +41,6 @@ height = 157.54086
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_3dkft"]
 shader = ExtResource("4_ddug4")
-shader_parameter/tint_color = Color(0.263, 0.42, 0.447, 1)
-shader_parameter/key_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
-shader_parameter/key_threshold = 0.02
 
 [node name="Patient" type="Node2D"]
 script = ExtResource("1_s1xdg")

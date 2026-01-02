@@ -18,6 +18,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 script = ExtResource("1_4v5wy")
+patient_scene = ExtResource("6_rudpn")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -123,8 +124,18 @@ script = null
 
 [node name="Player" parent="." instance=ExtResource("8_eum3g")]
 
+[node name="patient_button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 491.0
+offset_top = 553.0
+offset_right = 543.0
+offset_bottom = 607.0
+
 [connection signal="pressed" from="ButtonContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="ButtonContainer/HowToPlayButton" to="." method="_on_how_to_play_button_pressed"]
 [connection signal="pressed" from="ButtonContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="ButtonContainer/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="FullScreenButton" to="." method="_on_fullscreen_button_pressed"]
+[connection signal="pressed" from="patient_button" to="." method="_on_patient_button_pressed"]
+
+[editable path="Patient"]

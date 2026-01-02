@@ -5,6 +5,12 @@ extends Control
 
 var _starting: bool = false
 
+@export var patient_scene: PackedScene
+@onready var current_patient: Node2D = $Patient
+@onready var inicial_pos: Vector2 = current_patient.global_position
+var can_press_patient: bool = true
+
+
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	Global.reset_score()
@@ -45,3 +51,32 @@ func _on_fullscreen_button_pressed() -> void:
 func _on_quit_button_pressed() -> void:
 	AudioManager.create_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.BUTTON_CLICK)
 	get_tree().quit()
+
+
+
+func _on_patient_button_pressed() -> void:
+	if not can_press_patient:
+		return
+	
+	can_press_patient = false
+	
+	var old_patient = current_patient
+
+	var new_patient = patient_scene.instantiate()
+	new_patient.position = Vector2(inicial_pos.x, -300)
+	new_patient.rotation_degrees = randi_range(0,360)
+	add_child(new_patient)
+
+	current_patient = new_patient
+
+	var tween := create_tween()
+	tween.set_trans(Tween.TRANS_CUBIC)
+	tween.set_ease(Tween.EASE_IN_OUT)
+
+	tween.tween_property(old_patient,"position:y",1100,0.8)
+
+	tween.parallel().tween_property(new_patient,"position:y",inicial_pos.y,0.8)
+
+	await tween.finished
+	old_patient.queue_free()
+	can_press_patient = true
