@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dolritqgtceml"]
+[gd_scene load_steps=10 format=3 uid="uid://dolritqgtceml"]
 
 [ext_resource type="Script" uid="uid://crp24nu04jd44" path="res://scripts/start_menu/start_menu.gd" id="1_4v5wy"]
 [ext_resource type="Theme" uid="uid://2ek7eagjo7f0" path="res://resources/themes/general_theme.tres" id="2_tj3dw"]
@@ -8,6 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://mtilpmnd7m7y" path="res://scenes/main_game/patient.tscn" id="6_rudpn"]
 [ext_resource type="Texture2D" uid="uid://djliflvadj1j5" path="res://assets/ui/logo.png" id="7_rudpn"]
 [ext_resource type="PackedScene" uid="uid://l2cef4jx50s4" path="res://scenes/main_game/Player.tscn" id="8_eum3g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eum3g"]
+bg_color = Color(0.29803923, 0.49803922, 0.47058824, 1)
 
 [node name="StartMenu" type="Control"]
 layout_mode = 3
@@ -81,6 +84,7 @@ theme = ExtResource("2_tj3dw")
 text = " QUIT"
 
 [node name="FullScreenButton" type="Button" parent="."]
+visible = false
 texture_filter = 1
 layout_mode = 1
 offset_left = 1198.0001
@@ -112,6 +116,16 @@ layout_mode = 1
 offset_top = -23.0
 offset_bottom = -23.0
 
+[node name="Panel2" type="Panel" parent="OptionsMenu"]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -26.0
+offset_top = -18.0
+offset_right = 1307.0
+offset_bottom = 763.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_eum3g")
+
 [node name="HowToPlayMenu" parent="." instance=ExtResource("5_gu1vn")]
 unique_name_in_owner = true
 visible = false
@@ -124,16 +138,8 @@ script = null
 
 [node name="Player" parent="." instance=ExtResource("8_eum3g")]
 
-[node name="patient_button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 491.0
-offset_top = 553.0
-offset_right = 543.0
-offset_bottom = 607.0
-
 [connection signal="pressed" from="ButtonContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="ButtonContainer/HowToPlayButton" to="." method="_on_how_to_play_button_pressed"]
 [connection signal="pressed" from="ButtonContainer/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="ButtonContainer/QuitButton" to="." method="_on_quit_button_pressed"]
 [connection signal="pressed" from="FullScreenButton" to="." method="_on_fullscreen_button_pressed"]
-[connection signal="pressed" from="patient_button" to="." method="_on_patient_button_pressed"]

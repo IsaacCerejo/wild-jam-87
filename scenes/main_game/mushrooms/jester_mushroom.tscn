@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://6gc5emte74i3" path="res://assets/mushrooms/jester_mushroom.PNG" id="3_00xul"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g25aq"]
-size = Vector2(28.62713, 66.2944)
+size = Vector2(34.653896, 70.81448)
 
 [node name="JesterMushroom" instance=ExtResource("1_g25aq")]
 script = ExtResource("2_0t73v")

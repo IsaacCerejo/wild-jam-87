@@ -4,7 +4,7 @@ uniform sampler2D SCREEN_TEXTURE : hint_screen_texture;
 
 uniform bool disable_rotating = false;
 uniform float area_scale = 1.5;
-const vec2 shadow_offset = vec2(6.0, -10.0);
+const vec2 shadow_offset = vec2(6.0, -8.0);
 
 uniform vec4 shadow_color : source_color = vec4(0.263, 0.42, 0.447, 1.0);
 uniform vec4 key_color : source_color = vec4(0.298, 0.498, 0.471, 1.0);
