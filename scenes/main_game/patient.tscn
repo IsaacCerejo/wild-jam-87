@@ -224,7 +224,6 @@ angular_damp = 8.0
 z_index = -5
 material = SubResource("ShaderMaterial_xkswm")
 texture = ExtResource("8_5mt75")
-flip_v = true
 
 [node name="blank_leg" type="Sprite2D" parent="BodyParts/RightLeg"]
 z_index = -1
@@ -282,7 +281,6 @@ angular_damp = 8.0
 z_index = -5
 material = SubResource("ShaderMaterial_vfgv1")
 texture = ExtResource("8_q6v5p")
-flip_v = true
 
 [node name="blank_arm" type="Sprite2D" parent="BodyParts/RightArm"]
 z_index = -1
