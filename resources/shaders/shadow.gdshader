@@ -1,28 +1,55 @@
 shader_type canvas_item;
 
-render_mode blend_mix;
 uniform sampler2D SCREEN_TEXTURE : hint_screen_texture;
-const vec4 tint_color = vec4(0.263, 0.42, 0.447, 1.0);  // The color to recolor the sprite
-const vec4 key_color = vec4(0.298, 0.498, 0.471, 1.0);   // Background color to render over
-const float key_threshold = 0.02;                                 // Allowed difference for key match
+
+uniform bool disable_rotating = false;
+uniform float area_scale = 1.5;
+const vec2 shadow_offset = vec2(6.0, -10.0);
+
+uniform vec4 shadow_color : source_color = vec4(0.263, 0.42, 0.447, 1.0);
+uniform vec4 key_color : source_color = vec4(0.298, 0.498, 0.471, 1.0);
+uniform float key_threshold = 0.02;
+
+varying flat float sprite_rotation;
+
+void vertex() {
+	// Expand quad
+	VERTEX.xy *= area_scale;
+
+	// Store sprite rotation
+	sprite_rotation = atan(MODEL_MATRIX[0][1], MODEL_MATRIX[0][0]);
+}
+
+vec2 rotate_point(vec2 p, float a) {
+	float s = sin(a);
+	float c = cos(a);
+	return vec2(p.x * c - p.y * s, p.x * s + p.y * c);
+}
 
 void fragment() {
-    // Load sprite pixel
-    vec4 tex_color = texture(TEXTURE, UV);
+	// Recenter UVs after scaling
+	vec2 centered_uv = (UV - 0.5) * area_scale + 0.5;
 
-    // Get screen background color behind this pixel
-    vec4 bg = texture(SCREEN_TEXTURE, SCREEN_UV);
+	// Shadow offset in screen space
+	vec2 offset = disable_rotating
+		? shadow_offset
+		: rotate_point(shadow_offset, -sprite_rotation);
 
-    // Compare background with key color
-    float diff = distance(bg.rgb, key_color.rgb);
+	vec2 uv = centered_uv + offset * TEXTURE_PIXEL_SIZE;
 
-    // If background doesn't match the key color, discard the pixel
-    if (diff > key_threshold) {
-        discard;
-    }
+	// Sample shadow shape
+	vec4 tex = texture(TEXTURE, uv);
+	if (tex.a <= 0.0) {
+		discard;
+	}
 
-    // Apply tint color to the sprite
-    vec4 final_color = vec4(tint_color.rgb, tex_color.a * tint_color.a);
+	// Sample background
+	vec4 bg = texture(SCREEN_TEXTURE, SCREEN_UV);
+	float diff = distance(bg.rgb, key_color.rgb);
+	if (diff > key_threshold) {
+		discard;
+	}
 
-    COLOR = final_color;
+	// Final shadow color
+	COLOR = vec4(shadow_color.rgb, tex.a * shadow_color.a);
 }
