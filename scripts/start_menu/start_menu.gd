@@ -26,8 +26,8 @@ func _ready() -> void:
 func _on_start_button_pressed() -> void:
 	if _starting:
 		return
+	send_patient_away()
 	_starting = true
-	cycle_patient()
 	
 	AudioManager.create_audio(SoundEffectSettings.SOUND_EFFECT_TYPE.BUTTON_CLICK)
 	await Global.game_controller.change_scene(Global.SCENE_UIDS.MAIN_GAME_UI, Global.SCENE_UIDS.MAIN_GAME, TransitionSettings.TRANSITION_TYPE.FADE_TO_FADE)
@@ -72,9 +72,7 @@ func cycle_patient():
 
 	current_patient = new_patient
 
-	var tween := create_tween()
-	tween.set_trans(Tween.TRANS_CUBIC)
-	tween.set_ease(Tween.EASE_IN_OUT)
+	var tween := create_tween().set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
 
 	tween.tween_property(old_patient,"position:y",1100,0.8)
 
@@ -83,3 +81,8 @@ func cycle_patient():
 	await tween.finished
 	old_patient.queue_free()
 	can_press_patient = true
+
+func send_patient_away():
+	can_press_patient = false
+	var tween := create_tween().set_trans(Tween.TRANS_CUBIC).set_ease(Tween.EASE_IN_OUT)
+	tween.tween_property(current_patient,"position:y",1100,0.4)
