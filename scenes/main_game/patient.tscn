@@ -15,7 +15,6 @@
 shader = ExtResource("4_ddug4")
 shader_parameter/disable_rotating = false
 shader_parameter/area_scale = 1.5
-shader_parameter/shadow_color = Color(0.263, 0.42, 0.447, 1)
 shader_parameter/key_color = Color(0.298, 0.498, 0.471, 1)
 shader_parameter/key_threshold = 0.02
 
@@ -26,7 +25,6 @@ size = Vector2(167, 120)
 shader = ExtResource("4_ddug4")
 shader_parameter/disable_rotating = false
 shader_parameter/area_scale = 1.5
-shader_parameter/shadow_color = Color(0.263, 0.42, 0.447, 1)
 shader_parameter/key_color = Color(0.298, 0.498, 0.471, 1)
 shader_parameter/key_threshold = 0.02
 
@@ -37,7 +35,6 @@ size = Vector2(46, 66)
 shader = ExtResource("4_ddug4")
 shader_parameter/disable_rotating = false
 shader_parameter/area_scale = 1.5
-shader_parameter/shadow_color = Color(0.263, 0.42, 0.447, 1)
 shader_parameter/key_color = Color(0.298, 0.498, 0.471, 1)
 shader_parameter/key_threshold = 0.02
 
@@ -49,7 +46,6 @@ height = 182.64925
 shader = ExtResource("4_ddug4")
 shader_parameter/disable_rotating = false
 shader_parameter/area_scale = 1.5
-shader_parameter/shadow_color = Color(0.263, 0.42, 0.447, 1)
 shader_parameter/key_color = Color(0.298, 0.498, 0.471, 1)
 shader_parameter/key_threshold = 0.02
 
@@ -57,7 +53,6 @@ shader_parameter/key_threshold = 0.02
 shader = ExtResource("4_ddug4")
 shader_parameter/disable_rotating = false
 shader_parameter/area_scale = 1.5
-shader_parameter/shadow_color = Color(0.263, 0.42, 0.447, 1)
 shader_parameter/key_color = Color(0.298, 0.498, 0.471, 1)
 shader_parameter/key_threshold = 0.02
 
@@ -69,7 +64,6 @@ height = 165.52567
 shader = ExtResource("4_ddug4")
 shader_parameter/disable_rotating = false
 shader_parameter/area_scale = 1.5
-shader_parameter/shadow_color = Color(0.263, 0.42, 0.447, 1)
 shader_parameter/key_color = Color(0.298, 0.498, 0.471, 1)
 shader_parameter/key_threshold = 0.02
 

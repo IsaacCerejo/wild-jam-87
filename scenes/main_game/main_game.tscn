@@ -138,7 +138,6 @@ glow_enabled = true
 fog_mode = 1
 fog_density = 1.0
 adjustment_enabled = true
-adjustment_contrast = 1.1
 
 [node name="MainGame" type="Node2D"]
 
@@ -149,7 +148,7 @@ texture = ExtResource("1_fm6xj")
 
 [node name="cabinet" type="Sprite2D" parent="."]
 z_index = 1
-position = Vector2(640, 360)
+position = Vector2(640, 643)
 texture = ExtResource("2_sjufv")
 
 [node name="Player" parent="." instance=ExtResource("3_kwr1i")]
@@ -169,7 +168,7 @@ texture = ExtResource("15_fxa2l")
 [node name="SprayPostIt" type="Sprite2D" parent="PostIts"]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_qspar")
-position = Vector2(-171, 124)
+position = Vector2(-213, 113)
 texture = ExtResource("16_feobv")
 
 [node name="HammerPostIt" type="Sprite2D" parent="PostIts"]
@@ -187,7 +186,7 @@ texture = ExtResource("18_qspar")
 [node name="DrillPostIt" type="Sprite2D" parent="PostIts"]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_sjufv")
-position = Vector2(91, 94)
+position = Vector2(51, 85)
 texture = ExtResource("19_7mboc")
 
 [node name="ToolSelector" type="Node2D" parent="."]
@@ -206,7 +205,7 @@ rotation = -0.77841693
 shape = SubResource("RectangleShape2D_r8wn4")
 
 [node name="Spray" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
-position = Vector2(1029, 615)
+position = Vector2(987, 608)
 type = 1
 
 [node name="Sprite2D" parent="ToolSelector/Spray" index="0"]
@@ -240,7 +239,7 @@ position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_feobv")
 
 [node name="Drill" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
-position = Vector2(1160, 665)
+position = Vector2(1121, 660)
 type = 3
 
 [node name="Sprite2D" parent="ToolSelector/Drill" index="0"]

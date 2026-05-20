@@ -6,7 +6,7 @@ uniform bool disable_rotating = false;
 uniform float area_scale = 1.5;
 const vec2 shadow_offset = vec2(6.0, -8.0);
 
-uniform vec4 shadow_color : source_color = vec4(0.263, 0.42, 0.447, 1.0);
+const vec4 shadow_color = vec4(0.231, 0.329, 0.318, 1.0);
 uniform vec4 key_color : source_color = vec4(0.298, 0.498, 0.471, 1.0);
 uniform float key_threshold = 0.02;
 
