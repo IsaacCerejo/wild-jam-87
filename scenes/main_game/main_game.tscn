@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://fwifwdj0klmd"]
+[gd_scene format=3 uid="uid://fwifwdj0klmd"]
 
 [ext_resource type="Texture2D" uid="uid://b6ug3vgnb5hek" path="res://assets/background/background.png" id="1_fm6xj"]
 [ext_resource type="Texture2D" uid="uid://dq7udm4bi8xi8" path="res://assets/background/cabinet.PNG" id="2_sjufv"]
@@ -138,62 +138,64 @@ glow_enabled = true
 fog_mode = 1
 fog_density = 1.0
 adjustment_enabled = true
+adjustment_brightness = 1.03
+adjustment_contrast = 1.015
 
-[node name="MainGame" type="Node2D"]
+[node name="MainGame" type="Node2D" unique_id=2029834894]
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="." unique_id=1115607594]
 z_index = -3
 position = Vector2(640, 360)
 texture = ExtResource("1_fm6xj")
 
-[node name="cabinet" type="Sprite2D" parent="."]
+[node name="cabinet" type="Sprite2D" parent="." unique_id=1691834290]
 z_index = 1
 position = Vector2(640, 643)
 texture = ExtResource("2_sjufv")
 
-[node name="Player" parent="." instance=ExtResource("3_kwr1i")]
+[node name="Player" parent="." unique_id=489417617 instance=ExtResource("3_kwr1i")]
 
-[node name="PostIts" type="Node2D" parent="."]
+[node name="PostIts" type="Node2D" parent="." unique_id=1372767496]
 z_index = 1
 position = Vector2(1140, 550)
 script = ExtResource("8_gxjft")
 dissolve_threshold = 10
 
-[node name="TesouraPostIt" type="Sprite2D" parent="PostIts"]
+[node name="TesouraPostIt" type="Sprite2D" parent="PostIts" unique_id=1318751690]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_uddg2")
 position = Vector2(-928, 103)
 texture = ExtResource("15_fxa2l")
 
-[node name="SprayPostIt" type="Sprite2D" parent="PostIts"]
+[node name="SprayPostIt" type="Sprite2D" parent="PostIts" unique_id=188454741]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_qspar")
 position = Vector2(-213, 113)
 texture = ExtResource("16_feobv")
 
-[node name="HammerPostIt" type="Sprite2D" parent="PostIts"]
+[node name="HammerPostIt" type="Sprite2D" parent="PostIts" unique_id=1349955932]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_7mboc")
 position = Vector2(-478, 108)
 texture = ExtResource("17_uddg2")
 
-[node name="PincaPostIt" type="Sprite2D" parent="PostIts"]
+[node name="PincaPostIt" type="Sprite2D" parent="PostIts" unique_id=1527814077]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_fm6xj")
 position = Vector2(18, -446)
 texture = ExtResource("18_qspar")
 
-[node name="DrillPostIt" type="Sprite2D" parent="PostIts"]
+[node name="DrillPostIt" type="Sprite2D" parent="PostIts" unique_id=2075432605]
 unique_name_in_owner = true
 material = SubResource("ShaderMaterial_sjufv")
 position = Vector2(51, 85)
 texture = ExtResource("19_7mboc")
 
-[node name="ToolSelector" type="Node2D" parent="."]
+[node name="ToolSelector" type="Node2D" parent="." unique_id=615753503]
 z_index = 2
 script = ExtResource("4_irrf2")
 
-[node name="Pinca" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
+[node name="Pinca" parent="ToolSelector" unique_id=1626593542 instance=ExtResource("7_b4n6q")]
 position = Vector2(1096, 79)
 
 [node name="Sprite2D" parent="ToolSelector/Pinca" index="0"]
@@ -204,7 +206,7 @@ position = Vector2(1.3126221, -2.7181396)
 rotation = -0.77841693
 shape = SubResource("RectangleShape2D_r8wn4")
 
-[node name="Spray" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
+[node name="Spray" parent="ToolSelector" unique_id=976163049 instance=ExtResource("7_b4n6q")]
 position = Vector2(987, 608)
 type = 1
 
@@ -215,7 +217,7 @@ texture = ExtResource("7_l774p")
 position = Vector2(0, 2)
 shape = SubResource("RectangleShape2D_kwr1i")
 
-[node name="Tesoura" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
+[node name="Tesoura" parent="ToolSelector" unique_id=1945678134 instance=ExtResource("7_b4n6q")]
 position = Vector2(112, 655)
 type = 2
 
@@ -227,7 +229,7 @@ position = Vector2(-2.1519928, -6.5203247)
 rotation = -0.91978854
 shape = SubResource("RectangleShape2D_fxa2l")
 
-[node name="Hammer" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
+[node name="Hammer" parent="ToolSelector" unique_id=281219678 instance=ExtResource("7_b4n6q")]
 position = Vector2(773, 666)
 type = 4
 
@@ -238,7 +240,7 @@ texture = ExtResource("7_ebk6p")
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_feobv")
 
-[node name="Drill" parent="ToolSelector" instance=ExtResource("7_b4n6q")]
+[node name="Drill" parent="ToolSelector" unique_id=396784220 instance=ExtResource("7_b4n6q")]
 position = Vector2(1121, 660)
 type = 3
 
@@ -250,30 +252,28 @@ position = Vector2(1.3377686, 2.2496948)
 rotation = 0.86917394
 shape = SubResource("RectangleShape2D_gxjft")
 
-[node name="PatientManager" type="Node2D" parent="."]
+[node name="PatientManager" type="Node2D" parent="." unique_id=1476750043]
 z_index = -2
 position = Vector2(640, 360)
 script = ExtResource("3_4y18v")
 
-[node name="Tray" type="Sprite2D" parent="PatientManager"]
+[node name="Tray" type="Sprite2D" parent="PatientManager" unique_id=724639772]
 position = Vector2(971, 0)
 texture = ExtResource("8_s87mg")
 offset = Vector2(2, 86)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="PatientManager"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PatientManager" unique_id=2071015982]
 unique_name_in_owner = true
-libraries = {
-&"": SubResource("AnimationLibrary_ag8io")
-}
+libraries/ = SubResource("AnimationLibrary_ag8io")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=366128866]
 limit_left = 0
 limit_top = 0
 limit_right = 1280
 limit_bottom = 720
 script = ExtResource("19_r8wn4")
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1363917804]
 environment = SubResource("Environment_r8wn4")
 
 [editable path="ToolSelector/Pinca"]
