@@ -139,7 +139,8 @@ fog_mode = 1
 fog_density = 1.0
 adjustment_enabled = true
 adjustment_brightness = 1.03
-adjustment_contrast = 1.015
+adjustment_contrast = 1.11
+adjustment_saturation = 0.86
 
 [node name="MainGame" type="Node2D" unique_id=2029834894]
 
@@ -150,7 +151,7 @@ texture = ExtResource("1_fm6xj")
 
 [node name="cabinet" type="Sprite2D" parent="." unique_id=1691834290]
 z_index = 1
-position = Vector2(640, 643)
+position = Vector2(640, 360)
 texture = ExtResource("2_sjufv")
 
 [node name="Player" parent="." unique_id=489417617 instance=ExtResource("3_kwr1i")]
