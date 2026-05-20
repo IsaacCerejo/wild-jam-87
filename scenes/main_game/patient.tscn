@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://mtilpmnd7m7y"]
+[gd_scene format=3 uid="uid://mtilpmnd7m7y"]
 
 [ext_resource type="Script" uid="uid://c3wghgg2g717r" path="res://scripts/main_game/patient.gd" id="1_s1xdg"]
 [ext_resource type="Texture2D" uid="uid://dj84m1ovp6jep" path="res://assets/patient/blank_parts/torso.png" id="3_5mt75"]
@@ -9,7 +9,115 @@
 [ext_resource type="Texture2D" uid="uid://bhaii651jxouo" path="res://assets/patient/blank_parts/leg.png" id="8_5mt75"]
 [ext_resource type="Texture2D" uid="uid://8guy4d6qos1b" path="res://assets/patient/blank_parts/arm.png" id="8_q6v5p"]
 [ext_resource type="Script" uid="uid://me7cgjqr5843" path="res://scripts/main_game/patient_drag.gd" id="9_ddug4"]
+[ext_resource type="Texture2D" uid="uid://djam1vrw5rxg7" path="res://assets/patient/mouth/mouth_01.png" id="11_is8pg"]
+[ext_resource type="Texture2D" uid="uid://dn4v2tt4fx7x3" path="res://assets/patient/mouth/mouth_02.png" id="12_275e6"]
+[ext_resource type="Texture2D" uid="uid://de6ncctq5n3p2" path="res://assets/patient/mouth/mouth_03.png" id="13_fm0jy"]
+[ext_resource type="Texture2D" uid="uid://ckm1wevdhau2u" path="res://assets/patient/mouth/mouth_04.png" id="14_gvj8w"]
+[ext_resource type="Texture2D" uid="uid://depy3hc4oocfk" path="res://assets/patient/mouth/mouth_05.png" id="15_x6gwq"]
+[ext_resource type="Texture2D" uid="uid://uyonwkwubked" path="res://assets/patient/mouth/mouth_06.png" id="16_noo12"]
+[ext_resource type="Texture2D" uid="uid://c4wtn4kcwgfj5" path="res://assets/patient/mouth/mouth_07.png" id="17_w7vda"]
+[ext_resource type="Texture2D" uid="uid://wb0e8a0fuxh6" path="res://assets/patient/mouth/mouth_08.png" id="18_lyf1e"]
+[ext_resource type="Texture2D" uid="uid://c8bdjosgpxjgp" path="res://assets/patient/mouth/mouth_09.png" id="19_6owpd"]
+[ext_resource type="Texture2D" uid="uid://clinqpbbse4r7" path="res://assets/patient/mouth/mouth_10.png" id="20_p7x33"]
+[ext_resource type="Texture2D" uid="uid://dggffqmqvkval" path="res://assets/patient/mouth/mouth_11.png" id="21_h40yq"]
+[ext_resource type="Texture2D" uid="uid://dlvmgpdnvmkka" path="res://assets/patient/mouth/mouth_12.png" id="22_q6q2c"]
+[ext_resource type="Texture2D" uid="uid://coxpl1u8o5k4b" path="res://assets/patient/mouth/mouth_13.png" id="23_pe1bf"]
+[ext_resource type="Texture2D" uid="uid://bl8ifmlhefaam" path="res://assets/patient/mouth/mouth_14.png" id="24_qm5sd"]
+[ext_resource type="Texture2D" uid="uid://byhv85hotenca" path="res://assets/patient/mouth/mouth_15.png" id="25_3ywj1"]
+[ext_resource type="Texture2D" uid="uid://i4jo4owfmx0c" path="res://assets/patient/mouth/mouth_16.png" id="26_gjtpu"]
 [ext_resource type="Script" uid="uid://bxu1ceexvxg2" path="res://scripts/main_game/patient_skin_manager.gd" id="27_jmvsg"]
+[ext_resource type="Texture2D" uid="uid://bkvcqcbmwa5ak" path="res://assets/patient/eyes/eyes_01.png" id="27_p0mba"]
+[ext_resource type="Texture2D" uid="uid://c0kk4c7ih7by7" path="res://assets/patient/eyes/eyes_02.png" id="28_oeoho"]
+[ext_resource type="Texture2D" uid="uid://2yq0n0vwyyhc" path="res://assets/patient/eyes/eyes_03.png" id="29_r22eg"]
+[ext_resource type="Texture2D" uid="uid://dtrfpdv32c8h7" path="res://assets/patient/eyes/eyes_04.png" id="30_hj1r0"]
+[ext_resource type="Texture2D" uid="uid://cb436qwffnfx7" path="res://assets/patient/eyes/eyes_05.png" id="31_irrlt"]
+[ext_resource type="Texture2D" uid="uid://c52wvnvuvthy4" path="res://assets/patient/eyes/eyes_06.png" id="32_i4ds6"]
+[ext_resource type="Texture2D" uid="uid://bbfs3750ds3c7" path="res://assets/patient/eyes/eyes_08.png" id="33_nxdh2"]
+[ext_resource type="Texture2D" uid="uid://bt66mtcqk8fe1" path="res://assets/patient/eyes/eyes_09.png" id="34_r6uf1"]
+[ext_resource type="Texture2D" uid="uid://b5gdptfui1wtp" path="res://assets/patient/eyes/eyes_10.png" id="35_rugjb"]
+[ext_resource type="Texture2D" uid="uid://cmdxaqqy2jeet" path="res://assets/patient/eyes/eyes_11.png" id="36_h1dap"]
+[ext_resource type="Texture2D" uid="uid://cr12wy0dw7n8l" path="res://assets/patient/eyes/eyes_12.png" id="37_mbhrx"]
+[ext_resource type="Texture2D" uid="uid://b1vti1ks0bf77" path="res://assets/patient/eyes/eyes_13.png" id="38_rt2mk"]
+[ext_resource type="Texture2D" uid="uid://he0rx1rxjp35" path="res://assets/patient/eyes/eyes_14.png" id="39_gg6y2"]
+[ext_resource type="Texture2D" uid="uid://baxjasaucegtq" path="res://assets/patient/eyes/eyes_15.png" id="40_j6ofu"]
+[ext_resource type="Texture2D" uid="uid://dymt6m321emq0" path="res://assets/patient/eyes/eyes_16.png" id="41_fxwlc"]
+[ext_resource type="Texture2D" uid="uid://dvf5ojvfs2e0p" path="res://assets/patient/hair/hair_01.png" id="42_7kids"]
+[ext_resource type="Texture2D" uid="uid://cwxjg66qd5eu6" path="res://assets/patient/hair/hair_02.png" id="43_er1e1"]
+[ext_resource type="Texture2D" uid="uid://bllskvmeuve2j" path="res://assets/patient/hair/hair_03.png" id="44_foncg"]
+[ext_resource type="Texture2D" uid="uid://cmldl67lwcn78" path="res://assets/patient/hair/hair_04.png" id="45_yg6e2"]
+[ext_resource type="Texture2D" uid="uid://cn8nnfty8gmrn" path="res://assets/patient/hair/hair_05.png" id="46_bhu7p"]
+[ext_resource type="Texture2D" uid="uid://cseyxordw16lv" path="res://assets/patient/hair/hair_06.png" id="47_sg45f"]
+[ext_resource type="Texture2D" uid="uid://dvf14pmy60wbu" path="res://assets/patient/hair/hair_07.png" id="48_o5y26"]
+[ext_resource type="Texture2D" uid="uid://r4lurpjkipt4" path="res://assets/patient/hair/hair_08.png" id="49_f0irh"]
+[ext_resource type="Texture2D" uid="uid://hr322uyxuebj" path="res://assets/patient/hair/hair_10.png" id="50_b5bha"]
+[ext_resource type="Texture2D" uid="uid://5go7yamwlkd4" path="res://assets/patient/hair/hair_11.png" id="51_7nmta"]
+[ext_resource type="Texture2D" uid="uid://ds37cbb2bl1nl" path="res://assets/patient/hair/hair_12.png" id="52_n1lvq"]
+[ext_resource type="Texture2D" uid="uid://dxsxgud5rvxcd" path="res://assets/patient/hair/hair_13.png" id="53_x2urc"]
+[ext_resource type="Texture2D" uid="uid://hc643wsp68oc" path="res://assets/patient/hair/hair_14.png" id="54_wn2f6"]
+[ext_resource type="Texture2D" uid="uid://teimywswa3qs" path="res://assets/patient/hair/hair_15.png" id="55_bkkc2"]
+[ext_resource type="Texture2D" uid="uid://3j3gln8fx265" path="res://assets/patient/hair/hair_16.png" id="56_mo8yy"]
+[ext_resource type="Texture2D" uid="uid://dnvd2ajqcxftg" path="res://assets/patient/hair/hair_17.png" id="57_hky46"]
+[ext_resource type="Texture2D" uid="uid://bg7sdhantc0kw" path="res://assets/patient/hair/hair_18.png" id="58_73v3v"]
+[ext_resource type="Texture2D" uid="uid://m5scv4anjm4e" path="res://assets/patient/hair/no_skin.png" id="59_7bady"]
+[ext_resource type="Texture2D" uid="uid://x7xsbdisq1g8" path="res://assets/patient/torso/necklace.png" id="60_mu3kd"]
+[ext_resource type="Texture2D" uid="uid://ch8d7h06dkk8m" path="res://assets/patient/torso/necklace_02.png" id="61_8do6y"]
+[ext_resource type="Texture2D" uid="uid://cvyrlh1et8kb4" path="res://assets/patient/torso/necklace_03.png" id="62_s7n1b"]
+[ext_resource type="Texture2D" uid="uid://d2cseqbkjmalb" path="res://assets/patient/torso/necklace_04.png" id="63_63rst"]
+[ext_resource type="Texture2D" uid="uid://blf5y60vh4ujw" path="res://assets/patient/torso/no_skin1.png" id="64_yqj11"]
+[ext_resource type="Texture2D" uid="uid://ddm0oik0fceqh" path="res://assets/patient/torso/no_skin2.png" id="65_5bxgj"]
+[ext_resource type="Texture2D" uid="uid://d2au3tgpgad78" path="res://assets/patient/torso/no_skin3.png" id="66_7mthg"]
+[ext_resource type="Texture2D" uid="uid://cwy20gajol55p" path="res://assets/patient/torso/piercings.png" id="67_2kybx"]
+[ext_resource type="Texture2D" uid="uid://c65jqx6mxjqc3" path="res://assets/patient/torso/tattoo_1.png" id="68_5iera"]
+[ext_resource type="Texture2D" uid="uid://d1lakl0gmll5y" path="res://assets/patient/torso/tattoo_02.png" id="69_tmecm"]
+[ext_resource type="Texture2D" uid="uid://bynnkwu4lx0ef" path="res://assets/patient/torso/tattoo_03.png" id="70_pcay7"]
+[ext_resource type="Texture2D" uid="uid://cdoy24vixq0eg" path="res://assets/patient/torso/tattoo_04.png" id="71_ts82k"]
+[ext_resource type="Texture2D" uid="uid://cglhyarmcih8m" path="res://assets/patient/torso/tattoo_05.png" id="72_ih7x5"]
+[ext_resource type="Texture2D" uid="uid://bmh5v51vss8bt" path="res://assets/patient/torso/tattoo_06.png" id="73_vrkn4"]
+[ext_resource type="Texture2D" uid="uid://bqbfs7qkfrs21" path="res://assets/patient/torso/tattoo_07.png" id="74_qxsuy"]
+[ext_resource type="Texture2D" uid="uid://ephpvxc28do8" path="res://assets/patient/torso/tattoo_08.png" id="75_visxy"]
+[ext_resource type="Texture2D" uid="uid://bugnvsyo5krhd" path="res://assets/patient/torso/tattoo_09.png" id="76_j17ex"]
+[ext_resource type="Texture2D" uid="uid://bpy3xtjh4mihw" path="res://assets/patient/torso/tattoo_10.png" id="77_ojmn1"]
+[ext_resource type="Texture2D" uid="uid://clbtkhd25pq6v" path="res://assets/patient/torso/tattoo_11.png" id="78_2dqcv"]
+[ext_resource type="Texture2D" uid="uid://bs31by4c0jxan" path="res://assets/patient/torso/tattoo_12.png" id="79_0nhkb"]
+[ext_resource type="Texture2D" uid="uid://cklrwehhxc37q" path="res://assets/patient/torso/tattoo_13.png" id="80_3whoh"]
+[ext_resource type="Texture2D" uid="uid://q3xm0et5w2hj" path="res://assets/patient/torso/tattoo_14.png" id="81_nkn2u"]
+[ext_resource type="Texture2D" uid="uid://cp6vi8ce7itj1" path="res://assets/patient/torso/tattoo_15.png" id="82_smb6c"]
+[ext_resource type="Texture2D" uid="uid://cak0qb1pl538y" path="res://assets/patient/torso/tattoo_16.png" id="83_8x00y"]
+[ext_resource type="Texture2D" uid="uid://c86rod0llxsrs" path="res://assets/patient/torso/tattoo_17.png" id="84_67fv2"]
+[ext_resource type="Texture2D" uid="uid://b4c54kqmvh7ta" path="res://assets/patient/torso/tattoo_18.png" id="85_4u62q"]
+[ext_resource type="Texture2D" uid="uid://rwu6kwiklbdf" path="res://assets/patient/arm/bracelet.png" id="86_v3d8l"]
+[ext_resource type="Texture2D" uid="uid://doddit5nsc646" path="res://assets/patient/arm/bracelet_02.png" id="87_o842t"]
+[ext_resource type="Texture2D" uid="uid://b75xaysnsj0uv" path="res://assets/patient/arm/bracelet_03.png" id="88_y65ts"]
+[ext_resource type="Texture2D" uid="uid://ctbdq0q3urv2o" path="res://assets/patient/arm/bracelet_04.png" id="89_sgdrv"]
+[ext_resource type="Texture2D" uid="uid://b5a07otik7wn" path="res://assets/patient/arm/clock.png" id="90_3o3eb"]
+[ext_resource type="Texture2D" uid="uid://dp52a1ekmpl1v" path="res://assets/patient/arm/diabetes.png" id="91_r251k"]
+[ext_resource type="Texture2D" uid="uid://dsu3j1q5slyjx" path="res://assets/patient/arm/gold_bracelet.png" id="92_7c5tk"]
+[ext_resource type="Texture2D" uid="uid://f0bmsmenw2nv" path="res://assets/patient/arm/no_skin1.png" id="93_v6ye3"]
+[ext_resource type="Texture2D" uid="uid://m22i1t01w8yj" path="res://assets/patient/arm/no_skin2.png" id="94_uftrc"]
+[ext_resource type="Texture2D" uid="uid://cprjgds7r4uko" path="res://assets/patient/arm/no_skin3.png" id="95_m1ivj"]
+[ext_resource type="Texture2D" uid="uid://bpet43pilfwrc" path="res://assets/patient/arm/no_skin4.png" id="96_bt3wb"]
+[ext_resource type="Texture2D" uid="uid://ccvwpsmbbue05" path="res://assets/patient/arm/tattoo_1.png" id="97_5y47y"]
+[ext_resource type="Texture2D" uid="uid://dymjrv6i8anae" path="res://assets/patient/arm/tattoo_2.png" id="98_g63vr"]
+[ext_resource type="Texture2D" uid="uid://bxy5uwlnspgj8" path="res://assets/patient/arm/tattoo_3.png" id="99_raavo"]
+[ext_resource type="Texture2D" uid="uid://djxibxdm0dn4i" path="res://assets/patient/arm/tattoo_4.png" id="100_14nqo"]
+[ext_resource type="Texture2D" uid="uid://clbm8ftdwbuap" path="res://assets/patient/arm/tattoo_5.png" id="101_x2udh"]
+[ext_resource type="Texture2D" uid="uid://cxapu0m5w1poh" path="res://assets/patient/arm/tattoo_06.png" id="102_rd6b4"]
+[ext_resource type="Texture2D" uid="uid://b22xcuacwfvl1" path="res://assets/patient/arm/tattoo_07.png" id="103_eefjd"]
+[ext_resource type="Texture2D" uid="uid://73cnq862sbsx" path="res://assets/patient/arm/tattoo_08.png" id="104_7gxnw"]
+[ext_resource type="Texture2D" uid="uid://of565n4lekqx" path="res://assets/patient/arm/tattoo_09.png" id="105_uejp0"]
+[ext_resource type="Texture2D" uid="uid://bbp5akwwm2fa7" path="res://assets/patient/arm/tattoo_10.png" id="106_0jkqf"]
+[ext_resource type="Texture2D" uid="uid://de32fer1ssbfy" path="res://assets/patient/arm/tattoo_11.png" id="107_ukhjg"]
+[ext_resource type="Texture2D" uid="uid://c54ekycv5wpjs" path="res://assets/patient/arm/tattoo_12.png" id="108_67lw4"]
+[ext_resource type="Texture2D" uid="uid://bdexbiypp8ae1" path="res://assets/patient/arm/tattoo_13.png" id="109_j7br1"]
+[ext_resource type="Texture2D" uid="uid://bcuu0du54fywr" path="res://assets/patient/leg/hearts.png" id="110_t60i0"]
+[ext_resource type="Texture2D" uid="uid://itiu0gm0i0jj" path="res://assets/patient/leg/scratches.png" id="111_n6lva"]
+[ext_resource type="Texture2D" uid="uid://b6ski4i8c2t7" path="res://assets/patient/leg/sok2.png" id="112_337rw"]
+[ext_resource type="Texture2D" uid="uid://bhc7nye4bo35t" path="res://assets/patient/leg/sok3.png" id="113_df5d5"]
+[ext_resource type="Texture2D" uid="uid://cfkwri0584os6" path="res://assets/patient/leg/sok4.png" id="114_o7xvr"]
+[ext_resource type="Texture2D" uid="uid://1aush2xvgifp" path="res://assets/patient/leg/sok.png" id="115_faay7"]
+[ext_resource type="Texture2D" uid="uid://cqijquxiulp1n" path="res://assets/patient/leg/tattoo_01.png" id="116_wau27"]
+[ext_resource type="Texture2D" uid="uid://bweqhpd21xn3s" path="res://assets/patient/leg/tattoo_02.png" id="117_vbqkw"]
+[ext_resource type="Texture2D" uid="uid://cb40iqnkv7hcf" path="res://assets/patient/leg/timmy.png" id="118_d0xja"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6vb6e"]
 shader = ExtResource("4_ddug4")
@@ -79,35 +187,35 @@ size = Vector2(340.5, 476)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q6v5p"]
 size = Vector2(581, 285)
 
-[node name="Patient" type="Node2D"]
+[node name="Patient" type="Node2D" unique_id=2119642655]
 script = ExtResource("1_s1xdg")
 
-[node name="DragManager" type="Node2D" parent="."]
+[node name="DragManager" type="Node2D" parent="." unique_id=1220553680]
 script = ExtResource("9_ddug4")
 
-[node name="MousePin" type="PinJoint2D" parent="DragManager"]
+[node name="MousePin" type="PinJoint2D" parent="DragManager" unique_id=310654663]
 node_a = NodePath("MouseBody")
 softness = 1.0
 
-[node name="MouseBody" type="StaticBody2D" parent="DragManager/MousePin"]
+[node name="MouseBody" type="StaticBody2D" parent="DragManager/MousePin" unique_id=1507518389]
 
-[node name="Pins" type="Node2D" parent="."]
+[node name="Pins" type="Node2D" parent="." unique_id=141719591]
 
-[node name="PinJoint2D" type="PinJoint2D" parent="Pins"]
+[node name="PinJoint2D" type="PinJoint2D" parent="Pins" unique_id=1841914069]
 position = Vector2(-192, 0)
 node_a = NodePath("../../BodyParts/Torso")
 node_b = NodePath("../../BodyParts/Head")
 bias = 0.9
 disable_collision = false
 
-[node name="PinJoint2D2" type="PinJoint2D" parent="Pins"]
+[node name="PinJoint2D2" type="PinJoint2D" parent="Pins" unique_id=681286431]
 position = Vector2(-147, -60)
 node_a = NodePath("../../BodyParts/Torso")
 node_b = NodePath("../../BodyParts/LeftArm")
 bias = 0.9
 disable_collision = false
 
-[node name="PinJoint2D3" type="PinJoint2D" parent="Pins"]
+[node name="PinJoint2D3" type="PinJoint2D" parent="Pins" unique_id=141752434]
 position = Vector2(-147, 60)
 node_a = NodePath("../../BodyParts/Torso")
 node_b = NodePath("../../BodyParts/RightArm")
@@ -115,25 +223,25 @@ bias = 0.9
 disable_collision = false
 angular_limit_lower = -2.0943952
 
-[node name="PinJoint2D4" type="PinJoint2D" parent="Pins"]
+[node name="PinJoint2D4" type="PinJoint2D" parent="Pins" unique_id=1892239859]
 position = Vector2(31, 45)
 node_a = NodePath("../../BodyParts/Torso")
 node_b = NodePath("../../BodyParts/RightLeg")
 bias = 0.9
 disable_collision = false
 
-[node name="PinJoint2D5" type="PinJoint2D" parent="Pins"]
+[node name="PinJoint2D5" type="PinJoint2D" parent="Pins" unique_id=676511214]
 position = Vector2(28, -45)
 node_a = NodePath("../../BodyParts/Torso")
 node_b = NodePath("../../BodyParts/LeftLeg")
 bias = 0.9
 disable_collision = false
 
-[node name="BodyParts" type="Node2D" parent="."]
+[node name="BodyParts" type="Node2D" parent="." unique_id=1083510843]
 z_index = 7
 y_sort_enabled = true
 
-[node name="Torso" type="RigidBody2D" parent="BodyParts"]
+[node name="Torso" type="RigidBody2D" parent="BodyParts" unique_id=1228280043]
 y_sort_enabled = true
 position = Vector2(-68, 0)
 collision_layer = 128
@@ -142,23 +250,23 @@ gravity_scale = 0.0
 freeze = true
 freeze_mode = 1
 
-[node name="shadow" type="Sprite2D" parent="BodyParts/Torso"]
+[node name="shadow" type="Sprite2D" parent="BodyParts/Torso" unique_id=487862903]
 z_index = -6
 material = SubResource("ShaderMaterial_6vb6e")
 texture = ExtResource("3_5mt75")
 
-[node name="blank_torso" type="Sprite2D" parent="BodyParts/Torso"]
+[node name="blank_torso" type="Sprite2D" parent="BodyParts/Torso" unique_id=2107363875]
 z_index = -5
 texture = ExtResource("3_5mt75")
 
-[node name="torso_skin" type="Sprite2D" parent="BodyParts/Torso"]
+[node name="torso_skin" type="Sprite2D" parent="BodyParts/Torso" unique_id=2099459130]
 z_index = -5
 
-[node name="collision" type="CollisionShape2D" parent="BodyParts/Torso"]
+[node name="collision" type="CollisionShape2D" parent="BodyParts/Torso" unique_id=469397520]
 position = Vector2(-25.5, 0)
 shape = SubResource("RectangleShape2D_6vb6e")
 
-[node name="Head" type="RigidBody2D" parent="BodyParts"]
+[node name="Head" type="RigidBody2D" parent="BodyParts" unique_id=1050842884]
 y_sort_enabled = true
 position = Vector2(-235, 0)
 collision_layer = 704
@@ -172,33 +280,33 @@ linear_damp = 2.0
 angular_velocity = 17.453293
 angular_damp = 32.0
 
-[node name="shadow" type="Sprite2D" parent="BodyParts/Head"]
+[node name="shadow" type="Sprite2D" parent="BodyParts/Head" unique_id=254879954]
 z_index = -6
 material = SubResource("ShaderMaterial_q6v5p")
 texture = ExtResource("6_6vb6e")
 
-[node name="blank_head" type="Sprite2D" parent="BodyParts/Head"]
+[node name="blank_head" type="Sprite2D" parent="BodyParts/Head" unique_id=2133518497]
 z_index = -4
 texture = ExtResource("6_6vb6e")
 
-[node name="mouth" type="Sprite2D" parent="BodyParts/Head"]
+[node name="mouth" type="Sprite2D" parent="BodyParts/Head" unique_id=408708333]
 z_index = -4
 
-[node name="eyes" type="Sprite2D" parent="BodyParts/Head"]
+[node name="eyes" type="Sprite2D" parent="BodyParts/Head" unique_id=779106717]
 z_index = -4
 texture = ExtResource("6_5mt75")
 
-[node name="hair" type="Sprite2D" parent="BodyParts/Head"]
+[node name="hair" type="Sprite2D" parent="BodyParts/Head" unique_id=784034961]
 self_modulate = Color(0.101960786, 0.07450981, 0.0627451, 1)
 z_index = -3
 position = Vector2(-35, 0)
 texture = ExtResource("7_6vb6e")
 
-[node name="collision" type="CollisionShape2D" parent="BodyParts/Head"]
+[node name="collision" type="CollisionShape2D" parent="BodyParts/Head" unique_id=909306377]
 position = Vector2(3, 0)
 shape = SubResource("RectangleShape2D_vfgv1")
 
-[node name="LeftLeg" type="RigidBody2D" parent="BodyParts"]
+[node name="LeftLeg" type="RigidBody2D" parent="BodyParts" unique_id=966274707]
 y_sort_enabled = true
 position = Vector2(150, -70)
 rotation = -0.23038344
@@ -213,24 +321,24 @@ linear_damp = 2.0
 angular_velocity = 17.453293
 angular_damp = 10.0
 
-[node name="shadow" type="Sprite2D" parent="BodyParts/LeftLeg"]
+[node name="shadow" type="Sprite2D" parent="BodyParts/LeftLeg" unique_id=2067231272]
 z_index = -6
 material = SubResource("ShaderMaterial_3dkft")
 texture = ExtResource("8_5mt75")
 
-[node name="blank_leg" type="Sprite2D" parent="BodyParts/LeftLeg"]
+[node name="blank_leg" type="Sprite2D" parent="BodyParts/LeftLeg" unique_id=1880264611]
 z_index = -2
 texture = ExtResource("8_5mt75")
 
-[node name="leg_skin" type="Sprite2D" parent="BodyParts/LeftLeg"]
+[node name="leg_skin" type="Sprite2D" parent="BodyParts/LeftLeg" unique_id=136658908]
 z_index = -2
 
-[node name="collision" type="CollisionShape2D" parent="BodyParts/LeftLeg"]
+[node name="collision" type="CollisionShape2D" parent="BodyParts/LeftLeg" unique_id=955379762]
 position = Vector2(45, 0)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_5mt75")
 
-[node name="RightLeg" type="RigidBody2D" parent="BodyParts"]
+[node name="RightLeg" type="RigidBody2D" parent="BodyParts" unique_id=1917941308]
 y_sort_enabled = true
 position = Vector2(149, 70)
 rotation = 0.23561949
@@ -245,26 +353,26 @@ linear_damp = 2.0
 angular_velocity = 17.453293
 angular_damp = 10.0
 
-[node name="shadow" type="Sprite2D" parent="BodyParts/RightLeg"]
+[node name="shadow" type="Sprite2D" parent="BodyParts/RightLeg" unique_id=378785555]
 z_index = -6
 material = SubResource("ShaderMaterial_xkswm")
 texture = ExtResource("8_5mt75")
 
-[node name="blank_leg" type="Sprite2D" parent="BodyParts/RightLeg"]
+[node name="blank_leg" type="Sprite2D" parent="BodyParts/RightLeg" unique_id=500307368]
 z_index = -2
 texture = ExtResource("8_5mt75")
 flip_v = true
 
-[node name="leg_skin" type="Sprite2D" parent="BodyParts/RightLeg"]
+[node name="leg_skin" type="Sprite2D" parent="BodyParts/RightLeg" unique_id=2083229693]
 z_index = -2
 flip_v = true
 
-[node name="collision" type="CollisionShape2D" parent="BodyParts/RightLeg"]
+[node name="collision" type="CollisionShape2D" parent="BodyParts/RightLeg" unique_id=1883057457]
 position = Vector2(45, 0)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_5mt75")
 
-[node name="LeftArm" type="RigidBody2D" parent="BodyParts"]
+[node name="LeftArm" type="RigidBody2D" parent="BodyParts" unique_id=215293304]
 y_sort_enabled = true
 position = Vector2(-71, -105)
 rotation = -0.49741888
@@ -280,26 +388,26 @@ linear_damp = 2.0
 angular_velocity = 17.453293
 angular_damp = 10.0
 
-[node name="shadow" type="Sprite2D" parent="BodyParts/LeftArm"]
+[node name="shadow" type="Sprite2D" parent="BodyParts/LeftArm" unique_id=820169566]
 z_index = -6
 material = SubResource("ShaderMaterial_5mt75")
 scale = Vector2(1.0000001, 1.0000001)
 texture = ExtResource("8_q6v5p")
 
-[node name="blank_arm" type="Sprite2D" parent="BodyParts/LeftArm"]
+[node name="blank_arm" type="Sprite2D" parent="BodyParts/LeftArm" unique_id=1636270560]
 z_index = -1
 texture = ExtResource("8_q6v5p")
 
-[node name="arm_skin" type="Sprite2D" parent="BodyParts/LeftArm"]
+[node name="arm_skin" type="Sprite2D" parent="BodyParts/LeftArm" unique_id=1065376138]
 z_index = -1
 
-[node name="collision" type="CollisionShape2D" parent="BodyParts/LeftArm"]
+[node name="collision" type="CollisionShape2D" parent="BodyParts/LeftArm" unique_id=1010014696]
 position = Vector2(22.825, 0)
 rotation = 1.5707964
 scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("CapsuleShape2D_6vb6e")
 
-[node name="RightArm" type="RigidBody2D" parent="BodyParts"]
+[node name="RightArm" type="RigidBody2D" parent="BodyParts" unique_id=814044884]
 y_sort_enabled = true
 position = Vector2(-72, 105)
 rotation = 0.50963616
@@ -314,68 +422,74 @@ linear_damp = 2.0
 angular_velocity = 17.453293
 angular_damp = 10.0
 
-[node name="shadow" type="Sprite2D" parent="BodyParts/RightArm"]
+[node name="shadow" type="Sprite2D" parent="BodyParts/RightArm" unique_id=456639373]
 z_index = -6
 material = SubResource("ShaderMaterial_vfgv1")
 texture = ExtResource("8_q6v5p")
 
-[node name="blank_arm" type="Sprite2D" parent="BodyParts/RightArm"]
+[node name="blank_arm" type="Sprite2D" parent="BodyParts/RightArm" unique_id=596859830]
 z_index = -1
 texture = ExtResource("8_q6v5p")
 flip_v = true
 
-[node name="arm_skin" type="Sprite2D" parent="BodyParts/RightArm"]
+[node name="arm_skin" type="Sprite2D" parent="BodyParts/RightArm" unique_id=1933095031]
 z_index = -1
 texture = ExtResource("8_q6v5p")
 flip_v = true
 
-[node name="collision" type="CollisionShape2D" parent="BodyParts/RightArm"]
+[node name="collision" type="CollisionShape2D" parent="BodyParts/RightArm" unique_id=1812223247]
 position = Vector2(23.21, 0)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_6vb6e")
 
-[node name="PatientSkinManager" type="Node2D" parent="."]
+[node name="PatientSkinManager" type="Node2D" parent="." unique_id=565105131]
 script = ExtResource("27_jmvsg")
+mouth_textures = Array[Texture2D]([ExtResource("11_is8pg"), ExtResource("12_275e6"), ExtResource("13_fm0jy"), ExtResource("14_gvj8w"), ExtResource("15_x6gwq"), ExtResource("16_noo12"), ExtResource("17_w7vda"), ExtResource("18_lyf1e"), ExtResource("19_6owpd"), ExtResource("20_p7x33"), ExtResource("21_h40yq"), ExtResource("22_q6q2c"), ExtResource("23_pe1bf"), ExtResource("24_qm5sd"), ExtResource("25_3ywj1"), ExtResource("26_gjtpu")])
+eye_textures = Array[Texture2D]([ExtResource("27_p0mba"), ExtResource("28_oeoho"), ExtResource("29_r22eg"), ExtResource("30_hj1r0"), ExtResource("31_irrlt"), ExtResource("32_i4ds6"), ExtResource("6_5mt75"), ExtResource("33_nxdh2"), ExtResource("34_r6uf1"), ExtResource("35_rugjb"), ExtResource("36_h1dap"), ExtResource("37_mbhrx"), ExtResource("38_rt2mk"), ExtResource("39_gg6y2"), ExtResource("40_j6ofu"), ExtResource("41_fxwlc")])
+hair_textures = Array[Texture2D]([ExtResource("42_7kids"), ExtResource("43_er1e1"), ExtResource("44_foncg"), ExtResource("45_yg6e2"), ExtResource("46_bhu7p"), ExtResource("47_sg45f"), ExtResource("48_o5y26"), ExtResource("49_f0irh"), ExtResource("7_6vb6e"), ExtResource("50_b5bha"), ExtResource("51_7nmta"), ExtResource("52_n1lvq"), ExtResource("53_x2urc"), ExtResource("54_wn2f6"), ExtResource("55_bkkc2"), ExtResource("56_mo8yy"), ExtResource("57_hky46"), ExtResource("58_73v3v"), ExtResource("59_7bady")])
+torso_textures = Array[Texture2D]([ExtResource("60_mu3kd"), ExtResource("61_8do6y"), ExtResource("62_s7n1b"), ExtResource("63_63rst"), ExtResource("64_yqj11"), ExtResource("65_5bxgj"), ExtResource("66_7mthg"), ExtResource("67_2kybx"), ExtResource("68_5iera"), ExtResource("69_tmecm"), ExtResource("70_pcay7"), ExtResource("71_ts82k"), ExtResource("72_ih7x5"), ExtResource("73_vrkn4"), ExtResource("74_qxsuy"), ExtResource("75_visxy"), ExtResource("76_j17ex"), ExtResource("77_ojmn1"), ExtResource("78_2dqcv"), ExtResource("79_0nhkb"), ExtResource("80_3whoh"), ExtResource("81_nkn2u"), ExtResource("82_smb6c"), ExtResource("83_8x00y"), ExtResource("84_67fv2"), ExtResource("85_4u62q")])
+arm_textures = Array[Texture2D]([ExtResource("86_v3d8l"), ExtResource("87_o842t"), ExtResource("88_y65ts"), ExtResource("89_sgdrv"), ExtResource("90_3o3eb"), ExtResource("91_r251k"), ExtResource("92_7c5tk"), ExtResource("93_v6ye3"), ExtResource("94_uftrc"), ExtResource("95_m1ivj"), ExtResource("96_bt3wb"), ExtResource("97_5y47y"), ExtResource("98_g63vr"), ExtResource("99_raavo"), ExtResource("100_14nqo"), ExtResource("101_x2udh"), ExtResource("102_rd6b4"), ExtResource("103_eefjd"), ExtResource("104_7gxnw"), ExtResource("105_uejp0"), ExtResource("106_0jkqf"), ExtResource("107_ukhjg"), ExtResource("108_67lw4"), ExtResource("109_j7br1")])
+leg_textures = Array[Texture2D]([ExtResource("110_t60i0"), ExtResource("111_n6lva"), ExtResource("112_337rw"), ExtResource("113_df5d5"), ExtResource("114_o7xvr"), ExtResource("115_faay7"), ExtResource("116_wau27"), ExtResource("117_vbqkw"), ExtResource("118_d0xja")])
 
-[node name="Blockers" type="Node2D" parent="."]
+[node name="Blockers" type="Node2D" parent="." unique_id=1928013049]
 visible = false
 
-[node name="left_leg_blocker" type="StaticBody2D" parent="Blockers"]
+[node name="left_leg_blocker" type="StaticBody2D" parent="Blockers" unique_id=243949384]
 collision_layer = 16
 collision_mask = 16
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Blockers/left_leg_blocker"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blockers/left_leg_blocker" unique_id=753681365]
 position = Vector2(102, 159.5)
 shape = SubResource("RectangleShape2D_5mt75")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Blockers/left_leg_blocker"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Blockers/left_leg_blocker" unique_id=385094279]
 position = Vector2(-152, -5)
 shape = SubResource("RectangleShape2D_3dkft")
 
-[node name="right_leg_blocker" type="StaticBody2D" parent="Blockers"]
+[node name="right_leg_blocker" type="StaticBody2D" parent="Blockers" unique_id=1889183939]
 collision_layer = 32
 collision_mask = 32
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Blockers/right_leg_blocker"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blockers/right_leg_blocker" unique_id=326312642]
 position = Vector2(98.25, -160)
 shape = SubResource("RectangleShape2D_5mt75")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Blockers/right_leg_blocker"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Blockers/right_leg_blocker" unique_id=121241473]
 position = Vector2(-152, -4)
 shape = SubResource("RectangleShape2D_xkswm")
 
-[node name="left_arm_blocker" type="StaticBody2D" parent="Blockers"]
+[node name="left_arm_blocker" type="StaticBody2D" parent="Blockers" unique_id=262396198]
 collision_layer = 64
 collision_mask = 64
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Blockers/left_arm_blocker"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blockers/left_arm_blocker" unique_id=1058899547]
 position = Vector2(-156.5, 89.5)
 shape = SubResource("RectangleShape2D_q6v5p")
 
-[node name="right_arm_blocker" type="StaticBody2D" parent="Blockers"]
+[node name="right_arm_blocker" type="StaticBody2D" parent="Blockers" unique_id=1034177393]
 collision_layer = 512
 collision_mask = 512
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Blockers/right_arm_blocker"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Blockers/right_arm_blocker" unique_id=1446788265]
 position = Vector2(-156.5, -90)
 shape = SubResource("RectangleShape2D_q6v5p")

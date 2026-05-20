@@ -9,6 +9,13 @@ extends Node2D
 @onready var left_leg_sprite: Sprite2D = $"../BodyParts/LeftLeg/leg_skin"
 @onready var right_leg_sprite: Sprite2D = $"../BodyParts/RightLeg/leg_skin"
 
+@export var mouth_textures: Array[Texture2D]
+@export var eye_textures: Array[Texture2D]
+@export var hair_textures: Array[Texture2D]
+@export var torso_textures: Array[Texture2D]
+@export var arm_textures: Array[Texture2D]
+@export var leg_textures: Array[Texture2D]
+
 const hair_colors: Array = [
 	Color("8c4e34ff"),
 	Color("2e4a37ff"),
@@ -29,41 +36,28 @@ const hair_colors: Array = [
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Restart"):
-		_ready()
+		randomize_character()
 
 func _ready() -> void:
-	mouth_sprite.texture = load_random_texture("res://assets/patient/mouth")
-	hair_sprite.texture = load_random_texture("res://assets/patient/hair")
-	eyes_sprite.texture = load_random_texture("res://assets/patient/eyes")
-	torso_sprite.texture = load_random_texture("res://assets/patient/torso")
-	left_arm_sprite.texture = load_random_texture("res://assets/patient/arm")
-	right_arm_sprite.texture = load_random_texture("res://assets/patient/arm")
-	left_leg_sprite.texture = load_random_texture("res://assets/patient/leg")
-	right_leg_sprite.texture = load_random_texture("res://assets/patient/leg")
+	randomize_character()
+
+func randomize_character() -> void:
+	mouth_sprite.texture = mouth_textures.pick_random()
+	eyes_sprite.texture = eye_textures.pick_random()
+	hair_sprite.texture = hair_textures.pick_random()
+	torso_sprite.texture = torso_textures.pick_random()
+
+	left_arm_sprite.texture = arm_textures.pick_random()
+	right_arm_sprite.texture = arm_textures.pick_random()
+
+	left_leg_sprite.texture = leg_textures.pick_random()
+	right_leg_sprite.texture = leg_textures.pick_random()
+
 	randomize_hair_color()
 	randomize_flip_torso()
 
-func load_random_texture(folder_path: String) -> Texture2D:
-	
-	var folder := DirAccess.open(folder_path)
-	var assets_available: Array[String] = []
-	
-	folder.list_dir_begin()
-
-	var asset_path := folder.get_next()
-	while asset_path != "":
-		if asset_path.get_extension() == "png":
-			assets_available.append(asset_path)
-		asset_path = folder.get_next()
-
-	folder.list_dir_end()
-	
-	var chosen_asset = assets_available.pick_random()
-
-	return load(folder_path + "/" + chosen_asset)
-
 func randomize_hair_color():
-	hair_sprite.self_modulate = hair_colors[randi_range(0, hair_colors.size()-1)]
+	hair_sprite.self_modulate = hair_colors.pick_random()
 
 func randomize_flip_torso():
-	torso_sprite.flip_v = randi_range(0,1)
+	torso_sprite.flip_v = randi() % 2 == 0
